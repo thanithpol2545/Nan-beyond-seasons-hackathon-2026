@@ -4,10 +4,14 @@
     "description": "Comprehensive dataset of Nan province covering all festivals/events, flowers with medical/aesthetic/traditional/belief dimensions, and wellness community information. Suitable for ML training and application development.",
     "version": "1.0",
     "last_updated": "2026-07-13",
-    "total_festivals": 14,
+    "total_festivals": 15,
     "total_flowers": 20,
     "total_wellness_communities": 4,
-    "total_ethnic_groups": 1
+    "total_ethnic_groups": 6,
+    "total_locations": 10,
+    "total_products": 12,
+    "has_blooming_calendar": true,
+    "has_monthly_overview": true
   },
 
   "festivals": [
@@ -264,6 +268,22 @@
         {"name": "ดอกดาวเรือง", "use": "เครื่องบูชา", "symbolism": "สิริมงคล"}
       ],
       "wellness_connection": "Physical exercise (climbing), View meditation, Photography mindfulness, Spiritual reflection"
+    },
+    {
+      "id": "F015",
+      "name_th": "งานส่งเสริมศิลปวัฒนธรรมประเพณีชนเผ่าเวียงสา",
+      "name_en": "Wiang Sa Ethnic Festival",
+      "month": 3,
+      "period": "ประมาณมีนาคมของทุกปี",
+      "location": "อำเภอเวียงสา, จังหวัดน่าน",
+      "ethnic_group": "ม้ง, อิ้วเมี่ยน, ขมุ, มลาบริ, ถิ่น, พื้นเมือง",
+      "description_th": "งานรวม 6 กลุ่มชาติพันธุ์ในน่าน ได้แก่ ม้ง, อิ้วเมี่ยน, ขมุ, มลาบริ, ถิ่น และชาวพื้นเมือง มีขบวนแห่วัฒนธรรม การประกวด การแสดงศิลปวัฒนธรรม และการจำหน่ายผลิตภัณฑ์ชุมชน",
+      "description_en": "Grand ethnic festival featuring all 6 ethnic groups of Nan: Hmong, Iu Mien, Khmu, Mlabri, Tin, and local Tai Lue. Cultural parades, contests, performances, and local product fairs.",
+      "flowers_used": [
+        {"name": "ดอกไม้ป่าประจำถิ่น", "use": "ประดับขบวนแห่", "symbolism": "อัตลักษณ์ของแต่ละชาติพันธุ์"},
+        {"name": "ดอกดาวเรือง", "use": "บายศรีต้อนรับ", "symbolism": "สิริมงคล"}
+      ],
+      "wellness_connection": "Cultural diversity appreciation, Community bonding, Creative expression"
     }
   ],
 
@@ -1088,7 +1108,186 @@
       {"user_element": "ไฟ", "recommended_flowers": ["ดาวเรือง", "ทองกวาว", "บัวตอง"], "recommended_festivals": ["แห่เทียนพรรษา", "ปีใหม่ม้ง"], "wellness_tip": "ดอกดาวเรืองจะช่วยเติมพลังและความอบอุ่นให้คุณ"},
       {"visit_month": 10, "festival": "แข่งเรือชิงถ้วยพระราชทาน", "suggested_experience": "ชมการแข่งเรือ + พัก Wellness Stay ที่บ่อสวก + ร่วมกิจกรรมสุมยาแช่เท้า"},
       {"visit_month": 3, "festival": "หกเป็งนมัสการพระธาตุแช่แห้ง", "suggested_experience": "เดินขึ้นพระธาตุ + ทำบุญ + ชิมอาหารดีวิถีน่าน"},
-      {"visit_month": 11, "festival": "ยี่เป็ง", "suggested_experience": "ลอยกระทง + ชมประตูป่า + เที่ยวบ่อเกลือโบราณ"}
+      {"visit_month": 11, "festival": "ยี่เป็ง", "suggested_experience": "ลอยกระทง + ชมประตูป่า + เที่ยวบ่อเกลือโบราณ"},
+      {"user_mood": "stressed", "recommended_flowers": ["มะลิ", "ลาเวนเดอร์", "กระดังงา"], "recommended_activity": "Aromatherapy massage ที่บ่อสวก + สุมยา", "wellness_tip": "ดอกมะลิจะช่วยให้คุณผ่อนคลายจากความเครียด"},
+      {"user_mood": "sad", "recommended_flowers": ["กุหลาบ", "ดาวเรือง", "บัวตอง"], "recommended_activity": "Forest Bathing ที่ดอยภูคา + ชมวิว", "wellness_tip": "ดอกกุหลาบสีสดใสจะช่วยฟื้นฟูจิตใจของคุณ"},
+      {"user_mood": "tired", "recommended_flowers": ["ตะไคร้", "เปปเปอร์มินต์", "มะกรูด"], "recommended_activity": "แช่เท้าสมุนไพรที่บ่อสวก + ชาใบหม่อน", "wellness_tip": "ตะไคร้จะช่วยกระตุ้นให้คุณรู้สึกสดชื่นขึ้น"},
+      {"user_mood": "anxious", "recommended_flowers": ["บัวหลวง", "ลาเวนเดอร์", "สารภี"], "recommended_activity": "นั่งสมาธิที่วัดภูมินทร์ + จิบชาเบญจเกสร", "wellness_tip": "ดอกบัวหลวงจะช่วยให้จิตใจสงบและมีสมาธิ"},
+      {"interest": "photography", "recommended_flowers": ["เสี้ยวดอกขาว", "บัวตอง", "เอื้อง", "ทองกวาว"], "suggested_spots": ["ดอยภูคา", "วัดพระธาตุเขาน้อย", "ดอยแม่อูคอ", "วัดภูมินทร์"]},
+      {"interest": "food", "recommended_flowers": ["มะลิ", "บัวหลวง", "ดาวเรือง", "กุหลาบ"], "suggested_activities": ["ชิมชาเบญจเกสร", "เวิร์กชอปทำอาหารจากดอกไม้", "เส้นทางอาหารดีวิถีน่าน"]},
+      {"interest": "herbal_wellness", "recommended_flowers": ["ไพล", "ตะไคร้", "หม่อน", "ใบเมี่ยง"], "suggested_activities": ["แช่เท้าสมุนไพรบ่อสวก", "พอกเข่า", "ซื้อผลิตภัณฑ์บ้านน้ำเกี๋ยน"]},
+      {"interest": "spiritual", "recommended_flowers": ["บัวหลวง", "มะลิ", "ดาวเรือง", "บานไม่รู้โรย"], "suggested_festivals": ["หกเป็ง", "สืบชะตา", "ตานก๋วยสลาก", "ยี่เป็ง"]},
+      {"interest": "social_media_content", "recommended_flowers": ["เสี้ยวดอกขาว", "ลีลาวดี", "บัวตอง", "ทองกวาว"], "photo_scores": {"เสี้ยวดอกขาว": 9, "ลีลาวดี": 9, "บัวตอง": 10, "ทองกวาว": 10}, "suggested_filters": "warm_vintage, nature_boost"}
     ]
+  },
+
+  "flower_blooming_calendar": {
+    "description": "ปฏิทินดอกไม้บานในจังหวัดน่านรายเดือน สำหรับใช้วางแผนการท่องเที่ยว",
+    "calendar": {
+      "january": {"flowers": ["เสี้ยวดอกขาว", "บัวตอง", "เอื้อง (กล้วยไม้ป่า)"], "festivals": ["ปีใหม่ม้ง"], "season": "High Season (อากาศหนาว)", "avg_temp": "15-25°C", "wellness_tip": "อากาศหนาว เหมาะกับการแช่เท้าสมุนไพรอุ่นๆ"},
+      "february": {"flowers": ["ทองกวาว", "เสี้ยวดอกขาว", "บัวตอง"], "festivals": ["ดอกไม้พันดวง"], "season": "High Season (อากาศหนาว)", "avg_temp": "16-28°C", "wellness_tip": "ชมทองกวาวดอกสีแสดสดใส เหมาะกับการถ่ายรูป"},
+      "march": {"flowers": ["ทองกวาว", "พวงแสด", "เสี้ยวดอกขาว"], "festivals": ["หกเป็งนมัสการพระธาตุแช่แห้ง"], "season": "เริ่มร้อน", "avg_temp": "20-33°C", "wellness_tip": "ขึ้นพระธาตุแช่แห้งแต่เช้า หลบเลี่ยงความร้อน"},
+      "april": {"flowers": ["ดอกไม้ป่าดอย", "ทองกวาว", "มะลิ"], "festivals": ["สงกรานต์", "เลี้ยงผีขุนน้ำ"], "season": "Low Season (ร้อน)", "avg_temp": "23-36°C", "wellness_tip": "สงกรานต์คลายร้อน กิจกรรมเลี้ยงผีขุนน้ำเชื่อมต่อธรรมชาติ"},
+      "may": {"flowers": ["บัวหลวง", "บัวตอง", "พุดซ้อน"], "festivals": ["แปดเป็งวัดจอมแจ้ง", "ไหว้พระธาตุเขาน้อย"], "season": "Low Season (ร้อน)", "avg_temp": "24-34°C", "wellness_tip": "เริ่มเข้าหน้าฝน ชมทุ่งบัวตอง"},
+      "june": {"flowers": ["บัวหลวง", "พุดซ้อน", "กระดังงา"], "festivals": [], "season": "Low Season (ฝน)", "avg_temp": "24-33°C", "wellness_tip": "อากาศเริ่มเย็นลง เหมาะกับการทำสมาธิในวัด"},
+      "july": {"flowers": ["บัวหลวง", "ดอกลีลาวดี", "พุดซ้อน"], "festivals": ["แห่เทียนเข้าพรรษา"], "season": "Low Season (ฝน)", "avg_temp": "23-32°C", "wellness_tip": "เทศกาลแห่เทียน ชมดอกบัวในวัด"},
+      "august": {"flowers": ["บัวหลวง", "ดอกไม้ป่า", "ไพล"], "festivals": [], "season": "Low Season (ฝน)", "avg_temp": "23-32°C", "wellness_tip": "กิจกรรม indoor: สุมยา, แช่เท้า, ชิมชาที่บ่อสวก"},
+      "september": {"flowers": ["มะลิ", "ดาวเรือง", "ดอกรัก"], "festivals": ["ตานก๋วยสลาก", "แข่งเรือเปิดสนาม"], "season": "Low→High Season (ปลายฝน)", "avg_temp": "23-31°C", "wellness_tip": "ชมแข่งเรือ + ร่วมประเพณีตานก๋วยสลาก"},
+      "october": {"flowers": ["ดาวเรือง", "มะลิ", "บานไม่รู้โรย", "เสี้ยวดอกขาว"], "festivals": ["แข่งเรือชิงถ้วยพระราชทาน", "ถวายทานสลากภัต"], "season": "High Season (เริ่มหนาว)", "avg_temp": "22-30°C", "wellness_tip": "High season เริ่มแล้ว อากาศดี เหมาะกับการท่องเที่ยวครบวงจร"},
+      "november": {"flowers": ["บัวตอง", "ดาวเรือง", "บัวหลวง", "เสี้ยวดอกขาว"], "festivals": ["ยี่เป็ง/ลอยกระทง"], "season": "High Season (หนาว)", "avg_temp": "18-28°C", "wellness_tip": "ยี่เป็งลอยกระทง ลอยความทุกข์ ชมประตูป่าดอกไม้"},
+      "december": {"flowers": ["บัวตอง", "เสี้ยวดอกขาว", "เอื้อง", "ลีลาวดี"], "festivals": ["เทศกาลท่องเที่ยวประจำปี"], "season": "High Season (หนาว)", "avg_temp": "15-25°C", "wellness_tip": "อากาศหนาวที่สุดของปี เหมาะกับการทำกิจกรรมกลางแจ้งและ Forest Bathing"}
+    }
+  },
+
+  "locations": {
+    "description": "พิกัดสถานที่สำคัญในจังหวัดน่าน สำหรับใช้ในฟีเจอร์แผนที่และการวางแผนเส้นทาง",
+    "places": [
+      {"id": "LOC001", "name": "วัดพระธาตุแช่แห้ง", "lat": 18.7847, "lng": 100.7869, "type": "temple", "tags": ["sacred","festival","wellness"], "wellness_score": 9},
+      {"id": "LOC002", "name": "วัดภูมินทร์", "lat": 18.7753, "lng": 100.7719, "type": "temple", "tags": ["culture","art","meditation"], "wellness_score": 8},
+      {"id": "LOC003", "name": "ดอยภูคา", "lat": 19.1989, "lng": 101.0756, "type": "national_park", "tags": ["nature","hiking","forest_bathing"], "wellness_score": 10},
+      {"id": "LOC004", "name": "บ่อสวก (Bo Sok Herb)", "lat": 18.7211, "lng": 100.7033, "type": "wellness_community", "tags": ["herbal","wellness","workshop"], "wellness_score": 10},
+      {"id": "LOC005", "name": "บ้านน้ำเกี๋ยน", "lat": 18.6900, "lng": 100.7200, "type": "wellness_community", "tags": ["herbal","wellness_stay","organic"], "wellness_score": 9},
+      {"id": "LOC006", "name": "บ่อเกลือโบราณ", "lat": 19.1500, "lng": 101.1500, "type": "natural_attraction", "tags": ["salt_bath","hot_spring","wellness"], "wellness_score": 8},
+      {"id": "LOC007", "name": "วัดพระธาตุเขาน้อย", "lat": 18.7800, "lng": 100.7600, "type": "temple", "tags": ["viewpoint","sunset","meditation"], "wellness_score": 8},
+      {"id": "LOC008", "name": "ดอยแม่อูคอ (ทุ่งบัวตอง)", "lat": 19.2300, "lng": 101.0100, "type": "natural_attraction", "tags": ["flower_field","photography","nature"], "wellness_score": 9},
+      {"id": "LOC009", "name": "อุทยานแห่งชาติศรีน่าน", "lat": 18.4736, "lng": 100.7417, "type": "national_park", "tags": ["camping","stargazing","nature"], "wellness_score": 8},
+      {"id": "LOC010", "name": "อำเภอปัว (ศูนย์กลางไทลื้อ)", "lat": 19.1600, "lng": 100.9200, "type": "district", "tags": ["tai_lue","culture","handicraft"], "wellness_score": 7}
+    ]
+  },
+
+  "flower_products": {
+    "description": "ผลิตภัณฑ์จากดอกไม้และสมุนไพรที่นักท่องเที่ยวสามารถซื้อเป็นของฝากหรือใช้เพื่อ wellness",
+    "products": [
+      {"name": "ชาเบญจเกสร", "ingredients": ["บัวหลวง", "สารภี", "พิกุล", "บุนนาค", "มะลิ"], "benefits": ["บำรุงหัวใจ", "ผ่อนคลาย", "รสเย็น"], "source": "ผลิตภัณฑ์ชุมชนน่าน", "price_range": "100-250 บาท"},
+      {"name": "ชาใบหม่อนอินทรีย์", "ingredients": ["ใบหม่อน"], "benefits": ["ลดน้ำตาลในเลือด", "บำรุงร่างกาย"], "source": "บ่อสวกเฮิร์บ", "price_range": "80-200 บาท"},
+      {"name": "น้ำมันหอมระเหยมะลิ", "ingredients": ["ดอกมะลิ"], "benefits": ["ผ่อนคลาย", "ปรับสมดุลฮอร์โมน", "สดชื่น"], "source": "ร้านวิสาหกิจชุมชนน่าน", "price_range": "150-500 บาท"},
+      {"name": "น้ำมันหอมระเหยกระดังงา", "ingredients": ["ดอกกระดังงา"], "benefits": ["คลายเครียด", "ผ่อนคลาย", "อบอุ่น"], "source": "ร้านวิสาหกิจชุมชนน่าน", "price_range": "150-500 บาท"},
+      {"name": "ยาดมเบญจชื่นจิต", "ingredients": ["ดอกไม้เบญจเกสร", "การบูร", "พิมเสน", "เมนทอล", "ส้มโอ"], "benefits": ["ผ่อนคลาย", "ลดวิงเวียน", "สดชื่น"], "source": "กรมการแพทย์แผนไทยฯ", "price_range": "50-120 บาท"},
+      {"name": "เกลืออาบน้ำสมุนไพรบ่อเกลือ", "ingredients": ["เกลือบ่อเกลือ", "ไพล", "ตะไคร้", "ขมิ้น"], "benefits": ["ผ่อนคลาย", "กระตุ้น circulation", " detox"], "source": "บ่อเกลือโบราณ", "price_range": "100-300 บาท"},
+      {"name": "น้ำยาบ้วนปากใบเมี่ยง", "ingredients": ["สารสกัดใบเมี่ยง"], "benefits": ["ต้านเชื้อแบคทีเรีย", "สดชื่น"], "source": "บ่อสวกเฮิร์บ", "price_range": "80-200 บาท"},
+      {"name": "ลูกประคบสมุนไพร", "ingredients": ["ไพล", "ตะไคร้", "ขมิ้น", "ใบมะขาม"], "benefits": ["คลายกล้ามเนื้อ", "ลดปวดเมื่อย"], "source": "ชุมชนน่าน", "price_range": "50-150 บาท"},
+      {"name": "น้ำมันนวดไพล", "ingredients": ["น้ำมันไพล", "น้ำมันระกำ", "เมนทอล"], "benefits": ["ลดปวดเมื่อย", "คลายเส้น", "อบอุ่น"], "source": "ชุมชนน่าน", "price_range": "120-350 บาท"},
+      {"name": "พวงมาลัยดอกมะลิสด", "ingredients": ["ดอกมะลิ"], "benefits": ["สวยงาม", "หอม", "เป็นมงคล"], "source": "ตลาดน่าน", "price_range": "20-50 บาท"},
+      {"name": "ผ้าทอมือไทลื้อย้อมคราม", "ingredients": ["ฝ้าย", "ครามธรรมชาติ"], "benefits": ["หัตถกรรม", "ย้อมธรรมชาติ", "unique"], "source": "อำเภอปัว", "price_range": "300-2000 บาท"},
+      {"name": "สครับเกลือบ่อเกลือผสมดอกไม้", "ingredients": ["เกลือบ่อเกลือ", "ดอกดาวเรือง", "ดอกมะลิ", "น้ำมันหอมระเหย"], "benefits": ["ขัดผิว", "ผ่อนคลาย", "หอม"], "source": "บ่อเกลือ", "price_range": "150-400 บาท"}
+    ]
+  },
+
+  "ethnic_groups_extended": [
+    {
+      "id": "EG002",
+      "name_th": "ม้ง",
+      "name_en": "Hmong",
+      "language_family": "ม้ง-เมี่ยน (Hmong-Mien)",
+      "population_in_nan": "มีชุมชนขนาดใหญ่ในอำเภอทุ่งช้างและปัว",
+      "districts": ["อำเภอทุ่งช้าง", "อำเภอปัว", "อำเภอเชียงกลาง"],
+      "religion": "ผีบรรพบุรุษ + พุทธ",
+      "cultural_highlights": {
+        "costume": "ชุดประจำเผ่าสีสันสดใส ม้งขาว (กระโปรงจีบขาว), ม้งลาย (กระโปรงปักลายหลากสี)",
+        "festivals": ["ปีใหม่ม้ง (น่อเป๊โจ่วฮ์)", "พิธีเลี้ยงผี"],
+        "food": ["ข้าวโพด", "ผักกาดดอง", "หมูสามชั้น", "เหล้าข้าวโพด"],
+        "music": "เครื่องดนตรี: แคนม้ง, พิณ, กลอง",
+        "game": "ลูกช่วง (Pov pob) — การโยนลูกบอลผ้าสีสัน เป็นการละเล่นหาคู่"
+      },
+      "flower_connection": {
+        "traditional_flowers": ["ดอกป๊อปปี้ (ในอดีต)", "ดอกไม้ป่าดอย", "ดอกบานไม่รู้โรย"],
+        "meaning": "ดอกไม้ในวัฒนธรรมม้งสื่อถึงความอุดมสมบูรณ์และความเคารพต่อธรรมชาติ",
+        "wellness_activity": ["ลูกช่วง (Movement Therapy)", "เดินชมธรรมชาติ", "เรียนรู้วิถีชีวิตม้ง"]
+      }
+    },
+    {
+      "id": "EG003",
+      "name_th": "อิ้วเมี่ยน",
+      "name_en": "Iu Mien",
+      "language_family": "ม้ง-เมี่ยน (Hmong-Mien)",
+      "population_in_nan": "ชุมชนขนาดเล็กในอำเภอเวียงสา",
+      "districts": ["อำเภอเวียงสา"],
+      "religion": "ผี + พุทธ + ลัทธิบูชาบรรพบุรุษ",
+      "cultural_highlights": {
+        "costume": "ชุดสีน้ำเงินเข้ม ปักลวดลายสีสันสดใสที่ปกเสื้อและชายแขน",
+        "festivals": ["ปีใหม่เมี่ยน", "พิธีขอขมาผี"],
+        "food": ["ข้าวเหนียว", "หมักเนื้อ", "ชาสมุนไพร"],
+        "music": "กลอง, ฆ้อง, ระฆังในพิธีกรรม"
+      },
+      "flower_connection": {
+        "traditional_flowers": ["ดอกไม้ป่าประจำถิ่น", "ดอกบานไม่รู้โรย"],
+        "wellness_activity": ["เยี่ยมชมหมู่บ้านเมี่ยน", "เรียนรู้การย้อมผ้าธรรมชาติ"]
+      }
+    },
+    {
+      "id": "EG004",
+      "name_th": "ขมุ",
+      "name_en": "Khmu",
+      "language_family": "ออสโตรเอเชียติก (Austroasiatic)",
+      "population_in_nan": "ชุมชนดั้งเดิมในพื้นที่สูงของน่าน",
+      "districts": ["อำเภอเวียงสา", "อำเภอเฉลิมพระเกียรติ"],
+      "religion": "ผี + พุทธ",
+      "cultural_highlights": {
+        "costume": "ชุดพื้นเมืองสีดำหรือคราม เสื้อปักลวดลาย",
+        "festivals": ["พิธีเลี้ยงผี", "ปีใหม่ขมุ"],
+        "food": ["ข้าวไร่", "หน่อไม้ดอง", "ลาบ", "น้ำพริก"],
+        "special": "ขมุเป็นกลุ่มชาติพันธุ์ดั้งเดิมที่อาศัยอยู่ในน่านตั้งแต่ก่อนตั้งเมือง"
+      },
+      "flower_connection": {
+        "traditional_flowers": ["ดอกไม้ป่า", "สมุนไพรท้องถิ่น"],
+        "wellness_activity": ["เรียนรู้สมุนไพรป่าจากภูมิปัญญาขมุ", "เดินป่าศึกษาพืช"]
+      }
+    },
+    {
+      "id": "EG005",
+      "name_th": "มลาบริ",
+      "name_en": "Mlabri",
+      "language_family": "ออสโตรเอเชียติก (Austroasiatic)",
+      "population_in_nan": "กลุ่มชาติพันธุ์น้อยที่สุดในไทย, พบในน่าน",
+      "districts": ["อำเภอเวียงสา", "อำเภอบ่อเกลือ"],
+      "religion": "ผีธรรมชาติ",
+      "cultural_highlights": {
+        "costume": "เครื่องนุ่งห่มจากเปลือกไม้ (ดั้งเดิม), ปัจจุบันใช้ผ้าทั่วไป",
+        "special": "มลาบริหรือ 'ผีตองเหลือง' เป็นกลุ่มเร่ร่อนหากินในป่า หนึ่งในกลุ่มชาติพันธุ์ที่เก่าแก่ที่สุดในเอเชียตะวันออกเฉียงใต้ ปัจจุบันมีจำนวนน้อยมาก"
+      },
+      "flower_connection": {
+        "traditional_flowers": ["สมุนไพรป่า", "พืชป่าต่างๆ"],
+        "wellness_activity": ["เรียนรู้การใช้พืชป่า", "การดำรงชีวิตกับธรรมชาติอย่างยั่งยืน"]
+      }
+    },
+    {
+      "id": "EG006",
+      "name_th": "ถิ่น (Tin)",
+      "name_en": "Tin / Lua",
+      "language_family": "ออสโตรเอเชียติก (Austroasiatic)",
+      "population_in_nan": "ชุมชนกระจัดกระจายในน่าน",
+      "districts": ["อำเภอเวียงสา", "อำเภอทุ่งช้าง"],
+      "religion": "ผี + พุทธ",
+      "cultural_highlights": {
+        "costume": "คล้ายขมุ มีเอกลักษณ์ทางภาษาของตนเอง",
+        "festivals": ["พิธีกรรมเกี่ยวกับข้าวและน้ำ"],
+        "food": ["ข้าวไร่", "ผักป่า", "น้ำพริก"]
+      },
+      "flower_connection": {
+        "traditional_flowers": ["ดอกไม้ป่า", "สมุนไพร"],
+        "wellness_activity": ["เรียนรู้วิถีชีวิต", "เดินป่า"]
+      }
+    }
+  ],
+
+  "festival_monthly_overview": {
+    "description": "ภาพรวมเทศกาลรายเดือน สำหรับใช้ในการวางแผนท่องเที่ยว และเป็น quick reference",
+    "overview": [
+      {"month": 1, "festivals": ["ปีใหม่ม้ง"], "flower_highlights": ["บัวตอง", "เสี้ยวดอกขาว"], "season": "High", "weather": "หนาว", "tourist_level": "ปานกลาง-มาก"},
+      {"month": 2, "festivals": ["ดอกไม้พันดวง"], "flower_highlights": ["ทองกวาว", "เสี้ยวดอกขาว"], "season": "High", "weather": "หนาว-เริ่มร้อน", "tourist_level": "ปานกลาง"},
+      {"month": 3, "festivals": ["หกเป็งนมัสการพระธาตุแช่แห้ง"], "flower_highlights": ["ทองกวาว", "พวงแสด"], "season": "High→Low", "weather": "ร้อน", "tourist_level": "ปานกลาง"},
+      {"month": 4, "festivals": ["สงกรานต์", "เลี้ยงผีขุนน้ำ"], "flower_highlights": ["มะลิ", "ดอกไม้ป่า"], "season": "Low", "weather": "ร้อนจัด", "tourist_level": "น้อย (เหมาะ Low Season Campaign)"},
+      {"month": 5, "festivals": ["แปดเป็งวัดจอมแจ้ง", "ไหว้พระธาตุเขาน้อย"], "flower_highlights": ["บัวหลวง", "พุดซ้อน"], "season": "Low", "weather": "ร้อน-เริ่มฝน", "tourist_level": "น้อย (เหมาะ Low Season Campaign)"},
+      {"month": 6, "festivals": [], "flower_highlights": ["บัวหลวง", "กระดังงา"], "season": "Low", "weather": "ฝน", "tourist_level": "น้อย (เหมาะ Low Season Campaign)"},
+      {"month": 7, "festivals": ["แห่เทียนเข้าพรรษา"], "flower_highlights": ["บัวหลวง", "ลีลาวดี"], "season": "Low", "weather": "ฝน", "tourist_level": "น้อย (เหมาะ Low Season Campaign)"},
+      {"month": 8, "festivals": [], "flower_highlights": ["บัวหลวง", "ไพล"], "season": "Low", "weather": "ฝน", "tourist_level": "น้อย (เหมาะ Low Season Campaign)"},
+      {"month": 9, "festivals": ["ตานก๋วยสลาก", "แข่งเรือเปิดสนาม"], "flower_highlights": ["ดาวเรือง", "มะลิ", "ดอกรัก"], "season": "Low→High", "weather": "ปลายฝน", "tourist_level": "เริ่มเพิ่มขึ้น"},
+      {"month": 10, "festivals": ["แข่งเรือชิงถ้วยพระราชทาน", "ถวายทานสลากภัต"], "flower_highlights": ["ดาวเรือง", "บานไม่รู้โรย", "เสี้ยวดอกขาว"], "season": "High", "weather": "เริ่มหนาว", "tourist_level": "มาก"},
+      {"month": 11, "festivals": ["ยี่เป็ง/ลอยกระทง"], "flower_highlights": ["บัวตอง", "ดาวเรือง", "บัวหลวง"], "season": "High", "weather": "หนาว", "tourist_level": "มาก"},
+      {"month": 12, "festivals": ["เทศกาลท่องเที่ยวประจำปี"], "flower_highlights": ["บัวตอง", "เสี้ยวดอกขาว", "เอื้อง"], "season": "High", "weather": "หนาวจัด", "tourist_level": "มากที่สุด"}
+    ],
+    "low_season_months": [4, 5, 6, 7, 8],
+    "low_season_strategy": "เสนอแพ็กเกจ wellness ในช่วง low season: ส่วนลดที่พัก + โปรแกรมสุขภาพ เช่น สุมยา, แช่เท้าสมุนไพร, ชิมชา, เวิร์กชอปสมุนไพร — กลุ่มเป้าหมายชาวต่างชาติที่ต้องการหลีกเลี่ยง High Season",
+    "high_season_months": [1, 2, 10, 11, 12]
   }
 }
