@@ -1,0 +1,6 @@
+{
+  "name": "Nan Flower Wellness Finder",
+  "description": "A minimalist, premium wellness finder and e-commerce platform blending flower scent profiling, zodiac matching, and low-season travel itinerary generation for Nan Province.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
