@@ -5,10 +5,12 @@
 | รายการ | รายละเอียด |
 |--------|-----------|
 | ชื่อไฟล์ | `nan_dataset.json` |
-| เวอร์ชัน | 1.0 |
+| เวอร์ชัน | 1.0 → 1.1 |
 | อัปเดตล่าสุด | 2026-07-13 |
 | ภาษา | ไทย / อังกฤษ |
+| ขนาดไฟล์ | ~227 KB |
 | วัตถุประสงค์ | ใช้เป็นฐานข้อมูลสำหรับ Train Model, Recommendation System, และพัฒนา Application |
+| การเปลี่ยนแปลงใน v1.1 | เพิ่มข้อมูลจาก TAT Data API (events, places, routes, articles แบบ real-time) |
 
 ---
 
@@ -20,12 +22,16 @@
 |-------|-----------|---------|---------|
 | `title` | `string` | ชื่อ dataset | "Nan Province Dataset — Festivals, Traditions, Flowers & Wellness" |
 | `description` | `string` | คำอธิบายโดยรวม | "Comprehensive dataset of Nan province covering all festivals..." |
-| `version` | `string` | เวอร์ชัน | "1.0" |
+| `version` | `string` | เวอร์ชัน | "1.1" |
 | `last_updated` | `string` (date) | วันที่อัปเดตล่าสุด | "2026-07-13" |
-| `total_festivals` | `number` | จำนวนเทศกาลทั้งหมด | 14 |
+| `total_festivals` | `number` | จำนวนเทศกาลทั้งหมด | 15 |
 | `total_flowers` | `number` | จำนวนดอกไม้ทั้งหมด | 20 |
 | `total_wellness_communities` | `number` | จำนวนชุมชน wellness | 4 |
-| `total_ethnic_groups` | `number` | จำนวนกลุ่มชาติพันธุ์ | 1 |
+| `total_ethnic_groups` | `number` | จำนวนกลุ่มชาติพันธุ์ | 6 |
+| `\*NEW\* total_api_events` | `number` | จำนวนกิจกรรมจาก TAT API | 30 |
+| `\*NEW\* total_api_places` | `number` | จำนวนสถานที่จาก TAT API | 50 |
+| `\*NEW\* total_api_routes` | `number` | จำนวนเส้นทางจาก TAT API | 3 |
+| `\*NEW\* total_api_articles` | `number` | จำนวนบทความจาก TAT API | 11 |
 
 ---
 
@@ -237,7 +243,151 @@ nan_dataset.json
 
 ---
 
-## 10. หมายเหตุ (Notes)
+---
+
+## 11. tat_api
+
+ข้อมูลเชื่อมต่อ TAT Data API (Tourism Authority of Thailand) — API จริงที่ใช้ API key ที่ได้รับ
+
+| ฟิลด์ | ชนิดข้อมูล | คำอธิบาย | ตัวอย่าง |
+|-------|-----------|---------|---------|
+| `description` | `string` | คำอธิบาย API | "ข้อมูลจาก TAT Data API..." |
+| `base_url` | `string` | Base URL ของ API | "https://tatdataapi.io/api/v2" |
+| `authentication.method` | `string` | วิธีการ Authentication | "X-API-Key header" |
+| `authentication.language` | `string` | ภาษา (ใช้ Accept-Language header) | "Accept-Language header (th/en)" |
+| `nan_province_id` | `number` | รหัสจังหวัดน่านในระบบ TAT | 108 |
+| `endpoints.events` | `object` | รายละเอียด endpoint events | `{url: "/events", params: "..."}` |
+| `endpoints.places` | `object` | รายละเอียด endpoint places | `{url: "/places", params: "..."}` |
+| `endpoints.routes` | `object` | รายละเอียด endpoint routes | `{url: "/routes", params: "..."}` |
+| `endpoints.articles` | `object` | รายละเอียด endpoint articles | `{url: "/articles", params: "..."}` |
+
+---
+
+## 12. tat_api_events
+
+ข้อมูลกิจกรรม/อีเวนท์ในจังหวัดน่านจาก TAT Data API (ดึงจาก API จริง)
+
+| ฟิลด์ | ชนิดข้อมูล | คำอธิบาย | ตัวอย่าง |
+|-------|-----------|---------|---------|
+| `event_id` | `number` | รหัสกิจกรรมจาก TAT | 36562 |
+| `name_th` | `string` | ชื่อกิจกรรมภาษาไทย | "น่าน เมาเท่น เทรล 2026" |
+| `slug` | `string` | URL slug | "น่าน-เมาเท่น-เทรล-2026" |
+| `full_url` | `string` | URL เต็มบน tourismthailand.org | "https://thai.tourismthailand.org/Events-and-Festivals/..." |
+| `start_date` | `string` (ISO date) | วันที่เริ่มต้น (UTC) | "2026-10-09T17:00:00.000Z" |
+| `end_date` | `string` (ISO date) | วันที่สิ้นสุด (UTC) | "2026-10-10T17:00:00.000Z" |
+| `latitude` | `number \| null` | พิกัดละติจูด | 18.2934281 |
+| `longitude` | `number \| null` | พิกัดลองจิจูด | 100.484447 |
+| `categories` | `array<string>` | หมวดหมู่ของกิจกรรม | `["เทศกาลสุดสร้างสรรค์"]` |
+| `introduction` | `string \| null` | คำอธิบายสั้น | "โรงเรียนประกิตเวชศักดิ์ อ.นาน้อย จ.น่าน" |
+| `contact_phones` | `array<string>` | เบอร์โทรศัพท์ติดต่อ | `["089 749 1949"]` |
+| `contact_emails` | `array<string>` | อีเมลติดต่อ | `["NanMountainTrail@gmail.com"]` |
+| `registration_urls` | `array<string>` | URL สำหรับลงทะเบียน | `["https://www.regis.run/event/nmt2026"]` |
+| `thumbnail_url` | `string` | URL รูปภาพ thumbnail | "https://dmc.tatdataapi.io/assets/..." |
+| `mobile_image_urls` | `array<string>` | รูปภาพสำหรับมือถือ | `["https://dmc.tatdataapi.io/assets/..."]` |
+| `desktop_image_urls` | `array<string>` | รูปภาพสำหรับเดสก์ท็อป | `["https://dmc.tatdataapi.io/assets/..."]` |
+| `province_id` | `number` | รหัสจังหวัด | 108 |
+| `province_name` | `string` | ชื่อจังหวัด | "น่าน" |
+
+### ตัวอย่างกิจกรรมสำคัญจาก API
+
+| event_id | กิจกรรม | ช่วงเวลา |
+|----------|---------|---------|
+| 36562 | น่าน เมาเท่น เทรล 2026 | 10-11 ต.ค. 2026 |
+| 34693 | ประเพณีแข่งเรือจังหวัดน่าน ชิงถ้วยพระราชทานฯ 2568 | 18-19 ก.ย. 2568 |
+| 33653 | ประเพณีแข่งเรือจังหวัดน่าน 2568 | 18 ส.ค. - 6 ก.ย. 2568 |
+| 33654 | เสน่หา มนตรา น่านนครา | 6 มิ.ย. 2568 |
+| 33191 | สรงน้ำพระ บูชาตุง ข่วงสะหลี ปี๋ใหม่เมืองน่าน | 11-16 เม.ย. 2568 |
+
+---
+
+## 13. tat_api_places
+
+ข้อมูลสถานที่ท่องเที่ยวในจังหวัดน่านจาก TAT Data API
+
+| ฟิลด์ | ชนิดข้อมูล | คำอธิบาย | ตัวอย่าง |
+|-------|-----------|---------|---------|
+| `place_id` | `string` | รหัสสถานที่จาก TAT | "18774" |
+| `name_th` | `string` | ชื่อสถานที่ภาษาไทย | "อุทยานแห่งชาติแม่จริม" |
+| `introduction` | `string \| null` | คำแนะนำสั้น | null |
+| `category` | `string` | หมวดหมู่สถานที่ | "สถานที่ท่องเที่ยว" |
+| `latitude` | `string \| null` | พิกัดละติจูด | "18.60254" |
+| `longitude` | `string \| null` | พิกัดลองจิจูด | "100.98026" |
+| `thumbnail_url` | `string \| array` | URL รูปภาพ (string หรือ array) | "https://dmc.tatdataapi.io/assets/..." |
+| `detail_summary` | `string` | รายละเอียดสถานที่ | "แหล่งเรียนรู้..." |
+| `detail_images` | `array<string>` | รูปภาพเพิ่มเติม | `["https://dmc.tatdataapi.io/assets/..."]` |
+| `address` | `string \| null` | ที่อยู่ | null |
+| `district` | `string` | อำเภอ | "แม่จริม" |
+| `sub_district` | `string` | ตำบล | "น้ำปาย" |
+| `postcode` | `string` | รหัสไปรษณีย์ | "55170" |
+| `province_id` | `number \| null` | รหัสจังหวัด | 108 |
+| `province_name` | `string` | ชื่อจังหวัด | "น่าน" |
+| `tags` | `array<string>` | แท็ก | `["อุทยานแห่งชาติแม่จริม", "น่าน", ...]` |
+| `status` | `string` | สถานะ | "approved" |
+
+---
+
+## 14. tat_api_routes
+
+เส้นทางท่องเที่ยวที่ผ่านจังหวัดน่านจาก TAT Data API
+
+| ฟิลด์ | ชนิดข้อมูล | คำอธิบาย | ตัวอย่าง |
+|-------|-----------|---------|---------|
+| `route_id` | `number` | รหัสเส้นทาง | 57 |
+| `name_th` | `string` | ชื่อเส้นทางภาษาไทย | "3 วัน 2 คืน ชวนเธอมาหลงรัก \"น่าน\"" |
+| `introduction` | `string` | คำอธิบายเส้นทาง | "เส้นทางท่องเที่ยว 3 วัน 2 คืน : น่าน" |
+| `number_of_days` | `number` | จำนวนวัน | 3 |
+| `thumbnail_url` | `string` | URL รูปภาพ | "https://dmc.tatdataapi.io/assets/..." |
+| `provinces_with_days` | `array<object>` | จังหวัดและวันที่แวะ | `[{province: "น่าน", day: 1}]` |
+| `regions` | `array<string>` | ภาคที่ผ่าน | `["ภาคเหนือ"]` |
+| `place_image_urls` | `array<string>` | รูปภาพสถานที่ในเส้นทาง | `["https://dmc.tatdataapi.io/assets/..."]` |
+
+### เส้นทางท่องเที่ยวที่ผ่านน่าน
+
+| route_id | ชื่อ | จำนวนวัน |
+|----------|-----|---------|
+| 57 | 3 วัน 2 คืน ชวนเธอมาหลงรัก "น่าน" | 3 วัน |
+| 68 | น่าน - แพร่ - เชียงราย - แม่ฮ่องสอน | 4 วัน |
+| 54 | น่าน - แพร่ | 2 วัน |
+
+---
+
+## 15. tat_api_articles
+
+บทความเกี่ยวกับจังหวัดน่านจาก TAT Data API
+
+| ฟิลด์ | ชนิดข้อมูล | คำอธิบาย | ตัวอย่าง |
+|-------|-----------|---------|---------|
+| `article_id` | `string` | รหัสบทความ | "227" |
+| `title_th` | `string` | ชื่อบทความภาษาไทย | "รีวิวเที่ยว พะเยา-น่าน 2 วัน 1 คืน" |
+| `slug` | `string` | URL slug | "รีวิวเที่ยว-พะเยา-น่าน-2-วัน-1-คืน..." |
+| `type` | `string` | ประเภทบทความ | "See & Do" |
+| `type_id` | `string` | รหัสประเภท | "3" |
+| `thumbnail_url` | `string` | URL รูปภาพ | "https://dmc.tatdataapi.io/assets/..." |
+| `updated_at` | `string` (ISO date) | วันที่อัปเดตล่าสุด | "2025-02-03T14:06:50.663Z" |
+| `created_at` | `string` (ISO date) | วันที่สร้าง | "2025-02-03T14:06:50.663Z" |
+
+---
+
+## 16. Usage Notes (วิธีการใช้ TAT API Data)
+
+1. **Authentication**: ส่ง API key ใน header `X-API-Key` และภาษาใน `Accept-Language` (`th` หรือ `en`)
+2. **API Key**: `Y94v9EU4ppWYAsuE6N8EKQX6SVLpXi8l`
+3. **Base URL**: `https://tatdataapi.io/api/v2`
+4. **Nan province ID**: `108` (ใช้ใน query parameter `provinceId=108`)
+5. **Keyword search**: ใช้ keyword `"น่าน"` หรือ `"Nan"` ค้นหาข้อมูลที่เกี่ยวข้อง
+6. **ข้อจำกัด**: 
+   - endpoint `/places/provinceId` ไม่ filter ตามจังหวัด ต้องใช้ keyword search แทน
+   - API ไม่มีข้อมูล wellness/flower โดยตรง ต้อง cross-reference กับ dataset
+7. **Endpoint summary**:
+   - `GET /events?provinceId=108` - กิจกรรมในน่าน
+   - `GET /events/{id}` - รายละเอียดกิจกรรม
+   - `GET /places?keyword=น่าน` - สถานที่ในน่าน
+   - `GET /routes?keyword=น่าน` - เส้นทางท่องเที่ยวผ่านน่าน
+   - `GET /articles?keyword=น่าน` - บทความเกี่ยวกับน่าน
+
+---
+
+## 17. หมายเหตุ (Notes)
 
 1. **ฟิลด์ที่เป็น optional** จะมีเครื่องหมาย (optional) กำกับ อาจเป็น `null` หรือไม่มีในบาง record
 2. **ข้อมูลภาษาไทย** เป็น primary ส่วนภาษาอังกฤษเป็น secondary สำหรับรองรับ multilingual

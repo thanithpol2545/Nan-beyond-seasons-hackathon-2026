@@ -11,9 +11,13 @@
     "total_locations": 10,
     "total_products": 12,
     "has_blooming_calendar": true,
-    "has_monthly_overview": true
+    "has_monthly_overview": true,
+    "has_tat_api_data": true,
+    "total_api_events": 30,
+    "total_api_places": 50,
+    "total_api_routes": 3,
+    "total_api_articles": 11
   },
-
   "festivals": [
     {
       "id": "F001",
@@ -26,8 +30,16 @@
       "description_th": "งานรื่นเริงของชาวม้ง ฉลองความสำเร็จในการเพาะปลูกหลังเก็บเกี่ยวผลผลิต บูชาเซ่นไหว้บรรพบุรุษที่ให้ความคุ้มครอง มีการแต่งกายชุดประจำเผ่าสีสันสดใส มีการละเล่นพื้นเมือง เช่น ลูกช่วง (ball tossing) และการแสดงดนตรี",
       "description_en": "Hmong New Year celebration after harvest. Includes traditional costumes, ball tossing games, music performances, and ancestor worship ceremonies.",
       "flowers_used": [
-        {"name": "ดอกป๊อปปี้", "use": "ประดับตกแต่ง", "symbolism": "ความอุดมสมบูรณ์"},
-        {"name": "ดอกไม้ป่าประจำถิ่น", "use": "เครื่องบูชาบรรพบุรุษ", "symbolism": "ความเคารพต่อธรรมชาติ"}
+        {
+          "name": "ดอกป๊อปปี้",
+          "use": "ประดับตกแต่ง",
+          "symbolism": "ความอุดมสมบูรณ์"
+        },
+        {
+          "name": "ดอกไม้ป่าประจำถิ่น",
+          "use": "เครื่องบูชาบรรพบุรุษ",
+          "symbolism": "ความเคารพต่อธรรมชาติ"
+        }
       ],
       "wellness_connection": "Ethnic cultural experience, Movement therapy through traditional games, Community bonding"
     },
@@ -42,11 +54,31 @@
       "description_th": "ประเพณีขึ้นไปนมัสการพระธาตุแช่แห้ง ซึ่งเป็นพระธาตุคู่บ้านคู่เมืองของจังหวัดน่าน ในวันขึ้น 15 ค่ำ เดือน 6 เหนือ ชาวบ้านจะนำดอกไม้ ธูป เทียน ไปสักการะและทำบุญ",
       "description_en": "Annual pilgrimage to Phra That Chae Haeng, the most sacred pagoda of Nan province. Locals bring flowers, incense, and candles for merit-making.",
       "flowers_used": [
-        {"name": "ดอกบัวหลวง", "use": "บูชาพระธาตุ", "symbolism": "ความบริสุทธิ์, การตรัสรู้"},
-        {"name": "ดอกมะลิ", "use": "พวงมาลัยถวายพระ", "symbolism": "ความบริสุทธิ์ใจ, ความกตัญญู"},
-        {"name": "ดอกดาวเรือง", "use": "บายศรี, เครื่องบูชา", "symbolism": "โชคลาภ, ความเป็นสิริมงคล"},
-        {"name": "ดอกบานไม่รู้โรย", "use": "บายศรี, ตกแต่ง", "symbolism": "ความยั่งยืน, ไม่รู้โรย"},
-        {"name": "ดอกรัก", "use": "บายศรี, อุบะ", "symbolism": "ความรัก, ความสามัคคี"}
+        {
+          "name": "ดอกบัวหลวง",
+          "use": "บูชาพระธาตุ",
+          "symbolism": "ความบริสุทธิ์, การตรัสรู้"
+        },
+        {
+          "name": "ดอกมะลิ",
+          "use": "พวงมาลัยถวายพระ",
+          "symbolism": "ความบริสุทธิ์ใจ, ความกตัญญู"
+        },
+        {
+          "name": "ดอกดาวเรือง",
+          "use": "บายศรี, เครื่องบูชา",
+          "symbolism": "โชคลาภ, ความเป็นสิริมงคล"
+        },
+        {
+          "name": "ดอกบานไม่รู้โรย",
+          "use": "บายศรี, ตกแต่ง",
+          "symbolism": "ความยั่งยืน, ไม่รู้โรย"
+        },
+        {
+          "name": "ดอกรัก",
+          "use": "บายศรี, อุบะ",
+          "symbolism": "ความรัก, ความสามัคคี"
+        }
       ],
       "wellness_connection": "Walking meditation (เดินจงกรมขึ้นเขาพระธาตุ), Mindfulness, Spiritual well-being, Merit-making reduces stress and anxiety"
     },
@@ -61,13 +93,41 @@
       "description_th": "ประเพณีปีใหม่ไทย มีการสรงน้ำพระ การรดน้ำดำหัวผู้ใหญ่ การก่อเจดีย์ทราย การทำบุญตักบาตร และการเล่นน้ำ ชาวล้านนาเรียกว่า 'ปีใหม่เมือง' มีการทำบายศรีและเครื่องสักการะด้วยดอกไม้",
       "description_en": "Thai New Year celebration. Includes water pouring on Buddha images, paying respects to elders, building sand pagodas, and water festivities.",
       "flowers_used": [
-        {"name": "ดอกมะลิ", "use": "รดน้ำดำหัว, มาลัย", "symbolism": "ความบริสุทธิ์, ความเคารพ"},
-        {"name": "ดอกกุหลาบ", "use": "บายศรี, พวงมาลัย", "symbolism": "ความรัก, ความเคารพ"},
-        {"name": "ดอกดาวเรือง", "use": "บายศรี, ก่อเจดีย์ทราย", "symbolism": "โชคลาภ, สิริมงคล"},
-        {"name": "ดอกรัก", "use": "บายศรี, อุบะ", "symbolism": "ความรักใคร่กลมเกลียว"},
-        {"name": "ดอกบัวแดง", "use": "บูชาพระ, สรงน้ำพระ", "symbolism": "ความบริสุทธิ์ทางจิต"},
-        {"name": "ดอกบานไม่รู้โรย", "use": "บายศรี, เครื่องบูชา", "symbolism": "อายุยืน, ความมั่นคง"},
-        {"name": "ดอกพุดซ้อน", "use": "พวงมาลัย", "symbolism": "ความบริสุทธิ์, ความมั่นคง"}
+        {
+          "name": "ดอกมะลิ",
+          "use": "รดน้ำดำหัว, มาลัย",
+          "symbolism": "ความบริสุทธิ์, ความเคารพ"
+        },
+        {
+          "name": "ดอกกุหลาบ",
+          "use": "บายศรี, พวงมาลัย",
+          "symbolism": "ความรัก, ความเคารพ"
+        },
+        {
+          "name": "ดอกดาวเรือง",
+          "use": "บายศรี, ก่อเจดีย์ทราย",
+          "symbolism": "โชคลาภ, สิริมงคล"
+        },
+        {
+          "name": "ดอกรัก",
+          "use": "บายศรี, อุบะ",
+          "symbolism": "ความรักใคร่กลมเกลียว"
+        },
+        {
+          "name": "ดอกบัวแดง",
+          "use": "บูชาพระ, สรงน้ำพระ",
+          "symbolism": "ความบริสุทธิ์ทางจิต"
+        },
+        {
+          "name": "ดอกบานไม่รู้โรย",
+          "use": "บายศรี, เครื่องบูชา",
+          "symbolism": "อายุยืน, ความมั่นคง"
+        },
+        {
+          "name": "ดอกพุดซ้อน",
+          "use": "พวงมาลัย",
+          "symbolism": "ความบริสุทธิ์, ความมั่นคง"
+        }
       ],
       "wellness_connection": "Family bonding (รดน้ำดำหัว), Community spirit, Cooling water therapy, Letting go of past year stress"
     },
@@ -82,8 +142,16 @@
       "description_th": "ประเพณีขึ้นไปนมัสการพระธาตุจอมแจ้ง ซึ่งสร้างโดยเจ้าฟ้าอัตถวรปัญโญ เจ้าผู้ครองนครน่าน เมื่อปี พ.ศ. 2390 มีการนำดอกไม้ไปสักการะและทำบุญ",
       "description_en": "Tradition of worshiping at Phra That Chom Chaeng, built in 1847 by the ruler of Nan. Flower offerings and merit-making.",
       "flowers_used": [
-        {"name": "ดอกไม้ป่าดอย", "use": "ถวายพระธาตุ", "symbolism": "ความบริสุทธิ์ตามธรรมชาติ"},
-        {"name": "ดอกเอื้อง (กล้วยไม้ล้านนา)", "use": "ประดับ, บูชา", "symbolism": "โชคลาภ, มั่งมีเงินทอง"}
+        {
+          "name": "ดอกไม้ป่าดอย",
+          "use": "ถวายพระธาตุ",
+          "symbolism": "ความบริสุทธิ์ตามธรรมชาติ"
+        },
+        {
+          "name": "ดอกเอื้อง (กล้วยไม้ล้านนา)",
+          "use": "ประดับ, บูชา",
+          "symbolism": "โชคลาภ, มั่งมีเงินทอง"
+        }
       ],
       "wellness_connection": "Nature connection, Mindful walking, Altitude meditation"
     },
@@ -98,11 +166,31 @@
       "description_th": "ประเพณีแห่เทียนพรรษา มีการหล่อเทียนและตกแต่งเทียนด้วยดอกไม้อย่างสวยงาม แห่รอบเมืองก่อนนำไปถวายวัด ช่วงเข้าพรรษาเป็นเวลา 3 เดือนที่พระสงฆ์จำพรรษาอยู่ในวัด",
       "description_en": "Candle festival before Buddhist Lent. Elaborately decorated candles with floral designs are paraded and offered to temples.",
       "flowers_used": [
-        {"name": "ดอกบัวหลวง", "use": "ตกแต่งแท่นเทียน", "symbolism": "การตรัสรู้, หลุดพ้น"},
-        {"name": "ดอกดาวเรือง", "use": "ประดับเทียน", "symbolism": "สว่างไสวดั่งทอง"},
-        {"name": "ดอกกุหลาบ", "use": "ตกแต่งขบวนแห่", "symbolism": "ความสวยงาม, ความรักในศาสนา"},
-        {"name": "ดอกบานไม่รู้โรย", "use": "ตกแต่ง", "symbolism": "ความมั่นคง, ไม่รู้โรย"},
-        {"name": "ดอกรัก", "use": "ร้อยอุบะ", "symbolism": "ความรัก, ความสามัคคี"}
+        {
+          "name": "ดอกบัวหลวง",
+          "use": "ตกแต่งแท่นเทียน",
+          "symbolism": "การตรัสรู้, หลุดพ้น"
+        },
+        {
+          "name": "ดอกดาวเรือง",
+          "use": "ประดับเทียน",
+          "symbolism": "สว่างไสวดั่งทอง"
+        },
+        {
+          "name": "ดอกกุหลาบ",
+          "use": "ตกแต่งขบวนแห่",
+          "symbolism": "ความสวยงาม, ความรักในศาสนา"
+        },
+        {
+          "name": "ดอกบานไม่รู้โรย",
+          "use": "ตกแต่ง",
+          "symbolism": "ความมั่นคง, ไม่รู้โรย"
+        },
+        {
+          "name": "ดอกรัก",
+          "use": "ร้อยอุบะ",
+          "symbolism": "ความรัก, ความสามัคคี"
+        }
       ],
       "wellness_connection": "Community participation, Artistic expression, Spiritual renewal, Mindful reflection during Lent period"
     },
@@ -117,11 +205,31 @@
       "description_th": "ประเพณีของชาวล้านนา แสดงความระลึกถึงบรรพบุรุษและญาติมิตรผู้ล่วงลับ ด้วยการทำบุญอุทิศส่วนกุศลผ่าน 'ก๋วยสลาก' ซึ่งสานจากไม้ไผ่ ภายในบรรจุข้าวสาร อาหารแห้ง ใบหมากพลู ไม้ดอก ไม้ประดับ ติดเทียนบุหรี่และเงิน ที่ขาดไม่ได้คือดอกไม้ในก๋วยสลาก",
       "description_en": "Lanna tradition of offering 'Salak' baskets to monks as merit transfer to ancestors. Bamboo baskets contain rice, dry food, betel nuts, flowers, candles, and money.",
       "flowers_used": [
-        {"name": "ดอกมะลิ", "use": "บรรจุในก๋วยสลาก", "symbolism": "ความบริสุทธิ์, ความกตัญญูต่อบรรพบุรุษ"},
-        {"name": "ดอกดาวเรือง", "use": "ประดับก๋วยสลาก", "symbolism": "โชคลาภ, สิริมงคล"},
-        {"name": "ดอกบานไม่รู้โรย", "use": "มัดรวมกับก๋วยสลาก", "symbolism": "ความยั่งยืนของบุญ"},
-        {"name": "ดอกรัก", "use": "ร้อยเป็นอุบะ", "symbolism": "ความรัก, ความผูกพันในครอบครัว"},
-        {"name": "ดอกพุด", "use": "ประดับก๋วยสลาก", "symbolism": "ความบริสุทธิ์"}
+        {
+          "name": "ดอกมะลิ",
+          "use": "บรรจุในก๋วยสลาก",
+          "symbolism": "ความบริสุทธิ์, ความกตัญญูต่อบรรพบุรุษ"
+        },
+        {
+          "name": "ดอกดาวเรือง",
+          "use": "ประดับก๋วยสลาก",
+          "symbolism": "โชคลาภ, สิริมงคล"
+        },
+        {
+          "name": "ดอกบานไม่รู้โรย",
+          "use": "มัดรวมกับก๋วยสลาก",
+          "symbolism": "ความยั่งยืนของบุญ"
+        },
+        {
+          "name": "ดอกรัก",
+          "use": "ร้อยเป็นอุบะ",
+          "symbolism": "ความรัก, ความผูกพันในครอบครัว"
+        },
+        {
+          "name": "ดอกพุด",
+          "use": "ประดับก๋วยสลาก",
+          "symbolism": "ความบริสุทธิ์"
+        }
       ],
       "wellness_connection": "Grief healing through ancestor remembrance, Family bonding, Letting go, Generosity practice"
     },
@@ -136,10 +244,26 @@
       "description_th": "การแข่งเรือยาวประเพณีของจังหวัดน่าน เรือถูกขุดจากไม้ตะเคียนทองทั้งต้น หัวเรือแกะสลักเป็นหัวพญานาคแบบล้านนา หางเป็นหางพญานาค เชื่อว่าพญานาคมีความศักดิ์สิทธิ์ ดลบันดาลให้ฝนฟ้าอุดมสมบูรณ์ แบ่งเป็นเรือใหญ่ (41-58 ฝีพาย), เรือกลาง (31-40 ฝีพาย), เรือเล็ก (20-30 ฝีพาย)",
       "description_en": "Traditional long boat race. Boats carved from whole ironwood logs with Naga serpent bow. Three categories: large (41-58 paddlers), medium (31-40), small (20-30).",
       "flowers_used": [
-        {"name": "ดอกไม้ประดับเรือ", "use": "พวงมาลัยคล้องหัวเรือ", "symbolism": "ความเป็นสิริมงคลแก่เรือและฝีพาย"},
-        {"name": "ดอกดาวเรือง", "use": "บายศรีบูชาพญานาค", "symbolism": "โชคลาภ, บารมี"},
-        {"name": "ดอกมะลิ", "use": "พวงมาลัยบูชา", "symbolism": "ความบริสุทธิ์ของนักแข่ง"},
-        {"name": "ดอกบัวหลวง", "use": "เครื่องสังเวยพญานาค", "symbolism": "ความศักดิ์สิทธิ์"}
+        {
+          "name": "ดอกไม้ประดับเรือ",
+          "use": "พวงมาลัยคล้องหัวเรือ",
+          "symbolism": "ความเป็นสิริมงคลแก่เรือและฝีพาย"
+        },
+        {
+          "name": "ดอกดาวเรือง",
+          "use": "บายศรีบูชาพญานาค",
+          "symbolism": "โชคลาภ, บารมี"
+        },
+        {
+          "name": "ดอกมะลิ",
+          "use": "พวงมาลัยบูชา",
+          "symbolism": "ความบริสุทธิ์ของนักแข่ง"
+        },
+        {
+          "name": "ดอกบัวหลวง",
+          "use": "เครื่องสังเวยพญานาค",
+          "symbolism": "ความศักดิ์สิทธิ์"
+        }
       ],
       "wellness_connection": "Teamwork & camaraderie, Physical fitness through paddling, Community bonding, Stress release through celebration"
     },
@@ -154,10 +278,26 @@
       "description_th": "การแข่งขันเรือชิงถ้วยพระราชทานสมเด็จพระกนิษฐาธิราชเจ้า กรมสมเด็จพระเทพรัตนราชสุดาฯ พร้อมประเพณีถวายทานสลากภัต วัดพระธาตุแช่แห้ง มีการประกวดกองเชียร์จาก 14 ชุมชน การแสดงศิลปวัฒนธรรมท้องถิ่น",
       "description_en": "Boat race for the Royal Princess's Trophy combined with Salak Patt offering ceremony. Includes cheerleading contests from 14 communities and local performances.",
       "flowers_used": [
-        {"name": "ดอกดาวเรือง", "use": "ตกแต่งขบวนเรือและกองเชียร์", "symbolism": "สิริมงคล, โชคลาภ"},
-        {"name": "ดอกกุหลาบ", "use": "ประดับกองเชียร์", "symbolism": "ความสวยงาม"},
-        {"name": "ดอกบัวหลวง", "use": "เครื่องสักการะสลากภัต", "symbolism": "ความบริสุทธิ์, บูชาพระรัตนตรัย"},
-        {"name": "ดอกมะลิ", "use": "พวงมาลัยถวาย", "symbolism": "ความกตัญญู"}
+        {
+          "name": "ดอกดาวเรือง",
+          "use": "ตกแต่งขบวนเรือและกองเชียร์",
+          "symbolism": "สิริมงคล, โชคลาภ"
+        },
+        {
+          "name": "ดอกกุหลาบ",
+          "use": "ประดับกองเชียร์",
+          "symbolism": "ความสวยงาม"
+        },
+        {
+          "name": "ดอกบัวหลวง",
+          "use": "เครื่องสักการะสลากภัต",
+          "symbolism": "ความบริสุทธิ์, บูชาพระรัตนตรัย"
+        },
+        {
+          "name": "ดอกมะลิ",
+          "use": "พวงมาลัยถวาย",
+          "symbolism": "ความกตัญญู"
+        }
       ],
       "wellness_connection": "Cultural pride, Social bonding, Physical activity, Community wellness"
     },
@@ -172,13 +312,41 @@
       "description_th": "ประเพณีลอยกระทงของล้านนา เรียก 'ยี่เป็ง' (เพ็ญเดือนยี่) มีการทำกระทงและ 'ประตูป่า' ซุ้มประตูตกแต่งด้วยดอกไม้และโคมพื้นเมือง การจุดผางประทีป และการลอยกระทงในแม่น้ำน่าน",
       "description_en": "Lanna Yi Peng festival with floating krathong, decorated gates 'Pratu Pa', lantern releases, and candle offerings on the Nan River.",
       "flowers_used": [
-        {"name": "ดอกดาวเรือง", "use": "ประตูป่า, กระทง", "symbolism": "โชคลาภ, ความสว่างไสว"},
-        {"name": "ดอกบานไม่รู้โรย", "use": "ประตูป่า, ตกแต่ง", "symbolism": "อายุยืน, ไม่รู้โรย"},
-        {"name": "ดอกรัก", "use": "อุบะ, ร้อยมาลัย", "symbolism": "ความรัก"},
-        {"name": "ดอกบัวหลวง", "use": "กระทง, บูชา", "symbolism": "การตรัสรู้"},
-        {"name": "ดอกมะลิ", "use": "กระทง, มาลัย", "symbolism": "ความบริสุทธิ์"},
-        {"name": "ดอกกุหลาบ", "use": "ประตูป่า", "symbolism": "ความสวยงาม"},
-        {"name": "ดอกกล้วยไม้ (เอื้อง)", "use": "โคมประดับ", "symbolism": "โชคลาภ"}
+        {
+          "name": "ดอกดาวเรือง",
+          "use": "ประตูป่า, กระทง",
+          "symbolism": "โชคลาภ, ความสว่างไสว"
+        },
+        {
+          "name": "ดอกบานไม่รู้โรย",
+          "use": "ประตูป่า, ตกแต่ง",
+          "symbolism": "อายุยืน, ไม่รู้โรย"
+        },
+        {
+          "name": "ดอกรัก",
+          "use": "อุบะ, ร้อยมาลัย",
+          "symbolism": "ความรัก"
+        },
+        {
+          "name": "ดอกบัวหลวง",
+          "use": "กระทง, บูชา",
+          "symbolism": "การตรัสรู้"
+        },
+        {
+          "name": "ดอกมะลิ",
+          "use": "กระทง, มาลัย",
+          "symbolism": "ความบริสุทธิ์"
+        },
+        {
+          "name": "ดอกกุหลาบ",
+          "use": "ประตูป่า",
+          "symbolism": "ความสวยงาม"
+        },
+        {
+          "name": "ดอกกล้วยไม้ (เอื้อง)",
+          "use": "โคมประดับ",
+          "symbolism": "โชคลาภ"
+        }
       ],
       "wellness_connection": "Letting go of negative emotions (ลอยความทุกข์), Mindfulness practice, Community celebration, Light therapy through candle/lantern gazing"
     },
@@ -193,8 +361,16 @@
       "description_th": "พิธีกรรมบูชาผีขุนน้ำหรือผีป่าต้นน้ำ ซึ่งเชื่อว่าเป็นผู้ปกปักรักษาป่าไม้และแหล่งน้ำ ชาวบ้านจะนำเครื่องสังเวยและดอกไม้ไปบูชาที่ต้นน้ำ เพื่อขอให้ฝนตกตามฤดูกาลและป่าไม้อุดมสมบูรณ์",
       "description_en": "Water source spirit worship ceremony. Locals offer food, flowers, and incense to the guardian spirits of forests and water sources for rain and abundance.",
       "flowers_used": [
-        {"name": "ดอกไม้ป่าประจำถิ่น", "use": "สังเวยผีขุนน้ำ", "symbolism": "การคืนสู่ธรรมชาติ"},
-        {"name": "ดอกดาวเรือง", "use": "เครื่องบูชา", "symbolism": "สิริมงคล"}
+        {
+          "name": "ดอกไม้ป่าประจำถิ่น",
+          "use": "สังเวยผีขุนน้ำ",
+          "symbolism": "การคืนสู่ธรรมชาติ"
+        },
+        {
+          "name": "ดอกดาวเรือง",
+          "use": "เครื่องบูชา",
+          "symbolism": "สิริมงคล"
+        }
       ],
       "wellness_connection": "Nature connection (Forest Bathing), Environmental awareness, Community bonding, Spiritual grounding"
     },
@@ -209,11 +385,31 @@
       "description_th": "พิธีสำคัญของชาวล้านนา เชื่อว่าเป็นการต่ออายุหรือต่อชีวิตของบ้านเมืองหรือของคนให้ยืนยาว มีความสุข การทำพิธีต้องใช้บายศรีเครื่องสักการะที่ประดับด้วยดอกไม้มงคลหลายชนิด",
       "description_en": "Lanna life-extension ceremony believed to prolong life and bring prosperity. Requires elaborate flower-adorned baisri offerings.",
       "flowers_used": [
-        {"name": "ดอกดาวเรือง", "use": "บายศรี, เครื่องสังเวย", "symbolism": "โชคลาภ, สิริมงคล, ชีวิตรุ่งเรือง"},
-        {"name": "ดอกบัวหลวง", "use": "ยอดบายศรี", "symbolism": "ปัญญา, การตรัสรู้"},
-        {"name": "ดอกบานไม่รู้โรย", "use": "ลายบายศรี", "symbolism": "อายุยืนยาว, ไม่รู้โรย"},
-        {"name": "ดอกรัก", "use": "อุบะบายศรี", "symbolism": "ความรักใคร่กลมเกลียว"},
-        {"name": "ดอกมะลิ", "use": "พวงมาลัยถวาย", "symbolism": "ความบริสุทธิ์"}
+        {
+          "name": "ดอกดาวเรือง",
+          "use": "บายศรี, เครื่องสังเวย",
+          "symbolism": "โชคลาภ, สิริมงคล, ชีวิตรุ่งเรือง"
+        },
+        {
+          "name": "ดอกบัวหลวง",
+          "use": "ยอดบายศรี",
+          "symbolism": "ปัญญา, การตรัสรู้"
+        },
+        {
+          "name": "ดอกบานไม่รู้โรย",
+          "use": "ลายบายศรี",
+          "symbolism": "อายุยืนยาว, ไม่รู้โรย"
+        },
+        {
+          "name": "ดอกรัก",
+          "use": "อุบะบายศรี",
+          "symbolism": "ความรักใคร่กลมเกลียว"
+        },
+        {
+          "name": "ดอกมะลิ",
+          "use": "พวงมาลัยถวาย",
+          "symbolism": "ความบริสุทธิ์"
+        }
       ],
       "wellness_connection": "Psychological well-being through ritual, Community support, Hope and positive mindset, Anxiety reduction"
     },
@@ -228,10 +424,26 @@
       "description_th": "ประเพณีไทลื้อในการฟังเทศน์มหาชาติ (พระเวสสันดรชาดก) โดยมีการทำ 'ดอกไม้พันดวง' ดอกไม้ประดิษฐ์จากสีธรรมชาติเป็นจำนวนมาก ถวายเป็นพุทธบูชา ความพิเศษคือมีการร่วมแรงร่วมใจทำดอกไม้ประดิษฐ์จากต้นไม้ในท้องถิ่น",
       "description_en": "Tai Lue tradition of listening to the Mahachat sermon (Lord Vessantara's story). Features 'Flower Thousand' — hundreds of handmade flowers from natural materials offered as Buddhist homage.",
       "flowers_used": [
-        {"name": "ดอกไม้ประดิษฐ์จากธรรมชาติ", "use": "พุทธบูชา ดอกไม้พันดวง", "symbolism": "ศรัทธา, การเสียสละ"},
-        {"name": "ดอกรัก", "use": "ประดับ", "symbolism": "ความรักในพระธรรม"},
-        {"name": "ดอกบัวหลวง", "use": "พุทธบูชา", "symbolism": "การตรัสรู้"},
-        {"name": "ดอกมะลิ", "use": "เครื่องบูชาธรรม", "symbolism": "ความบริสุทธิ์"}
+        {
+          "name": "ดอกไม้ประดิษฐ์จากธรรมชาติ",
+          "use": "พุทธบูชา ดอกไม้พันดวง",
+          "symbolism": "ศรัทธา, การเสียสละ"
+        },
+        {
+          "name": "ดอกรัก",
+          "use": "ประดับ",
+          "symbolism": "ความรักในพระธรรม"
+        },
+        {
+          "name": "ดอกบัวหลวง",
+          "use": "พุทธบูชา",
+          "symbolism": "การตรัสรู้"
+        },
+        {
+          "name": "ดอกมะลิ",
+          "use": "เครื่องบูชาธรรม",
+          "symbolism": "ความบริสุทธิ์"
+        }
       ],
       "wellness_connection": "Mindfulness through listening to sermons, Handcrafting (flow state), Community bonding, Spiritual fulfillment"
     },
@@ -246,9 +458,21 @@
       "description_th": "งานเทศกาลท่องเที่ยวประจำปีของจังหวัดน่าน มีขบวนแห่วัฒนธรรม 15 อำเภอ การแสดงแสงสีเสียง การออกร้านจำหน่ายผลิตภัณฑ์ชุมชน และการแสดงศิลปวัฒนธรรมของกลุ่มชาติพันธุ์ต่างๆ",
       "description_en": "Nan's annual tourism festival featuring cultural processions from all 15 districts, light & sound shows, community product fairs, and ethnic performances.",
       "flowers_used": [
-        {"name": "ดอกเสี้ยวดอกขาว", "use": "สัญลักษณ์ขบวนแห่", "symbolism": "ดอกไม้ประจำจังหวัด, เอกลักษณ์น่าน"},
-        {"name": "ดอกดาวเรือง", "use": "ตกแต่งขบวน", "symbolism": "สิริมงคล"},
-        {"name": "ดอกไม้ประจำท้องถิ่นแต่ละอำเภอ", "use": "แสดงอัตลักษณ์", "symbolism": "ความหลากหลายทางวัฒนธรรม"}
+        {
+          "name": "ดอกเสี้ยวดอกขาว",
+          "use": "สัญลักษณ์ขบวนแห่",
+          "symbolism": "ดอกไม้ประจำจังหวัด, เอกลักษณ์น่าน"
+        },
+        {
+          "name": "ดอกดาวเรือง",
+          "use": "ตกแต่งขบวน",
+          "symbolism": "สิริมงคล"
+        },
+        {
+          "name": "ดอกไม้ประจำท้องถิ่นแต่ละอำเภอ",
+          "use": "แสดงอัตลักษณ์",
+          "symbolism": "ความหลากหลายทางวัฒนธรรม"
+        }
       ],
       "wellness_connection": "Cultural celebration, Community pride, Social connection, Creative expression"
     },
@@ -263,9 +487,21 @@
       "description_th": "ประเพณีขึ้นไปสักการะพระธาตุเขาน้อย ซึ่งเป็นจุดชมวิวสำคัญของเมืองน่าน มองเห็นตัวเมืองแบบ 360 องศา มีการนำดอกไม้ไปบูชาและชมความงามของดอกไม้ในบริเวณวัด",
       "description_en": "Tradition of climbing to Phra That Khao Noi for worship. Offers panoramic 360-degree views of Nan city. Flower offerings and scenery appreciation.",
       "flowers_used": [
-        {"name": "ดอกลีลาวดี", "use": "ประดับวัด, ถ่ายรูป", "symbolism": "ความสงบ, ความรักอมตะ"},
-        {"name": "ดอกบัวหลวง", "use": "บูชาพระธาตุ", "symbolism": "ความบริสุทธิ์"},
-        {"name": "ดอกดาวเรือง", "use": "เครื่องบูชา", "symbolism": "สิริมงคล"}
+        {
+          "name": "ดอกลีลาวดี",
+          "use": "ประดับวัด, ถ่ายรูป",
+          "symbolism": "ความสงบ, ความรักอมตะ"
+        },
+        {
+          "name": "ดอกบัวหลวง",
+          "use": "บูชาพระธาตุ",
+          "symbolism": "ความบริสุทธิ์"
+        },
+        {
+          "name": "ดอกดาวเรือง",
+          "use": "เครื่องบูชา",
+          "symbolism": "สิริมงคล"
+        }
       ],
       "wellness_connection": "Physical exercise (climbing), View meditation, Photography mindfulness, Spiritual reflection"
     },
@@ -280,13 +516,20 @@
       "description_th": "งานรวม 6 กลุ่มชาติพันธุ์ในน่าน ได้แก่ ม้ง, อิ้วเมี่ยน, ขมุ, มลาบริ, ถิ่น และชาวพื้นเมือง มีขบวนแห่วัฒนธรรม การประกวด การแสดงศิลปวัฒนธรรม และการจำหน่ายผลิตภัณฑ์ชุมชน",
       "description_en": "Grand ethnic festival featuring all 6 ethnic groups of Nan: Hmong, Iu Mien, Khmu, Mlabri, Tin, and local Tai Lue. Cultural parades, contests, performances, and local product fairs.",
       "flowers_used": [
-        {"name": "ดอกไม้ป่าประจำถิ่น", "use": "ประดับขบวนแห่", "symbolism": "อัตลักษณ์ของแต่ละชาติพันธุ์"},
-        {"name": "ดอกดาวเรือง", "use": "บายศรีต้อนรับ", "symbolism": "สิริมงคล"}
+        {
+          "name": "ดอกไม้ป่าประจำถิ่น",
+          "use": "ประดับขบวนแห่",
+          "symbolism": "อัตลักษณ์ของแต่ละชาติพันธุ์"
+        },
+        {
+          "name": "ดอกดาวเรือง",
+          "use": "บายศรีต้อนรับ",
+          "symbolism": "สิริมงคล"
+        }
       ],
       "wellness_connection": "Cultural diversity appreciation, Community bonding, Creative expression"
     }
   ],
-
   "flowers": [
     {
       "id": "FL001",
@@ -299,9 +542,21 @@
       "scent": "หอมอ่อนๆ",
       "color": "ชมพูอ่อน, ขาว",
       "medical": {
-        "benefits_th": ["เปลือกมีสารแทนนินใช้ย้อมแห อวน ต้านเชื้อแบคทีเรีย", "ดอกมีฤทธิ์ต้านมะเร็ง", "ใบอ่อนและฝักอ่อนกินได้ มีสารต้านอนุมูลอิสระ"],
-        "uses_th": ["ย้อมผ้าธรรมชาติ", "พืชอาหาร (ใบอ่อน, ฝักอ่อน)", "สมุนไพร"],
-        "benefits_en": ["Bark contains tannins with antibacterial properties", "Flowers show anticancer activity", "Young leaves and pods are edible with antioxidants"]
+        "benefits_th": [
+          "เปลือกมีสารแทนนินใช้ย้อมแห อวน ต้านเชื้อแบคทีเรีย",
+          "ดอกมีฤทธิ์ต้านมะเร็ง",
+          "ใบอ่อนและฝักอ่อนกินได้ มีสารต้านอนุมูลอิสระ"
+        ],
+        "uses_th": [
+          "ย้อมผ้าธรรมชาติ",
+          "พืชอาหาร (ใบอ่อน, ฝักอ่อน)",
+          "สมุนไพร"
+        ],
+        "benefits_en": [
+          "Bark contains tannins with antibacterial properties",
+          "Flowers show anticancer activity",
+          "Young leaves and pods are edible with antioxidants"
+        ]
       },
       "aesthetic": {
         "description_th": "ไม้ยืนต้นสูง 10-15 ม. ดอกคล้ายดอกชงโค 5 กลีบ สีชมพูอ่อนหรือขาว กลิ่นหอมอ่อนๆ ใบบางรูปหัวใจ ปลายเว้าลึก เวลาดอกบานจะทิ้งใบ เห็นแต่ดอกเต็มต้นสวยงาม",
@@ -310,18 +565,38 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["ดอกไม้ประจำจังหวัดน่าน", "ปลูกเป็นไม้ประดับริมถนน", "ใช้เปลือกย้อมแหและอวน"],
+        "uses_th": [
+          "ดอกไม้ประจำจังหวัดน่าน",
+          "ปลูกเป็นไม้ประดับริมถนน",
+          "ใช้เปลือกย้อมแหและอวน"
+        ],
         "food_th": "ใบอ่อนใช้ห่อหมก หรือปรุงเป็นผักสด ฝักอ่อนนำมาแกงหรือผัด"
       },
       "belief": {
         "meaning_th": "ความงามที่เรียบง่าย, ความอดทน",
-        "beliefs_th": ["เป็นไม้มงคล", "ในอินเดียถือเป็น 'โควิทารา' ต้นไม้ศักดิ์สิทธิ์ ใช้ในพิธีบูชาเทวดา", "เชื่อว่าปลูกแล้วจะช่วยเสริมสิริมงคลแก่บ้านและเมือง"],
-        "beliefs_en": ["Sacred tree (Kovidara) in Hinduism", "Believed to bring prosperity and protection"]
+        "beliefs_th": [
+          "เป็นไม้มงคล",
+          "ในอินเดียถือเป็น 'โควิทารา' ต้นไม้ศักดิ์สิทธิ์ ใช้ในพิธีบูชาเทวดา",
+          "เชื่อว่าปลูกแล้วจะช่วยเสริมสิริมงคลแก่บ้านและเมือง"
+        ],
+        "beliefs_en": [
+          "Sacred tree (Kovidara) in Hinduism",
+          "Believed to bring prosperity and protection"
+        ]
       },
-      "wellness_activity": ["Flower photography tour", "Nature walk to spot blooming season", "Edible flower cooking workshop"],
+      "wellness_activity": [
+        "Flower photography tour",
+        "Nature walk to spot blooming season",
+        "Edible flower cooking workshop"
+      ],
       "fragrance_family": "Floral - Soft",
       "element": "ลม (Wind)",
-      "knowledge_graph_tags": ["nan_province_flower", "edible_flower", "sacred_tree", "ornamental"]
+      "knowledge_graph_tags": [
+        "nan_province_flower",
+        "edible_flower",
+        "sacred_tree",
+        "ornamental"
+      ]
     },
     {
       "id": "FL002",
@@ -334,9 +609,24 @@
       "scent": "หอมหวานเข้มข้น (Sweet, warm white floral)",
       "color": "ขาว",
       "medical": {
-        "benefits_th": ["ปรับสมดุลฮอร์โมนเพศหญิง", "ลดความเครียดและวิตกกังวล", "ช่วยให้นอนหลับสบาย", "สดชื่น, กระปรี้กระเปร่า"],
-        "uses_th": ["น้ำมันหอมระเหย", "ชาดอกมะลิ", "ยาหอมแก้วิงเวียน", "บำรุงผิว"],
-        "benefits_en": ["Hormone balancing", "Anxiety reduction", "Sleep aid", "Mood uplifting"]
+        "benefits_th": [
+          "ปรับสมดุลฮอร์โมนเพศหญิง",
+          "ลดความเครียดและวิตกกังวล",
+          "ช่วยให้นอนหลับสบาย",
+          "สดชื่น, กระปรี้กระเปร่า"
+        ],
+        "uses_th": [
+          "น้ำมันหอมระเหย",
+          "ชาดอกมะลิ",
+          "ยาหอมแก้วิงเวียน",
+          "บำรุงผิว"
+        ],
+        "benefits_en": [
+          "Hormone balancing",
+          "Anxiety reduction",
+          "Sleep aid",
+          "Mood uplifting"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอกสีขาวขนาดเล็ก กลีบซ้อนหรือกลีบเดี่ยว กลิ่นหอมหวานเป็นเอกลักษณ์ นิยมร้อยเป็นพวงมาลัยและอุบะ",
@@ -344,18 +634,41 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["พวงมาลัยถวายพระ", "รดน้ำดำหัวผู้ใหญ่", "ก๋วยสลาก", "กระทงลอย", "งานมงคล"],
+        "uses_th": [
+          "พวงมาลัยถวายพระ",
+          "รดน้ำดำหัวผู้ใหญ่",
+          "ก๋วยสลาก",
+          "กระทงลอย",
+          "งานมงคล"
+        ],
         "food_th": "ดอกมะลิลูกกวาด, ชามะลิ, น้ำลอยดอกมะลิสำหรับทำขนมไทย"
       },
       "belief": {
         "meaning_th": "ความบริสุทธิ์, ความรักที่บริสุทธิ์, ความกตัญญู",
-        "beliefs_th": ["ดอกไม้มงคลที่ขาดไม่ได้ในงานพุทธศาสนา", "ใช้ในพิธีบูชาพระและสิ่งศักดิ์สิทธิ์", "เชื่อว่าดอกมะลิสีขาวแทนความสะอาดบริสุทธิ์"],
-        "beliefs_en": ["Symbol of purity and gratitude in Buddhism", "Essential flower for worship and ceremonies"]
+        "beliefs_th": [
+          "ดอกไม้มงคลที่ขาดไม่ได้ในงานพุทธศาสนา",
+          "ใช้ในพิธีบูชาพระและสิ่งศักดิ์สิทธิ์",
+          "เชื่อว่าดอกมะลิสีขาวแทนความสะอาดบริสุทธิ์"
+        ],
+        "beliefs_en": [
+          "Symbol of purity and gratitude in Buddhism",
+          "Essential flower for worship and ceremonies"
+        ]
       },
-      "wellness_activity": ["Jasmine tea ceremony", "Aromatherapy with jasmine essential oil", "DIY jasmine garland workshop", "Jasmine-scented meditation"],
+      "wellness_activity": [
+        "Jasmine tea ceremony",
+        "Aromatherapy with jasmine essential oil",
+        "DIY jasmine garland workshop",
+        "Jasmine-scented meditation"
+      ],
       "fragrance_family": "Floral",
       "element": "ดิน (Earth)",
-      "knowledge_graph_tags": ["buddhist_offering", "aromatherapy", "edible_flower", "garland_flower"]
+      "knowledge_graph_tags": [
+        "buddhist_offering",
+        "aromatherapy",
+        "edible_flower",
+        "garland_flower"
+      ]
     },
     {
       "id": "FL003",
@@ -368,9 +681,22 @@
       "scent": "หอมอ่อนๆ (Green, watery floral)",
       "color": "ชมพู, ขาว",
       "medical": {
-        "benefits_th": ["รสเย็น บำรุงหัวใจ (แพทย์แผนไทย)", "ดอกบัวหลวงเป็นส่วนผสมในตำรับเบญจเกสร", "เม็ดบัวบำรุงร่างกาย", "ฝักบัวช่วยบำรุงครรภ์"],
-        "uses_th": ["ตำรับเบญจเกสร (บำรุงหัวใจ)", "ชาดอกบัว", "ปรุงยาบำรุงกำลัง"],
-        "benefits_en": ["Cooling effect, heart tonic (Thai traditional medicine)", "Part of Benjakesorn formula", "Lotus seed for general health"]
+        "benefits_th": [
+          "รสเย็น บำรุงหัวใจ (แพทย์แผนไทย)",
+          "ดอกบัวหลวงเป็นส่วนผสมในตำรับเบญจเกสร",
+          "เม็ดบัวบำรุงร่างกาย",
+          "ฝักบัวช่วยบำรุงครรภ์"
+        ],
+        "uses_th": [
+          "ตำรับเบญจเกสร (บำรุงหัวใจ)",
+          "ชาดอกบัว",
+          "ปรุงยาบำรุงกำลัง"
+        ],
+        "benefits_en": [
+          "Cooling effect, heart tonic (Thai traditional medicine)",
+          "Part of Benjakesorn formula",
+          "Lotus seed for general health"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอกขนาดใหญ่ สีชมพูหรือขาว กลีบหลายชั้นซ้อนกัน กลางดอกเป็นฝัก เมล็ดกลม ดอกและใบบัวลอยพ้นน้ำ ให้ความรู้สึกสงบ สวยงาม แบบไทย",
@@ -378,18 +704,41 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["บูชาพระพุทธ (สัญลักษณ์แห่งการตรัสรู้)", "ประดับในเทศกาลวันสำคัญทางพุทธศาสนา", "ตำรับเบญจเกสรในแพทย์แผนไทย", "กระทง"],
+        "uses_th": [
+          "บูชาพระพุทธ (สัญลักษณ์แห่งการตรัสรู้)",
+          "ประดับในเทศกาลวันสำคัญทางพุทธศาสนา",
+          "ตำรับเบญจเกสรในแพทย์แผนไทย",
+          "กระทง"
+        ],
         "food_th": "เม็ดบัวต้ม, บัวลอย, ชากลีบบัว, หยวกบัวในแกงเลียง, หัวบัว"
       },
       "belief": {
         "meaning_th": "การตรัสรู้, ความบริสุทธิ์ทางจิต, การหลุดพ้นจากกิเลส",
-        "beliefs_th": ["ดอกไม้แห่งพุทธศาสนา ดอกบัวแทนภาวะที่จิตใจพ้นจากกิเลส", "บัว 4 เหล่า เปรียบกับระดับการเข้าถึงธรรม", "เชื่อว่าการถวายดอกบัวเป็นพุทธบูชาจะส่งผลให้มีปัญญา"],
-        "beliefs_en": ["Symbol of enlightenment in Buddhism", "Different stages of lotus represent different levels of spiritual development"]
+        "beliefs_th": [
+          "ดอกไม้แห่งพุทธศาสนา ดอกบัวแทนภาวะที่จิตใจพ้นจากกิเลส",
+          "บัว 4 เหล่า เปรียบกับระดับการเข้าถึงธรรม",
+          "เชื่อว่าการถวายดอกบัวเป็นพุทธบูชาจะส่งผลให้มีปัญญา"
+        ],
+        "beliefs_en": [
+          "Symbol of enlightenment in Buddhism",
+          "Different stages of lotus represent different levels of spiritual development"
+        ]
       },
-      "wellness_activity": ["Lotus meditation", "Lotus tea ceremony", "Lotus photography", "Benjakesorn herbal workshop"],
+      "wellness_activity": [
+        "Lotus meditation",
+        "Lotus tea ceremony",
+        "Lotus photography",
+        "Benjakesorn herbal workshop"
+      ],
       "fragrance_family": "Floral - Green",
       "element": "น้ำ (Water)",
-      "knowledge_graph_tags": ["buddhist_flower", "benjakesorn", "meditation_flower", "thai_medicine", "edible_flower"]
+      "knowledge_graph_tags": [
+        "buddhist_flower",
+        "benjakesorn",
+        "meditation_flower",
+        "thai_medicine",
+        "edible_flower"
+      ]
     },
     {
       "id": "FL004",
@@ -402,9 +751,22 @@
       "scent": "ฉุนเฉพาะตัว (Herbal, pungent)",
       "color": "ส้ม, เหลืองทอง",
       "medical": {
-        "benefits_th": ["ต้านการอักเสบ", "สมานแผล", "ขับพิษ", "มีฤทธิ์ต้านเชื้อราและแบคทีเรีย"],
-        "uses_th": ["ทำยาสมานแผล", "น้ำมันหอมระเหย", "สารสกัดใช้ในเครื่องสำอาง"],
-        "benefits_en": ["Anti-inflammatory", "Wound healing", "Antifungal and antibacterial"]
+        "benefits_th": [
+          "ต้านการอักเสบ",
+          "สมานแผล",
+          "ขับพิษ",
+          "มีฤทธิ์ต้านเชื้อราและแบคทีเรีย"
+        ],
+        "uses_th": [
+          "ทำยาสมานแผล",
+          "น้ำมันหอมระเหย",
+          "สารสกัดใช้ในเครื่องสำอาง"
+        ],
+        "benefits_en": [
+          "Anti-inflammatory",
+          "Wound healing",
+          "Antifungal and antibacterial"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอกสีเหลืองถึงส้มเข้ม กลีบดอกหนาแน่น ดอกเป็นกระจุกแน่น สีสันสดใส มีทั้งดอกเล็กและดอกใหญ่ ปลูกง่าย ทนทาน",
@@ -412,18 +774,42 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["บายศรีทุกประเภท", "ประตูป่าประเพณียี่เป็ง", "ประดับเทียนพรรษา", "ก๋วยสลาก", "เครื่องสังเวยในพิธีกรรม", "กระทง"],
+        "uses_th": [
+          "บายศรีทุกประเภท",
+          "ประตูป่าประเพณียี่เป็ง",
+          "ประดับเทียนพรรษา",
+          "ก๋วยสลาก",
+          "เครื่องสังเวยในพิธีกรรม",
+          "กระทง"
+        ],
         "food_th": "ดอกดาวเรืองใช้ล้างน้ำแล้วกินสดกับน้ำพริกได้ หรือชุบไข่ทอด"
       },
       "belief": {
         "meaning_th": "โชคลาภ, ความมั่งมี, สิริมงคล",
-        "beliefs_th": ["ดอกไม้สีทองแห่งความโชคดี", "ขาดไม่ได้ในบายศรีและเครื่องบูชาทุกชนิดของล้านนา", "เชื่อว่าดอกดาวเรืองช่วยเสริมบารมีและโชคลาภ"],
-        "beliefs_en": ["Golden flower symbolizing wealth and good fortune", "Essential in all Lanna baisri offerings"]
+        "beliefs_th": [
+          "ดอกไม้สีทองแห่งความโชคดี",
+          "ขาดไม่ได้ในบายศรีและเครื่องบูชาทุกชนิดของล้านนา",
+          "เชื่อว่าดอกดาวเรืองช่วยเสริมบารมีและโชคลาภ"
+        ],
+        "beliefs_en": [
+          "Golden flower symbolizing wealth and good fortune",
+          "Essential in all Lanna baisri offerings"
+        ]
       },
-      "wellness_activity": ["Baisri making workshop", "Marigold garland crafting", "Flower photography"],
+      "wellness_activity": [
+        "Baisri making workshop",
+        "Marigold garland crafting",
+        "Flower photography"
+      ],
       "fragrance_family": "Fresh - Herbal",
       "element": "ไฟ (Fire)",
-      "knowledge_graph_tags": ["offering_flower", "baisri_flower", "lanna_tradition", "edible_flower", "medicinal_flower"]
+      "knowledge_graph_tags": [
+        "offering_flower",
+        "baisri_flower",
+        "lanna_tradition",
+        "edible_flower",
+        "medicinal_flower"
+      ]
     },
     {
       "id": "FL005",
@@ -436,9 +822,21 @@
       "scent": "ไม่มีกลิ่น",
       "color": "ม่วง, ชมพู, แดง, ขาว",
       "medical": {
-        "benefits_th": ["ลดความดันโลหิต", "ขับเสมหะ", "บำรุงผิว", "ต้านอนุมูลอิสระ"],
-        "uses_th": ["ชาดอกบานไม่รู้โรย", "สมุนไพรลดความดัน"],
-        "benefits_en": ["Blood pressure reduction", "Antioxidant", "Expectorant"]
+        "benefits_th": [
+          "ลดความดันโลหิต",
+          "ขับเสมหะ",
+          "บำรุงผิว",
+          "ต้านอนุมูลอิสระ"
+        ],
+        "uses_th": [
+          "ชาดอกบานไม่รู้โรย",
+          "สมุนไพรลดความดัน"
+        ],
+        "benefits_en": [
+          "Blood pressure reduction",
+          "Antioxidant",
+          "Expectorant"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอกกลมเล็กคล้ายกระดุม สีสดใสอยู่ได้นานแม้แห้งแล้ว นิยมใช้ในงานหัตถกรรมดอกไม้แห้งและงานประดิษฐ์",
@@ -446,18 +844,39 @@
         "instagram_worthy": false
       },
       "tradition": {
-        "uses_th": ["บายศรีทุกชนิด (ใช้ทำลวดลายบนบายศรี)", "ประตูป่าประเพณียี่เป็ง", "เครื่องบูชาในพิธีสืบชะตา", "พวงมาลัย"],
+        "uses_th": [
+          "บายศรีทุกชนิด (ใช้ทำลวดลายบนบายศรี)",
+          "ประตูป่าประเพณียี่เป็ง",
+          "เครื่องบูชาในพิธีสืบชะตา",
+          "พวงมาลัย"
+        ],
         "food_th": "ชาดอกบานไม่รู้โรย"
       },
       "belief": {
         "meaning_th": "ความมั่นคง, ความยั่งยืน, อายุยืนยาว",
-        "beliefs_th": ["ดอกไม้ที่แห้งแล้วสีไม่ซีด จึงเป็นสัญลักษณ์ของความไม่รู้โรย", "ใช้ในพิธีสืบชะตาเพื่อต่ออายุ", "เชื่อว่าช่วยเสริมให้ชีวิตเจริญรุ่งเรืองมั่นคง"],
-        "beliefs_en": ["Symbol of longevity and stability because color persists when dried", "Used in life-extension ceremonies"]
+        "beliefs_th": [
+          "ดอกไม้ที่แห้งแล้วสีไม่ซีด จึงเป็นสัญลักษณ์ของความไม่รู้โรย",
+          "ใช้ในพิธีสืบชะตาเพื่อต่ออายุ",
+          "เชื่อว่าช่วยเสริมให้ชีวิตเจริญรุ่งเรืองมั่นคง"
+        ],
+        "beliefs_en": [
+          "Symbol of longevity and stability because color persists when dried",
+          "Used in life-extension ceremonies"
+        ]
       },
-      "wellness_activity": ["Dried flower craft workshop", "Herbal tea making"],
+      "wellness_activity": [
+        "Dried flower craft workshop",
+        "Herbal tea making"
+      ],
       "fragrance_family": "None",
       "element": "ดิน (Earth)",
-      "knowledge_graph_tags": ["durable_flower", "baisri_flower", "longevity_symbol", "herbal_tea", "dried_flower_craft"]
+      "knowledge_graph_tags": [
+        "durable_flower",
+        "baisri_flower",
+        "longevity_symbol",
+        "herbal_tea",
+        "dried_flower_craft"
+      ]
     },
     {
       "id": "FL006",
@@ -470,9 +889,17 @@
       "scent": "ไม่มีกลิ่นแรง",
       "color": "เหลืองสด",
       "medical": {
-        "benefits_th": ["มีสารอัลคาลอยด์", "ใช้ในตำรับยาไทยบางตำรับ", "ต้องใช้ด้วยความระมัดระวัง"],
-        "uses_th": ["สมุนไพรในตำรับยาไทย"],
-        "benefits_en": ["Contains alkaloids used in Thai traditional medicine (caution required)"]
+        "benefits_th": [
+          "มีสารอัลคาลอยด์",
+          "ใช้ในตำรับยาไทยบางตำรับ",
+          "ต้องใช้ด้วยความระมัดระวัง"
+        ],
+        "uses_th": [
+          "สมุนไพรในตำรับยาไทย"
+        ],
+        "benefits_en": [
+          "Contains alkaloids used in Thai traditional medicine (caution required)"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอกสีเหลืองสด รูปดอกถั่ว ดอกเล็กเรียงเป็นช่อ ออกดอกเป็นพวงสวยงาม ชื่อ 'รัก' เพราะเมื่อเด็ดดอกจะมีน้ำยางข้นเหนียวคล้ายความรักที่เหนียวแน่น",
@@ -480,18 +907,39 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["ร้อยอุบะบายศรีทุกชนิด", "พวงมาลัย", "เครื่องบูชาในพิธีมงคล", "บายศรีงานไหว้ครู", "เครื่องสังเวย"],
+        "uses_th": [
+          "ร้อยอุบะบายศรีทุกชนิด",
+          "พวงมาลัย",
+          "เครื่องบูชาในพิธีมงคล",
+          "บายศรีงานไหว้ครู",
+          "เครื่องสังเวย"
+        ],
         "food_th": "ไม่นิยมรับประทาน"
       },
       "belief": {
         "meaning_th": "ความรัก, ความสามัคคี, ความผูกพัน",
-        "beliefs_th": ["ขาดไม่ได้ในบายศรีเพราะชื่อ 'รัก' เป็นมงคล", "เชื่อว่านำมาซึ่งความรักใคร่กลมเกลียวในหมู่คณะ", "ใช้ในบายศรีทุกชนิดตั้งแต่ระดับชาวบ้านถึงพระราชพิธี"],
-        "beliefs_en": ["Name means 'love' — essential in all baisri offerings", "Believed to bring harmony and unity"]
+        "beliefs_th": [
+          "ขาดไม่ได้ในบายศรีเพราะชื่อ 'รัก' เป็นมงคล",
+          "เชื่อว่านำมาซึ่งความรักใคร่กลมเกลียวในหมู่คณะ",
+          "ใช้ในบายศรีทุกชนิดตั้งแต่ระดับชาวบ้านถึงพระราชพิธี"
+        ],
+        "beliefs_en": [
+          "Name means 'love' — essential in all baisri offerings",
+          "Believed to bring harmony and unity"
+        ]
       },
-      "wellness_activity": ["Baisri making workshop", "Floral arrangement"],
+      "wellness_activity": [
+        "Baisri making workshop",
+        "Floral arrangement"
+      ],
       "fragrance_family": "None",
       "element": "ลม (Wind)",
-      "knowledge_graph_tags": ["baisri_flower", "love_symbol", "auspicious_flower", "lanna_tradition"]
+      "knowledge_graph_tags": [
+        "baisri_flower",
+        "love_symbol",
+        "auspicious_flower",
+        "lanna_tradition"
+      ]
     },
     {
       "id": "FL007",
@@ -504,9 +952,23 @@
       "scent": "หอมหวานเข้มข้น (Creamy, lush white floral)",
       "color": "ขาว",
       "medical": {
-        "benefits_th": ["หอมเย็นสดชื่น", "ระบายความร้อน", "แก้วิงเวียนศีรษะ", "คลายเครียด"],
-        "uses_th": ["น้ำมันหอมระเหย", "เครื่องหอม", "ยาหอมแก้วิงเวียน"],
-        "benefits_en": ["Cooling effect", "Relieves dizziness", "Stress relief", "Aromatherapy"]
+        "benefits_th": [
+          "หอมเย็นสดชื่น",
+          "ระบายความร้อน",
+          "แก้วิงเวียนศีรษะ",
+          "คลายเครียด"
+        ],
+        "uses_th": [
+          "น้ำมันหอมระเหย",
+          "เครื่องหอม",
+          "ยาหอมแก้วิงเวียน"
+        ],
+        "benefits_en": [
+          "Cooling effect",
+          "Relieves dizziness",
+          "Stress relief",
+          "Aromatherapy"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอกสีขาว กลีบซ้อนกันเป็นชั้นๆ สวยงาม กลิ่นหอมหวานเป็นเอกลักษณ์ นิยมปลูกเป็นไม้ประดับ",
@@ -514,18 +976,36 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["พวงมาลัย", "เครื่องบูชาพระ", "ประดับตกแต่ง"],
+        "uses_th": [
+          "พวงมาลัย",
+          "เครื่องบูชาพระ",
+          "ประดับตกแต่ง"
+        ],
         "food_th": "ใช้แต่งกลิ่นขนมไทยบางชนิด"
       },
       "belief": {
         "meaning_th": "ความบริสุทธิ์, ความผุดผ่อง, ความมั่นคง",
-        "beliefs_th": ["ชื่อ 'พุด' คล้าย 'พุฒ' แปลว่า เจริญ", "เชื่อว่าการถวายดอกพุดจะทำให้มีความเจริญมั่นคง"],
-        "beliefs_en": ["Name resembles 'phut' meaning prosperity", "Offering gardenia flowers brings stability and growth"]
+        "beliefs_th": [
+          "ชื่อ 'พุด' คล้าย 'พุฒ' แปลว่า เจริญ",
+          "เชื่อว่าการถวายดอกพุดจะทำให้มีความเจริญมั่นคง"
+        ],
+        "beliefs_en": [
+          "Name resembles 'phut' meaning prosperity",
+          "Offering gardenia flowers brings stability and growth"
+        ]
       },
-      "wellness_activity": ["Aromatherapy with gardenia oil", "Flower arrangement workshop"],
+      "wellness_activity": [
+        "Aromatherapy with gardenia oil",
+        "Flower arrangement workshop"
+      ],
       "fragrance_family": "Floral - Creamy",
       "element": "ดิน (Earth)",
-      "knowledge_graph_tags": ["garland_flower", "auspicious_flower", "thai_gardenia", "aromatherapy"]
+      "knowledge_graph_tags": [
+        "garland_flower",
+        "auspicious_flower",
+        "thai_gardenia",
+        "aromatherapy"
+      ]
     },
     {
       "id": "FL008",
@@ -538,9 +1018,19 @@
       "scent": "หอมอ่อนๆ (Soft, delicate floral)",
       "color": "ขาว",
       "medical": {
-        "benefits_th": ["รสเย็น บำรุงหัวใจ", "เป็นส่วนผสมในตำรับเบญจเกสร", "ช่วยผ่อนคลาย"],
-        "uses_th": ["ตำรับเบญจเกสร (บำรุงหัวใจ)", "ชาดอกสารภี"],
-        "benefits_en": ["Cooling heart tonic in Thai traditional medicine", "Part of Benjakesorn formula"]
+        "benefits_th": [
+          "รสเย็น บำรุงหัวใจ",
+          "เป็นส่วนผสมในตำรับเบญจเกสร",
+          "ช่วยผ่อนคลาย"
+        ],
+        "uses_th": [
+          "ตำรับเบญจเกสร (บำรุงหัวใจ)",
+          "ชาดอกสารภี"
+        ],
+        "benefits_en": [
+          "Cooling heart tonic in Thai traditional medicine",
+          "Part of Benjakesorn formula"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอกสีขาว กลีบบางละเอียด กลิ่นหอมอ่อนๆ เป็นไม้มงคลประจำจังหวัดพะเยา",
@@ -548,17 +1038,31 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["ตำรับเบญจเกสร", "ดอกไม้ประจำจังหวัดพะเยา", "ไม้ประดับวัด"],
+        "uses_th": [
+          "ตำรับเบญจเกสร",
+          "ดอกไม้ประจำจังหวัดพะเยา",
+          "ไม้ประดับวัด"
+        ],
         "food_th": "ชาดอกสารภี"
       },
       "belief": {
         "meaning_th": "ความสง่างาม, ความดีงาม",
-        "beliefs_th": ["ดอกสารภีเป็นดอกไม้ที่มีชื่อเพราะนิยมปลูกในวัด"]
+        "beliefs_th": [
+          "ดอกสารภีเป็นดอกไม้ที่มีชื่อเพราะนิยมปลูกในวัด"
+        ]
       },
-      "wellness_activity": ["Herbal tea tasting", "Mindfulness walk in temple"],
+      "wellness_activity": [
+        "Herbal tea tasting",
+        "Mindfulness walk in temple"
+      ],
       "fragrance_family": "Floral - Delicate",
       "element": "น้ำ (Water)",
-      "knowledge_graph_tags": ["benjakesorn", "thai_medicine", "temple_flower", "herbal_tea"]
+      "knowledge_graph_tags": [
+        "benjakesorn",
+        "thai_medicine",
+        "temple_flower",
+        "herbal_tea"
+      ]
     },
     {
       "id": "FL009",
@@ -571,9 +1075,19 @@
       "scent": "หอมหวานละมุน (Mild, subtle floral)",
       "color": "ขาว",
       "medical": {
-        "benefits_th": ["รสเย็น บำรุงหัวใจ", "ส่วนผสมในเบญจเกสร", "ดอกใช้บำรุงหัวใจ"],
-        "uses_th": ["ตำรับเบญจเกสร", "ยาบำรุงหัวใจ"],
-        "benefits_en": ["Cooling heart tonic", "Part of Benjakesorn formula"]
+        "benefits_th": [
+          "รสเย็น บำรุงหัวใจ",
+          "ส่วนผสมในเบญจเกสร",
+          "ดอกใช้บำรุงหัวใจ"
+        ],
+        "uses_th": [
+          "ตำรับเบญจเกสร",
+          "ยาบำรุงหัวใจ"
+        ],
+        "benefits_en": [
+          "Cooling heart tonic",
+          "Part of Benjakesorn formula"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอกสีขาวขนาดเล็ก รูปดอกจันทร์ กลิ่นหอมหวานละมุน เวลาบานจะมีกลีบปลายหยักเป็นแฉก",
@@ -581,17 +1095,30 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["ตำรับเบญจเกสร", "ประดับ", "ไม้มงคล"],
+        "uses_th": [
+          "ตำรับเบญจเกสร",
+          "ประดับ",
+          "ไม้มงคล"
+        ],
         "food_th": "ไม่นิยม"
       },
       "belief": {
         "meaning_th": "ความดีงาม, ความอ่อนหวาน",
-        "beliefs_th": ["ดอกพิกุลเป็นสัญลักษณ์ของความดีงาม"]
+        "beliefs_th": [
+          "ดอกพิกุลเป็นสัญลักษณ์ของความดีงาม"
+        ]
       },
-      "wellness_activity": ["Benjakesorn workshop", "Scent meditation"],
+      "wellness_activity": [
+        "Benjakesorn workshop",
+        "Scent meditation"
+      ],
       "fragrance_family": "Floral - Mild",
       "element": "น้ำ (Water)",
-      "knowledge_graph_tags": ["benjakesorn", "thai_medicine", "heart_tonic"]
+      "knowledge_graph_tags": [
+        "benjakesorn",
+        "thai_medicine",
+        "heart_tonic"
+      ]
     },
     {
       "id": "FL010",
@@ -604,9 +1131,20 @@
       "scent": "หอมหวานอบอวล (Creamy, tropical floral)",
       "color": "ขาว, ชมพู, แดง, เหลือง",
       "medical": {
-        "benefits_th": ["ผ่อนคลาย", "ดับพิษร้อน", "ดอกมีฤทธิ์ต้านไวรัสและแบคทีเรีย"],
-        "uses_th": ["น้ำมันหอมระเหย", "ยาสมุนไพร (ใช้ภายนอก)"],
-        "benefits_en": ["Relaxation", "Cooling effect", "Antiviral and antibacterial (external use)"]
+        "benefits_th": [
+          "ผ่อนคลาย",
+          "ดับพิษร้อน",
+          "ดอกมีฤทธิ์ต้านไวรัสและแบคทีเรีย"
+        ],
+        "uses_th": [
+          "น้ำมันหอมระเหย",
+          "ยาสมุนไพร (ใช้ภายนอก)"
+        ],
+        "benefits_en": [
+          "Relaxation",
+          "Cooling effect",
+          "Antiviral and antibacterial (external use)"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอก 5 กลีบ สีสันหลากหลาย กลิ่นหอมอบอวล ต้นเป็นไม้ยืนต้นขนาดเล็ก นิยมปลูกในวัดและบ้านเรือน",
@@ -614,18 +1152,37 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["ประดับวัด (นิยมปลูกในวัด)", "พวงมาลัย", "เครื่องบูชา"],
+        "uses_th": [
+          "ประดับวัด (นิยมปลูกในวัด)",
+          "พวงมาลัย",
+          "เครื่องบูชา"
+        ],
         "food_th": "ไม่นิยมรับประทาน"
       },
       "belief": {
         "meaning_th": "ความรักอมตะ, ความสงบทางใจ",
-        "beliefs_th": ["นิยมปลูกในวัดเพราะเชื่อว่าให้ความสงบ", "ชื่อ 'ลีลาวดี' หมายถึงผู้หญิงที่มีลีลางดงาม"],
-        "beliefs_en": ["Symbol of immortality and peace", "Commonly planted in temples"]
+        "beliefs_th": [
+          "นิยมปลูกในวัดเพราะเชื่อว่าให้ความสงบ",
+          "ชื่อ 'ลีลาวดี' หมายถึงผู้หญิงที่มีลีลางดงาม"
+        ],
+        "beliefs_en": [
+          "Symbol of immortality and peace",
+          "Commonly planted in temples"
+        ]
       },
-      "wellness_activity": ["Scented candle making", "Temple photography", "Aromatherapy"],
+      "wellness_activity": [
+        "Scented candle making",
+        "Temple photography",
+        "Aromatherapy"
+      ],
       "fragrance_family": "Floral - Tropical",
       "element": "ลม (Wind)",
-      "knowledge_graph_tags": ["temple_flower", "aromatherapy", "thai_garden", "photogenic"]
+      "knowledge_graph_tags": [
+        "temple_flower",
+        "aromatherapy",
+        "thai_garden",
+        "photogenic"
+      ]
     },
     {
       "id": "FL011",
@@ -638,9 +1195,16 @@
       "scent": "แตกต่างกันไป",
       "color": "หลากหลาย",
       "medical": {
-        "benefits_th": ["กล้วยไม้บางชนิดใช้เป็นยาสมุนไพร", "หัวกล้วยไม้ใช้บำรุงร่างกาย"],
-        "uses_th": ["สมุนไพรพื้นบ้านล้านนา"],
-        "benefits_en": ["Some orchid species used in traditional Lanna medicine"]
+        "benefits_th": [
+          "กล้วยไม้บางชนิดใช้เป็นยาสมุนไพร",
+          "หัวกล้วยไม้ใช้บำรุงร่างกาย"
+        ],
+        "uses_th": [
+          "สมุนไพรพื้นบ้านล้านนา"
+        ],
+        "benefits_en": [
+          "Some orchid species used in traditional Lanna medicine"
+        ]
       },
       "aesthetic": {
         "description_th": "กล้วยไม้ป่าล้านนามีหลากหลายสายพันธุ์ พบมากในป่าดอยภูคาและเขตอุทยานแห่งชาติของน่าน สวยงามและหายาก",
@@ -648,18 +1212,37 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["ประดับในพิธีกรรม", "เครื่องบูชา (ดอกเอื้องสีเหลือง)", "ของป่าหายาก"],
+        "uses_th": [
+          "ประดับในพิธีกรรม",
+          "เครื่องบูชา (ดอกเอื้องสีเหลือง)",
+          "ของป่าหายาก"
+        ],
         "food_th": "ไม่นิยม"
       },
       "belief": {
         "meaning_th": "โชคลาภ, มั่งคั่ง",
-        "beliefs_th": ["ดอกเอื้องสีเหลืองดั่งทองคำ เชื่อว่าเป็นสิริมงคล", "ชาวล้านนาเชื่อว่าการปลูกดอกเอื้องจะทำให้มีโชคลาภ"],
-        "beliefs_en": ["Yellow orchids symbolize gold and wealth", "Believed to bring good fortune"]
+        "beliefs_th": [
+          "ดอกเอื้องสีเหลืองดั่งทองคำ เชื่อว่าเป็นสิริมงคล",
+          "ชาวล้านนาเชื่อว่าการปลูกดอกเอื้องจะทำให้มีโชคลาภ"
+        ],
+        "beliefs_en": [
+          "Yellow orchids symbolize gold and wealth",
+          "Believed to bring good fortune"
+        ]
       },
-      "wellness_activity": ["Orchid watching at Doi Phu Kha", "Nature photography", "Forest bathing"],
+      "wellness_activity": [
+        "Orchid watching at Doi Phu Kha",
+        "Nature photography",
+        "Forest bathing"
+      ],
       "fragrance_family": "Floral - Varied",
       "element": "ลม (Wind)",
-      "knowledge_graph_tags": ["lanna_orchid", "wild_flower", "rare_flower", "doiphukha"]
+      "knowledge_graph_tags": [
+        "lanna_orchid",
+        "wild_flower",
+        "rare_flower",
+        "doiphukha"
+      ]
     },
     {
       "id": "FL012",
@@ -672,9 +1255,23 @@
       "scent": "หอมหวานอบอุ่น (Sweet, exotic floral-oriental)",
       "color": "เขียวอมเหลือง",
       "medical": {
-        "benefits_th": ["คลายเครียด", "บรรเทาอาการวิตกกังวล", "ผ่อนคลาย, รู้สึกอบอุ่น", "แก้ซึมเศร้า"],
-        "uses_th": ["น้ำมันหอมระเหย", "น้ำมันนวด", "เครื่องหอม"],
-        "benefits_en": ["Stress relief", "Anti-anxiety", "Relaxation, warmth", "Antidepressant properties"]
+        "benefits_th": [
+          "คลายเครียด",
+          "บรรเทาอาการวิตกกังวล",
+          "ผ่อนคลาย, รู้สึกอบอุ่น",
+          "แก้ซึมเศร้า"
+        ],
+        "uses_th": [
+          "น้ำมันหอมระเหย",
+          "น้ำมันนวด",
+          "เครื่องหอม"
+        ],
+        "benefits_en": [
+          "Stress relief",
+          "Anti-anxiety",
+          "Relaxation, warmth",
+          "Antidepressant properties"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอกสีเขียวอมเหลือง กลีบดอกบิดเป็นเกลียว กลิ่นหอมหวานอบอุ่นเย้ายวน ลักษณะดอกห้อยลง",
@@ -682,18 +1279,36 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["พวงมาลัย", "เครื่องหอม", "อบผม", "น้ำมันหอมระเหย"],
+        "uses_th": [
+          "พวงมาลัย",
+          "เครื่องหอม",
+          "อบผม",
+          "น้ำมันหอมระเหย"
+        ],
         "food_th": "ใช้แต่งกลิ่นขนมไทย"
       },
       "belief": {
         "meaning_th": "ความอบอุ่น, ความมั่นใจ",
-        "beliefs_th": ["เชื่อว่าดอกกระดังงาช่วยสร้างความอบอุ่นในครอบครัว"],
-        "beliefs_en": ["Believed to bring warmth and confidence"]
+        "beliefs_th": [
+          "เชื่อว่าดอกกระดังงาช่วยสร้างความอบอุ่นในครอบครัว"
+        ],
+        "beliefs_en": [
+          "Believed to bring warmth and confidence"
+        ]
       },
-      "wellness_activity": ["Aromatherapy massage", "Essential oil blending", "DIY fragrance workshop"],
+      "wellness_activity": [
+        "Aromatherapy massage",
+        "Essential oil blending",
+        "DIY fragrance workshop"
+      ],
       "fragrance_family": "Floral-Oriental",
       "element": "น้ำ (Water)",
-      "knowledge_graph_tags": ["aromatherapy", "essential_oil", "thai_fragrance", "relaxation_oil"]
+      "knowledge_graph_tags": [
+        "aromatherapy",
+        "essential_oil",
+        "thai_fragrance",
+        "relaxation_oil"
+      ]
     },
     {
       "id": "FL013",
@@ -706,9 +1321,24 @@
       "scent": "หอมหวานเข้มข้น (Rich, honeyed rose)",
       "color": "แดง, ชมพู, ขาว, หลากสี",
       "medical": {
-        "benefits_th": ["ลดความเครียด", "ฟื้นฟูจิตใจ", "บำรุงผิว", "มีวิตามินซีสูง"],
-        "uses_th": ["น้ำมันหอมระเหยกุหลาบ", "น้ำลอยดอกกุหลาบ", "แยมกุหลาบ", "เครื่องสำอาง"],
-        "benefits_en": ["Stress reduction", "Mental rejuvenation", "Skin care", "Rich in Vitamin C"]
+        "benefits_th": [
+          "ลดความเครียด",
+          "ฟื้นฟูจิตใจ",
+          "บำรุงผิว",
+          "มีวิตามินซีสูง"
+        ],
+        "uses_th": [
+          "น้ำมันหอมระเหยกุหลาบ",
+          "น้ำลอยดอกกุหลาบ",
+          "แยมกุหลาบ",
+          "เครื่องสำอาง"
+        ],
+        "benefits_en": [
+          "Stress reduction",
+          "Mental rejuvenation",
+          "Skin care",
+          "Rich in Vitamin C"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอกซ้อนหรือชั้นเดียว หลากสีสัน กลิ่นหอมหวาน มีความสวยงามคลาสสิค",
@@ -716,17 +1346,36 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["พวงมาลัย", "ประดับงานมงคล", "ประตูป่า", "กระทง", "บายศรี"],
+        "uses_th": [
+          "พวงมาลัย",
+          "ประดับงานมงคล",
+          "ประตูป่า",
+          "กระทง",
+          "บายศรี"
+        ],
         "food_th": "แยมกุหลาบ, ชากุหลาบ, ขนมไทยกลิ่นกุหลาบ"
       },
       "belief": {
         "meaning_th": "ความรัก, ความสวยงาม, ความเคารพ",
-        "beliefs_th": ["ใช้ในบายศรีและเครื่องบูชา", "เป็นดอกไม้สากลแห่งความรัก"]
+        "beliefs_th": [
+          "ใช้ในบายศรีและเครื่องบูชา",
+          "เป็นดอกไม้สากลแห่งความรัก"
+        ]
       },
-      "wellness_activity": ["Rose bath", "Rose tea ceremony", "Rose hydrosol spray making", "Petal meditation"],
+      "wellness_activity": [
+        "Rose bath",
+        "Rose tea ceremony",
+        "Rose hydrosol spray making",
+        "Petal meditation"
+      ],
       "fragrance_family": "Floral",
       "element": "น้ำ (Water)",
-      "knowledge_graph_tags": ["universal_flower", "aromatherapy", "edible_flower", "skincare"]
+      "knowledge_graph_tags": [
+        "universal_flower",
+        "aromatherapy",
+        "edible_flower",
+        "skincare"
+      ]
     },
     {
       "id": "FL014",
@@ -739,9 +1388,21 @@
       "scent": "ไม่มีกลิ่น",
       "color": "แสดอมเหลือง",
       "medical": {
-        "benefits_th": ["ดอกต้มน้ำดื่มถอนพิษไข้", "ขับปัสสาวะ", "รักษาโรคตามัว", "เปลือกใช้ย้อมผ้าให้สีแดง"],
-        "uses_th": ["ยาสมุนไพร", "ย้อมผ้าธรรมชาติ"],
-        "benefits_en": ["Antipyretic (fever relief)", "Diuretic", "Natural dye for fabric"]
+        "benefits_th": [
+          "ดอกต้มน้ำดื่มถอนพิษไข้",
+          "ขับปัสสาวะ",
+          "รักษาโรคตามัว",
+          "เปลือกใช้ย้อมผ้าให้สีแดง"
+        ],
+        "uses_th": [
+          "ยาสมุนไพร",
+          "ย้อมผ้าธรรมชาติ"
+        ],
+        "benefits_en": [
+          "Antipyretic (fever relief)",
+          "Diuretic",
+          "Natural dye for fabric"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอกสีแสดสดใส ออกเป็นช่อ ต้นผลัดใบก่อนดอกบาน ทิ้งให้เห็นแต่ดอกสีส้มสดเต็มต้น สวยงามโดดเด่น",
@@ -749,18 +1410,36 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["ดอกไม้ประจำจังหวัดเชียงใหม่และลำพูน", "ย้อมผ้า", "ดอกใช้ต้มน้ำดื่มเป็นยา"],
+        "uses_th": [
+          "ดอกไม้ประจำจังหวัดเชียงใหม่และลำพูน",
+          "ย้อมผ้า",
+          "ดอกใช้ต้มน้ำดื่มเป็นยา"
+        ],
         "food_th": "ดอกใช้ย้อมสีผสมอาหาร"
       },
       "belief": {
         "meaning_th": "ความรุ่งเรือง, ความเจริญ",
-        "beliefs_th": ["เป็นไม้มงคลของล้านนา", "ดอกสีแสดแทนความรุ่งโรจน์"],
-        "beliefs_en": ["Auspicious Lanna tree symbolizing prosperity"]
+        "beliefs_th": [
+          "เป็นไม้มงคลของล้านนา",
+          "ดอกสีแสดแทนความรุ่งโรจน์"
+        ],
+        "beliefs_en": [
+          "Auspicious Lanna tree symbolizing prosperity"
+        ]
       },
-      "wellness_activity": ["Natural dye workshop", "Nature photography", "Herbal tea"],
+      "wellness_activity": [
+        "Natural dye workshop",
+        "Nature photography",
+        "Herbal tea"
+      ],
       "fragrance_family": "None",
       "element": "ไฟ (Fire)",
-      "knowledge_graph_tags": ["lanna_flower", "natural_dye", "medicinal_flower", "northern_thailand"]
+      "knowledge_graph_tags": [
+        "lanna_flower",
+        "natural_dye",
+        "medicinal_flower",
+        "northern_thailand"
+      ]
     },
     {
       "id": "FL015",
@@ -773,9 +1452,19 @@
       "scent": "ไม่มีกลิ่นแรง",
       "color": "เหลืองส้ม",
       "medical": {
-        "benefits_th": ["ต้านมาลาเรีย", "ต้านการอักเสบ", "รักษาเบาหวาน (การใช้พื้นบ้าน)"],
-        "uses_th": ["สมุนไพรพื้นบ้าน"],
-        "benefits_en": ["Antimalarial", "Anti-inflammatory", "Traditional diabetes treatment"]
+        "benefits_th": [
+          "ต้านมาลาเรีย",
+          "ต้านการอักเสบ",
+          "รักษาเบาหวาน (การใช้พื้นบ้าน)"
+        ],
+        "uses_th": [
+          "สมุนไพรพื้นบ้าน"
+        ],
+        "benefits_en": [
+          "Antimalarial",
+          "Anti-inflammatory",
+          "Traditional diabetes treatment"
+        ]
       },
       "aesthetic": {
         "description_th": "ดอกสีเหลืองส้มสดใสขนาดใหญ่ บานเต็มทุ่งในฤดูหนาว ที่ดอยแม่อูคอ อำเภอปัว เป็นจุดถ่ายรูปยอดนิยม",
@@ -783,16 +1472,28 @@
         "instagram_worthy": true
       },
       "tradition": {
-        "uses_th": ["ดอกไม้ประจำจังหวัดแม่ฮ่องสอน", "ที่ดอยแม่อูคอ (น่าน) เป็นจุดชมบัวตอง"],
+        "uses_th": [
+          "ดอกไม้ประจำจังหวัดแม่ฮ่องสอน",
+          "ที่ดอยแม่อูคอ (น่าน) เป็นจุดชมบัวตอง"
+        ],
         "food_th": "ไม่นิยม"
       },
       "belief": {
         "meaning_th": "ความสดใส, ความอบอุ่น"
       },
-      "wellness_activity": ["Sunflower field photography", "Nature walk at Doi Mae Ukho", "Sunset viewing"],
+      "wellness_activity": [
+        "Sunflower field photography",
+        "Nature walk at Doi Mae Ukho",
+        "Sunset viewing"
+      ],
       "fragrance_family": "Fresh",
       "element": "ไฟ (Fire)",
-      "knowledge_graph_tags": ["photogenic", "winter_flower", "nan_tourism", "nature_trail"]
+      "knowledge_graph_tags": [
+        "photogenic",
+        "winter_flower",
+        "nan_tourism",
+        "nature_trail"
+      ]
     },
     {
       "id": "FL016",
@@ -805,9 +1506,22 @@
       "scent": "หอมอ่อนๆ (หมัก)",
       "color": "เขียวเข้ม (ใบ)",
       "medical": {
-        "benefits_th": ["สารต้านอนุมูลอิสระสูง", "บำรุงร่างกาย", "มีคาเฟอีน", "ช่วยให้สดชื่น"],
-        "uses_th": ["ชาใบเมี่ยง", "น้ำยาบ้วนปาก", "สมุนไพร"],
-        "benefits_en": ["High antioxidant content", "Body nourishment", "Refreshing effect"]
+        "benefits_th": [
+          "สารต้านอนุมูลอิสระสูง",
+          "บำรุงร่างกาย",
+          "มีคาเฟอีน",
+          "ช่วยให้สดชื่น"
+        ],
+        "uses_th": [
+          "ชาใบเมี่ยง",
+          "น้ำยาบ้วนปาก",
+          "สมุนไพร"
+        ],
+        "benefits_en": [
+          "High antioxidant content",
+          "Body nourishment",
+          "Refreshing effect"
+        ]
       },
       "aesthetic": {
         "description_th": "ใบเมี่ยงเป็นใบชาที่ผ่านการหมัก ใช้ในพิธีกรรมทางสังคมของชาวเหนือ มีสีเขียวเข้ม กลิ่นหอมเฉพาะตัวจากการหมัก",
@@ -815,18 +1529,36 @@
         "instagram_worthy": false
       },
       "tradition": {
-        "uses_th": ["การกินเมี่ยงเป็นวัฒนธรรมล้านนา", "รับประทานกับถั่ว งา มะพร้าว", "ต่อยอดเป็นนวัตกรรม: ชา, น้ำยาบ้วนปาก"],
+        "uses_th": [
+          "การกินเมี่ยงเป็นวัฒนธรรมล้านนา",
+          "รับประทานกับถั่ว งา มะพร้าว",
+          "ต่อยอดเป็นนวัตกรรม: ชา, น้ำยาบ้วนปาก"
+        ],
         "food_th": "กินเมี่ยง (ใบเมี่ยงหมัก กับ ถั่ว งา มะพร้าว เกลือ)"
       },
       "belief": {
         "meaning_th": "ภูมิปัญญา, การต้อนรับ",
-        "beliefs_th": ["การกินเมี่ยงเป็นเครื่องหมายของการต้อนรับในวัฒนธรรมล้านนา"],
-        "beliefs_en": ["Miang eating is a Lanna hospitality tradition"]
+        "beliefs_th": [
+          "การกินเมี่ยงเป็นเครื่องหมายของการต้อนรับในวัฒนธรรมล้านนา"
+        ],
+        "beliefs_en": [
+          "Miang eating is a Lanna hospitality tradition"
+        ]
       },
-      "wellness_activity": ["Miang tasting experience", "Miang product workshop (mouthwash, tea)", "Herbal innovation tour at Bo Sok"],
+      "wellness_activity": [
+        "Miang tasting experience",
+        "Miang product workshop (mouthwash, tea)",
+        "Herbal innovation tour at Bo Sok"
+      ],
       "fragrance_family": "Herbal - Fermented",
       "element": "ลม (Wind)",
-      "knowledge_graph_tags": ["lanna_food", "fermented_tea", "bosok", "local_wisdom", "wellness_product"]
+      "knowledge_graph_tags": [
+        "lanna_food",
+        "fermented_tea",
+        "bosok",
+        "local_wisdom",
+        "wellness_product"
+      ]
     },
     {
       "id": "FL017",
@@ -839,9 +1571,19 @@
       "scent": "ไม่มีกลิ่น",
       "color": "เขียว (ใบ), ม่วงดำ (ผล)",
       "medical": {
-        "benefits_th": ["ชาใบหม่อนลดระดับน้ำตาลในเลือด", "บำรุงร่างกาย", "มีวิตามินและแร่ธาตุสูง"],
-        "uses_th": ["ชาใบหม่อนอินทรีย์ (ผลิตภัณฑ์เด่นของบ่อสวก)", "ผลหม่อนรับประทานสด"],
-        "benefits_en": ["Mulberry leaf tea helps reduce blood sugar", "Rich in vitamins and minerals"]
+        "benefits_th": [
+          "ชาใบหม่อนลดระดับน้ำตาลในเลือด",
+          "บำรุงร่างกาย",
+          "มีวิตามินและแร่ธาตุสูง"
+        ],
+        "uses_th": [
+          "ชาใบหม่อนอินทรีย์ (ผลิตภัณฑ์เด่นของบ่อสวก)",
+          "ผลหม่อนรับประทานสด"
+        ],
+        "benefits_en": [
+          "Mulberry leaf tea helps reduce blood sugar",
+          "Rich in vitamins and minerals"
+        ]
       },
       "aesthetic": {
         "description_th": "ต้นหม่อนมีใบเขียวสวย ผลมีสีม่วงดำเมื่อสุก เป็นพืชเศรษฐกิจของน่าน",
@@ -849,17 +1591,31 @@
         "instagram_worthy": false
       },
       "tradition": {
-        "uses_th": ["ชาใบหม่อนอินทรีย์ของชุมชนบ่อสวก", "ผลิตภัณฑ์สุขภาพ"],
+        "uses_th": [
+          "ชาใบหม่อนอินทรีย์ของชุมชนบ่อสวก",
+          "ผลิตภัณฑ์สุขภาพ"
+        ],
         "food_th": "ผลหม่อนสด, น้ำหม่อน, แยมหม่อน, ชาใบหม่อน"
       },
       "belief": {
         "meaning_th": "สุขภาพดี, การบำรุง",
-        "beliefs_th": ["เป็นพืชที่ได้รับการส่งเสริมให้ปลูกแทนข้าวโพดในน่าน"]
+        "beliefs_th": [
+          "เป็นพืชที่ได้รับการส่งเสริมให้ปลูกแทนข้าวโพดในน่าน"
+        ]
       },
-      "wellness_activity": ["Mulberry tea ceremony at Bo Sok", "Mulberry picking", "Wellness drink workshop"],
+      "wellness_activity": [
+        "Mulberry tea ceremony at Bo Sok",
+        "Mulberry picking",
+        "Wellness drink workshop"
+      ],
       "fragrance_family": "None",
       "element": "ดิน (Earth)",
-      "knowledge_graph_tags": ["bosok_herb", "diabetes_herb", "wellness_product", "organic_farming"]
+      "knowledge_graph_tags": [
+        "bosok_herb",
+        "diabetes_herb",
+        "wellness_product",
+        "organic_farming"
+      ]
     },
     {
       "id": "FL018",
@@ -872,9 +1628,24 @@
       "scent": "หอมฉุนเฉพาะตัว (Herbal, medicinal)",
       "color": "เขียว (ต้น), ส้มอมเหลือง (เหง้า)",
       "medical": {
-        "benefits_th": ["ลดการอักเสบ", "คลายเส้น, คลายกล้ามเนื้อ", "แก้ปวดเมื่อย", "กระตุ้นระบบไหลเวียนโลหิต"],
-        "uses_th": ["แช่เท้าสมุนไพร", "พอกเข่า", "น้ำมันนวด", "ลูกประคบ"],
-        "benefits_en": ["Anti-inflammatory", "Muscle relaxation", "Pain relief", "Circulation improvement"]
+        "benefits_th": [
+          "ลดการอักเสบ",
+          "คลายเส้น, คลายกล้ามเนื้อ",
+          "แก้ปวดเมื่อย",
+          "กระตุ้นระบบไหลเวียนโลหิต"
+        ],
+        "uses_th": [
+          "แช่เท้าสมุนไพร",
+          "พอกเข่า",
+          "น้ำมันนวด",
+          "ลูกประคบ"
+        ],
+        "benefits_en": [
+          "Anti-inflammatory",
+          "Muscle relaxation",
+          "Pain relief",
+          "Circulation improvement"
+        ]
       },
       "aesthetic": {
         "description_th": "พืชล้มลุก มีเหง้าใต้ดินสีส้มอมเหลือง กลิ่นหอมเฉพาะตัว ใบคล้ายขมิ้น",
@@ -882,17 +1653,34 @@
         "instagram_worthy": false
       },
       "tradition": {
-        "uses_th": ["ลูกประคบ", "น้ำมันนวด", "แช่เท้าสมุนไพร", "พอกเข่า", "ยาสมุนไพรพื้นบ้าน"],
+        "uses_th": [
+          "ลูกประคบ",
+          "น้ำมันนวด",
+          "แช่เท้าสมุนไพร",
+          "พอกเข่า",
+          "ยาสมุนไพรพื้นบ้าน"
+        ],
         "food_th": "ไม่นิยมรับประทาน (ใช้ภายนอก)"
       },
       "belief": {
         "meaning_th": "การรักษาแบบธรรมชาติ",
-        "beliefs_th": ["ใช้ในการแพทย์แผนไทยพื้นบ้านล้านนามานาน"]
+        "beliefs_th": [
+          "ใช้ในการแพทย์แผนไทยพื้นบ้านล้านนามานาน"
+        ]
       },
-      "wellness_activity": ["Herbal foot bath at Bo Sok", "Phlai knee compress therapy", "Herbal compress workshop"],
+      "wellness_activity": [
+        "Herbal foot bath at Bo Sok",
+        "Phlai knee compress therapy",
+        "Herbal compress workshop"
+      ],
       "fragrance_family": "Fresh - Herbal",
       "element": "ไฟ (Fire)",
-      "knowledge_graph_tags": ["bosok_herb", "traditional_medicine", "herbal_compress", "foot_bath"]
+      "knowledge_graph_tags": [
+        "bosok_herb",
+        "traditional_medicine",
+        "herbal_compress",
+        "foot_bath"
+      ]
     },
     {
       "id": "FL019",
@@ -905,9 +1693,23 @@
       "scent": "หอมสดชื่น (Citrus, fresh)",
       "color": "เขียว",
       "medical": {
-        "benefits_th": ["กระตุ้นระบบไหลเวียนโลหิต", "ขับลม", "ลดความดันโลหิต", "ช่วยย่อยอาหาร"],
-        "uses_th": ["แช่เท้าสมุนไพร", "ชาตะไคร้", "น้ำมันหอมระเหย"],
-        "benefits_en": ["Circulation stimulation", "Carvative", "Blood pressure reduction", "Digestive aid"]
+        "benefits_th": [
+          "กระตุ้นระบบไหลเวียนโลหิต",
+          "ขับลม",
+          "ลดความดันโลหิต",
+          "ช่วยย่อยอาหาร"
+        ],
+        "uses_th": [
+          "แช่เท้าสมุนไพร",
+          "ชาตะไคร้",
+          "น้ำมันหอมระเหย"
+        ],
+        "benefits_en": [
+          "Circulation stimulation",
+          "Carvative",
+          "Blood pressure reduction",
+          "Digestive aid"
+        ]
       },
       "aesthetic": {
         "description_th": "หญ้ากลิ่นหอมสดชื่น ปลูกเป็นกอ ใบยาวเรียว สีเขียว",
@@ -915,17 +1717,32 @@
         "instagram_worthy": false
       },
       "tradition": {
-        "uses_th": ["แช่เท้าสมุนไพร", "เครื่องหอม", "อาหารไทยทุกประเภท"],
+        "uses_th": [
+          "แช่เท้าสมุนไพร",
+          "เครื่องหอม",
+          "อาหารไทยทุกประเภท"
+        ],
         "food_th": "ต้มยำ, ต้มข่า, ผัด, น้ำพริก, ชา"
       },
       "belief": {
         "meaning_th": "ความสดชื่น, การชำระล้าง",
-        "beliefs_th": ["เชื่อว่าตะไคร้ช่วยไล่สิ่งไม่ดี"]
+        "beliefs_th": [
+          "เชื่อว่าตะไคร้ช่วยไล่สิ่งไม่ดี"
+        ]
       },
-      "wellness_activity": ["Herbal foot bath", "Lemongrass tea", "Essential oil distillation demo"],
+      "wellness_activity": [
+        "Herbal foot bath",
+        "Lemongrass tea",
+        "Essential oil distillation demo"
+      ],
       "fragrance_family": "Fresh - Citrus",
       "element": "ลม (Wind)",
-      "knowledge_graph_tags": ["bosok_herb", "culinary_herb", "aromatherapy", "thai_cooking"]
+      "knowledge_graph_tags": [
+        "bosok_herb",
+        "culinary_herb",
+        "aromatherapy",
+        "thai_cooking"
+      ]
     },
     {
       "id": "FL020",
@@ -938,9 +1755,20 @@
       "scent": "ไม่มีกลิ่น",
       "color": "เขียว (ผล), น้ำตาล (เมล็ด)",
       "medical": {
-        "benefits_th": ["เมล็ดมีไขมันดีสูง", "คุณค่าทางโภชนาการสูง", "ใช้ในผลิตภัณฑ์สุขภาพ"],
-        "uses_th": ["สกัดน้ำมัน", "อาหารเสริมสุขภาพ"],
-        "benefits_en": ["High in healthy fats", "Nutritious seeds", "Used in health supplements"]
+        "benefits_th": [
+          "เมล็ดมีไขมันดีสูง",
+          "คุณค่าทางโภชนาการสูง",
+          "ใช้ในผลิตภัณฑ์สุขภาพ"
+        ],
+        "uses_th": [
+          "สกัดน้ำมัน",
+          "อาหารเสริมสุขภาพ"
+        ],
+        "benefits_en": [
+          "High in healthy fats",
+          "Nutritious seeds",
+          "Used in health supplements"
+        ]
       },
       "aesthetic": {
         "description_th": "ไม้ยืนต้นสูงใหญ่ ผลกลมสีเขียว เมล็ดในใช้สกัดน้ำมัน เป็นพืชประจำถิ่นของน่าน",
@@ -948,20 +1776,34 @@
         "instagram_worthy": false
       },
       "tradition": {
-        "uses_th": ["พืชอาหารพื้นบ้าน", "สกัดน้ำมัน", "พืชเศรษฐกิจท้องถิ่น"],
+        "uses_th": [
+          "พืชอาหารพื้นบ้าน",
+          "สกัดน้ำมัน",
+          "พืชเศรษฐกิจท้องถิ่น"
+        ],
         "food_th": "เมล็ดกระบกคั่ว, น้ำมันกระบก"
       },
       "belief": {
         "meaning_th": "ความอุดมสมบูรณ์ของป่าน่าน",
-        "beliefs_th": ["เป็นพืชท้องถิ่นที่แสดงถึงความสมบูรณ์ของป่าต้นน้ำน่าน"]
+        "beliefs_th": [
+          "เป็นพืชท้องถิ่นที่แสดงถึงความสมบูรณ์ของป่าต้นน้ำน่าน"
+        ]
       },
-      "wellness_activity": ["Local food tasting", "Oil pressing workshop", "Sustainable farming tour"],
+      "wellness_activity": [
+        "Local food tasting",
+        "Oil pressing workshop",
+        "Sustainable farming tour"
+      ],
       "fragrance_family": "None",
       "element": "ดิน (Earth)",
-      "knowledge_graph_tags": ["nan_local_plant", "edible_seed", "local_ingredient", "sustainable_farming"]
+      "knowledge_graph_tags": [
+        "nan_local_plant",
+        "edible_seed",
+        "local_ingredient",
+        "sustainable_farming"
+      ]
     }
   ],
-
   "wellness_communities": [
     {
       "id": "WC001",
@@ -977,8 +1819,17 @@
         "ชาใบหม่อนอินทรีย์ — บำรุงร่างกาย, ลดระดับน้ำตาล",
         "ผลิตภัณฑ์แปรรูปใบเมี่ยง (ชา, น้ำยาบ้วนปาก)"
       ],
-      "key_herbs": ["ใบเมี่ยง", "หม่อน", "ไพล", "ตะไคร้", "ขมิ้น"],
-      "flowers_in_use": ["ดาวเรือง (พอกเข่า)", "มะลิ (พวงมาลัย)"]
+      "key_herbs": [
+        "ใบเมี่ยง",
+        "หม่อน",
+        "ไพล",
+        "ตะไคร้",
+        "ขมิ้น"
+      ],
+      "flowers_in_use": [
+        "ดาวเรือง (พอกเข่า)",
+        "มะลิ (พวงมาลัย)"
+      ]
     },
     {
       "id": "WC002",
@@ -1022,30 +1873,49 @@
       ]
     }
   ],
-
   "ethnic_groups": [
     {
       "id": "EG001",
       "name_th": "ไทลื้อ",
       "name_en": "Tai Lue",
       "population_in_nan": "มากที่สุดในประเทศไทย (ตั้งถิ่นฐานในน่านมากกว่าจังหวัดอื่น)",
-      "districts": ["อำเภอปัว (ศูนย์กลาง)", "อำเภอท่าวังผา", "อำเภอทุ่งช้าง"],
+      "districts": [
+        "อำเภอปัว (ศูนย์กลาง)",
+        "อำเภอท่าวังผา",
+        "อำเภอทุ่งช้าง"
+      ],
       "language": "ภาษาไทลื้อ (Tai Lü) — กลุ่มภาษาไท-กะได",
       "religion": "พุทธเถรวาท + ความเชื่อเรื่องผี",
       "cultural_highlights": {
         "textile": "ผ้าทอมือไทลื้อ — ลวดลายเอกลักษณ์, ย้อมสีธรรมชาติจากดอกไม้และพืช",
-        "food": ["ข้าวแคบ (Crispy rice cracker)", "แคบหมูไทลื้อ", "ไส้อั่วไทลื้อ", "น้ำพริกหนุ่ม", "ข้าวซอยไทลื้อ (Khao Soi Tai Lue)"],
-        "music": ["จ๊อยซอ", "ปี่แม่ (Pi Mae)", "ขับลื้อ (Khap Lue)", "วงปี่จุ้ม"],
+        "food": [
+          "ข้าวแคบ (Crispy rice cracker)",
+          "แคบหมูไทลื้อ",
+          "ไส้อั่วไทลื้อ",
+          "น้ำพริกหนุ่ม",
+          "ข้าวซอยไทลื้อ (Khao Soi Tai Lue)"
+        ],
+        "music": [
+          "จ๊อยซอ",
+          "ปี่แม่ (Pi Mae)",
+          "ขับลื้อ (Khap Lue)",
+          "วงปี่จุ้ม"
+        ],
         "dance": "ฟ้อนแง้น, ฟ้อนไทลื้อ",
         "medicine": "ภูมิปัญญาสมุนไพร 700 ปี — พืชสมุนไพรรักษาโรคความดันโลหิตสูง (ศึกษาที่หมู่บ้านภูคำ อำเภอปัว)"
       },
       "flower_connection": {
-        "traditional_flowers": ["ดอกมะลิ", "ดอกดาวเรือง", "ดอกบัว", "ดอกรัก", "ดอกบานไม่รู้โรย"],
+        "traditional_flowers": [
+          "ดอกมะลิ",
+          "ดอกดาวเรือง",
+          "ดอกบัว",
+          "ดอกรัก",
+          "ดอกบานไม่รู้โรย"
+        ],
         "special_tradition": "ประเพณีดอกไม้พันดวง — การทำดอกไม้ประดิษฐ์นับพันดอกเพื่อถวายเป็นพุทธบูชาในงานเทศน์มหาชาติ"
       }
     }
   ],
-
   "relationship_matrix": {
     "description": "Matrix connecting festivals → flowers → beliefs → wellness activities",
     "example_connections": [
@@ -1093,7 +1963,6 @@
       }
     ]
   },
-
   "ml_training_notes": {
     "recommendation_features": [
       "user_zodiac_sign → element → recommended flowers",
@@ -1102,77 +1971,666 @@
       "user_interest → flower_knowledge_graph_tag → personalized_experience"
     ],
     "example_training_data": [
-      {"user_element": "ดิน", "recommended_flowers": ["มะลิ", "กุหลาบ", "พุดซ้อน"], "recommended_festivals": ["สืบชะตา", "ตานก๋วยสลาก"], "wellness_tip": "ดอกมะลิจะช่วยให้คุณรู้สึกมั่นคงและผ่อนคลาย"},
-      {"user_element": "น้ำ", "recommended_flowers": ["บัวหลวง", "กระดังงา", "สารภี"], "recommended_festivals": ["ยี่เป็ง", "หกเป็ง"], "wellness_tip": "ดอกบัวจะช่วยให้คุณเชื่อมต่อกับอารมณ์และความคิด"},
-      {"user_element": "ลม", "recommended_flowers": ["เสี้ยวดอกขาว", "ลีลาวดี", "ตะไคร้"], "recommended_festivals": ["แข่งเรือ", "ดอกไม้พันดวง"], "wellness_tip": "ดอกเสี้ยวดอกขาวจะช่วยให้คุณรู้สึกสดชื่นและอิสระ"},
-      {"user_element": "ไฟ", "recommended_flowers": ["ดาวเรือง", "ทองกวาว", "บัวตอง"], "recommended_festivals": ["แห่เทียนพรรษา", "ปีใหม่ม้ง"], "wellness_tip": "ดอกดาวเรืองจะช่วยเติมพลังและความอบอุ่นให้คุณ"},
-      {"visit_month": 10, "festival": "แข่งเรือชิงถ้วยพระราชทาน", "suggested_experience": "ชมการแข่งเรือ + พัก Wellness Stay ที่บ่อสวก + ร่วมกิจกรรมสุมยาแช่เท้า"},
-      {"visit_month": 3, "festival": "หกเป็งนมัสการพระธาตุแช่แห้ง", "suggested_experience": "เดินขึ้นพระธาตุ + ทำบุญ + ชิมอาหารดีวิถีน่าน"},
-      {"visit_month": 11, "festival": "ยี่เป็ง", "suggested_experience": "ลอยกระทง + ชมประตูป่า + เที่ยวบ่อเกลือโบราณ"},
-      {"user_mood": "stressed", "recommended_flowers": ["มะลิ", "ลาเวนเดอร์", "กระดังงา"], "recommended_activity": "Aromatherapy massage ที่บ่อสวก + สุมยา", "wellness_tip": "ดอกมะลิจะช่วยให้คุณผ่อนคลายจากความเครียด"},
-      {"user_mood": "sad", "recommended_flowers": ["กุหลาบ", "ดาวเรือง", "บัวตอง"], "recommended_activity": "Forest Bathing ที่ดอยภูคา + ชมวิว", "wellness_tip": "ดอกกุหลาบสีสดใสจะช่วยฟื้นฟูจิตใจของคุณ"},
-      {"user_mood": "tired", "recommended_flowers": ["ตะไคร้", "เปปเปอร์มินต์", "มะกรูด"], "recommended_activity": "แช่เท้าสมุนไพรที่บ่อสวก + ชาใบหม่อน", "wellness_tip": "ตะไคร้จะช่วยกระตุ้นให้คุณรู้สึกสดชื่นขึ้น"},
-      {"user_mood": "anxious", "recommended_flowers": ["บัวหลวง", "ลาเวนเดอร์", "สารภี"], "recommended_activity": "นั่งสมาธิที่วัดภูมินทร์ + จิบชาเบญจเกสร", "wellness_tip": "ดอกบัวหลวงจะช่วยให้จิตใจสงบและมีสมาธิ"},
-      {"interest": "photography", "recommended_flowers": ["เสี้ยวดอกขาว", "บัวตอง", "เอื้อง", "ทองกวาว"], "suggested_spots": ["ดอยภูคา", "วัดพระธาตุเขาน้อย", "ดอยแม่อูคอ", "วัดภูมินทร์"]},
-      {"interest": "food", "recommended_flowers": ["มะลิ", "บัวหลวง", "ดาวเรือง", "กุหลาบ"], "suggested_activities": ["ชิมชาเบญจเกสร", "เวิร์กชอปทำอาหารจากดอกไม้", "เส้นทางอาหารดีวิถีน่าน"]},
-      {"interest": "herbal_wellness", "recommended_flowers": ["ไพล", "ตะไคร้", "หม่อน", "ใบเมี่ยง"], "suggested_activities": ["แช่เท้าสมุนไพรบ่อสวก", "พอกเข่า", "ซื้อผลิตภัณฑ์บ้านน้ำเกี๋ยน"]},
-      {"interest": "spiritual", "recommended_flowers": ["บัวหลวง", "มะลิ", "ดาวเรือง", "บานไม่รู้โรย"], "suggested_festivals": ["หกเป็ง", "สืบชะตา", "ตานก๋วยสลาก", "ยี่เป็ง"]},
-      {"interest": "social_media_content", "recommended_flowers": ["เสี้ยวดอกขาว", "ลีลาวดี", "บัวตอง", "ทองกวาว"], "photo_scores": {"เสี้ยวดอกขาว": 9, "ลีลาวดี": 9, "บัวตอง": 10, "ทองกวาว": 10}, "suggested_filters": "warm_vintage, nature_boost"}
+      {
+        "user_element": "ดิน",
+        "recommended_flowers": [
+          "มะลิ",
+          "กุหลาบ",
+          "พุดซ้อน"
+        ],
+        "recommended_festivals": [
+          "สืบชะตา",
+          "ตานก๋วยสลาก"
+        ],
+        "wellness_tip": "ดอกมะลิจะช่วยให้คุณรู้สึกมั่นคงและผ่อนคลาย"
+      },
+      {
+        "user_element": "น้ำ",
+        "recommended_flowers": [
+          "บัวหลวง",
+          "กระดังงา",
+          "สารภี"
+        ],
+        "recommended_festivals": [
+          "ยี่เป็ง",
+          "หกเป็ง"
+        ],
+        "wellness_tip": "ดอกบัวจะช่วยให้คุณเชื่อมต่อกับอารมณ์และความคิด"
+      },
+      {
+        "user_element": "ลม",
+        "recommended_flowers": [
+          "เสี้ยวดอกขาว",
+          "ลีลาวดี",
+          "ตะไคร้"
+        ],
+        "recommended_festivals": [
+          "แข่งเรือ",
+          "ดอกไม้พันดวง"
+        ],
+        "wellness_tip": "ดอกเสี้ยวดอกขาวจะช่วยให้คุณรู้สึกสดชื่นและอิสระ"
+      },
+      {
+        "user_element": "ไฟ",
+        "recommended_flowers": [
+          "ดาวเรือง",
+          "ทองกวาว",
+          "บัวตอง"
+        ],
+        "recommended_festivals": [
+          "แห่เทียนพรรษา",
+          "ปีใหม่ม้ง"
+        ],
+        "wellness_tip": "ดอกดาวเรืองจะช่วยเติมพลังและความอบอุ่นให้คุณ"
+      },
+      {
+        "visit_month": 10,
+        "festival": "แข่งเรือชิงถ้วยพระราชทาน",
+        "suggested_experience": "ชมการแข่งเรือ + พัก Wellness Stay ที่บ่อสวก + ร่วมกิจกรรมสุมยาแช่เท้า"
+      },
+      {
+        "visit_month": 3,
+        "festival": "หกเป็งนมัสการพระธาตุแช่แห้ง",
+        "suggested_experience": "เดินขึ้นพระธาตุ + ทำบุญ + ชิมอาหารดีวิถีน่าน"
+      },
+      {
+        "visit_month": 11,
+        "festival": "ยี่เป็ง",
+        "suggested_experience": "ลอยกระทง + ชมประตูป่า + เที่ยวบ่อเกลือโบราณ"
+      },
+      {
+        "user_mood": "stressed",
+        "recommended_flowers": [
+          "มะลิ",
+          "ลาเวนเดอร์",
+          "กระดังงา"
+        ],
+        "recommended_activity": "Aromatherapy massage ที่บ่อสวก + สุมยา",
+        "wellness_tip": "ดอกมะลิจะช่วยให้คุณผ่อนคลายจากความเครียด"
+      },
+      {
+        "user_mood": "sad",
+        "recommended_flowers": [
+          "กุหลาบ",
+          "ดาวเรือง",
+          "บัวตอง"
+        ],
+        "recommended_activity": "Forest Bathing ที่ดอยภูคา + ชมวิว",
+        "wellness_tip": "ดอกกุหลาบสีสดใสจะช่วยฟื้นฟูจิตใจของคุณ"
+      },
+      {
+        "user_mood": "tired",
+        "recommended_flowers": [
+          "ตะไคร้",
+          "เปปเปอร์มินต์",
+          "มะกรูด"
+        ],
+        "recommended_activity": "แช่เท้าสมุนไพรที่บ่อสวก + ชาใบหม่อน",
+        "wellness_tip": "ตะไคร้จะช่วยกระตุ้นให้คุณรู้สึกสดชื่นขึ้น"
+      },
+      {
+        "user_mood": "anxious",
+        "recommended_flowers": [
+          "บัวหลวง",
+          "ลาเวนเดอร์",
+          "สารภี"
+        ],
+        "recommended_activity": "นั่งสมาธิที่วัดภูมินทร์ + จิบชาเบญจเกสร",
+        "wellness_tip": "ดอกบัวหลวงจะช่วยให้จิตใจสงบและมีสมาธิ"
+      },
+      {
+        "interest": "photography",
+        "recommended_flowers": [
+          "เสี้ยวดอกขาว",
+          "บัวตอง",
+          "เอื้อง",
+          "ทองกวาว"
+        ],
+        "suggested_spots": [
+          "ดอยภูคา",
+          "วัดพระธาตุเขาน้อย",
+          "ดอยแม่อูคอ",
+          "วัดภูมินทร์"
+        ]
+      },
+      {
+        "interest": "food",
+        "recommended_flowers": [
+          "มะลิ",
+          "บัวหลวง",
+          "ดาวเรือง",
+          "กุหลาบ"
+        ],
+        "suggested_activities": [
+          "ชิมชาเบญจเกสร",
+          "เวิร์กชอปทำอาหารจากดอกไม้",
+          "เส้นทางอาหารดีวิถีน่าน"
+        ]
+      },
+      {
+        "interest": "herbal_wellness",
+        "recommended_flowers": [
+          "ไพล",
+          "ตะไคร้",
+          "หม่อน",
+          "ใบเมี่ยง"
+        ],
+        "suggested_activities": [
+          "แช่เท้าสมุนไพรบ่อสวก",
+          "พอกเข่า",
+          "ซื้อผลิตภัณฑ์บ้านน้ำเกี๋ยน"
+        ]
+      },
+      {
+        "interest": "spiritual",
+        "recommended_flowers": [
+          "บัวหลวง",
+          "มะลิ",
+          "ดาวเรือง",
+          "บานไม่รู้โรย"
+        ],
+        "suggested_festivals": [
+          "หกเป็ง",
+          "สืบชะตา",
+          "ตานก๋วยสลาก",
+          "ยี่เป็ง"
+        ]
+      },
+      {
+        "interest": "social_media_content",
+        "recommended_flowers": [
+          "เสี้ยวดอกขาว",
+          "ลีลาวดี",
+          "บัวตอง",
+          "ทองกวาว"
+        ],
+        "photo_scores": {
+          "เสี้ยวดอกขาว": 9,
+          "ลีลาวดี": 9,
+          "บัวตอง": 10,
+          "ทองกวาว": 10
+        },
+        "suggested_filters": "warm_vintage, nature_boost"
+      }
     ]
   },
-
   "flower_blooming_calendar": {
     "description": "ปฏิทินดอกไม้บานในจังหวัดน่านรายเดือน สำหรับใช้วางแผนการท่องเที่ยว",
     "calendar": {
-      "january": {"flowers": ["เสี้ยวดอกขาว", "บัวตอง", "เอื้อง (กล้วยไม้ป่า)"], "festivals": ["ปีใหม่ม้ง"], "season": "High Season (อากาศหนาว)", "avg_temp": "15-25°C", "wellness_tip": "อากาศหนาว เหมาะกับการแช่เท้าสมุนไพรอุ่นๆ"},
-      "february": {"flowers": ["ทองกวาว", "เสี้ยวดอกขาว", "บัวตอง"], "festivals": ["ดอกไม้พันดวง"], "season": "High Season (อากาศหนาว)", "avg_temp": "16-28°C", "wellness_tip": "ชมทองกวาวดอกสีแสดสดใส เหมาะกับการถ่ายรูป"},
-      "march": {"flowers": ["ทองกวาว", "พวงแสด", "เสี้ยวดอกขาว"], "festivals": ["หกเป็งนมัสการพระธาตุแช่แห้ง"], "season": "เริ่มร้อน", "avg_temp": "20-33°C", "wellness_tip": "ขึ้นพระธาตุแช่แห้งแต่เช้า หลบเลี่ยงความร้อน"},
-      "april": {"flowers": ["ดอกไม้ป่าดอย", "ทองกวาว", "มะลิ"], "festivals": ["สงกรานต์", "เลี้ยงผีขุนน้ำ"], "season": "Low Season (ร้อน)", "avg_temp": "23-36°C", "wellness_tip": "สงกรานต์คลายร้อน กิจกรรมเลี้ยงผีขุนน้ำเชื่อมต่อธรรมชาติ"},
-      "may": {"flowers": ["บัวหลวง", "บัวตอง", "พุดซ้อน"], "festivals": ["แปดเป็งวัดจอมแจ้ง", "ไหว้พระธาตุเขาน้อย"], "season": "Low Season (ร้อน)", "avg_temp": "24-34°C", "wellness_tip": "เริ่มเข้าหน้าฝน ชมทุ่งบัวตอง"},
-      "june": {"flowers": ["บัวหลวง", "พุดซ้อน", "กระดังงา"], "festivals": [], "season": "Low Season (ฝน)", "avg_temp": "24-33°C", "wellness_tip": "อากาศเริ่มเย็นลง เหมาะกับการทำสมาธิในวัด"},
-      "july": {"flowers": ["บัวหลวง", "ดอกลีลาวดี", "พุดซ้อน"], "festivals": ["แห่เทียนเข้าพรรษา"], "season": "Low Season (ฝน)", "avg_temp": "23-32°C", "wellness_tip": "เทศกาลแห่เทียน ชมดอกบัวในวัด"},
-      "august": {"flowers": ["บัวหลวง", "ดอกไม้ป่า", "ไพล"], "festivals": [], "season": "Low Season (ฝน)", "avg_temp": "23-32°C", "wellness_tip": "กิจกรรม indoor: สุมยา, แช่เท้า, ชิมชาที่บ่อสวก"},
-      "september": {"flowers": ["มะลิ", "ดาวเรือง", "ดอกรัก"], "festivals": ["ตานก๋วยสลาก", "แข่งเรือเปิดสนาม"], "season": "Low→High Season (ปลายฝน)", "avg_temp": "23-31°C", "wellness_tip": "ชมแข่งเรือ + ร่วมประเพณีตานก๋วยสลาก"},
-      "october": {"flowers": ["ดาวเรือง", "มะลิ", "บานไม่รู้โรย", "เสี้ยวดอกขาว"], "festivals": ["แข่งเรือชิงถ้วยพระราชทาน", "ถวายทานสลากภัต"], "season": "High Season (เริ่มหนาว)", "avg_temp": "22-30°C", "wellness_tip": "High season เริ่มแล้ว อากาศดี เหมาะกับการท่องเที่ยวครบวงจร"},
-      "november": {"flowers": ["บัวตอง", "ดาวเรือง", "บัวหลวง", "เสี้ยวดอกขาว"], "festivals": ["ยี่เป็ง/ลอยกระทง"], "season": "High Season (หนาว)", "avg_temp": "18-28°C", "wellness_tip": "ยี่เป็งลอยกระทง ลอยความทุกข์ ชมประตูป่าดอกไม้"},
-      "december": {"flowers": ["บัวตอง", "เสี้ยวดอกขาว", "เอื้อง", "ลีลาวดี"], "festivals": ["เทศกาลท่องเที่ยวประจำปี"], "season": "High Season (หนาว)", "avg_temp": "15-25°C", "wellness_tip": "อากาศหนาวที่สุดของปี เหมาะกับการทำกิจกรรมกลางแจ้งและ Forest Bathing"}
+      "january": {
+        "flowers": [
+          "เสี้ยวดอกขาว",
+          "บัวตอง",
+          "เอื้อง (กล้วยไม้ป่า)"
+        ],
+        "festivals": [
+          "ปีใหม่ม้ง"
+        ],
+        "season": "High Season (อากาศหนาว)",
+        "avg_temp": "15-25°C",
+        "wellness_tip": "อากาศหนาว เหมาะกับการแช่เท้าสมุนไพรอุ่นๆ"
+      },
+      "february": {
+        "flowers": [
+          "ทองกวาว",
+          "เสี้ยวดอกขาว",
+          "บัวตอง"
+        ],
+        "festivals": [
+          "ดอกไม้พันดวง"
+        ],
+        "season": "High Season (อากาศหนาว)",
+        "avg_temp": "16-28°C",
+        "wellness_tip": "ชมทองกวาวดอกสีแสดสดใส เหมาะกับการถ่ายรูป"
+      },
+      "march": {
+        "flowers": [
+          "ทองกวาว",
+          "พวงแสด",
+          "เสี้ยวดอกขาว"
+        ],
+        "festivals": [
+          "หกเป็งนมัสการพระธาตุแช่แห้ง"
+        ],
+        "season": "เริ่มร้อน",
+        "avg_temp": "20-33°C",
+        "wellness_tip": "ขึ้นพระธาตุแช่แห้งแต่เช้า หลบเลี่ยงความร้อน"
+      },
+      "april": {
+        "flowers": [
+          "ดอกไม้ป่าดอย",
+          "ทองกวาว",
+          "มะลิ"
+        ],
+        "festivals": [
+          "สงกรานต์",
+          "เลี้ยงผีขุนน้ำ"
+        ],
+        "season": "Low Season (ร้อน)",
+        "avg_temp": "23-36°C",
+        "wellness_tip": "สงกรานต์คลายร้อน กิจกรรมเลี้ยงผีขุนน้ำเชื่อมต่อธรรมชาติ"
+      },
+      "may": {
+        "flowers": [
+          "บัวหลวง",
+          "บัวตอง",
+          "พุดซ้อน"
+        ],
+        "festivals": [
+          "แปดเป็งวัดจอมแจ้ง",
+          "ไหว้พระธาตุเขาน้อย"
+        ],
+        "season": "Low Season (ร้อน)",
+        "avg_temp": "24-34°C",
+        "wellness_tip": "เริ่มเข้าหน้าฝน ชมทุ่งบัวตอง"
+      },
+      "june": {
+        "flowers": [
+          "บัวหลวง",
+          "พุดซ้อน",
+          "กระดังงา"
+        ],
+        "festivals": [],
+        "season": "Low Season (ฝน)",
+        "avg_temp": "24-33°C",
+        "wellness_tip": "อากาศเริ่มเย็นลง เหมาะกับการทำสมาธิในวัด"
+      },
+      "july": {
+        "flowers": [
+          "บัวหลวง",
+          "ดอกลีลาวดี",
+          "พุดซ้อน"
+        ],
+        "festivals": [
+          "แห่เทียนเข้าพรรษา"
+        ],
+        "season": "Low Season (ฝน)",
+        "avg_temp": "23-32°C",
+        "wellness_tip": "เทศกาลแห่เทียน ชมดอกบัวในวัด"
+      },
+      "august": {
+        "flowers": [
+          "บัวหลวง",
+          "ดอกไม้ป่า",
+          "ไพล"
+        ],
+        "festivals": [],
+        "season": "Low Season (ฝน)",
+        "avg_temp": "23-32°C",
+        "wellness_tip": "กิจกรรม indoor: สุมยา, แช่เท้า, ชิมชาที่บ่อสวก"
+      },
+      "september": {
+        "flowers": [
+          "มะลิ",
+          "ดาวเรือง",
+          "ดอกรัก"
+        ],
+        "festivals": [
+          "ตานก๋วยสลาก",
+          "แข่งเรือเปิดสนาม"
+        ],
+        "season": "Low→High Season (ปลายฝน)",
+        "avg_temp": "23-31°C",
+        "wellness_tip": "ชมแข่งเรือ + ร่วมประเพณีตานก๋วยสลาก"
+      },
+      "october": {
+        "flowers": [
+          "ดาวเรือง",
+          "มะลิ",
+          "บานไม่รู้โรย",
+          "เสี้ยวดอกขาว"
+        ],
+        "festivals": [
+          "แข่งเรือชิงถ้วยพระราชทาน",
+          "ถวายทานสลากภัต"
+        ],
+        "season": "High Season (เริ่มหนาว)",
+        "avg_temp": "22-30°C",
+        "wellness_tip": "High season เริ่มแล้ว อากาศดี เหมาะกับการท่องเที่ยวครบวงจร"
+      },
+      "november": {
+        "flowers": [
+          "บัวตอง",
+          "ดาวเรือง",
+          "บัวหลวง",
+          "เสี้ยวดอกขาว"
+        ],
+        "festivals": [
+          "ยี่เป็ง/ลอยกระทง"
+        ],
+        "season": "High Season (หนาว)",
+        "avg_temp": "18-28°C",
+        "wellness_tip": "ยี่เป็งลอยกระทง ลอยความทุกข์ ชมประตูป่าดอกไม้"
+      },
+      "december": {
+        "flowers": [
+          "บัวตอง",
+          "เสี้ยวดอกขาว",
+          "เอื้อง",
+          "ลีลาวดี"
+        ],
+        "festivals": [
+          "เทศกาลท่องเที่ยวประจำปี"
+        ],
+        "season": "High Season (หนาว)",
+        "avg_temp": "15-25°C",
+        "wellness_tip": "อากาศหนาวที่สุดของปี เหมาะกับการทำกิจกรรมกลางแจ้งและ Forest Bathing"
+      }
     }
   },
-
   "locations": {
     "description": "พิกัดสถานที่สำคัญในจังหวัดน่าน สำหรับใช้ในฟีเจอร์แผนที่และการวางแผนเส้นทาง",
     "places": [
-      {"id": "LOC001", "name": "วัดพระธาตุแช่แห้ง", "lat": 18.7847, "lng": 100.7869, "type": "temple", "tags": ["sacred","festival","wellness"], "wellness_score": 9},
-      {"id": "LOC002", "name": "วัดภูมินทร์", "lat": 18.7753, "lng": 100.7719, "type": "temple", "tags": ["culture","art","meditation"], "wellness_score": 8},
-      {"id": "LOC003", "name": "ดอยภูคา", "lat": 19.1989, "lng": 101.0756, "type": "national_park", "tags": ["nature","hiking","forest_bathing"], "wellness_score": 10},
-      {"id": "LOC004", "name": "บ่อสวก (Bo Sok Herb)", "lat": 18.7211, "lng": 100.7033, "type": "wellness_community", "tags": ["herbal","wellness","workshop"], "wellness_score": 10},
-      {"id": "LOC005", "name": "บ้านน้ำเกี๋ยน", "lat": 18.6900, "lng": 100.7200, "type": "wellness_community", "tags": ["herbal","wellness_stay","organic"], "wellness_score": 9},
-      {"id": "LOC006", "name": "บ่อเกลือโบราณ", "lat": 19.1500, "lng": 101.1500, "type": "natural_attraction", "tags": ["salt_bath","hot_spring","wellness"], "wellness_score": 8},
-      {"id": "LOC007", "name": "วัดพระธาตุเขาน้อย", "lat": 18.7800, "lng": 100.7600, "type": "temple", "tags": ["viewpoint","sunset","meditation"], "wellness_score": 8},
-      {"id": "LOC008", "name": "ดอยแม่อูคอ (ทุ่งบัวตอง)", "lat": 19.2300, "lng": 101.0100, "type": "natural_attraction", "tags": ["flower_field","photography","nature"], "wellness_score": 9},
-      {"id": "LOC009", "name": "อุทยานแห่งชาติศรีน่าน", "lat": 18.4736, "lng": 100.7417, "type": "national_park", "tags": ["camping","stargazing","nature"], "wellness_score": 8},
-      {"id": "LOC010", "name": "อำเภอปัว (ศูนย์กลางไทลื้อ)", "lat": 19.1600, "lng": 100.9200, "type": "district", "tags": ["tai_lue","culture","handicraft"], "wellness_score": 7}
+      {
+        "id": "LOC001",
+        "name": "วัดพระธาตุแช่แห้ง",
+        "lat": 18.7847,
+        "lng": 100.7869,
+        "type": "temple",
+        "tags": [
+          "sacred",
+          "festival",
+          "wellness"
+        ],
+        "wellness_score": 9
+      },
+      {
+        "id": "LOC002",
+        "name": "วัดภูมินทร์",
+        "lat": 18.7753,
+        "lng": 100.7719,
+        "type": "temple",
+        "tags": [
+          "culture",
+          "art",
+          "meditation"
+        ],
+        "wellness_score": 8
+      },
+      {
+        "id": "LOC003",
+        "name": "ดอยภูคา",
+        "lat": 19.1989,
+        "lng": 101.0756,
+        "type": "national_park",
+        "tags": [
+          "nature",
+          "hiking",
+          "forest_bathing"
+        ],
+        "wellness_score": 10
+      },
+      {
+        "id": "LOC004",
+        "name": "บ่อสวก (Bo Sok Herb)",
+        "lat": 18.7211,
+        "lng": 100.7033,
+        "type": "wellness_community",
+        "tags": [
+          "herbal",
+          "wellness",
+          "workshop"
+        ],
+        "wellness_score": 10
+      },
+      {
+        "id": "LOC005",
+        "name": "บ้านน้ำเกี๋ยน",
+        "lat": 18.69,
+        "lng": 100.72,
+        "type": "wellness_community",
+        "tags": [
+          "herbal",
+          "wellness_stay",
+          "organic"
+        ],
+        "wellness_score": 9
+      },
+      {
+        "id": "LOC006",
+        "name": "บ่อเกลือโบราณ",
+        "lat": 19.15,
+        "lng": 101.15,
+        "type": "natural_attraction",
+        "tags": [
+          "salt_bath",
+          "hot_spring",
+          "wellness"
+        ],
+        "wellness_score": 8
+      },
+      {
+        "id": "LOC007",
+        "name": "วัดพระธาตุเขาน้อย",
+        "lat": 18.78,
+        "lng": 100.76,
+        "type": "temple",
+        "tags": [
+          "viewpoint",
+          "sunset",
+          "meditation"
+        ],
+        "wellness_score": 8
+      },
+      {
+        "id": "LOC008",
+        "name": "ดอยแม่อูคอ (ทุ่งบัวตอง)",
+        "lat": 19.23,
+        "lng": 101.01,
+        "type": "natural_attraction",
+        "tags": [
+          "flower_field",
+          "photography",
+          "nature"
+        ],
+        "wellness_score": 9
+      },
+      {
+        "id": "LOC009",
+        "name": "อุทยานแห่งชาติศรีน่าน",
+        "lat": 18.4736,
+        "lng": 100.7417,
+        "type": "national_park",
+        "tags": [
+          "camping",
+          "stargazing",
+          "nature"
+        ],
+        "wellness_score": 8
+      },
+      {
+        "id": "LOC010",
+        "name": "อำเภอปัว (ศูนย์กลางไทลื้อ)",
+        "lat": 19.16,
+        "lng": 100.92,
+        "type": "district",
+        "tags": [
+          "tai_lue",
+          "culture",
+          "handicraft"
+        ],
+        "wellness_score": 7
+      }
     ]
   },
-
   "flower_products": {
     "description": "ผลิตภัณฑ์จากดอกไม้และสมุนไพรที่นักท่องเที่ยวสามารถซื้อเป็นของฝากหรือใช้เพื่อ wellness",
     "products": [
-      {"name": "ชาเบญจเกสร", "ingredients": ["บัวหลวง", "สารภี", "พิกุล", "บุนนาค", "มะลิ"], "benefits": ["บำรุงหัวใจ", "ผ่อนคลาย", "รสเย็น"], "source": "ผลิตภัณฑ์ชุมชนน่าน", "price_range": "100-250 บาท"},
-      {"name": "ชาใบหม่อนอินทรีย์", "ingredients": ["ใบหม่อน"], "benefits": ["ลดน้ำตาลในเลือด", "บำรุงร่างกาย"], "source": "บ่อสวกเฮิร์บ", "price_range": "80-200 บาท"},
-      {"name": "น้ำมันหอมระเหยมะลิ", "ingredients": ["ดอกมะลิ"], "benefits": ["ผ่อนคลาย", "ปรับสมดุลฮอร์โมน", "สดชื่น"], "source": "ร้านวิสาหกิจชุมชนน่าน", "price_range": "150-500 บาท"},
-      {"name": "น้ำมันหอมระเหยกระดังงา", "ingredients": ["ดอกกระดังงา"], "benefits": ["คลายเครียด", "ผ่อนคลาย", "อบอุ่น"], "source": "ร้านวิสาหกิจชุมชนน่าน", "price_range": "150-500 บาท"},
-      {"name": "ยาดมเบญจชื่นจิต", "ingredients": ["ดอกไม้เบญจเกสร", "การบูร", "พิมเสน", "เมนทอล", "ส้มโอ"], "benefits": ["ผ่อนคลาย", "ลดวิงเวียน", "สดชื่น"], "source": "กรมการแพทย์แผนไทยฯ", "price_range": "50-120 บาท"},
-      {"name": "เกลืออาบน้ำสมุนไพรบ่อเกลือ", "ingredients": ["เกลือบ่อเกลือ", "ไพล", "ตะไคร้", "ขมิ้น"], "benefits": ["ผ่อนคลาย", "กระตุ้น circulation", " detox"], "source": "บ่อเกลือโบราณ", "price_range": "100-300 บาท"},
-      {"name": "น้ำยาบ้วนปากใบเมี่ยง", "ingredients": ["สารสกัดใบเมี่ยง"], "benefits": ["ต้านเชื้อแบคทีเรีย", "สดชื่น"], "source": "บ่อสวกเฮิร์บ", "price_range": "80-200 บาท"},
-      {"name": "ลูกประคบสมุนไพร", "ingredients": ["ไพล", "ตะไคร้", "ขมิ้น", "ใบมะขาม"], "benefits": ["คลายกล้ามเนื้อ", "ลดปวดเมื่อย"], "source": "ชุมชนน่าน", "price_range": "50-150 บาท"},
-      {"name": "น้ำมันนวดไพล", "ingredients": ["น้ำมันไพล", "น้ำมันระกำ", "เมนทอล"], "benefits": ["ลดปวดเมื่อย", "คลายเส้น", "อบอุ่น"], "source": "ชุมชนน่าน", "price_range": "120-350 บาท"},
-      {"name": "พวงมาลัยดอกมะลิสด", "ingredients": ["ดอกมะลิ"], "benefits": ["สวยงาม", "หอม", "เป็นมงคล"], "source": "ตลาดน่าน", "price_range": "20-50 บาท"},
-      {"name": "ผ้าทอมือไทลื้อย้อมคราม", "ingredients": ["ฝ้าย", "ครามธรรมชาติ"], "benefits": ["หัตถกรรม", "ย้อมธรรมชาติ", "unique"], "source": "อำเภอปัว", "price_range": "300-2000 บาท"},
-      {"name": "สครับเกลือบ่อเกลือผสมดอกไม้", "ingredients": ["เกลือบ่อเกลือ", "ดอกดาวเรือง", "ดอกมะลิ", "น้ำมันหอมระเหย"], "benefits": ["ขัดผิว", "ผ่อนคลาย", "หอม"], "source": "บ่อเกลือ", "price_range": "150-400 บาท"}
+      {
+        "name": "ชาเบญจเกสร",
+        "ingredients": [
+          "บัวหลวง",
+          "สารภี",
+          "พิกุล",
+          "บุนนาค",
+          "มะลิ"
+        ],
+        "benefits": [
+          "บำรุงหัวใจ",
+          "ผ่อนคลาย",
+          "รสเย็น"
+        ],
+        "source": "ผลิตภัณฑ์ชุมชนน่าน",
+        "price_range": "100-250 บาท"
+      },
+      {
+        "name": "ชาใบหม่อนอินทรีย์",
+        "ingredients": [
+          "ใบหม่อน"
+        ],
+        "benefits": [
+          "ลดน้ำตาลในเลือด",
+          "บำรุงร่างกาย"
+        ],
+        "source": "บ่อสวกเฮิร์บ",
+        "price_range": "80-200 บาท"
+      },
+      {
+        "name": "น้ำมันหอมระเหยมะลิ",
+        "ingredients": [
+          "ดอกมะลิ"
+        ],
+        "benefits": [
+          "ผ่อนคลาย",
+          "ปรับสมดุลฮอร์โมน",
+          "สดชื่น"
+        ],
+        "source": "ร้านวิสาหกิจชุมชนน่าน",
+        "price_range": "150-500 บาท"
+      },
+      {
+        "name": "น้ำมันหอมระเหยกระดังงา",
+        "ingredients": [
+          "ดอกกระดังงา"
+        ],
+        "benefits": [
+          "คลายเครียด",
+          "ผ่อนคลาย",
+          "อบอุ่น"
+        ],
+        "source": "ร้านวิสาหกิจชุมชนน่าน",
+        "price_range": "150-500 บาท"
+      },
+      {
+        "name": "ยาดมเบญจชื่นจิต",
+        "ingredients": [
+          "ดอกไม้เบญจเกสร",
+          "การบูร",
+          "พิมเสน",
+          "เมนทอล",
+          "ส้มโอ"
+        ],
+        "benefits": [
+          "ผ่อนคลาย",
+          "ลดวิงเวียน",
+          "สดชื่น"
+        ],
+        "source": "กรมการแพทย์แผนไทยฯ",
+        "price_range": "50-120 บาท"
+      },
+      {
+        "name": "เกลืออาบน้ำสมุนไพรบ่อเกลือ",
+        "ingredients": [
+          "เกลือบ่อเกลือ",
+          "ไพล",
+          "ตะไคร้",
+          "ขมิ้น"
+        ],
+        "benefits": [
+          "ผ่อนคลาย",
+          "กระตุ้น circulation",
+          " detox"
+        ],
+        "source": "บ่อเกลือโบราณ",
+        "price_range": "100-300 บาท"
+      },
+      {
+        "name": "น้ำยาบ้วนปากใบเมี่ยง",
+        "ingredients": [
+          "สารสกัดใบเมี่ยง"
+        ],
+        "benefits": [
+          "ต้านเชื้อแบคทีเรีย",
+          "สดชื่น"
+        ],
+        "source": "บ่อสวกเฮิร์บ",
+        "price_range": "80-200 บาท"
+      },
+      {
+        "name": "ลูกประคบสมุนไพร",
+        "ingredients": [
+          "ไพล",
+          "ตะไคร้",
+          "ขมิ้น",
+          "ใบมะขาม"
+        ],
+        "benefits": [
+          "คลายกล้ามเนื้อ",
+          "ลดปวดเมื่อย"
+        ],
+        "source": "ชุมชนน่าน",
+        "price_range": "50-150 บาท"
+      },
+      {
+        "name": "น้ำมันนวดไพล",
+        "ingredients": [
+          "น้ำมันไพล",
+          "น้ำมันระกำ",
+          "เมนทอล"
+        ],
+        "benefits": [
+          "ลดปวดเมื่อย",
+          "คลายเส้น",
+          "อบอุ่น"
+        ],
+        "source": "ชุมชนน่าน",
+        "price_range": "120-350 บาท"
+      },
+      {
+        "name": "พวงมาลัยดอกมะลิสด",
+        "ingredients": [
+          "ดอกมะลิ"
+        ],
+        "benefits": [
+          "สวยงาม",
+          "หอม",
+          "เป็นมงคล"
+        ],
+        "source": "ตลาดน่าน",
+        "price_range": "20-50 บาท"
+      },
+      {
+        "name": "ผ้าทอมือไทลื้อย้อมคราม",
+        "ingredients": [
+          "ฝ้าย",
+          "ครามธรรมชาติ"
+        ],
+        "benefits": [
+          "หัตถกรรม",
+          "ย้อมธรรมชาติ",
+          "unique"
+        ],
+        "source": "อำเภอปัว",
+        "price_range": "300-2000 บาท"
+      },
+      {
+        "name": "สครับเกลือบ่อเกลือผสมดอกไม้",
+        "ingredients": [
+          "เกลือบ่อเกลือ",
+          "ดอกดาวเรือง",
+          "ดอกมะลิ",
+          "น้ำมันหอมระเหย"
+        ],
+        "benefits": [
+          "ขัดผิว",
+          "ผ่อนคลาย",
+          "หอม"
+        ],
+        "source": "บ่อเกลือ",
+        "price_range": "150-400 บาท"
+      }
     ]
   },
-
   "ethnic_groups_extended": [
     {
       "id": "EG002",
@@ -1180,19 +2638,39 @@
       "name_en": "Hmong",
       "language_family": "ม้ง-เมี่ยน (Hmong-Mien)",
       "population_in_nan": "มีชุมชนขนาดใหญ่ในอำเภอทุ่งช้างและปัว",
-      "districts": ["อำเภอทุ่งช้าง", "อำเภอปัว", "อำเภอเชียงกลาง"],
+      "districts": [
+        "อำเภอทุ่งช้าง",
+        "อำเภอปัว",
+        "อำเภอเชียงกลาง"
+      ],
       "religion": "ผีบรรพบุรุษ + พุทธ",
       "cultural_highlights": {
         "costume": "ชุดประจำเผ่าสีสันสดใส ม้งขาว (กระโปรงจีบขาว), ม้งลาย (กระโปรงปักลายหลากสี)",
-        "festivals": ["ปีใหม่ม้ง (น่อเป๊โจ่วฮ์)", "พิธีเลี้ยงผี"],
-        "food": ["ข้าวโพด", "ผักกาดดอง", "หมูสามชั้น", "เหล้าข้าวโพด"],
+        "festivals": [
+          "ปีใหม่ม้ง (น่อเป๊โจ่วฮ์)",
+          "พิธีเลี้ยงผี"
+        ],
+        "food": [
+          "ข้าวโพด",
+          "ผักกาดดอง",
+          "หมูสามชั้น",
+          "เหล้าข้าวโพด"
+        ],
         "music": "เครื่องดนตรี: แคนม้ง, พิณ, กลอง",
         "game": "ลูกช่วง (Pov pob) — การโยนลูกบอลผ้าสีสัน เป็นการละเล่นหาคู่"
       },
       "flower_connection": {
-        "traditional_flowers": ["ดอกป๊อปปี้ (ในอดีต)", "ดอกไม้ป่าดอย", "ดอกบานไม่รู้โรย"],
+        "traditional_flowers": [
+          "ดอกป๊อปปี้ (ในอดีต)",
+          "ดอกไม้ป่าดอย",
+          "ดอกบานไม่รู้โรย"
+        ],
         "meaning": "ดอกไม้ในวัฒนธรรมม้งสื่อถึงความอุดมสมบูรณ์และความเคารพต่อธรรมชาติ",
-        "wellness_activity": ["ลูกช่วง (Movement Therapy)", "เดินชมธรรมชาติ", "เรียนรู้วิถีชีวิตม้ง"]
+        "wellness_activity": [
+          "ลูกช่วง (Movement Therapy)",
+          "เดินชมธรรมชาติ",
+          "เรียนรู้วิถีชีวิตม้ง"
+        ]
       }
     },
     {
@@ -1201,17 +2679,32 @@
       "name_en": "Iu Mien",
       "language_family": "ม้ง-เมี่ยน (Hmong-Mien)",
       "population_in_nan": "ชุมชนขนาดเล็กในอำเภอเวียงสา",
-      "districts": ["อำเภอเวียงสา"],
+      "districts": [
+        "อำเภอเวียงสา"
+      ],
       "religion": "ผี + พุทธ + ลัทธิบูชาบรรพบุรุษ",
       "cultural_highlights": {
         "costume": "ชุดสีน้ำเงินเข้ม ปักลวดลายสีสันสดใสที่ปกเสื้อและชายแขน",
-        "festivals": ["ปีใหม่เมี่ยน", "พิธีขอขมาผี"],
-        "food": ["ข้าวเหนียว", "หมักเนื้อ", "ชาสมุนไพร"],
+        "festivals": [
+          "ปีใหม่เมี่ยน",
+          "พิธีขอขมาผี"
+        ],
+        "food": [
+          "ข้าวเหนียว",
+          "หมักเนื้อ",
+          "ชาสมุนไพร"
+        ],
         "music": "กลอง, ฆ้อง, ระฆังในพิธีกรรม"
       },
       "flower_connection": {
-        "traditional_flowers": ["ดอกไม้ป่าประจำถิ่น", "ดอกบานไม่รู้โรย"],
-        "wellness_activity": ["เยี่ยมชมหมู่บ้านเมี่ยน", "เรียนรู้การย้อมผ้าธรรมชาติ"]
+        "traditional_flowers": [
+          "ดอกไม้ป่าประจำถิ่น",
+          "ดอกบานไม่รู้โรย"
+        ],
+        "wellness_activity": [
+          "เยี่ยมชมหมู่บ้านเมี่ยน",
+          "เรียนรู้การย้อมผ้าธรรมชาติ"
+        ]
       }
     },
     {
@@ -1220,17 +2713,34 @@
       "name_en": "Khmu",
       "language_family": "ออสโตรเอเชียติก (Austroasiatic)",
       "population_in_nan": "ชุมชนดั้งเดิมในพื้นที่สูงของน่าน",
-      "districts": ["อำเภอเวียงสา", "อำเภอเฉลิมพระเกียรติ"],
+      "districts": [
+        "อำเภอเวียงสา",
+        "อำเภอเฉลิมพระเกียรติ"
+      ],
       "religion": "ผี + พุทธ",
       "cultural_highlights": {
         "costume": "ชุดพื้นเมืองสีดำหรือคราม เสื้อปักลวดลาย",
-        "festivals": ["พิธีเลี้ยงผี", "ปีใหม่ขมุ"],
-        "food": ["ข้าวไร่", "หน่อไม้ดอง", "ลาบ", "น้ำพริก"],
+        "festivals": [
+          "พิธีเลี้ยงผี",
+          "ปีใหม่ขมุ"
+        ],
+        "food": [
+          "ข้าวไร่",
+          "หน่อไม้ดอง",
+          "ลาบ",
+          "น้ำพริก"
+        ],
         "special": "ขมุเป็นกลุ่มชาติพันธุ์ดั้งเดิมที่อาศัยอยู่ในน่านตั้งแต่ก่อนตั้งเมือง"
       },
       "flower_connection": {
-        "traditional_flowers": ["ดอกไม้ป่า", "สมุนไพรท้องถิ่น"],
-        "wellness_activity": ["เรียนรู้สมุนไพรป่าจากภูมิปัญญาขมุ", "เดินป่าศึกษาพืช"]
+        "traditional_flowers": [
+          "ดอกไม้ป่า",
+          "สมุนไพรท้องถิ่น"
+        ],
+        "wellness_activity": [
+          "เรียนรู้สมุนไพรป่าจากภูมิปัญญาขมุ",
+          "เดินป่าศึกษาพืช"
+        ]
       }
     },
     {
@@ -1239,15 +2749,24 @@
       "name_en": "Mlabri",
       "language_family": "ออสโตรเอเชียติก (Austroasiatic)",
       "population_in_nan": "กลุ่มชาติพันธุ์น้อยที่สุดในไทย, พบในน่าน",
-      "districts": ["อำเภอเวียงสา", "อำเภอบ่อเกลือ"],
+      "districts": [
+        "อำเภอเวียงสา",
+        "อำเภอบ่อเกลือ"
+      ],
       "religion": "ผีธรรมชาติ",
       "cultural_highlights": {
         "costume": "เครื่องนุ่งห่มจากเปลือกไม้ (ดั้งเดิม), ปัจจุบันใช้ผ้าทั่วไป",
         "special": "มลาบริหรือ 'ผีตองเหลือง' เป็นกลุ่มเร่ร่อนหากินในป่า หนึ่งในกลุ่มชาติพันธุ์ที่เก่าแก่ที่สุดในเอเชียตะวันออกเฉียงใต้ ปัจจุบันมีจำนวนน้อยมาก"
       },
       "flower_connection": {
-        "traditional_flowers": ["สมุนไพรป่า", "พืชป่าต่างๆ"],
-        "wellness_activity": ["เรียนรู้การใช้พืชป่า", "การดำรงชีวิตกับธรรมชาติอย่างยั่งยืน"]
+        "traditional_flowers": [
+          "สมุนไพรป่า",
+          "พืชป่าต่างๆ"
+        ],
+        "wellness_activity": [
+          "เรียนรู้การใช้พืชป่า",
+          "การดำรงชีวิตกับธรรมชาติอย่างยั่งยืน"
+        ]
       }
     },
     {
@@ -1256,38 +2775,2262 @@
       "name_en": "Tin / Lua",
       "language_family": "ออสโตรเอเชียติก (Austroasiatic)",
       "population_in_nan": "ชุมชนกระจัดกระจายในน่าน",
-      "districts": ["อำเภอเวียงสา", "อำเภอทุ่งช้าง"],
+      "districts": [
+        "อำเภอเวียงสา",
+        "อำเภอทุ่งช้าง"
+      ],
       "religion": "ผี + พุทธ",
       "cultural_highlights": {
         "costume": "คล้ายขมุ มีเอกลักษณ์ทางภาษาของตนเอง",
-        "festivals": ["พิธีกรรมเกี่ยวกับข้าวและน้ำ"],
-        "food": ["ข้าวไร่", "ผักป่า", "น้ำพริก"]
+        "festivals": [
+          "พิธีกรรมเกี่ยวกับข้าวและน้ำ"
+        ],
+        "food": [
+          "ข้าวไร่",
+          "ผักป่า",
+          "น้ำพริก"
+        ]
       },
       "flower_connection": {
-        "traditional_flowers": ["ดอกไม้ป่า", "สมุนไพร"],
-        "wellness_activity": ["เรียนรู้วิถีชีวิต", "เดินป่า"]
+        "traditional_flowers": [
+          "ดอกไม้ป่า",
+          "สมุนไพร"
+        ],
+        "wellness_activity": [
+          "เรียนรู้วิถีชีวิต",
+          "เดินป่า"
+        ]
       }
     }
   ],
-
   "festival_monthly_overview": {
     "description": "ภาพรวมเทศกาลรายเดือน สำหรับใช้ในการวางแผนท่องเที่ยว และเป็น quick reference",
     "overview": [
-      {"month": 1, "festivals": ["ปีใหม่ม้ง"], "flower_highlights": ["บัวตอง", "เสี้ยวดอกขาว"], "season": "High", "weather": "หนาว", "tourist_level": "ปานกลาง-มาก"},
-      {"month": 2, "festivals": ["ดอกไม้พันดวง"], "flower_highlights": ["ทองกวาว", "เสี้ยวดอกขาว"], "season": "High", "weather": "หนาว-เริ่มร้อน", "tourist_level": "ปานกลาง"},
-      {"month": 3, "festivals": ["หกเป็งนมัสการพระธาตุแช่แห้ง"], "flower_highlights": ["ทองกวาว", "พวงแสด"], "season": "High→Low", "weather": "ร้อน", "tourist_level": "ปานกลาง"},
-      {"month": 4, "festivals": ["สงกรานต์", "เลี้ยงผีขุนน้ำ"], "flower_highlights": ["มะลิ", "ดอกไม้ป่า"], "season": "Low", "weather": "ร้อนจัด", "tourist_level": "น้อย (เหมาะ Low Season Campaign)"},
-      {"month": 5, "festivals": ["แปดเป็งวัดจอมแจ้ง", "ไหว้พระธาตุเขาน้อย"], "flower_highlights": ["บัวหลวง", "พุดซ้อน"], "season": "Low", "weather": "ร้อน-เริ่มฝน", "tourist_level": "น้อย (เหมาะ Low Season Campaign)"},
-      {"month": 6, "festivals": [], "flower_highlights": ["บัวหลวง", "กระดังงา"], "season": "Low", "weather": "ฝน", "tourist_level": "น้อย (เหมาะ Low Season Campaign)"},
-      {"month": 7, "festivals": ["แห่เทียนเข้าพรรษา"], "flower_highlights": ["บัวหลวง", "ลีลาวดี"], "season": "Low", "weather": "ฝน", "tourist_level": "น้อย (เหมาะ Low Season Campaign)"},
-      {"month": 8, "festivals": [], "flower_highlights": ["บัวหลวง", "ไพล"], "season": "Low", "weather": "ฝน", "tourist_level": "น้อย (เหมาะ Low Season Campaign)"},
-      {"month": 9, "festivals": ["ตานก๋วยสลาก", "แข่งเรือเปิดสนาม"], "flower_highlights": ["ดาวเรือง", "มะลิ", "ดอกรัก"], "season": "Low→High", "weather": "ปลายฝน", "tourist_level": "เริ่มเพิ่มขึ้น"},
-      {"month": 10, "festivals": ["แข่งเรือชิงถ้วยพระราชทาน", "ถวายทานสลากภัต"], "flower_highlights": ["ดาวเรือง", "บานไม่รู้โรย", "เสี้ยวดอกขาว"], "season": "High", "weather": "เริ่มหนาว", "tourist_level": "มาก"},
-      {"month": 11, "festivals": ["ยี่เป็ง/ลอยกระทง"], "flower_highlights": ["บัวตอง", "ดาวเรือง", "บัวหลวง"], "season": "High", "weather": "หนาว", "tourist_level": "มาก"},
-      {"month": 12, "festivals": ["เทศกาลท่องเที่ยวประจำปี"], "flower_highlights": ["บัวตอง", "เสี้ยวดอกขาว", "เอื้อง"], "season": "High", "weather": "หนาวจัด", "tourist_level": "มากที่สุด"}
+      {
+        "month": 1,
+        "festivals": [
+          "ปีใหม่ม้ง"
+        ],
+        "flower_highlights": [
+          "บัวตอง",
+          "เสี้ยวดอกขาว"
+        ],
+        "season": "High",
+        "weather": "หนาว",
+        "tourist_level": "ปานกลาง-มาก"
+      },
+      {
+        "month": 2,
+        "festivals": [
+          "ดอกไม้พันดวง"
+        ],
+        "flower_highlights": [
+          "ทองกวาว",
+          "เสี้ยวดอกขาว"
+        ],
+        "season": "High",
+        "weather": "หนาว-เริ่มร้อน",
+        "tourist_level": "ปานกลาง"
+      },
+      {
+        "month": 3,
+        "festivals": [
+          "หกเป็งนมัสการพระธาตุแช่แห้ง"
+        ],
+        "flower_highlights": [
+          "ทองกวาว",
+          "พวงแสด"
+        ],
+        "season": "High→Low",
+        "weather": "ร้อน",
+        "tourist_level": "ปานกลาง"
+      },
+      {
+        "month": 4,
+        "festivals": [
+          "สงกรานต์",
+          "เลี้ยงผีขุนน้ำ"
+        ],
+        "flower_highlights": [
+          "มะลิ",
+          "ดอกไม้ป่า"
+        ],
+        "season": "Low",
+        "weather": "ร้อนจัด",
+        "tourist_level": "น้อย (เหมาะ Low Season Campaign)"
+      },
+      {
+        "month": 5,
+        "festivals": [
+          "แปดเป็งวัดจอมแจ้ง",
+          "ไหว้พระธาตุเขาน้อย"
+        ],
+        "flower_highlights": [
+          "บัวหลวง",
+          "พุดซ้อน"
+        ],
+        "season": "Low",
+        "weather": "ร้อน-เริ่มฝน",
+        "tourist_level": "น้อย (เหมาะ Low Season Campaign)"
+      },
+      {
+        "month": 6,
+        "festivals": [],
+        "flower_highlights": [
+          "บัวหลวง",
+          "กระดังงา"
+        ],
+        "season": "Low",
+        "weather": "ฝน",
+        "tourist_level": "น้อย (เหมาะ Low Season Campaign)"
+      },
+      {
+        "month": 7,
+        "festivals": [
+          "แห่เทียนเข้าพรรษา"
+        ],
+        "flower_highlights": [
+          "บัวหลวง",
+          "ลีลาวดี"
+        ],
+        "season": "Low",
+        "weather": "ฝน",
+        "tourist_level": "น้อย (เหมาะ Low Season Campaign)"
+      },
+      {
+        "month": 8,
+        "festivals": [],
+        "flower_highlights": [
+          "บัวหลวง",
+          "ไพล"
+        ],
+        "season": "Low",
+        "weather": "ฝน",
+        "tourist_level": "น้อย (เหมาะ Low Season Campaign)"
+      },
+      {
+        "month": 9,
+        "festivals": [
+          "ตานก๋วยสลาก",
+          "แข่งเรือเปิดสนาม"
+        ],
+        "flower_highlights": [
+          "ดาวเรือง",
+          "มะลิ",
+          "ดอกรัก"
+        ],
+        "season": "Low→High",
+        "weather": "ปลายฝน",
+        "tourist_level": "เริ่มเพิ่มขึ้น"
+      },
+      {
+        "month": 10,
+        "festivals": [
+          "แข่งเรือชิงถ้วยพระราชทาน",
+          "ถวายทานสลากภัต"
+        ],
+        "flower_highlights": [
+          "ดาวเรือง",
+          "บานไม่รู้โรย",
+          "เสี้ยวดอกขาว"
+        ],
+        "season": "High",
+        "weather": "เริ่มหนาว",
+        "tourist_level": "มาก"
+      },
+      {
+        "month": 11,
+        "festivals": [
+          "ยี่เป็ง/ลอยกระทง"
+        ],
+        "flower_highlights": [
+          "บัวตอง",
+          "ดาวเรือง",
+          "บัวหลวง"
+        ],
+        "season": "High",
+        "weather": "หนาว",
+        "tourist_level": "มาก"
+      },
+      {
+        "month": 12,
+        "festivals": [
+          "เทศกาลท่องเที่ยวประจำปี"
+        ],
+        "flower_highlights": [
+          "บัวตอง",
+          "เสี้ยวดอกขาว",
+          "เอื้อง"
+        ],
+        "season": "High",
+        "weather": "หนาวจัด",
+        "tourist_level": "มากที่สุด"
+      }
     ],
-    "low_season_months": [4, 5, 6, 7, 8],
+    "low_season_months": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
     "low_season_strategy": "เสนอแพ็กเกจ wellness ในช่วง low season: ส่วนลดที่พัก + โปรแกรมสุขภาพ เช่น สุมยา, แช่เท้าสมุนไพร, ชิมชา, เวิร์กชอปสมุนไพร — กลุ่มเป้าหมายชาวต่างชาติที่ต้องการหลีกเลี่ยง High Season",
-    "high_season_months": [1, 2, 10, 11, 12]
-  }
+    "high_season_months": [
+      1,
+      2,
+      10,
+      11,
+      12
+    ]
+  },
+  "tat_api": {
+    "description": "ข้อมูลจาก TAT Data API (Tourism Authority of Thailand) — API จริงที่เชื่อมต่อได้ด้วย key ที่ได้รับ",
+    "base_url": "https://tatdataapi.io/api/v2",
+    "authentication": {
+      "method": "X-API-Key header",
+      "language": "Accept-Language header (th/en)"
+    },
+    "nan_province_id": 108,
+    "endpoints": {
+      "events": {
+        "url": "/events",
+        "params": "provinceId, keyword, limit, page, upcoming, highlight, category, updatedAt"
+      },
+      "places": {
+        "url": "/places",
+        "params": "keyword, limit, page, categoryId, subCategoryId"
+      },
+      "routes": {
+        "url": "/routes",
+        "params": "keyword, limit, page"
+      },
+      "articles": {
+        "url": "/articles",
+        "params": "keyword, limit, page, typeId"
+      }
+    },
+    "total_api_events": 30,
+    "total_api_places": 50,
+    "total_api_routes": 3,
+    "total_api_articles": 11
+  },
+  "tat_api_events": [
+    {
+      "event_id": 36562,
+      "name_th": "น่าน เมาเท่น เทรล 2026",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2026-10-09T17:00:00.000Z",
+      "end_date": "2026-10-10T17:00:00.000Z",
+      "latitude": 18.2934281,
+      "longitude": 100.484447,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/e74ec5dc-c93b-4118-b68f-5f43a28c0c6c.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 34693,
+      "name_th": "ประเพณีแข่งเรือจังหวัดน่าน ชิงถ้วยพระราชทานฯ  (เฉลิมฉลองกฐินพระราชทาน) ประจำปี 2568",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2025-09-17T17:00:00.000Z",
+      "end_date": "2025-09-18T17:00:00.000Z",
+      "latitude": 18.77480436850548,
+      "longitude": 100.77815770386127,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/356f3535-886f-490e-82c6-9099ee9329f6.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 33653,
+      "name_th": "ประเพณีแข่งเรือจังหวัดน่าน ประจำปี 2568",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2025-08-18T17:00:00.000Z",
+      "end_date": "2025-09-06T17:00:00.000Z",
+      "latitude": 18.774676046631683,
+      "longitude": 100.77860487818756,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 33654,
+      "name_th": "เสน่หา มนตรา น่านนครา",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2025-06-05T17:00:00.000Z",
+      "end_date": "2025-06-05T17:00:00.000Z",
+      "latitude": 18.780541,
+      "longitude": 100.7684332,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 33191,
+      "name_th": "สรงน้ำพระ บูชาตุง ข่วงสะหลี ปี๋ใหม่เมืองน่าน",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2025-04-10T17:00:00.000Z",
+      "end_date": "2025-04-15T17:00:00.000Z",
+      "latitude": 18.7761162,
+      "longitude": 100.7720314,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 32788,
+      "name_th": "งานอนุสรณ์รอยพระบาทแรกแห่งแผ่นดินน่าน",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-11-30T17:00:00.000Z",
+      "end_date": "2024-12-05T17:00:00.000Z",
+      "latitude": 18.5712754,
+      "longitude": 100.7522209,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 29567,
+      "name_th": "ประเพณีนมัสการพระธาตุจอมแจ้ง ",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-05-20T17:00:00.000Z",
+      "end_date": "2024-05-21T17:00:00.000Z",
+      "latitude": 18.5810465,
+      "longitude": 100.7675423,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/095e0bb4-99d6-4e3b-9bf3-a755feb1dc7e.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 29289,
+      "name_th": "ประเพณีแปดเป็ง นมัสการพระธาตุเขาน้อย",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-05-20T17:00:00.000Z",
+      "end_date": "2024-05-21T17:00:00.000Z",
+      "latitude": 18.7696455,
+      "longitude": 100.7504312,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/146a8cef-8640-446e-85c3-7b85fb362570.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 29279,
+      "name_th": "วันมรดกน่าน",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-03-31T17:00:00.000Z",
+      "end_date": "2024-03-31T17:00:00.000Z",
+      "latitude": 18.7762417,
+      "longitude": 100.770759,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 29155,
+      "name_th": "งานอนุรักษ์มรดกไทย ",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-04-01T17:00:00.000Z",
+      "end_date": "2024-04-01T17:00:00.000Z",
+      "latitude": 18.7753205,
+      "longitude": 100.7715658,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 29156,
+      "name_th": "งานประเพณีสงกรานต์ “ปลอดเหล้า-เบียร์” จ.น่าน /งานประเพณีสรงน้ำพระหลักเมืองน่าน",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-04-10T17:00:00.000Z",
+      "end_date": "2024-04-15T17:00:00.000Z",
+      "latitude": 13.3588828,
+      "longitude": 100.9839785,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 29030,
+      "name_th": "NAN FEST เทศกาลน่าน",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-02-29T17:00:00.000Z",
+      "end_date": "2024-03-02T17:00:00.000Z",
+      "latitude": 18.5709856,
+      "longitude": 100.7515831,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/906ab533-8d4f-45f6-898b-14b56de8c173.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6644,
+      "name_th": "เทศกาลดอกชมพูภูคาบาน สืบสานตำนานชาติพันธุ์ ประจำปี 2567",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-02-26T17:00:00.000Z",
+      "end_date": "2024-03-04T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/c73d06b1-7395-4028-8a04-30f787f657fd.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6639,
+      "name_th": "งานประจำปีและของดีเมืองน่าน ประจำปี 2567",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-02-08T17:00:00.000Z",
+      "end_date": "2024-02-17T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/c6dbb37a-7660-451d-a471-7daa868e2ede.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6682,
+      "name_th": "เทศกาล \" NAN FEST PRENSENT \"",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-02-01T17:00:00.000Z",
+      "end_date": "2024-02-24T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/3a2851b6-3b77-41ff-bdc2-172513218293.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6537,
+      "name_th": "ม่วนแต้ น่านเฟส 67",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-02-01T17:00:00.000Z",
+      "end_date": "2024-02-02T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/e90b7d7e-8bc9-4f35-8030-741c3c9fe604.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6665,
+      "name_th": "งานสืบสาน วัฒนธรรม ประเพณี ประจำปีอำเภอบ้านหลวง",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-01-30T17:00:00.000Z",
+      "end_date": "2024-02-05T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/19566290-5254-4efa-90f6-76c9557de102.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6592,
+      "name_th": "วิถีน่าน วิถีถิ่น วิถีไทย ประจำปี 2567",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-01-30T17:00:00.000Z",
+      "end_date": "2024-02-03T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/8757aa63-b810-44f4-81d5-8dea4edf2e5e.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6597,
+      "name_th": "ของดีหกชนเผ่า",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-01-24T17:00:00.000Z",
+      "end_date": "2024-01-26T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/4aef7a0f-6ecf-453e-8901-1138475d3840.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6485,
+      "name_th": "ขอเชิญชวนนักท่องเที่ยวร่วมกิจกรรมส่งเสริมการท่องเที่ยว \"หนาวนี้...กระซิบรักที่น่าน” ปีที่ 12",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-01-18T17:00:00.000Z",
+      "end_date": "2024-01-20T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/8fcd9c97-a0f5-4036-8539-b09affc25fe4.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6578,
+      "name_th": "กาดหมั้ว คัวฮอม ในโครงการพัฒนาศัยภาพการท่องเที่ยว โดยชุมชน",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-01-17T17:00:00.000Z",
+      "end_date": "2024-01-19T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/80d63313-069b-40b5-a78f-7a427a7ce028.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6569,
+      "name_th": "Nan Cupping Special Once น่านเมืองกาแฟ",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-01-15T17:00:00.000Z",
+      "end_date": "2024-01-27T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/9024b831-64bf-441c-a4e5-ba999155e58a.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6295,
+      "name_th": "กิจกรรม Samer Dao Mountain Trail “วิ่งนับดาว คืนฟื้นฟูป่า”",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2024-01-05T17:00:00.000Z",
+      "end_date": "2024-01-06T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/dabdef79-2b47-49d5-8923-d027bd8fcbf9.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 5752,
+      "name_th": "มหกรรมแห่ครัวตานล้านนาของอำเภอสันติสุข ประจำปี 2566",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2023-12-30T17:00:00.000Z",
+      "end_date": "2023-12-31T16:59:59.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 5753,
+      "name_th": "งานประเพณีไตลื้อ และชนเผ่า ปี 2566",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2023-12-30T17:00:00.000Z",
+      "end_date": "2023-12-31T16:59:59.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 5755,
+      "name_th": "งานของดีบ่อสวก ประจำปี 2566",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2023-12-30T17:00:00.000Z",
+      "end_date": "2023-12-31T16:59:59.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6309,
+      "name_th": "งาน ของดีแม่จริม วิถีวัฒนธรรม ประจำปี 2567",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2023-12-26T17:00:00.000Z",
+      "end_date": "2024-01-01T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/b2e02b38-0dbc-4036-b3a8-8d116978305f.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 5756,
+      "name_th": "งานเทศกาลปีใหม่ม้งป่ากลาง 2023",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2023-12-25T17:00:00.000Z",
+      "end_date": "2024-01-01T16:59:59.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 6389,
+      "name_th": "งาน \"Winter Nan Coffee Lover 2023\"  Coffee Music Craft",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2023-12-07T17:00:00.000Z",
+      "end_date": "2023-12-09T17:00:00.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/c6104c5c-f74c-4391-b1b6-505c0eff3b2a.jpg",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    },
+    {
+      "event_id": 5754,
+      "name_th": "งานอนุสรณ์รอยพระ บาทแรกแห่งแผ่นดิน น่าน ประจำปี 2566",
+      "slug": "",
+      "full_url": "",
+      "start_date": "2023-11-30T17:00:00.000Z",
+      "end_date": "2023-12-05T16:59:59.000Z",
+      "latitude": null,
+      "longitude": null,
+      "categories": [],
+      "introduction": "",
+      "contact_phones": [],
+      "contact_emails": [],
+      "registration_urls": [],
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "mobile_image_urls": [],
+      "desktop_image_urls": [],
+      "province_id": 108,
+      "province_name": "น่าน"
+    }
+  ],
+  "tat_api_places": [
+    {
+      "place_id": "18774",
+      "name_th": "อุทยานแห่งชาติแม่จริม",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.60254",
+      "longitude": "100.98026",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/29082f2c-5887-401c-aebb-ab59dc0d48f7.jpeg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "แม่จริม",
+      "sub_district": "น้ำปาย",
+      "postcode": "55170",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "อุทยานแห่งชาติแม่จริม",
+        "แม่จริม",
+        "ล่องแก่งลำน้ำว้า",
+        "ลำน้ำว้า",
+        "น่าน",
+        "ล่องแก่งน้ำว้า"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "21881",
+      "name_th": "อุทยานแห่งชาติขุนน่าน",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.18276",
+      "longitude": "101.17919",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/1491fed0-203a-49b8-b694-79a6bceffe54.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "บ่อเกลือ",
+      "sub_district": "บ่อเกลือใต้",
+      "postcode": "55220",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "อุทยานแห่งชาติขุนน่าน",
+        "น้ำตกสะปัน",
+        "น้ำตกห้วยห้า",
+        "น้ำตกบ้านเด่น",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "30478",
+      "name_th": "บ่อเกลือสินเธาว์",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.14688",
+      "longitude": "101.15402",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/ec44f123-454c-4c70-9bb6-d64bb89b3f26.jpeg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "ถนนทางหลวงแผ่นดินหมายเลข 1081",
+      "district": "บ่อเกลือ",
+      "sub_district": "บ่อเกลือใต้",
+      "postcode": "55220",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "บ่อเกลือสินเธาว์",
+        "บ่อเกลือโบราณ",
+        "บ่อเกลือ",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "16415",
+      "name_th": "น้ำตกสะปัน",
+      "introduction": "น้ำตกสะปัน เป็นน้ำตกที่อยู่ในเขตอุทยานแห่งชาติขุนน่าน",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.19280",
+      "longitude": "101.19913",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/25625d50-8f0c-476d-ad60-bb2f0573adb6.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "บ่อเกลือ",
+      "sub_district": "ดงพญา",
+      "postcode": "55220",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น้ำตกสะปัน",
+        "อุทยานแห่งชาติขุนน่าน",
+        "สะปัน",
+        "บ้านสะปัน",
+        "หมู่บ้านสะปัน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "9929",
+      "name_th": "หมู่บ้านสะปัน",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.19273",
+      "longitude": "101.19827",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/2832c7ac-6818-42bb-ad6b-cfe8fafd40da.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "บ่อเกลือ",
+      "sub_district": "ดงพญา",
+      "postcode": "55220",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "บ้านสะปัน",
+        "หมู่บ้านสะปัน",
+        "สะปัน",
+        "น่าน",
+        "บ่อเกลือ"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "2006",
+      "name_th": "วัดภูเก็ต",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.16524",
+      "longitude": "100.93403",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/427db816-1908-4776-934c-6be4b50058aa.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "ปัว",
+      "sub_district": "วรนคร",
+      "postcode": "55120",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "วัดภูเก็ต"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "4687",
+      "name_th": "วังศิลาแลง",
+      "introduction": "วังศิลาแลง \"แกรนด์แคนยอนเมืองปัว” เกิดจากลำน้ำกูนไหลผ่านซอกหินผาและกัดเซาะจนเป็นร่องรอยตามการหมุนวนของน้ำ",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.13664",
+      "longitude": "100.95810",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/276a31cc-c004-4ec8-a096-03e162089693.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "บ้านหัวน้ำ ",
+      "district": "ปัว",
+      "sub_district": "ศิลาแลง",
+      "postcode": "55120",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "วังศิลาแลง",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "28097",
+      "name_th": "โกโก้วัลเลย์",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.17719",
+      "longitude": "100.91284",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/734ee28c-560f-4e02-952b-7b7ef154cc23.jpg"
+      ],
+      "detail_summary": "Cocoa Valley Resort : เป็นรีสอร์ทที่ถูกโอบล้อมด้วยธรรมชาติของอำเภอปัว พร้อมวิวภูเขาหลังห้อง รีสอร์ทเน้นบรรยากาศของความเป็นอีโค่มีกลิ่นอายของโกโก้ และเรายังมีสวนโกโก้ คาเฟ่ที่ทุกเมนูทำจากโกโก้แท้ รวมถึงกิจกรรมสนุกๆ “Chocolate Workshop” เพื่อเปิดประสบการณ์ใหม่จากต้นโกโก้สู่ช็อคโกแลต",
+      "detail_images": [
+        "https://dmc.tatdataapi.io/assets/5ae0e44a-7234-453a-ad3d-6dc5a296151f.jpg",
+        "https://dmc.tatdataapi.io/assets/bb9b2afa-4898-4c27-b1fa-eefceef030ec.jpg",
+        "https://dmc.tatdataapi.io/assets/7d41ce0f-0758-43e7-99b8-0a186720bb97.jpg",
+        "https://dmc.tatdataapi.io/assets/5de769e6-089f-462c-83ac-851058b2ca81.jpg",
+        "https://dmc.tatdataapi.io/assets/2362cdd4-a76d-4d6e-9d86-70b7af11fbab.jpg"
+      ],
+      "address": null,
+      "district": "ปัว",
+      "sub_district": "ปัว",
+      "postcode": "55120",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "โกโก้วัลเล่ย์",
+        "โกโก้วัลเลย์",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "27419",
+      "name_th": "ดอยสกาด",
+      "introduction": "เป็นหมู่บ้านชาวไทยภูเขาเผ่าลัวะที่มีวิถีชีวิตเรียบง่าย อาชีพหลักคือทำการเกษตร ปลูกเมี่ยง มะแขว่น ชา และกาแฟ ซึ่งเป็นพืชเศรษฐกิจที่ชาวบ้านนิยมปลูกกันมากขึ้น",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.24170",
+      "longitude": "100.98974",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/a18206cf-5323-45e8-87c4-2a71e7938380.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "ปัว",
+      "sub_district": "สกาด",
+      "postcode": "55120",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "ดอยสกาด",
+        "ไร่ชา",
+        "บ้านสกาด"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "27428",
+      "name_th": "อุทยานแห่งชาติดอยภูคา",
+      "introduction": "ได้รับรางวัลยอดเยี่ยม รางวัลอุตสาหกรรมท่องเที่ยวไทย ครั้งที่ 7 ประจำปี 2551 ประเภทแหล่งท่องเที่ยวทางธรรมชาติภาคเหนือ จากการท่องเที่ยวแห่งประเทศไทย (ททท.)",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.20056",
+      "longitude": "101.08065",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/0761969b-e25b-4880-9c61-336836f5f3a8.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "ถนนทางหลวงแผ่นดินหมายเลข 1256",
+      "district": "ปัว",
+      "sub_district": "ภูคา",
+      "postcode": "55120",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "อุทยานแห่งชาติดอยภูคา",
+        "ดอยภูคา",
+        "ต้นชมพูพูคา",
+        "ดอยภูแว",
+        "ภูแว",
+        "จุดชมวิว1715",
+        "น้ำตกภูฟ้า",
+        "น้ำตกศิลาเพชร",
+        "ถ้ำผาแดง",
+        "ถ้ำผาฆ้อง",
+        "น้ำตกต้นตอง",
+        "ถนนลอยฟ้า",
+        "ถนนลอยฟ้าน่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "1072",
+      "name_th": "วัดต้นแหลง",
+      "introduction": "ตั้งอยู่ในตัวเมืองปัว จากอำเภอเมืองไปตามทางหลวงหมายเลข 1080 เมื่อเริ่มเข้าเขตตัวเมืองปัวให้สังเกตธนาคารกสิกรไทย สาขาอำเภอปัว แล้วเลี้ยวซ้ายเข้าซอยก่อนถึงธนาคาร ขับตรงเข้าไปจนถึงวงเวียนให้เลี้ยวขวาอีกประมาณ 2 กิโลเมตร",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.18879",
+      "longitude": "100.90671",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/b37c5249-00bc-48df-a1ee-a2787a407f38.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "หมู่ 2 บ้านต้นแหลง",
+      "district": "ปัว",
+      "sub_district": "ปัว",
+      "postcode": "55120",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "วัดต้นแหลง",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "2176",
+      "name_th": "วัดพระธาตุเบ็งสกัด",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.17879",
+      "longitude": "100.91809",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/03e6c52d-924c-488a-a0a8-df361f693757.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "หมู่ 5 บ้านแก้ม",
+      "district": "ปัว",
+      "sub_district": "วรนคร",
+      "postcode": "55120",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "วัดพระธาตุเบ็งสกัด",
+        "พระธาตุเบ็งสกัด",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "1447",
+      "name_th": "วัดสวนตาล",
+      "introduction": "อยู่ที่ถนนมหายศ สร้างขึ้นโดยพระนางปทุมมาวดี เมื่อ พ.ศ. 1770 เจดีย์มีสัณฐานงดงาม ชั้นล่างมีซุ้มประตูทั้งสี่ทิศ",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.78411",
+      "longitude": "100.77378",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/b8b2b49a-b85f-4ee6-a7fb-3bd5e3b04ba3.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "244 ถนนมหายศ",
+      "district": "เมืองน่าน",
+      "sub_district": "ในเวียง",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "วัดสวนตาล",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "2449",
+      "name_th": "วัดพญาวัด",
+      "introduction": "ตั้งอยู่ที่บ้านพญาวัด ตำบลดู่ใต้ ตามเส้นทางหลวงหมายเลข 101 ก่อนข้ามสะพานเข้าเมืองน่าน มีทางแยกซ้ายมือเข้าทางหลวงหมายเลข 1025 เข้าไปประมาณ 300 เมตร",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.77046",
+      "longitude": "100.76234",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/c3c51065-f3e1-4e6e-8cf5-e3548f38bc04.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "ถนนทางหลวงแผ่นดินหมายเลข 1025",
+      "district": "เมืองน่าน",
+      "sub_district": "ดู่ใต้",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "วัดพญาวัด",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "14739",
+      "name_th": "หมู่บ้านประมงปากนาย",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.05525",
+      "longitude": "100.68028",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/2e0ee202-0ea6-4f5e-9d5f-79748263a8a5.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "นาหมื่น",
+      "sub_district": "นาทะนุง",
+      "postcode": "55180",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "หมู่บ้านประมงปากนาย",
+        "ปากนาย",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "4191",
+      "name_th": "วัดบ่อแก้ว",
+      "introduction": "พระอุโบสถสีขาวทั้งหลัง งดงามวิจิตรด้วยลวดลายแกะสลักปูนปั้นประดับกระจกสีต่าง ๆ",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.20730",
+      "longitude": "100.66677",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/c98717ce-2fea-4c0d-8596-7c1f53ccea88.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "นาหมื่น",
+      "sub_district": "บ่อแก้ว",
+      "postcode": "55180",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "วัดบ่อแก้ว",
+        "วัดศรีมาราม",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "2966",
+      "name_th": "วัดหนองบัว",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.08863",
+      "longitude": "100.78587",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/a39a2daa-0942-4379-84e7-5a4310e09f20.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "ท่าวังผา",
+      "sub_district": "ป่าคา",
+      "postcode": "55140",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "วัดหนองบัว",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "15551",
+      "name_th": "อุทยานแห่งชาตินันทบุรี",
+      "introduction": "ครอบคลุมพื้นที่อำเภอเมืองน่านและอำเภอบ้านหลวง รวมทั้งพื้นที่ป่าสงวนแห่งชาติ ป่าน้ำยาว-น้ำสวก และป่าสงวนแห่งชาติถ้ำพุเตย เป็นป่าผสมผลัดใบ ป่าดิบแล้ง ป่าดิบเขา มีไม้สัก ประดู่ ตะแบก ฯลฯ และในเขตอุทยานฯ ยังเป็นถิ่นที่อยู่อาศัยของชนเผ่ามลาบรี หรือผีตองเหลือง",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.13421",
+      "longitude": "100.64602",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/d3643dac-cd0a-47c1-b188-b3837590a766.jpg"
+      ],
+      "detail_summary": "ตะวันลับขอบฟ้าที่ดอยผาช้าง",
+      "detail_images": [
+        "https://dmc.tatdataapi.io/assets/42fec9a5-adc1-4442-bec5-b247aab14e37.jpg",
+        "https://dmc.tatdataapi.io/assets/eb6da042-03fc-4c6a-91db-0f262fb5fe5b.jpg",
+        "https://dmc.tatdataapi.io/assets/b47bfabf-c9a9-4483-a72e-b3e9e8e0b6f9.jpg",
+        "https://dmc.tatdataapi.io/assets/6b1e0344-9d01-42f4-b380-ee40127f73c2.jpg",
+        "https://dmc.tatdataapi.io/assets/9a12d5f5-b612-4f65-aabf-8e8dcb455af6.jpg"
+      ],
+      "address": "289 หมู่ 7 ถนน นาหนุน-สบขุ่น",
+      "district": "ท่าวังผา",
+      "sub_district": "ป่าคา",
+      "postcode": "55140",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "อุทยานแห่งชาตินันทบุรี",
+        "น่าน",
+        "ดอยผาจิ",
+        "ดอยผาช้าง",
+        "ดอยวาว"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "21948",
+      "name_th": "อุทยานแห่งชาติขุนสถาน",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.27858",
+      "longitude": "100.52171",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/a78a43f4-0ea4-4501-83d5-a3dd85c5e0ae.jpg"
+      ],
+      "detail_summary": "อุทยานแห่งชาติขุนสถาน มีลักษณะภูมิประเทศเป็นภูเขาสลับซับซ้อนสูงชัน ความสูงตั้งแต่ 120 - 1,726 เมตร จากระดับทะเลปานกลาง สภาพภูมิอากาศมีความชุ่มชื้นหนาวเย็นตลอดทั้งปี แบ่งเป็น 3 ฤดู คือ ฤดูร้อน เริ่มเดือนมีนาคมถึงเดือนพฤษภาคม ฤดูฝน เริ่มเดือนมิถุนายนถึงเดือนตุลาคม ฤดูหนาว เริ่มเดือนพฤศจิกายนถึงเดือนกุ",
+      "detail_images": [
+        "https://dmc.tatdataapi.io/assets/6ea562cf-0061-4a57-875f-f57fac0ad7dc.jpg"
+      ],
+      "address": "บ้านขุนสถาน ตำบลสันทะ ",
+      "district": "นาน้อย",
+      "sub_district": "สันทะ",
+      "postcode": "55150",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "อุทยานแห่งชาติขุนสถาน",
+        "ขุนสถาน",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "9961",
+      "name_th": "เสาดินนาน้อย (ฮ่อมจ๊อม) และคอกเสือ",
+      "introduction": "อยู่ที่ตำบลเชียงของ ห่างจากตัวเมืองน่าน 60 กิโลเมตร จากอำเภอนาน้อยมีทางแยกไปตามเส้นทางหมายเลข 1083 ประมาณ 6 กิโลเมตร",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.30398",
+      "longitude": "100.75370",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/89426031-7ff5-4a2f-ace4-73b24ede7f9d.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "นาน้อย",
+      "sub_district": "เชียงของ",
+      "postcode": "55150",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "เสาดินนาน้อย",
+        "คอกเสือ",
+        "ฮ่อมจ๊อม",
+        "อุทยานแห่งชาติศรีน่าน",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "9534",
+      "name_th": "อุทยานแห่งชาติศรีน่าน",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.36816",
+      "longitude": "100.84013",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/a7a1d407-b44b-4b4b-a83c-28478180bba7.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "นาน้อย",
+      "sub_district": "ศรีษะเกษ",
+      "postcode": "55150",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "อุทยานแห่งชาติศรีน่าน",
+        "ดอยเสมอดาว",
+        "ผาหัวสิงห์",
+        "ผาชู้",
+        "เสาดินนาน้อย",
+        "แก่งหลวง",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "4131",
+      "name_th": "วัดบุญยืน พระอารามหลวง",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.57129",
+      "longitude": "100.75220",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/f844d54e-61d8-4bc1-b6b4-8461db5e205f.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "เวียงสา",
+      "sub_district": "กลางเวียง",
+      "postcode": "55110",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "วัดบุญยืน",
+        "วัดบุญยืนพระอารามหลวง",
+        "วัดบุญยืน พระอารามหลวง",
+        "น่าน",
+        "ตักบาตรดอกไม้"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "2173",
+      "name_th": "วัดพระธาตุแช่แห้ง",
+      "introduction": "พระบรมธาตุแช่แห้ง ปูชนียสถานสำคัญคู่เมืองน่าน",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.75824",
+      "longitude": "100.79167",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/a69033a9-8365-4017-9298-a90c19285f42.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "89 หมู่ 3 ถนนพุทธบูชา",
+      "district": "ภูเพียง",
+      "sub_district": "ม่วงตึ๊ด",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "พระธาตุแช่แห้ง",
+        "น่าน",
+        "พระธาตุประจำปีเกิด",
+        "ปีเถาะ",
+        "วัดพระธาตุแช่แห่ง"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "16257",
+      "name_th": "พิพิธภัณฑสถานแห่งชาติน่าน",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.77624",
+      "longitude": "100.77064",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/3a79b9d9-f84c-451b-b2f1-7f396c827cb1.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "ถนนผากอง ตำบลในเวียง",
+      "district": "เมืองน่าน",
+      "sub_district": "ในเวียง",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "งาช้างดำ",
+        "ซุ้มลีลาวดี",
+        "วัดน้อย",
+        "พิพิธภัณฑ์น่าน",
+        "พิพิธภัณฑสถานแห่งชาติน่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "19996",
+      "name_th": "ถนนคนเดินกาดข่วงเมืองน่าน",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.77534",
+      "longitude": "100.77170",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/bb75339e-4fb8-44ed-a05c-4ebf6c11f951.JPG"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "เมืองน่าน",
+      "sub_district": "ในเวียง",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "ถนนคนเดินกาดข่วงเมืองน่าน",
+        "น่าน",
+        "ถนนคนเดิน",
+        "ถนนคนเดินน่าน",
+        "กาดข่วงเมืองน่าน",
+        "ข่วงเมืองน่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "16355",
+      "name_th": "หอศิลป์ริมน่าน",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.94020",
+      "longitude": "100.76813",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/72f9b735-d05c-4ce6-915d-a14a163decd6.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "122 ถนนน่าน-ทุ่งช้าง",
+      "district": "เมืองน่าน",
+      "sub_district": "บ่อ",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "หอศิลป์ริมน่าน",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "7767",
+      "name_th": "ชุมชนตำบลบ่อสวก",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.75204",
+      "longitude": "100.69415",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/de960362-ef39-4b18-aa38-b22948511279.jpeg"
+      ],
+      "detail_summary": "ชุมชนตำบลบ่อสวก จังหวัดน่าน เป็นชุมชนที่มีจุดเด่นเรื่องแหล่งโบราณคดีเตาเผาเครื่องปั้นโบราณ ศิลปะพื้นบ้าน และภูมิปัญญาท้องถิ่น มีกิจกรรมที่น่าสนใจให้นักท่องเที่ยวได้เรียนรู้วิถีชุมชนผ่านงานหัตถกรรมพื้นบ้าน วิถีชีวิต ศิลปวัฒนธรรม และประเพณีต่าง ๆ",
+      "detail_images": [
+        "https://dmc.tatdataapi.io/assets/7b5d433c-6c75-413c-8977-c23eb3c054c1.jpg",
+        "https://dmc.tatdataapi.io/assets/cd57a16e-7c1e-4386-82a6-0b993cdab489.jpg",
+        "https://dmc.tatdataapi.io/assets/03e11a03-fe3e-423d-83e4-1419045824c7.jpg"
+      ],
+      "address": null,
+      "district": "เมืองน่าน",
+      "sub_district": "บ่อสวก",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "ชุมชนตำบลบ่อสวก",
+        "บ่อสวก",
+        "ชุมชนบ่อสวก",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "25907",
+      "name_th": "โฮงเจ้าฟองคำ",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.78954",
+      "longitude": "100.78554",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/97e8c343-2704-4976-b4aa-89c1337bb09d.jpg"
+      ],
+      "detail_summary": "โฮงเจ้าฟองคำ เป็นบ้านเก่าแก่ในตัวเมืองน่าน ที่ได้รับการอนุรักษ์อย่างดี มีอายุกว่า 200 ปี และมีพิพิธภัณฑ์ท้องถิ่นจัดแสดงวิถีชีวิตในอดีต และแสดงของโบราณที่มีคุณค่า อาทิ เครื่องเรือน เครื่องใช้ เครื่องเงิน ผ้าทอ พื้นที่ชั้นล่างเป็นใต้ถุนโล่ง เปิดให้เป็นพื้นที่สาธิตการทอผ้า การปั่นฝ้าย การปักผ้าหน้าหมอน",
+      "detail_images": [
+        "https://dmc.tatdataapi.io/assets/9e8b4f9e-d0c6-4f44-8333-f8ae30b4d383.jpg",
+        "https://dmc.tatdataapi.io/assets/2c4c836a-369a-4b40-9879-e9020a5ccd3d.jpeg",
+        "https://dmc.tatdataapi.io/assets/3a25e3f8-09f5-4a5b-a04f-4dfda5fbb40e.jpeg",
+        "https://dmc.tatdataapi.io/assets/058a5337-af46-4080-8d1a-011f74a75d6e.jpeg",
+        "https://dmc.tatdataapi.io/assets/2b7df5ec-96dc-4767-bcf8-29a9507f3066.jpeg"
+      ],
+      "address": "เลขที่ 8 ซอย 2 ถนนสุมนเทวราช",
+      "district": "เมืองน่าน",
+      "sub_district": "ในเวียง",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "โฮงเจ้าฟองคำ",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "1495",
+      "name_th": "วัดศรีพันต้น",
+      "introduction": "ตั้งอยู่ริมถนนเจ้าฟ้า ตำบลในเวียง สร้างโดยพญาพันต้น เจ้าผู้ครองนครน่านแห่งราชวงศ์ภูคา (ครองนครน่านระหว่าง พ.ศ. 1960-1969) บางสมัยเรียกว่าวัดสลีพันต้น (คำว่า “สลี” หมายถึงต้นโพ) ซึ่งในอดีตมีต้นโพใหญ่อยู่ด้านทิศเหนือและทิศใต้ของวัด",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.77602",
+      "longitude": "100.76562",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/c1d1e7b6-a253-446a-9e14-8f739d165d78.jpg"
+      ],
+      "detail_summary": null,
+      "detail_images": [
+        "https://dmc.tatdataapi.io/assets/974f903a-3a2c-4d7e-950f-9ab7ecfd7967.jpeg",
+        "https://dmc.tatdataapi.io/assets/39125d98-f436-4396-8cdd-4fb0f2d07e01.jpeg",
+        "https://dmc.tatdataapi.io/assets/0313eb7e-e665-4f72-bc17-4dcc08bb96fa.jpeg"
+      ],
+      "address": "105 ถนนเจ้าฟ้า",
+      "district": "เมืองน่าน",
+      "sub_district": "ในเวียง",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "วัดศรีพันต้น",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "3206",
+      "name_th": "วัดมิ่งเมือง",
+      "introduction": "ตั้งอยู่ริมถนนสุริยพงษ์ เป็นที่ประดิษฐานเสาหลักเมืองของจังหวัดน่าน ซึ่งอยู่ในศาลาจตุรมุขด้านหน้าพระอุโบสถ เสาหลักเมืองสูง 3 เมตร ฐานประดับด้วยไม้แกะลวดลายลงรักปิดทอง ยอดเสาแกะสลักเป็นรูปพรหมพักตร์ มีชื่อว่าเมตตา กรุณา มุทิตา อุเบกขา",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.77454",
+      "longitude": "100.76919",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/fb4afc89-d30f-4538-aa2d-743b9a096756.jpg"
+      ],
+      "detail_summary": "เสาหลักเมืองน่าน",
+      "detail_images": [
+        "https://dmc.tatdataapi.io/assets/ba0d5aa5-2021-42ea-92f8-7b0ad62c2c83.jpeg",
+        "https://dmc.tatdataapi.io/assets/ea913fee-ea14-4c73-8a13-e2407e1e7ecf.jpeg",
+        "https://dmc.tatdataapi.io/assets/0cfed436-968c-4fa2-9959-238788558a72.jpeg"
+      ],
+      "address": "36 ถนนสุริยพงษ์",
+      "district": "เมืองน่าน",
+      "sub_district": "ในเวียง",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "วัดมิ่งเมือง",
+        "น่าน",
+        "เสาหลักเมือง",
+        "เสาหลักเมืองน่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "2165",
+      "name_th": "วัดพระธาตุเขาน้อย",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.76955",
+      "longitude": "100.75080",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/e0ea3cb8-d376-45ca-8158-b7c09a2a71de.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "ถนนทางหลวงแผ่นดินหมายเลข 1025",
+      "district": "เมืองน่าน",
+      "sub_district": "ดู่ใต้",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "วัดพระธาตุเขาน้อย",
+        "พระธาตุเขาน้อย",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "2172",
+      "name_th": "วัดพระธาตุช้างค้ำวรวิหาร",
+      "introduction": "เอกลักษณ์สำคัญของวัดพระธาตุช้างค้ำ คือ เจดีย์ทรงลังกา มีฐานรอบองค์ป้้นเป็นรูปช้างครึ่งตัว คล้ายลักษณะเอาหลังหนุนหรือค้ำองค์พระเจดีย์ไว้ สะท้อนให้เห็นอิทธิพลของศิลปะสุโขทัย",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.77684",
+      "longitude": "100.77203",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/8a2c5d4d-d82a-456b-af12-48de78d5479e.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "เมืองน่าน",
+      "sub_district": "ในเวียง",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "วัดพระธาตุช้างค้ำ",
+        "ข่วงเมืองน่าน",
+        "วัดพระธาตุช้างค้ำวรวิหาร",
+        "พระธาตุช้างค้ำ"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "2136",
+      "name_th": "วัดภูมินทร์",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.77460",
+      "longitude": "100.77168",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/cdc46bc6-98b0-47a7-a601-d38007e3f0d2.jpg"
+      ],
+      "detail_summary": "วัดโบราณกลางเมืองน่าน",
+      "detail_images": [
+        "https://dmc.tatdataapi.io/assets/119ed5dd-1575-4f40-8d2c-dca4296e0f31.jpeg",
+        "https://dmc.tatdataapi.io/assets/ecfc33df-91b4-492b-a9eb-4bfe3dd473a5.jpeg",
+        "https://dmc.tatdataapi.io/assets/85c1af77-4580-46c7-9a7c-188bf2cfeadb.jpeg",
+        "https://dmc.tatdataapi.io/assets/bab9ffd4-7d59-4c28-aaa3-2fff48e45acf.jpeg",
+        "https://dmc.tatdataapi.io/assets/f7172b97-7db7-4b5b-9285-dbe235ebd9f4.jpeg"
+      ],
+      "address": "33 หมู่ 1 ถนนผากอง",
+      "district": "เมืองน่าน",
+      "sub_district": "ในเวียง",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "ข่วงเมืองน่าน",
+        "ปู่ม่านย่าม่าน",
+        "วัดภูมินทร์",
+        "ภาพกระซิบรัก"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "16358",
+      "name_th": "กำแพงเมืองน่าน",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.78026",
+      "longitude": "100.77087",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/8fca55bc-9477-4faf-885a-fc8dfb43c526.jpeg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "เมืองน่าน",
+      "sub_district": "ในเวียง",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "กำแพงเมือง"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "33535",
+      "name_th": "บ้านสันเจริญ",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.25677",
+      "longitude": "100.64937",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "ท่าวังผา",
+      "sub_district": "ผาทอง",
+      "postcode": "55140",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "บ้านสันเจริญ"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "33533",
+      "name_th": "บ้านร้องแง",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.17467",
+      "longitude": "100.93592",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "ปัว",
+      "sub_district": "วรนคร",
+      "postcode": "55120",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [],
+      "status": "approved"
+    },
+    {
+      "place_id": "33436",
+      "name_th": "วังกาบรางธรรมสถาน",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.83643",
+      "longitude": "100.80230",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "หมู่ 10 บ้านราษฎร์สามัคคี",
+      "district": "ภูเพียง",
+      "sub_district": "เมืองจัง",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "วังกาบรางธรรมสถาน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "33259",
+      "name_th": "อาคารประวัติศาสตร์อำเภอเวียงสา",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.57105",
+      "longitude": "100.75116",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "636 หมู่ 4",
+      "district": "เวียงสา",
+      "sub_district": "กลางเวียง",
+      "postcode": "55110",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "อาคารประวัติศาสตร์อำเภอเวียงสา"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "31903",
+      "name_th": "บ้านดอนมูล",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.05151",
+      "longitude": "100.77264",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "ท่าวังผา",
+      "sub_district": "ศรีภูมิ",
+      "postcode": "55140",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "บ้านดอนมูล"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "31875",
+      "name_th": "บ้านหาดผาขน",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.88454",
+      "longitude": "100.79863",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "หมู่ 3 บ้านหาดผาขน",
+      "district": "ภูเพียง",
+      "sub_district": "เมืองจัง",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "บ้านหาดผาขน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "10932",
+      "name_th": "หมู่บ้านไทลื้อหนองบัว",
+      "introduction": "บ้านหนองบัว ตำบลป่าคา จากตัวเมืองน่านใช้ทางหลวงหมายเลข 1080 ระยะ ทาง 41 กิโลเมตร ก่อนถึงอำเภอท่าวังผามีทางแยก ซ้ายไปอีก 3 กิโลเมตร ",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.08891",
+      "longitude": "100.78606",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "ท่าวังผา",
+      "sub_district": "ป่าคา",
+      "postcode": "55120",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "หมู่บ้านไทลื้อหนองบัว"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "31856",
+      "name_th": "ตลาดชายแดนบ้านห้วยโก๋น",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.59631",
+      "longitude": "101.08562",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "เฉลิมพระเกียรติ",
+      "sub_district": "ห้วยโก๋น",
+      "postcode": "55130",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "ตลาดชายแดนบ้านห้วยโก๋น",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "16353",
+      "name_th": "น้ำตกภูฟ้า",
+      "introduction": "เป็นน้ำตกที่สูงที่สุดในเขตอุทยานแห่งชาติดอยภูคา สูงประมาณ 140 เมตร มีทั้งหมด 12 ชั้น ใช้เวลาไป-กลับ ชมน้ำตก 3 วัน 2 คืน ควรติดต่อเจ้าหน้าที่นำทาง",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.20571",
+      "longitude": "101.07985",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "ปัว",
+      "sub_district": "ภูคา",
+      "postcode": "55120",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "น้ำตกภูฟ้า"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "14284",
+      "name_th": "ถ้ำผาฆ้อง",
+      "introduction": "ต้องเดินเท้าผ่านป่าร่มรื่นเข้าไปประมาณ 3.5 กิโลเมตร เป็นน้ำตกขนาดกลางบริเวณปากถ้ำจะมีขนาดเล็ก ในถ้ำมีคูหาซึ่งมีหินงอกหินย้อย มีทางน้ำไหลผ่าน",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.18110",
+      "longitude": "101.04419",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "ปัว",
+      "sub_district": "ภูคา",
+      "postcode": "55120",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "ถ้ำผาฆ้อง",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "7732",
+      "name_th": "น้ำตกตาดม่าน",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.28787",
+      "longitude": "100.78665",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "เชียงกลาง",
+      "sub_district": "พระพุทธบาท",
+      "postcode": "55160",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "น่าน",
+        "น้ำตกตาดม่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "21651",
+      "name_th": "คุ้มเจ้าราชบุตร",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.77755",
+      "longitude": "100.77204",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": null,
+      "district": "เมืองน่าน",
+      "sub_district": "ในเวียง",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "คุ้มเจ้าราชบุตร",
+        "น่าน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "27540",
+      "name_th": "ต้นดิกเดียม วัดปรางค์",
+      "introduction": "ต้นดิกเดียม ต้นไม้อะไรใครรู้ดูประหลาดผิดธรรมชาติ พันธุ์พฤกษาน่าฉงน แค่เห็นเป็นต้นไม้หันหลังให้แดด หันหน้าเข้าวัดก็แปลกเหลือหลายอยู่แล้ว แต่ใครจะเชื่อว่าต้นไม้ ประหลาดต้นนี้เป็นต้นอารมณ์ขัน ใบไม้จะไหวสั่นทุกครั้ง ที่ถูกคนสัมผัส",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.18374",
+      "longitude": "100.91535",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/b5de41b7-9db4-4b4f-9a23-c17ba0b9fdcc.jpeg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "149 บ้านปรางค์",
+      "district": "ปัว",
+      "sub_district": "ปัว",
+      "postcode": "55120",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [],
+      "status": "approved"
+    },
+    {
+      "place_id": "30439",
+      "name_th": "แหล่งเตาเผาและเครื่องเคลือบบ้านบ่อสวก",
+      "introduction": "บริเวณบ้านบ่อสวกนี้ในอดีตเคยเป็นแหล่งผลิตเครื่องเคลือบภาชนะดินเผาที่สำคัญแห่งหนึ่งของเมืองน่าน มีรูปแบบและกรรมวิธีการผลิตเครื่องเคลือบภาชนะดินเผาเป็นลักษณะเฉพาะของตัวเอง",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "18.75068",
+      "longitude": "100.69830",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/fa36e254-fa53-428d-8611-9bc65728ff25.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "8 หมู่ 10 ถนนปางค่า-น้ำปั้ว",
+      "district": "เมืองน่าน",
+      "sub_district": "บ่อสวก",
+      "postcode": "55000",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [],
+      "status": "approved"
+    },
+    {
+      "place_id": "6900",
+      "name_th": "อุทยานแห่งชาติถ้ำสะเกิน",
+      "introduction": null,
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.38366",
+      "longitude": "100.53832",
+      "thumbnail_url": [
+        "https://dmc.tatdataapi.io/assets/f677fd24-edcd-41da-b9f7-23248569f2e8.jpg"
+      ],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "บ้านสะเกิน หมู่ 1",
+      "district": "สองแคว",
+      "sub_district": "ยอด",
+      "postcode": "55160",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [
+        "อุทยานแห่งชาติถ้ำสะเกิน"
+      ],
+      "status": "approved"
+    },
+    {
+      "place_id": "12586",
+      "name_th": "ภูพยัคฆ์",
+      "introduction": "อยู่บ้านน้ำรี หมู่ที่ 12 ตำบลขุนน่าน อำเภอเฉลิมพระเกียรติ จังหวัดน่าน",
+      "category": "สถานที่ท่องเที่ยว",
+      "latitude": "19.48938",
+      "longitude": "101.15517",
+      "thumbnail_url": [],
+      "detail_summary": "",
+      "detail_images": [],
+      "address": "หมู่ 12 บ้านน้ำรี ถนนทางหลวงหมายเลข 1081",
+      "district": "เฉลิมพระเกียรติ",
+      "sub_district": "ขุนน่าน",
+      "postcode": "55130",
+      "province_id": 108,
+      "province_name": "น่าน",
+      "tags": [],
+      "status": "approved"
+    }
+  ],
+  "tat_api_routes": [
+    {
+      "route_id": 57,
+      "name_th": "3 วัน 2 คืน ชวนเธอมาหลงรัก “น่าน”",
+      "introduction": "เส้นทางท่องเที่ยว 3 วัน 2 คืน : น่าน",
+      "number_of_days": 3,
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "provinces_with_days": [],
+      "regions": [],
+      "region_names": [],
+      "place_image_urls": []
+    },
+    {
+      "route_id": 68,
+      "name_th": "เส้นทางท่องเที่ยว 4 วัน 3 คืน : น่าน - แพร่ - เชียงราย - แม่ฮ่องสอน",
+      "introduction": "เส้นทางท่องเที่ยว 5 วัน 4 คืน : น่าน - แพร่ - เชียงราย - แม่ฮ่องสอน",
+      "number_of_days": 4,
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "provinces_with_days": [],
+      "regions": [],
+      "region_names": [],
+      "place_image_urls": []
+    },
+    {
+      "route_id": 54,
+      "name_th": "เส้นทางท่องเที่ยว 2 วัน 1 คืน : น่าน - แพร่",
+      "introduction": "เส้นทางท่องเที่ยว 2 วัน 1 คืน : น่าน - แพร่",
+      "number_of_days": 2,
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/00d2d29b-9152-4c6d-b9b9-f1d588c9b0ed.png",
+      "provinces_with_days": [],
+      "regions": [],
+      "region_names": [],
+      "place_image_urls": []
+    }
+  ],
+  "tat_api_articles": [
+    {
+      "article_id": "227",
+      "title_th": "รีวิวเที่ยว พะเยา-น่าน 2 วัน 1 คืน เต็มอิ่มกับวิวสวย",
+      "slug": "รีวิวเที่ยว-พะเยา-น่าน-2-วัน-1-คืน-เต็มอิ่มกับวิวสวย",
+      "type": "See & Do",
+      "type_id": "3",
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/676bb586-41e3-45be-86d9-c934a666ad78.png",
+      "updated_at": "2025-02-03T14:06:50.663Z",
+      "created_at": "2025-02-03T14:06:50.663Z"
+    },
+    {
+      "article_id": "73",
+      "title_th": "10 เท่...น่าเที่ยว จ.น่าน",
+      "slug": "10-เท่-น่าเที่ยว-น่าน",
+      "type": "Province",
+      "type_id": "2",
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/8d200149-0915-47c3-8cc9-5d2dd88f25c4.png",
+      "updated_at": "2019-09-26T12:45:37.000Z",
+      "created_at": "2025-02-03T14:06:13.218Z"
+    },
+    {
+      "article_id": "717",
+      "title_th": "จุดเช็คอินห้ามพลาด...จ.น่าน",
+      "slug": "จุดเช็คอินห้ามพลาด-จ-น่าน",
+      "type": "See & Do",
+      "type_id": "3",
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/4f7d06d7-d594-4d37-8ade-584166125660.png",
+      "updated_at": "2020-08-13T16:20:55.000Z",
+      "created_at": "2025-02-03T12:29:22.964Z"
+    },
+    {
+      "article_id": "792",
+      "title_th": "Road Trip 4 วัน 3 คืน พิชิตยอดดอยน่าน",
+      "slug": "road-trip-4-วัน-3-คืน-พิชิตยอดดอยน่าน",
+      "type": "Trip (Itinerary)",
+      "type_id": "8",
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/3a2fb88c-4e6f-4b9a-b4fc-8ceff8ae1042.png",
+      "updated_at": "2025-02-03T12:27:58.685Z",
+      "created_at": "2025-02-03T12:27:58.685Z"
+    },
+    {
+      "article_id": "1119",
+      "title_th": "มหกรรมวัฒนธรรม ชาติพันธุ์จังหวัดน่าน",
+      "slug": "มหกรรมวัฒนธรรม-ชาติพันธุ์จังหวัดน่าน",
+      "type": "Event & Festival",
+      "type_id": "4",
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/d2e77b4e-f82e-4106-8727-6f4546b1ea43.png",
+      "updated_at": "2023-01-25T19:26:54.000Z",
+      "created_at": "2025-02-03T12:22:06.492Z"
+    },
+    {
+      "article_id": "1258",
+      "title_th": "เสน่ห์น่าน หน้าฝน Touch a Green Season",
+      "slug": "เสน่ห์น่าน-หน้าฝน-touch-a-green-season",
+      "type": "News & Update",
+      "type_id": "12",
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/12623dbe-2182-4b23-8b16-5f36e3b350de.png",
+      "updated_at": "2023-06-14T09:12:44.000Z",
+      "created_at": "2025-02-03T12:20:46.382Z"
+    },
+    {
+      "article_id": "1307",
+      "title_th": "วันธรรมดา เปียกปอนมานอนน่าน",
+      "slug": "วันธรรมดา-เปียกปอนมานอนน่าน",
+      "type": "News & Update",
+      "type_id": "12",
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/16226b2d-3bea-4f0f-8c87-6d003fff1662.png",
+      "updated_at": "2023-08-24T10:18:07.000Z",
+      "created_at": "2025-02-03T12:19:53.774Z"
+    },
+    {
+      "article_id": "1399",
+      "title_th": "เที่ยวน่านวันธรรมดา",
+      "slug": "เที่ยวน่านวันธรรมดา",
+      "type": "See & Do",
+      "type_id": "3",
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/aad0a8fd-53af-4ace-9d15-e61ea3411c97.png",
+      "updated_at": "2023-12-01T10:45:24.000Z",
+      "created_at": "2025-02-03T12:19:09.918Z"
+    },
+    {
+      "article_id": "1458",
+      "title_th": "ททท. น่าน ชวนคู่รักเกี่ยวก้อยลอดซุ้มพญานาค กระซิบรักอมตะ รับวันวาเลนไทน์",
+      "slug": "ททท-น่าน-ชวนคู่รักเกี่ยวก้อยลอดซุ้มพญานาค-กระซิบรักอมตะ-รับวันวาเลนไทน์",
+      "type": "Event & Festival",
+      "type_id": "4",
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/5222b261-ea98-48ba-ae9e-ca85122edea0.png",
+      "updated_at": "2024-01-22T10:30:08.000Z",
+      "created_at": "2025-02-03T12:18:38.749Z"
+    },
+    {
+      "article_id": "192",
+      "title_th": "ชมทะเลสวยที่ “เกาะกูด” เกาะสุดท้ายแห่งน่านน้ำตะวันออกของไทย จังหวัดตราด",
+      "slug": "ชมทะเลสวยที่-เกาะกูด-เกาะสุดท้ายแห่งน่านน้ำตะวันออกของไทย-จังหวัดตราด",
+      "type": "Destination",
+      "type_id": "1",
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/4bb67768-36d2-4572-ba34-17f14aabcd2e.png",
+      "updated_at": "2025-02-03T11:24:29.346Z",
+      "created_at": "2025-02-03T11:24:29.346Z"
+    },
+    {
+      "article_id": "163",
+      "title_th": "ร้านน่านั่งนครปฐม ย่านริมน้ำท่าจีน-นครชัยศรี",
+      "slug": "ร้านน่านั่งนครปฐม-ย่านริมน้ำท่าจีน-นครชัยศรี",
+      "type": "Food",
+      "type_id": "6",
+      "thumbnail_url": "https://dmc.tatdataapi.io/assets/6daafc9b-0fd2-4029-a669-76e713c9c64c.png",
+      "updated_at": "2025-02-03T11:23:54.895Z",
+      "created_at": "2025-02-03T11:23:54.895Z"
+    }
+  ]
 }
