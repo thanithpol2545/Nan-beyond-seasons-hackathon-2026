@@ -1,0 +1,1094 @@
+{
+  "metadata": {
+    "title": "Nan Province Dataset — Festivals, Traditions, Flowers & Wellness",
+    "description": "Comprehensive dataset of Nan province covering all festivals/events, flowers with medical/aesthetic/traditional/belief dimensions, and wellness community information. Suitable for ML training and application development.",
+    "version": "1.0",
+    "last_updated": "2026-07-13",
+    "total_festivals": 14,
+    "total_flowers": 20,
+    "total_wellness_communities": 4,
+    "total_ethnic_groups": 1
+  },
+
+  "festivals": [
+    {
+      "id": "F001",
+      "name_th": "ปีใหม่ม้ง (น่อเป๊โจ่วฮ์)",
+      "name_en": "Hmong New Year",
+      "month": 1,
+      "period": "หลังจากเก็บเกี่ยวผลผลิต (ประมาณมกราคม)",
+      "location": "อำเภอปัว, จังหวัดน่าน",
+      "ethnic_group": "ม้ง (Hmong)",
+      "description_th": "งานรื่นเริงของชาวม้ง ฉลองความสำเร็จในการเพาะปลูกหลังเก็บเกี่ยวผลผลิต บูชาเซ่นไหว้บรรพบุรุษที่ให้ความคุ้มครอง มีการแต่งกายชุดประจำเผ่าสีสันสดใส มีการละเล่นพื้นเมือง เช่น ลูกช่วง (ball tossing) และการแสดงดนตรี",
+      "description_en": "Hmong New Year celebration after harvest. Includes traditional costumes, ball tossing games, music performances, and ancestor worship ceremonies.",
+      "flowers_used": [
+        {"name": "ดอกป๊อปปี้", "use": "ประดับตกแต่ง", "symbolism": "ความอุดมสมบูรณ์"},
+        {"name": "ดอกไม้ป่าประจำถิ่น", "use": "เครื่องบูชาบรรพบุรุษ", "symbolism": "ความเคารพต่อธรรมชาติ"}
+      ],
+      "wellness_connection": "Ethnic cultural experience, Movement therapy through traditional games, Community bonding"
+    },
+    {
+      "id": "F002",
+      "name_th": "หกเป็งนมัสการพระธาตุแช่แห้ง",
+      "name_en": "Hok Peng Worship at Phra That Chae Haeng",
+      "month": 3,
+      "period": "ขึ้น 15 ค่ำ เดือน 6 เหนือ (ประมาณมีนาคม)",
+      "location": "วัดพระธาตุแช่แห้ง, อำเภอภูเพียง, จังหวัดน่าน",
+      "ethnic_group": "ล้านนา/ไทลื้อ",
+      "description_th": "ประเพณีขึ้นไปนมัสการพระธาตุแช่แห้ง ซึ่งเป็นพระธาตุคู่บ้านคู่เมืองของจังหวัดน่าน ในวันขึ้น 15 ค่ำ เดือน 6 เหนือ ชาวบ้านจะนำดอกไม้ ธูป เทียน ไปสักการะและทำบุญ",
+      "description_en": "Annual pilgrimage to Phra That Chae Haeng, the most sacred pagoda of Nan province. Locals bring flowers, incense, and candles for merit-making.",
+      "flowers_used": [
+        {"name": "ดอกบัวหลวง", "use": "บูชาพระธาตุ", "symbolism": "ความบริสุทธิ์, การตรัสรู้"},
+        {"name": "ดอกมะลิ", "use": "พวงมาลัยถวายพระ", "symbolism": "ความบริสุทธิ์ใจ, ความกตัญญู"},
+        {"name": "ดอกดาวเรือง", "use": "บายศรี, เครื่องบูชา", "symbolism": "โชคลาภ, ความเป็นสิริมงคล"},
+        {"name": "ดอกบานไม่รู้โรย", "use": "บายศรี, ตกแต่ง", "symbolism": "ความยั่งยืน, ไม่รู้โรย"},
+        {"name": "ดอกรัก", "use": "บายศรี, อุบะ", "symbolism": "ความรัก, ความสามัคคี"}
+      ],
+      "wellness_connection": "Walking meditation (เดินจงกรมขึ้นเขาพระธาตุ), Mindfulness, Spiritual well-being, Merit-making reduces stress and anxiety"
+    },
+    {
+      "id": "F003",
+      "name_th": "สงกรานต์ (ปีใหม่เมือง)",
+      "name_en": "Songkran / Thai New Year",
+      "month": 4,
+      "period": "13-15 เมษายน",
+      "location": "ทั่วจังหวัดน่าน",
+      "ethnic_group": "ล้านนา",
+      "description_th": "ประเพณีปีใหม่ไทย มีการสรงน้ำพระ การรดน้ำดำหัวผู้ใหญ่ การก่อเจดีย์ทราย การทำบุญตักบาตร และการเล่นน้ำ ชาวล้านนาเรียกว่า 'ปีใหม่เมือง' มีการทำบายศรีและเครื่องสักการะด้วยดอกไม้",
+      "description_en": "Thai New Year celebration. Includes water pouring on Buddha images, paying respects to elders, building sand pagodas, and water festivities.",
+      "flowers_used": [
+        {"name": "ดอกมะลิ", "use": "รดน้ำดำหัว, มาลัย", "symbolism": "ความบริสุทธิ์, ความเคารพ"},
+        {"name": "ดอกกุหลาบ", "use": "บายศรี, พวงมาลัย", "symbolism": "ความรัก, ความเคารพ"},
+        {"name": "ดอกดาวเรือง", "use": "บายศรี, ก่อเจดีย์ทราย", "symbolism": "โชคลาภ, สิริมงคล"},
+        {"name": "ดอกรัก", "use": "บายศรี, อุบะ", "symbolism": "ความรักใคร่กลมเกลียว"},
+        {"name": "ดอกบัวแดง", "use": "บูชาพระ, สรงน้ำพระ", "symbolism": "ความบริสุทธิ์ทางจิต"},
+        {"name": "ดอกบานไม่รู้โรย", "use": "บายศรี, เครื่องบูชา", "symbolism": "อายุยืน, ความมั่นคง"},
+        {"name": "ดอกพุดซ้อน", "use": "พวงมาลัย", "symbolism": "ความบริสุทธิ์, ความมั่นคง"}
+      ],
+      "wellness_connection": "Family bonding (รดน้ำดำหัว), Community spirit, Cooling water therapy, Letting go of past year stress"
+    },
+    {
+      "id": "F004",
+      "name_th": "แปดเป็งวัดจอมแจ้ง",
+      "name_en": "Paet Peng at Wat Chom Chaeng",
+      "month": 5,
+      "period": "เดือนพฤษภาคม (ขึ้น 8 ค่ำ เดือน 8 เหนือ)",
+      "location": "วัดจอมแจ้ง, จังหวัดน่าน",
+      "ethnic_group": "ล้านนา",
+      "description_th": "ประเพณีขึ้นไปนมัสการพระธาตุจอมแจ้ง ซึ่งสร้างโดยเจ้าฟ้าอัตถวรปัญโญ เจ้าผู้ครองนครน่าน เมื่อปี พ.ศ. 2390 มีการนำดอกไม้ไปสักการะและทำบุญ",
+      "description_en": "Tradition of worshiping at Phra That Chom Chaeng, built in 1847 by the ruler of Nan. Flower offerings and merit-making.",
+      "flowers_used": [
+        {"name": "ดอกไม้ป่าดอย", "use": "ถวายพระธาตุ", "symbolism": "ความบริสุทธิ์ตามธรรมชาติ"},
+        {"name": "ดอกเอื้อง (กล้วยไม้ล้านนา)", "use": "ประดับ, บูชา", "symbolism": "โชคลาภ, มั่งมีเงินทอง"}
+      ],
+      "wellness_connection": "Nature connection, Mindful walking, Altitude meditation"
+    },
+    {
+      "id": "F005",
+      "name_th": "แห่เทียนเข้าพรรษา",
+      "name_en": "Candle Festival / Khao Phansa",
+      "month": 7,
+      "period": "ก่อนวันเข้าพรรษา (ประมาณกรกฎาคม)",
+      "location": "ข่วงเมืองน่าน, ทั่วจังหวัด",
+      "ethnic_group": "พุทธทั่วไป",
+      "description_th": "ประเพณีแห่เทียนพรรษา มีการหล่อเทียนและตกแต่งเทียนด้วยดอกไม้อย่างสวยงาม แห่รอบเมืองก่อนนำไปถวายวัด ช่วงเข้าพรรษาเป็นเวลา 3 เดือนที่พระสงฆ์จำพรรษาอยู่ในวัด",
+      "description_en": "Candle festival before Buddhist Lent. Elaborately decorated candles with floral designs are paraded and offered to temples.",
+      "flowers_used": [
+        {"name": "ดอกบัวหลวง", "use": "ตกแต่งแท่นเทียน", "symbolism": "การตรัสรู้, หลุดพ้น"},
+        {"name": "ดอกดาวเรือง", "use": "ประดับเทียน", "symbolism": "สว่างไสวดั่งทอง"},
+        {"name": "ดอกกุหลาบ", "use": "ตกแต่งขบวนแห่", "symbolism": "ความสวยงาม, ความรักในศาสนา"},
+        {"name": "ดอกบานไม่รู้โรย", "use": "ตกแต่ง", "symbolism": "ความมั่นคง, ไม่รู้โรย"},
+        {"name": "ดอกรัก", "use": "ร้อยอุบะ", "symbolism": "ความรัก, ความสามัคคี"}
+      ],
+      "wellness_connection": "Community participation, Artistic expression, Spiritual renewal, Mindful reflection during Lent period"
+    },
+    {
+      "id": "F006",
+      "name_th": "ตานก๋วยสลาก",
+      "name_en": "Tan Kuay Salak / Salak Festival",
+      "month": 9,
+      "period": "วันเพ็ญขึ้น 15 ค่ำ เดือน 12 เหนือ ถึง วันแรม 14 ค่ำ (ประมาณกันยายน-ตุลาคม)",
+      "location": "วัดต่างๆ ทั่วจังหวัดน่าน โดยเฉพาะวัดพระธาตุช้างค้ำวรวิหาร",
+      "ethnic_group": "ล้านนา/ไทลื้อ",
+      "description_th": "ประเพณีของชาวล้านนา แสดงความระลึกถึงบรรพบุรุษและญาติมิตรผู้ล่วงลับ ด้วยการทำบุญอุทิศส่วนกุศลผ่าน 'ก๋วยสลาก' ซึ่งสานจากไม้ไผ่ ภายในบรรจุข้าวสาร อาหารแห้ง ใบหมากพลู ไม้ดอก ไม้ประดับ ติดเทียนบุหรี่และเงิน ที่ขาดไม่ได้คือดอกไม้ในก๋วยสลาก",
+      "description_en": "Lanna tradition of offering 'Salak' baskets to monks as merit transfer to ancestors. Bamboo baskets contain rice, dry food, betel nuts, flowers, candles, and money.",
+      "flowers_used": [
+        {"name": "ดอกมะลิ", "use": "บรรจุในก๋วยสลาก", "symbolism": "ความบริสุทธิ์, ความกตัญญูต่อบรรพบุรุษ"},
+        {"name": "ดอกดาวเรือง", "use": "ประดับก๋วยสลาก", "symbolism": "โชคลาภ, สิริมงคล"},
+        {"name": "ดอกบานไม่รู้โรย", "use": "มัดรวมกับก๋วยสลาก", "symbolism": "ความยั่งยืนของบุญ"},
+        {"name": "ดอกรัก", "use": "ร้อยเป็นอุบะ", "symbolism": "ความรัก, ความผูกพันในครอบครัว"},
+        {"name": "ดอกพุด", "use": "ประดับก๋วยสลาก", "symbolism": "ความบริสุทธิ์"}
+      ],
+      "wellness_connection": "Grief healing through ancestor remembrance, Family bonding, Letting go, Generosity practice"
+    },
+    {
+      "id": "F007",
+      "name_th": "ประเพณีแข่งเรือยาวจังหวัดน่าน (นัดเปิดสนาม)",
+      "name_en": "Nan Long Boat Race (Opening Round)",
+      "month": 9,
+      "period": "ประมาณกลางกันยายน (ตรงกับตานก๋วยสลาก)",
+      "location": "ใต้สะพานพัฒนาภาคเหนือ, แม่น้ำน่าน",
+      "ethnic_group": "ล้านนา/ทั่วไป",
+      "description_th": "การแข่งเรือยาวประเพณีของจังหวัดน่าน เรือถูกขุดจากไม้ตะเคียนทองทั้งต้น หัวเรือแกะสลักเป็นหัวพญานาคแบบล้านนา หางเป็นหางพญานาค เชื่อว่าพญานาคมีความศักดิ์สิทธิ์ ดลบันดาลให้ฝนฟ้าอุดมสมบูรณ์ แบ่งเป็นเรือใหญ่ (41-58 ฝีพาย), เรือกลาง (31-40 ฝีพาย), เรือเล็ก (20-30 ฝีพาย)",
+      "description_en": "Traditional long boat race. Boats carved from whole ironwood logs with Naga serpent bow. Three categories: large (41-58 paddlers), medium (31-40), small (20-30).",
+      "flowers_used": [
+        {"name": "ดอกไม้ประดับเรือ", "use": "พวงมาลัยคล้องหัวเรือ", "symbolism": "ความเป็นสิริมงคลแก่เรือและฝีพาย"},
+        {"name": "ดอกดาวเรือง", "use": "บายศรีบูชาพญานาค", "symbolism": "โชคลาภ, บารมี"},
+        {"name": "ดอกมะลิ", "use": "พวงมาลัยบูชา", "symbolism": "ความบริสุทธิ์ของนักแข่ง"},
+        {"name": "ดอกบัวหลวง", "use": "เครื่องสังเวยพญานาค", "symbolism": "ความศักดิ์สิทธิ์"}
+      ],
+      "wellness_connection": "Teamwork & camaraderie, Physical fitness through paddling, Community bonding, Stress release through celebration"
+    },
+    {
+      "id": "F008",
+      "name_th": "แข่งขันเรือชิงถ้วยพระราชทาน และถวายทานสลากภัต",
+      "name_en": "Royal Trophy Boat Race & Salak Patt Offering",
+      "month": 10,
+      "period": "ต้นเดือนตุลาคม",
+      "location": "ลำน้ำน่าน บ้านแสงดาว ตำบลฝายแก้ว อำเภอภูเพียง",
+      "ethnic_group": "ล้านนา/ทั่วไป",
+      "description_th": "การแข่งขันเรือชิงถ้วยพระราชทานสมเด็จพระกนิษฐาธิราชเจ้า กรมสมเด็จพระเทพรัตนราชสุดาฯ พร้อมประเพณีถวายทานสลากภัต วัดพระธาตุแช่แห้ง มีการประกวดกองเชียร์จาก 14 ชุมชน การแสดงศิลปวัฒนธรรมท้องถิ่น",
+      "description_en": "Boat race for the Royal Princess's Trophy combined with Salak Patt offering ceremony. Includes cheerleading contests from 14 communities and local performances.",
+      "flowers_used": [
+        {"name": "ดอกดาวเรือง", "use": "ตกแต่งขบวนเรือและกองเชียร์", "symbolism": "สิริมงคล, โชคลาภ"},
+        {"name": "ดอกกุหลาบ", "use": "ประดับกองเชียร์", "symbolism": "ความสวยงาม"},
+        {"name": "ดอกบัวหลวง", "use": "เครื่องสักการะสลากภัต", "symbolism": "ความบริสุทธิ์, บูชาพระรัตนตรัย"},
+        {"name": "ดอกมะลิ", "use": "พวงมาลัยถวาย", "symbolism": "ความกตัญญู"}
+      ],
+      "wellness_connection": "Cultural pride, Social bonding, Physical activity, Community wellness"
+    },
+    {
+      "id": "F009",
+      "name_th": "ยี่เป็ง / ลอยกระทง",
+      "name_en": "Yi Peng / Loy Krathong",
+      "month": 11,
+      "period": "วันเพ็ญเดือน 12 (ประมาณพฤศจิกายน)",
+      "location": "ทั่วจังหวัดน่าน",
+      "ethnic_group": "ล้านนา",
+      "description_th": "ประเพณีลอยกระทงของล้านนา เรียก 'ยี่เป็ง' (เพ็ญเดือนยี่) มีการทำกระทงและ 'ประตูป่า' ซุ้มประตูตกแต่งด้วยดอกไม้และโคมพื้นเมือง การจุดผางประทีป และการลอยกระทงในแม่น้ำน่าน",
+      "description_en": "Lanna Yi Peng festival with floating krathong, decorated gates 'Pratu Pa', lantern releases, and candle offerings on the Nan River.",
+      "flowers_used": [
+        {"name": "ดอกดาวเรือง", "use": "ประตูป่า, กระทง", "symbolism": "โชคลาภ, ความสว่างไสว"},
+        {"name": "ดอกบานไม่รู้โรย", "use": "ประตูป่า, ตกแต่ง", "symbolism": "อายุยืน, ไม่รู้โรย"},
+        {"name": "ดอกรัก", "use": "อุบะ, ร้อยมาลัย", "symbolism": "ความรัก"},
+        {"name": "ดอกบัวหลวง", "use": "กระทง, บูชา", "symbolism": "การตรัสรู้"},
+        {"name": "ดอกมะลิ", "use": "กระทง, มาลัย", "symbolism": "ความบริสุทธิ์"},
+        {"name": "ดอกกุหลาบ", "use": "ประตูป่า", "symbolism": "ความสวยงาม"},
+        {"name": "ดอกกล้วยไม้ (เอื้อง)", "use": "โคมประดับ", "symbolism": "โชคลาภ"}
+      ],
+      "wellness_connection": "Letting go of negative emotions (ลอยความทุกข์), Mindfulness practice, Community celebration, Light therapy through candle/lantern gazing"
+    },
+    {
+      "id": "F010",
+      "name_th": "ประเพณีเลี้ยงผีขุนน้ำ",
+      "name_en": "Phi Khun Nam Spirit Festival",
+      "month": 4,
+      "period": "ก่อนฤดูทำนา (ประมาณเมษายน-พฤษภาคม)",
+      "location": "ป่าต้นน้ำต่างๆ ในจังหวัดน่าน",
+      "ethnic_group": "ล้านนา/ไทลื้อ",
+      "description_th": "พิธีกรรมบูชาผีขุนน้ำหรือผีป่าต้นน้ำ ซึ่งเชื่อว่าเป็นผู้ปกปักรักษาป่าไม้และแหล่งน้ำ ชาวบ้านจะนำเครื่องสังเวยและดอกไม้ไปบูชาที่ต้นน้ำ เพื่อขอให้ฝนตกตามฤดูกาลและป่าไม้อุดมสมบูรณ์",
+      "description_en": "Water source spirit worship ceremony. Locals offer food, flowers, and incense to the guardian spirits of forests and water sources for rain and abundance.",
+      "flowers_used": [
+        {"name": "ดอกไม้ป่าประจำถิ่น", "use": "สังเวยผีขุนน้ำ", "symbolism": "การคืนสู่ธรรมชาติ"},
+        {"name": "ดอกดาวเรือง", "use": "เครื่องบูชา", "symbolism": "สิริมงคล"}
+      ],
+      "wellness_connection": "Nature connection (Forest Bathing), Environmental awareness, Community bonding, Spiritual grounding"
+    },
+    {
+      "id": "F011",
+      "name_th": "พิธีสืบชะตา",
+      "name_en": "Suep Cha Ta / Life Extension Ceremony",
+      "month": null,
+      "period": "จัดตามฤกษ์ยามที่เหมาะสม ตลอดปี",
+      "location": "วัดต่างๆ ในจังหวัดน่าน",
+      "ethnic_group": "ล้านนา",
+      "description_th": "พิธีสำคัญของชาวล้านนา เชื่อว่าเป็นการต่ออายุหรือต่อชีวิตของบ้านเมืองหรือของคนให้ยืนยาว มีความสุข การทำพิธีต้องใช้บายศรีเครื่องสักการะที่ประดับด้วยดอกไม้มงคลหลายชนิด",
+      "description_en": "Lanna life-extension ceremony believed to prolong life and bring prosperity. Requires elaborate flower-adorned baisri offerings.",
+      "flowers_used": [
+        {"name": "ดอกดาวเรือง", "use": "บายศรี, เครื่องสังเวย", "symbolism": "โชคลาภ, สิริมงคล, ชีวิตรุ่งเรือง"},
+        {"name": "ดอกบัวหลวง", "use": "ยอดบายศรี", "symbolism": "ปัญญา, การตรัสรู้"},
+        {"name": "ดอกบานไม่รู้โรย", "use": "ลายบายศรี", "symbolism": "อายุยืนยาว, ไม่รู้โรย"},
+        {"name": "ดอกรัก", "use": "อุบะบายศรี", "symbolism": "ความรักใคร่กลมเกลียว"},
+        {"name": "ดอกมะลิ", "use": "พวงมาลัยถวาย", "symbolism": "ความบริสุทธิ์"}
+      ],
+      "wellness_connection": "Psychological well-being through ritual, Community support, Hope and positive mindset, Anxiety reduction"
+    },
+    {
+      "id": "F012",
+      "name_th": "ประเพณีดอกไม้พันดวง (เทศน์มหาชาติ)",
+      "name_en": "Flower Thousand / Mahachat Sermon",
+      "month": 2,
+      "period": "ก่อนวันยี่เป็ง หรือตามแต่ชุมชนกำหนด",
+      "location": "วัดไทลื้อในจังหวัดน่าน (อ.ปัว, อ.ท่าวังผา)",
+      "ethnic_group": "ไทลื้อ (Tai Lue)",
+      "description_th": "ประเพณีไทลื้อในการฟังเทศน์มหาชาติ (พระเวสสันดรชาดก) โดยมีการทำ 'ดอกไม้พันดวง' ดอกไม้ประดิษฐ์จากสีธรรมชาติเป็นจำนวนมาก ถวายเป็นพุทธบูชา ความพิเศษคือมีการร่วมแรงร่วมใจทำดอกไม้ประดิษฐ์จากต้นไม้ในท้องถิ่น",
+      "description_en": "Tai Lue tradition of listening to the Mahachat sermon (Lord Vessantara's story). Features 'Flower Thousand' — hundreds of handmade flowers from natural materials offered as Buddhist homage.",
+      "flowers_used": [
+        {"name": "ดอกไม้ประดิษฐ์จากธรรมชาติ", "use": "พุทธบูชา ดอกไม้พันดวง", "symbolism": "ศรัทธา, การเสียสละ"},
+        {"name": "ดอกรัก", "use": "ประดับ", "symbolism": "ความรักในพระธรรม"},
+        {"name": "ดอกบัวหลวง", "use": "พุทธบูชา", "symbolism": "การตรัสรู้"},
+        {"name": "ดอกมะลิ", "use": "เครื่องบูชาธรรม", "symbolism": "ความบริสุทธิ์"}
+      ],
+      "wellness_connection": "Mindfulness through listening to sermons, Handcrafting (flow state), Community bonding, Spiritual fulfillment"
+    },
+    {
+      "id": "F013",
+      "name_th": "งานเทศกาลท่องเที่ยวจังหวัดน่านประจำปี",
+      "name_en": "Nan Annual Tourism Festival",
+      "month": 12,
+      "period": "ปลายปี (ประมาณธันวาคม)",
+      "location": "ทั่วจังหวัดน่าน",
+      "ethnic_group": "ทุกกลุ่ม",
+      "description_th": "งานเทศกาลท่องเที่ยวประจำปีของจังหวัดน่าน มีขบวนแห่วัฒนธรรม 15 อำเภอ การแสดงแสงสีเสียง การออกร้านจำหน่ายผลิตภัณฑ์ชุมชน และการแสดงศิลปวัฒนธรรมของกลุ่มชาติพันธุ์ต่างๆ",
+      "description_en": "Nan's annual tourism festival featuring cultural processions from all 15 districts, light & sound shows, community product fairs, and ethnic performances.",
+      "flowers_used": [
+        {"name": "ดอกเสี้ยวดอกขาว", "use": "สัญลักษณ์ขบวนแห่", "symbolism": "ดอกไม้ประจำจังหวัด, เอกลักษณ์น่าน"},
+        {"name": "ดอกดาวเรือง", "use": "ตกแต่งขบวน", "symbolism": "สิริมงคล"},
+        {"name": "ดอกไม้ประจำท้องถิ่นแต่ละอำเภอ", "use": "แสดงอัตลักษณ์", "symbolism": "ความหลากหลายทางวัฒนธรรม"}
+      ],
+      "wellness_connection": "Cultural celebration, Community pride, Social connection, Creative expression"
+    },
+    {
+      "id": "F014",
+      "name_th": "งานไหว้พระธาตุเขาน้อย",
+      "name_en": "Phra That Khao Noi Worship",
+      "month": 5,
+      "period": "ประมาณพฤษภาคม",
+      "location": "วัดพระธาตุเขาน้อย, จังหวัดน่าน",
+      "ethnic_group": "พุทธทั่วไป",
+      "description_th": "ประเพณีขึ้นไปสักการะพระธาตุเขาน้อย ซึ่งเป็นจุดชมวิวสำคัญของเมืองน่าน มองเห็นตัวเมืองแบบ 360 องศา มีการนำดอกไม้ไปบูชาและชมความงามของดอกไม้ในบริเวณวัด",
+      "description_en": "Tradition of climbing to Phra That Khao Noi for worship. Offers panoramic 360-degree views of Nan city. Flower offerings and scenery appreciation.",
+      "flowers_used": [
+        {"name": "ดอกลีลาวดี", "use": "ประดับวัด, ถ่ายรูป", "symbolism": "ความสงบ, ความรักอมตะ"},
+        {"name": "ดอกบัวหลวง", "use": "บูชาพระธาตุ", "symbolism": "ความบริสุทธิ์"},
+        {"name": "ดอกดาวเรือง", "use": "เครื่องบูชา", "symbolism": "สิริมงคล"}
+      ],
+      "wellness_connection": "Physical exercise (climbing), View meditation, Photography mindfulness, Spiritual reflection"
+    }
+  ],
+
+  "flowers": [
+    {
+      "id": "FL001",
+      "name_th": "เสี้ยวดอกขาว",
+      "name_en": "Orchid Tree / Mountain Ebony",
+      "scientific": "Bauhinia variegata",
+      "family": "Fabaceae (ถั่ว)",
+      "symbol": "ดอกไม้ประจำจังหวัดน่าน",
+      "season": "ตลอดปี, ชอบอากาศเย็น",
+      "scent": "หอมอ่อนๆ",
+      "color": "ชมพูอ่อน, ขาว",
+      "medical": {
+        "benefits_th": ["เปลือกมีสารแทนนินใช้ย้อมแห อวน ต้านเชื้อแบคทีเรีย", "ดอกมีฤทธิ์ต้านมะเร็ง", "ใบอ่อนและฝักอ่อนกินได้ มีสารต้านอนุมูลอิสระ"],
+        "uses_th": ["ย้อมผ้าธรรมชาติ", "พืชอาหาร (ใบอ่อน, ฝักอ่อน)", "สมุนไพร"],
+        "benefits_en": ["Bark contains tannins with antibacterial properties", "Flowers show anticancer activity", "Young leaves and pods are edible with antioxidants"]
+      },
+      "aesthetic": {
+        "description_th": "ไม้ยืนต้นสูง 10-15 ม. ดอกคล้ายดอกชงโค 5 กลีบ สีชมพูอ่อนหรือขาว กลิ่นหอมอ่อนๆ ใบบางรูปหัวใจ ปลายเว้าลึก เวลาดอกบานจะทิ้งใบ เห็นแต่ดอกเต็มต้นสวยงาม",
+        "description_en": "Medium tree 10-15m. Flowers resemble orchid blooms with 5 petals in pale pink or white. Deciduous during flowering — bare branches covered in blossoms.",
+        "photography_score": 9,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["ดอกไม้ประจำจังหวัดน่าน", "ปลูกเป็นไม้ประดับริมถนน", "ใช้เปลือกย้อมแหและอวน"],
+        "food_th": "ใบอ่อนใช้ห่อหมก หรือปรุงเป็นผักสด ฝักอ่อนนำมาแกงหรือผัด"
+      },
+      "belief": {
+        "meaning_th": "ความงามที่เรียบง่าย, ความอดทน",
+        "beliefs_th": ["เป็นไม้มงคล", "ในอินเดียถือเป็น 'โควิทารา' ต้นไม้ศักดิ์สิทธิ์ ใช้ในพิธีบูชาเทวดา", "เชื่อว่าปลูกแล้วจะช่วยเสริมสิริมงคลแก่บ้านและเมือง"],
+        "beliefs_en": ["Sacred tree (Kovidara) in Hinduism", "Believed to bring prosperity and protection"]
+      },
+      "wellness_activity": ["Flower photography tour", "Nature walk to spot blooming season", "Edible flower cooking workshop"],
+      "fragrance_family": "Floral - Soft",
+      "element": "ลม (Wind)",
+      "knowledge_graph_tags": ["nan_province_flower", "edible_flower", "sacred_tree", "ornamental"]
+    },
+    {
+      "id": "FL002",
+      "name_th": "มะลิ",
+      "name_en": "Jasmine",
+      "scientific": "Jasminum spp.",
+      "family": "Oleaceae",
+      "symbol": "ความกตัญญู, ความบริสุทธิ์",
+      "season": "ตลอดปี (ออกดอกมากในหน้าร้อน)",
+      "scent": "หอมหวานเข้มข้น (Sweet, warm white floral)",
+      "color": "ขาว",
+      "medical": {
+        "benefits_th": ["ปรับสมดุลฮอร์โมนเพศหญิง", "ลดความเครียดและวิตกกังวล", "ช่วยให้นอนหลับสบาย", "สดชื่น, กระปรี้กระเปร่า"],
+        "uses_th": ["น้ำมันหอมระเหย", "ชาดอกมะลิ", "ยาหอมแก้วิงเวียน", "บำรุงผิว"],
+        "benefits_en": ["Hormone balancing", "Anxiety reduction", "Sleep aid", "Mood uplifting"]
+      },
+      "aesthetic": {
+        "description_th": "ดอกสีขาวขนาดเล็ก กลีบซ้อนหรือกลีบเดี่ยว กลิ่นหอมหวานเป็นเอกลักษณ์ นิยมร้อยเป็นพวงมาลัยและอุบะ",
+        "photography_score": 8,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["พวงมาลัยถวายพระ", "รดน้ำดำหัวผู้ใหญ่", "ก๋วยสลาก", "กระทงลอย", "งานมงคล"],
+        "food_th": "ดอกมะลิลูกกวาด, ชามะลิ, น้ำลอยดอกมะลิสำหรับทำขนมไทย"
+      },
+      "belief": {
+        "meaning_th": "ความบริสุทธิ์, ความรักที่บริสุทธิ์, ความกตัญญู",
+        "beliefs_th": ["ดอกไม้มงคลที่ขาดไม่ได้ในงานพุทธศาสนา", "ใช้ในพิธีบูชาพระและสิ่งศักดิ์สิทธิ์", "เชื่อว่าดอกมะลิสีขาวแทนความสะอาดบริสุทธิ์"],
+        "beliefs_en": ["Symbol of purity and gratitude in Buddhism", "Essential flower for worship and ceremonies"]
+      },
+      "wellness_activity": ["Jasmine tea ceremony", "Aromatherapy with jasmine essential oil", "DIY jasmine garland workshop", "Jasmine-scented meditation"],
+      "fragrance_family": "Floral",
+      "element": "ดิน (Earth)",
+      "knowledge_graph_tags": ["buddhist_offering", "aromatherapy", "edible_flower", "garland_flower"]
+    },
+    {
+      "id": "FL003",
+      "name_th": "บัวหลวง",
+      "name_en": "Sacred Lotus",
+      "scientific": "Nelumbo nucifera",
+      "family": "Nelumbonaceae",
+      "symbol": "การตรัสรู้ในพุทธศาสนา",
+      "season": "ฤดูฝน-ฤดูหนาว (ประมาณพฤษภาคม-กุมภาพันธ์)",
+      "scent": "หอมอ่อนๆ (Green, watery floral)",
+      "color": "ชมพู, ขาว",
+      "medical": {
+        "benefits_th": ["รสเย็น บำรุงหัวใจ (แพทย์แผนไทย)", "ดอกบัวหลวงเป็นส่วนผสมในตำรับเบญจเกสร", "เม็ดบัวบำรุงร่างกาย", "ฝักบัวช่วยบำรุงครรภ์"],
+        "uses_th": ["ตำรับเบญจเกสร (บำรุงหัวใจ)", "ชาดอกบัว", "ปรุงยาบำรุงกำลัง"],
+        "benefits_en": ["Cooling effect, heart tonic (Thai traditional medicine)", "Part of Benjakesorn formula", "Lotus seed for general health"]
+      },
+      "aesthetic": {
+        "description_th": "ดอกขนาดใหญ่ สีชมพูหรือขาว กลีบหลายชั้นซ้อนกัน กลางดอกเป็นฝัก เมล็ดกลม ดอกและใบบัวลอยพ้นน้ำ ให้ความรู้สึกสงบ สวยงาม แบบไทย",
+        "photography_score": 10,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["บูชาพระพุทธ (สัญลักษณ์แห่งการตรัสรู้)", "ประดับในเทศกาลวันสำคัญทางพุทธศาสนา", "ตำรับเบญจเกสรในแพทย์แผนไทย", "กระทง"],
+        "food_th": "เม็ดบัวต้ม, บัวลอย, ชากลีบบัว, หยวกบัวในแกงเลียง, หัวบัว"
+      },
+      "belief": {
+        "meaning_th": "การตรัสรู้, ความบริสุทธิ์ทางจิต, การหลุดพ้นจากกิเลส",
+        "beliefs_th": ["ดอกไม้แห่งพุทธศาสนา ดอกบัวแทนภาวะที่จิตใจพ้นจากกิเลส", "บัว 4 เหล่า เปรียบกับระดับการเข้าถึงธรรม", "เชื่อว่าการถวายดอกบัวเป็นพุทธบูชาจะส่งผลให้มีปัญญา"],
+        "beliefs_en": ["Symbol of enlightenment in Buddhism", "Different stages of lotus represent different levels of spiritual development"]
+      },
+      "wellness_activity": ["Lotus meditation", "Lotus tea ceremony", "Lotus photography", "Benjakesorn herbal workshop"],
+      "fragrance_family": "Floral - Green",
+      "element": "น้ำ (Water)",
+      "knowledge_graph_tags": ["buddhist_flower", "benjakesorn", "meditation_flower", "thai_medicine", "edible_flower"]
+    },
+    {
+      "id": "FL004",
+      "name_th": "ดาวเรือง",
+      "name_en": "Marigold",
+      "scientific": "Tagetes erecta",
+      "family": "Asteraceae",
+      "symbol": "โชคลาภ, ความเป็นสิริมงคล",
+      "season": "ตลอดปี",
+      "scent": "ฉุนเฉพาะตัว (Herbal, pungent)",
+      "color": "ส้ม, เหลืองทอง",
+      "medical": {
+        "benefits_th": ["ต้านการอักเสบ", "สมานแผล", "ขับพิษ", "มีฤทธิ์ต้านเชื้อราและแบคทีเรีย"],
+        "uses_th": ["ทำยาสมานแผล", "น้ำมันหอมระเหย", "สารสกัดใช้ในเครื่องสำอาง"],
+        "benefits_en": ["Anti-inflammatory", "Wound healing", "Antifungal and antibacterial"]
+      },
+      "aesthetic": {
+        "description_th": "ดอกสีเหลืองถึงส้มเข้ม กลีบดอกหนาแน่น ดอกเป็นกระจุกแน่น สีสันสดใส มีทั้งดอกเล็กและดอกใหญ่ ปลูกง่าย ทนทาน",
+        "photography_score": 7,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["บายศรีทุกประเภท", "ประตูป่าประเพณียี่เป็ง", "ประดับเทียนพรรษา", "ก๋วยสลาก", "เครื่องสังเวยในพิธีกรรม", "กระทง"],
+        "food_th": "ดอกดาวเรืองใช้ล้างน้ำแล้วกินสดกับน้ำพริกได้ หรือชุบไข่ทอด"
+      },
+      "belief": {
+        "meaning_th": "โชคลาภ, ความมั่งมี, สิริมงคล",
+        "beliefs_th": ["ดอกไม้สีทองแห่งความโชคดี", "ขาดไม่ได้ในบายศรีและเครื่องบูชาทุกชนิดของล้านนา", "เชื่อว่าดอกดาวเรืองช่วยเสริมบารมีและโชคลาภ"],
+        "beliefs_en": ["Golden flower symbolizing wealth and good fortune", "Essential in all Lanna baisri offerings"]
+      },
+      "wellness_activity": ["Baisri making workshop", "Marigold garland crafting", "Flower photography"],
+      "fragrance_family": "Fresh - Herbal",
+      "element": "ไฟ (Fire)",
+      "knowledge_graph_tags": ["offering_flower", "baisri_flower", "lanna_tradition", "edible_flower", "medicinal_flower"]
+    },
+    {
+      "id": "FL005",
+      "name_th": "บานไม่รู้โรย",
+      "name_en": "Globe Amaranth",
+      "scientific": "Gomphrena globosa",
+      "family": "Amaranthaceae",
+      "symbol": "ความยั่งยืน, ระยะยาว",
+      "season": "ตลอดปี",
+      "scent": "ไม่มีกลิ่น",
+      "color": "ม่วง, ชมพู, แดง, ขาว",
+      "medical": {
+        "benefits_th": ["ลดความดันโลหิต", "ขับเสมหะ", "บำรุงผิว", "ต้านอนุมูลอิสระ"],
+        "uses_th": ["ชาดอกบานไม่รู้โรย", "สมุนไพรลดความดัน"],
+        "benefits_en": ["Blood pressure reduction", "Antioxidant", "Expectorant"]
+      },
+      "aesthetic": {
+        "description_th": "ดอกกลมเล็กคล้ายกระดุม สีสดใสอยู่ได้นานแม้แห้งแล้ว นิยมใช้ในงานหัตถกรรมดอกไม้แห้งและงานประดิษฐ์",
+        "photography_score": 6,
+        "instagram_worthy": false
+      },
+      "tradition": {
+        "uses_th": ["บายศรีทุกชนิด (ใช้ทำลวดลายบนบายศรี)", "ประตูป่าประเพณียี่เป็ง", "เครื่องบูชาในพิธีสืบชะตา", "พวงมาลัย"],
+        "food_th": "ชาดอกบานไม่รู้โรย"
+      },
+      "belief": {
+        "meaning_th": "ความมั่นคง, ความยั่งยืน, อายุยืนยาว",
+        "beliefs_th": ["ดอกไม้ที่แห้งแล้วสีไม่ซีด จึงเป็นสัญลักษณ์ของความไม่รู้โรย", "ใช้ในพิธีสืบชะตาเพื่อต่ออายุ", "เชื่อว่าช่วยเสริมให้ชีวิตเจริญรุ่งเรืองมั่นคง"],
+        "beliefs_en": ["Symbol of longevity and stability because color persists when dried", "Used in life-extension ceremonies"]
+      },
+      "wellness_activity": ["Dried flower craft workshop", "Herbal tea making"],
+      "fragrance_family": "None",
+      "element": "ดิน (Earth)",
+      "knowledge_graph_tags": ["durable_flower", "baisri_flower", "longevity_symbol", "herbal_tea", "dried_flower_craft"]
+    },
+    {
+      "id": "FL006",
+      "name_th": "ดอกรัก",
+      "name_en": "Roxburgh's Rattlepod",
+      "scientific": "Crotalaria retusa",
+      "family": "Fabaceae",
+      "symbol": "ความรัก, ความสามัคคี",
+      "season": "ฤดูฝน-ฤดูหนาว",
+      "scent": "ไม่มีกลิ่นแรง",
+      "color": "เหลืองสด",
+      "medical": {
+        "benefits_th": ["มีสารอัลคาลอยด์", "ใช้ในตำรับยาไทยบางตำรับ", "ต้องใช้ด้วยความระมัดระวัง"],
+        "uses_th": ["สมุนไพรในตำรับยาไทย"],
+        "benefits_en": ["Contains alkaloids used in Thai traditional medicine (caution required)"]
+      },
+      "aesthetic": {
+        "description_th": "ดอกสีเหลืองสด รูปดอกถั่ว ดอกเล็กเรียงเป็นช่อ ออกดอกเป็นพวงสวยงาม ชื่อ 'รัก' เพราะเมื่อเด็ดดอกจะมีน้ำยางข้นเหนียวคล้ายความรักที่เหนียวแน่น",
+        "photography_score": 7,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["ร้อยอุบะบายศรีทุกชนิด", "พวงมาลัย", "เครื่องบูชาในพิธีมงคล", "บายศรีงานไหว้ครู", "เครื่องสังเวย"],
+        "food_th": "ไม่นิยมรับประทาน"
+      },
+      "belief": {
+        "meaning_th": "ความรัก, ความสามัคคี, ความผูกพัน",
+        "beliefs_th": ["ขาดไม่ได้ในบายศรีเพราะชื่อ 'รัก' เป็นมงคล", "เชื่อว่านำมาซึ่งความรักใคร่กลมเกลียวในหมู่คณะ", "ใช้ในบายศรีทุกชนิดตั้งแต่ระดับชาวบ้านถึงพระราชพิธี"],
+        "beliefs_en": ["Name means 'love' — essential in all baisri offerings", "Believed to bring harmony and unity"]
+      },
+      "wellness_activity": ["Baisri making workshop", "Floral arrangement"],
+      "fragrance_family": "None",
+      "element": "ลม (Wind)",
+      "knowledge_graph_tags": ["baisri_flower", "love_symbol", "auspicious_flower", "lanna_tradition"]
+    },
+    {
+      "id": "FL007",
+      "name_th": "พุดซ้อน (พุด)",
+      "name_en": "Gardenia",
+      "scientific": "Gardenia jasminoides",
+      "family": "Rubiaceae",
+      "symbol": "ความบริสุทธิ์, ความมั่นคง",
+      "season": "ฤดูฝน-ฤดูหนาว",
+      "scent": "หอมหวานเข้มข้น (Creamy, lush white floral)",
+      "color": "ขาว",
+      "medical": {
+        "benefits_th": ["หอมเย็นสดชื่น", "ระบายความร้อน", "แก้วิงเวียนศีรษะ", "คลายเครียด"],
+        "uses_th": ["น้ำมันหอมระเหย", "เครื่องหอม", "ยาหอมแก้วิงเวียน"],
+        "benefits_en": ["Cooling effect", "Relieves dizziness", "Stress relief", "Aromatherapy"]
+      },
+      "aesthetic": {
+        "description_th": "ดอกสีขาว กลีบซ้อนกันเป็นชั้นๆ สวยงาม กลิ่นหอมหวานเป็นเอกลักษณ์ นิยมปลูกเป็นไม้ประดับ",
+        "photography_score": 9,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["พวงมาลัย", "เครื่องบูชาพระ", "ประดับตกแต่ง"],
+        "food_th": "ใช้แต่งกลิ่นขนมไทยบางชนิด"
+      },
+      "belief": {
+        "meaning_th": "ความบริสุทธิ์, ความผุดผ่อง, ความมั่นคง",
+        "beliefs_th": ["ชื่อ 'พุด' คล้าย 'พุฒ' แปลว่า เจริญ", "เชื่อว่าการถวายดอกพุดจะทำให้มีความเจริญมั่นคง"],
+        "beliefs_en": ["Name resembles 'phut' meaning prosperity", "Offering gardenia flowers brings stability and growth"]
+      },
+      "wellness_activity": ["Aromatherapy with gardenia oil", "Flower arrangement workshop"],
+      "fragrance_family": "Floral - Creamy",
+      "element": "ดิน (Earth)",
+      "knowledge_graph_tags": ["garland_flower", "auspicious_flower", "thai_gardenia", "aromatherapy"]
+    },
+    {
+      "id": "FL008",
+      "name_th": "สารภี",
+      "name_en": "Saraphi",
+      "scientific": "Mammea siamensis",
+      "family": "Calophyllaceae",
+      "symbol": "ความสง่างาม",
+      "season": "ฤดูร้อน-ฤดูฝน",
+      "scent": "หอมอ่อนๆ (Soft, delicate floral)",
+      "color": "ขาว",
+      "medical": {
+        "benefits_th": ["รสเย็น บำรุงหัวใจ", "เป็นส่วนผสมในตำรับเบญจเกสร", "ช่วยผ่อนคลาย"],
+        "uses_th": ["ตำรับเบญจเกสร (บำรุงหัวใจ)", "ชาดอกสารภี"],
+        "benefits_en": ["Cooling heart tonic in Thai traditional medicine", "Part of Benjakesorn formula"]
+      },
+      "aesthetic": {
+        "description_th": "ดอกสีขาว กลีบบางละเอียด กลิ่นหอมอ่อนๆ เป็นไม้มงคลประจำจังหวัดพะเยา",
+        "photography_score": 7,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["ตำรับเบญจเกสร", "ดอกไม้ประจำจังหวัดพะเยา", "ไม้ประดับวัด"],
+        "food_th": "ชาดอกสารภี"
+      },
+      "belief": {
+        "meaning_th": "ความสง่างาม, ความดีงาม",
+        "beliefs_th": ["ดอกสารภีเป็นดอกไม้ที่มีชื่อเพราะนิยมปลูกในวัด"]
+      },
+      "wellness_activity": ["Herbal tea tasting", "Mindfulness walk in temple"],
+      "fragrance_family": "Floral - Delicate",
+      "element": "น้ำ (Water)",
+      "knowledge_graph_tags": ["benjakesorn", "thai_medicine", "temple_flower", "herbal_tea"]
+    },
+    {
+      "id": "FL009",
+      "name_th": "พิกุล",
+      "name_en": "Pikul / Bullet Wood",
+      "scientific": "Mimusops elengi",
+      "family": "Sapotaceae",
+      "symbol": "ความดีงาม, ความอ่อนหวาน",
+      "season": "ฤดูร้อน",
+      "scent": "หอมหวานละมุน (Mild, subtle floral)",
+      "color": "ขาว",
+      "medical": {
+        "benefits_th": ["รสเย็น บำรุงหัวใจ", "ส่วนผสมในเบญจเกสร", "ดอกใช้บำรุงหัวใจ"],
+        "uses_th": ["ตำรับเบญจเกสร", "ยาบำรุงหัวใจ"],
+        "benefits_en": ["Cooling heart tonic", "Part of Benjakesorn formula"]
+      },
+      "aesthetic": {
+        "description_th": "ดอกสีขาวขนาดเล็ก รูปดอกจันทร์ กลิ่นหอมหวานละมุน เวลาบานจะมีกลีบปลายหยักเป็นแฉก",
+        "photography_score": 7,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["ตำรับเบญจเกสร", "ประดับ", "ไม้มงคล"],
+        "food_th": "ไม่นิยม"
+      },
+      "belief": {
+        "meaning_th": "ความดีงาม, ความอ่อนหวาน",
+        "beliefs_th": ["ดอกพิกุลเป็นสัญลักษณ์ของความดีงาม"]
+      },
+      "wellness_activity": ["Benjakesorn workshop", "Scent meditation"],
+      "fragrance_family": "Floral - Mild",
+      "element": "น้ำ (Water)",
+      "knowledge_graph_tags": ["benjakesorn", "thai_medicine", "heart_tonic"]
+    },
+    {
+      "id": "FL010",
+      "name_th": "ลีลาวดี",
+      "name_en": "Plumeria / Frangipani",
+      "scientific": "Plumeria spp.",
+      "family": "Apocynaceae",
+      "symbol": "ความรักอมตะ, ความสงบ",
+      "season": "ตลอดปี",
+      "scent": "หอมหวานอบอวล (Creamy, tropical floral)",
+      "color": "ขาว, ชมพู, แดง, เหลือง",
+      "medical": {
+        "benefits_th": ["ผ่อนคลาย", "ดับพิษร้อน", "ดอกมีฤทธิ์ต้านไวรัสและแบคทีเรีย"],
+        "uses_th": ["น้ำมันหอมระเหย", "ยาสมุนไพร (ใช้ภายนอก)"],
+        "benefits_en": ["Relaxation", "Cooling effect", "Antiviral and antibacterial (external use)"]
+      },
+      "aesthetic": {
+        "description_th": "ดอก 5 กลีบ สีสันหลากหลาย กลิ่นหอมอบอวล ต้นเป็นไม้ยืนต้นขนาดเล็ก นิยมปลูกในวัดและบ้านเรือน",
+        "photography_score": 9,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["ประดับวัด (นิยมปลูกในวัด)", "พวงมาลัย", "เครื่องบูชา"],
+        "food_th": "ไม่นิยมรับประทาน"
+      },
+      "belief": {
+        "meaning_th": "ความรักอมตะ, ความสงบทางใจ",
+        "beliefs_th": ["นิยมปลูกในวัดเพราะเชื่อว่าให้ความสงบ", "ชื่อ 'ลีลาวดี' หมายถึงผู้หญิงที่มีลีลางดงาม"],
+        "beliefs_en": ["Symbol of immortality and peace", "Commonly planted in temples"]
+      },
+      "wellness_activity": ["Scented candle making", "Temple photography", "Aromatherapy"],
+      "fragrance_family": "Floral - Tropical",
+      "element": "ลม (Wind)",
+      "knowledge_graph_tags": ["temple_flower", "aromatherapy", "thai_garden", "photogenic"]
+    },
+    {
+      "id": "FL011",
+      "name_th": "เอื้อง (กล้วยไม้ล้านนา)",
+      "name_en": "Lanna Orchid",
+      "scientific": "Various orchid species",
+      "family": "Orchidaceae",
+      "symbol": "โชคลาภ, มั่งมีเงินทอง",
+      "season": "แตกต่างตามชนิด (ส่วนใหญ่ออกดอกหน้าหนาว)",
+      "scent": "แตกต่างกันไป",
+      "color": "หลากหลาย",
+      "medical": {
+        "benefits_th": ["กล้วยไม้บางชนิดใช้เป็นยาสมุนไพร", "หัวกล้วยไม้ใช้บำรุงร่างกาย"],
+        "uses_th": ["สมุนไพรพื้นบ้านล้านนา"],
+        "benefits_en": ["Some orchid species used in traditional Lanna medicine"]
+      },
+      "aesthetic": {
+        "description_th": "กล้วยไม้ป่าล้านนามีหลากหลายสายพันธุ์ พบมากในป่าดอยภูคาและเขตอุทยานแห่งชาติของน่าน สวยงามและหายาก",
+        "photography_score": 10,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["ประดับในพิธีกรรม", "เครื่องบูชา (ดอกเอื้องสีเหลือง)", "ของป่าหายาก"],
+        "food_th": "ไม่นิยม"
+      },
+      "belief": {
+        "meaning_th": "โชคลาภ, มั่งคั่ง",
+        "beliefs_th": ["ดอกเอื้องสีเหลืองดั่งทองคำ เชื่อว่าเป็นสิริมงคล", "ชาวล้านนาเชื่อว่าการปลูกดอกเอื้องจะทำให้มีโชคลาภ"],
+        "beliefs_en": ["Yellow orchids symbolize gold and wealth", "Believed to bring good fortune"]
+      },
+      "wellness_activity": ["Orchid watching at Doi Phu Kha", "Nature photography", "Forest bathing"],
+      "fragrance_family": "Floral - Varied",
+      "element": "ลม (Wind)",
+      "knowledge_graph_tags": ["lanna_orchid", "wild_flower", "rare_flower", "doiphukha"]
+    },
+    {
+      "id": "FL012",
+      "name_th": "กระดังงา",
+      "name_en": "Ylang-Ylang / Cananga",
+      "scientific": "Cananga odorata",
+      "family": "Annonaceae",
+      "symbol": "ความอบอุ่น, ความมั่นใจ",
+      "season": "ตลอดปี",
+      "scent": "หอมหวานอบอุ่น (Sweet, exotic floral-oriental)",
+      "color": "เขียวอมเหลือง",
+      "medical": {
+        "benefits_th": ["คลายเครียด", "บรรเทาอาการวิตกกังวล", "ผ่อนคลาย, รู้สึกอบอุ่น", "แก้ซึมเศร้า"],
+        "uses_th": ["น้ำมันหอมระเหย", "น้ำมันนวด", "เครื่องหอม"],
+        "benefits_en": ["Stress relief", "Anti-anxiety", "Relaxation, warmth", "Antidepressant properties"]
+      },
+      "aesthetic": {
+        "description_th": "ดอกสีเขียวอมเหลือง กลีบดอกบิดเป็นเกลียว กลิ่นหอมหวานอบอุ่นเย้ายวน ลักษณะดอกห้อยลง",
+        "photography_score": 8,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["พวงมาลัย", "เครื่องหอม", "อบผม", "น้ำมันหอมระเหย"],
+        "food_th": "ใช้แต่งกลิ่นขนมไทย"
+      },
+      "belief": {
+        "meaning_th": "ความอบอุ่น, ความมั่นใจ",
+        "beliefs_th": ["เชื่อว่าดอกกระดังงาช่วยสร้างความอบอุ่นในครอบครัว"],
+        "beliefs_en": ["Believed to bring warmth and confidence"]
+      },
+      "wellness_activity": ["Aromatherapy massage", "Essential oil blending", "DIY fragrance workshop"],
+      "fragrance_family": "Floral-Oriental",
+      "element": "น้ำ (Water)",
+      "knowledge_graph_tags": ["aromatherapy", "essential_oil", "thai_fragrance", "relaxation_oil"]
+    },
+    {
+      "id": "FL013",
+      "name_th": "กุหลาบ",
+      "name_en": "Rose",
+      "scientific": "Rosa spp.",
+      "family": "Rosaceae",
+      "symbol": "ความรัก, ความสวยงาม",
+      "season": "ฤดูหนาว (ยอดนิยมในน่าน)",
+      "scent": "หอมหวานเข้มข้น (Rich, honeyed rose)",
+      "color": "แดง, ชมพู, ขาว, หลากสี",
+      "medical": {
+        "benefits_th": ["ลดความเครียด", "ฟื้นฟูจิตใจ", "บำรุงผิว", "มีวิตามินซีสูง"],
+        "uses_th": ["น้ำมันหอมระเหยกุหลาบ", "น้ำลอยดอกกุหลาบ", "แยมกุหลาบ", "เครื่องสำอาง"],
+        "benefits_en": ["Stress reduction", "Mental rejuvenation", "Skin care", "Rich in Vitamin C"]
+      },
+      "aesthetic": {
+        "description_th": "ดอกซ้อนหรือชั้นเดียว หลากสีสัน กลิ่นหอมหวาน มีความสวยงามคลาสสิค",
+        "photography_score": 9,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["พวงมาลัย", "ประดับงานมงคล", "ประตูป่า", "กระทง", "บายศรี"],
+        "food_th": "แยมกุหลาบ, ชากุหลาบ, ขนมไทยกลิ่นกุหลาบ"
+      },
+      "belief": {
+        "meaning_th": "ความรัก, ความสวยงาม, ความเคารพ",
+        "beliefs_th": ["ใช้ในบายศรีและเครื่องบูชา", "เป็นดอกไม้สากลแห่งความรัก"]
+      },
+      "wellness_activity": ["Rose bath", "Rose tea ceremony", "Rose hydrosol spray making", "Petal meditation"],
+      "fragrance_family": "Floral",
+      "element": "น้ำ (Water)",
+      "knowledge_graph_tags": ["universal_flower", "aromatherapy", "edible_flower", "skincare"]
+    },
+    {
+      "id": "FL014",
+      "name_th": "ทองกวาว",
+      "name_en": "Flame of the Forest",
+      "scientific": "Butea monosperma",
+      "family": "Fabaceae",
+      "symbol": "ความรุ่งเรือง",
+      "season": "ฤดูร้อน (ประมาณกุมภาพันธ์-เมษายน)",
+      "scent": "ไม่มีกลิ่น",
+      "color": "แสดอมเหลือง",
+      "medical": {
+        "benefits_th": ["ดอกต้มน้ำดื่มถอนพิษไข้", "ขับปัสสาวะ", "รักษาโรคตามัว", "เปลือกใช้ย้อมผ้าให้สีแดง"],
+        "uses_th": ["ยาสมุนไพร", "ย้อมผ้าธรรมชาติ"],
+        "benefits_en": ["Antipyretic (fever relief)", "Diuretic", "Natural dye for fabric"]
+      },
+      "aesthetic": {
+        "description_th": "ดอกสีแสดสดใส ออกเป็นช่อ ต้นผลัดใบก่อนดอกบาน ทิ้งให้เห็นแต่ดอกสีส้มสดเต็มต้น สวยงามโดดเด่น",
+        "photography_score": 10,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["ดอกไม้ประจำจังหวัดเชียงใหม่และลำพูน", "ย้อมผ้า", "ดอกใช้ต้มน้ำดื่มเป็นยา"],
+        "food_th": "ดอกใช้ย้อมสีผสมอาหาร"
+      },
+      "belief": {
+        "meaning_th": "ความรุ่งเรือง, ความเจริญ",
+        "beliefs_th": ["เป็นไม้มงคลของล้านนา", "ดอกสีแสดแทนความรุ่งโรจน์"],
+        "beliefs_en": ["Auspicious Lanna tree symbolizing prosperity"]
+      },
+      "wellness_activity": ["Natural dye workshop", "Nature photography", "Herbal tea"],
+      "fragrance_family": "None",
+      "element": "ไฟ (Fire)",
+      "knowledge_graph_tags": ["lanna_flower", "natural_dye", "medicinal_flower", "northern_thailand"]
+    },
+    {
+      "id": "FL015",
+      "name_th": "บัวตอง",
+      "name_en": "Mexican Sunflower",
+      "scientific": "Tithonia diversifolia",
+      "family": "Asteraceae",
+      "symbol": "ความสดใส",
+      "season": "ฤดูหนาว (ประมาณพฤศจิกายน-มกราคม)",
+      "scent": "ไม่มีกลิ่นแรง",
+      "color": "เหลืองส้ม",
+      "medical": {
+        "benefits_th": ["ต้านมาลาเรีย", "ต้านการอักเสบ", "รักษาเบาหวาน (การใช้พื้นบ้าน)"],
+        "uses_th": ["สมุนไพรพื้นบ้าน"],
+        "benefits_en": ["Antimalarial", "Anti-inflammatory", "Traditional diabetes treatment"]
+      },
+      "aesthetic": {
+        "description_th": "ดอกสีเหลืองส้มสดใสขนาดใหญ่ บานเต็มทุ่งในฤดูหนาว ที่ดอยแม่อูคอ อำเภอปัว เป็นจุดถ่ายรูปยอดนิยม",
+        "photography_score": 10,
+        "instagram_worthy": true
+      },
+      "tradition": {
+        "uses_th": ["ดอกไม้ประจำจังหวัดแม่ฮ่องสอน", "ที่ดอยแม่อูคอ (น่าน) เป็นจุดชมบัวตอง"],
+        "food_th": "ไม่นิยม"
+      },
+      "belief": {
+        "meaning_th": "ความสดใส, ความอบอุ่น"
+      },
+      "wellness_activity": ["Sunflower field photography", "Nature walk at Doi Mae Ukho", "Sunset viewing"],
+      "fragrance_family": "Fresh",
+      "element": "ไฟ (Fire)",
+      "knowledge_graph_tags": ["photogenic", "winter_flower", "nan_tourism", "nature_trail"]
+    },
+    {
+      "id": "FL016",
+      "name_th": "ใบเมี่ยง",
+      "name_en": "Fermented Tea Leaves (Miang)",
+      "scientific": "Camellia sinensis var. assamica (processed)",
+      "family": "Theaceae",
+      "symbol": "ภูมิปัญญาท้องถิ่น",
+      "season": "เก็บเกี่ยวได้ตลอดปี",
+      "scent": "หอมอ่อนๆ (หมัก)",
+      "color": "เขียวเข้ม (ใบ)",
+      "medical": {
+        "benefits_th": ["สารต้านอนุมูลอิสระสูง", "บำรุงร่างกาย", "มีคาเฟอีน", "ช่วยให้สดชื่น"],
+        "uses_th": ["ชาใบเมี่ยง", "น้ำยาบ้วนปาก", "สมุนไพร"],
+        "benefits_en": ["High antioxidant content", "Body nourishment", "Refreshing effect"]
+      },
+      "aesthetic": {
+        "description_th": "ใบเมี่ยงเป็นใบชาที่ผ่านการหมัก ใช้ในพิธีกรรมทางสังคมของชาวเหนือ มีสีเขียวเข้ม กลิ่นหอมเฉพาะตัวจากการหมัก",
+        "photography_score": 5,
+        "instagram_worthy": false
+      },
+      "tradition": {
+        "uses_th": ["การกินเมี่ยงเป็นวัฒนธรรมล้านนา", "รับประทานกับถั่ว งา มะพร้าว", "ต่อยอดเป็นนวัตกรรม: ชา, น้ำยาบ้วนปาก"],
+        "food_th": "กินเมี่ยง (ใบเมี่ยงหมัก กับ ถั่ว งา มะพร้าว เกลือ)"
+      },
+      "belief": {
+        "meaning_th": "ภูมิปัญญา, การต้อนรับ",
+        "beliefs_th": ["การกินเมี่ยงเป็นเครื่องหมายของการต้อนรับในวัฒนธรรมล้านนา"],
+        "beliefs_en": ["Miang eating is a Lanna hospitality tradition"]
+      },
+      "wellness_activity": ["Miang tasting experience", "Miang product workshop (mouthwash, tea)", "Herbal innovation tour at Bo Sok"],
+      "fragrance_family": "Herbal - Fermented",
+      "element": "ลม (Wind)",
+      "knowledge_graph_tags": ["lanna_food", "fermented_tea", "bosok", "local_wisdom", "wellness_product"]
+    },
+    {
+      "id": "FL017",
+      "name_th": "หม่อน",
+      "name_en": "Mulberry",
+      "scientific": "Morus alba",
+      "family": "Moraceae",
+      "symbol": "การบำรุงสุขภาพ",
+      "season": "ตลอดปี (ใบ), ฤดูร้อน (ผล)",
+      "scent": "ไม่มีกลิ่น",
+      "color": "เขียว (ใบ), ม่วงดำ (ผล)",
+      "medical": {
+        "benefits_th": ["ชาใบหม่อนลดระดับน้ำตาลในเลือด", "บำรุงร่างกาย", "มีวิตามินและแร่ธาตุสูง"],
+        "uses_th": ["ชาใบหม่อนอินทรีย์ (ผลิตภัณฑ์เด่นของบ่อสวก)", "ผลหม่อนรับประทานสด"],
+        "benefits_en": ["Mulberry leaf tea helps reduce blood sugar", "Rich in vitamins and minerals"]
+      },
+      "aesthetic": {
+        "description_th": "ต้นหม่อนมีใบเขียวสวย ผลมีสีม่วงดำเมื่อสุก เป็นพืชเศรษฐกิจของน่าน",
+        "photography_score": 5,
+        "instagram_worthy": false
+      },
+      "tradition": {
+        "uses_th": ["ชาใบหม่อนอินทรีย์ของชุมชนบ่อสวก", "ผลิตภัณฑ์สุขภาพ"],
+        "food_th": "ผลหม่อนสด, น้ำหม่อน, แยมหม่อน, ชาใบหม่อน"
+      },
+      "belief": {
+        "meaning_th": "สุขภาพดี, การบำรุง",
+        "beliefs_th": ["เป็นพืชที่ได้รับการส่งเสริมให้ปลูกแทนข้าวโพดในน่าน"]
+      },
+      "wellness_activity": ["Mulberry tea ceremony at Bo Sok", "Mulberry picking", "Wellness drink workshop"],
+      "fragrance_family": "None",
+      "element": "ดิน (Earth)",
+      "knowledge_graph_tags": ["bosok_herb", "diabetes_herb", "wellness_product", "organic_farming"]
+    },
+    {
+      "id": "FL018",
+      "name_th": "ไพล",
+      "name_en": "Phlai / Cassumunar Ginger",
+      "scientific": "Zingiber montanum",
+      "family": "Zingiberaceae",
+      "symbol": "การรักษา, การผ่อนคลาย",
+      "season": "ตลอดปี (เหง้าใต้ดิน)",
+      "scent": "หอมฉุนเฉพาะตัว (Herbal, medicinal)",
+      "color": "เขียว (ต้น), ส้มอมเหลือง (เหง้า)",
+      "medical": {
+        "benefits_th": ["ลดการอักเสบ", "คลายเส้น, คลายกล้ามเนื้อ", "แก้ปวดเมื่อย", "กระตุ้นระบบไหลเวียนโลหิต"],
+        "uses_th": ["แช่เท้าสมุนไพร", "พอกเข่า", "น้ำมันนวด", "ลูกประคบ"],
+        "benefits_en": ["Anti-inflammatory", "Muscle relaxation", "Pain relief", "Circulation improvement"]
+      },
+      "aesthetic": {
+        "description_th": "พืชล้มลุก มีเหง้าใต้ดินสีส้มอมเหลือง กลิ่นหอมเฉพาะตัว ใบคล้ายขมิ้น",
+        "photography_score": 4,
+        "instagram_worthy": false
+      },
+      "tradition": {
+        "uses_th": ["ลูกประคบ", "น้ำมันนวด", "แช่เท้าสมุนไพร", "พอกเข่า", "ยาสมุนไพรพื้นบ้าน"],
+        "food_th": "ไม่นิยมรับประทาน (ใช้ภายนอก)"
+      },
+      "belief": {
+        "meaning_th": "การรักษาแบบธรรมชาติ",
+        "beliefs_th": ["ใช้ในการแพทย์แผนไทยพื้นบ้านล้านนามานาน"]
+      },
+      "wellness_activity": ["Herbal foot bath at Bo Sok", "Phlai knee compress therapy", "Herbal compress workshop"],
+      "fragrance_family": "Fresh - Herbal",
+      "element": "ไฟ (Fire)",
+      "knowledge_graph_tags": ["bosok_herb", "traditional_medicine", "herbal_compress", "foot_bath"]
+    },
+    {
+      "id": "FL019",
+      "name_th": "ตะไคร้",
+      "name_en": "Lemongrass",
+      "scientific": "Cymbopogon citratus",
+      "family": "Poaceae",
+      "symbol": "ความสดชื่น",
+      "season": "ตลอดปี",
+      "scent": "หอมสดชื่น (Citrus, fresh)",
+      "color": "เขียว",
+      "medical": {
+        "benefits_th": ["กระตุ้นระบบไหลเวียนโลหิต", "ขับลม", "ลดความดันโลหิต", "ช่วยย่อยอาหาร"],
+        "uses_th": ["แช่เท้าสมุนไพร", "ชาตะไคร้", "น้ำมันหอมระเหย"],
+        "benefits_en": ["Circulation stimulation", "Carvative", "Blood pressure reduction", "Digestive aid"]
+      },
+      "aesthetic": {
+        "description_th": "หญ้ากลิ่นหอมสดชื่น ปลูกเป็นกอ ใบยาวเรียว สีเขียว",
+        "photography_score": 4,
+        "instagram_worthy": false
+      },
+      "tradition": {
+        "uses_th": ["แช่เท้าสมุนไพร", "เครื่องหอม", "อาหารไทยทุกประเภท"],
+        "food_th": "ต้มยำ, ต้มข่า, ผัด, น้ำพริก, ชา"
+      },
+      "belief": {
+        "meaning_th": "ความสดชื่น, การชำระล้าง",
+        "beliefs_th": ["เชื่อว่าตะไคร้ช่วยไล่สิ่งไม่ดี"]
+      },
+      "wellness_activity": ["Herbal foot bath", "Lemongrass tea", "Essential oil distillation demo"],
+      "fragrance_family": "Fresh - Citrus",
+      "element": "ลม (Wind)",
+      "knowledge_graph_tags": ["bosok_herb", "culinary_herb", "aromatherapy", "thai_cooking"]
+    },
+    {
+      "id": "FL020",
+      "name_th": "กระบก",
+      "name_en": "Irvingia / Wild Almond",
+      "scientific": "Irvingia malayana",
+      "family": "Irvingiaceae",
+      "symbol": "ความอุดมสมบูรณ์ของน่าน",
+      "season": "ฤดูร้อน",
+      "scent": "ไม่มีกลิ่น",
+      "color": "เขียว (ผล), น้ำตาล (เมล็ด)",
+      "medical": {
+        "benefits_th": ["เมล็ดมีไขมันดีสูง", "คุณค่าทางโภชนาการสูง", "ใช้ในผลิตภัณฑ์สุขภาพ"],
+        "uses_th": ["สกัดน้ำมัน", "อาหารเสริมสุขภาพ"],
+        "benefits_en": ["High in healthy fats", "Nutritious seeds", "Used in health supplements"]
+      },
+      "aesthetic": {
+        "description_th": "ไม้ยืนต้นสูงใหญ่ ผลกลมสีเขียว เมล็ดในใช้สกัดน้ำมัน เป็นพืชประจำถิ่นของน่าน",
+        "photography_score": 4,
+        "instagram_worthy": false
+      },
+      "tradition": {
+        "uses_th": ["พืชอาหารพื้นบ้าน", "สกัดน้ำมัน", "พืชเศรษฐกิจท้องถิ่น"],
+        "food_th": "เมล็ดกระบกคั่ว, น้ำมันกระบก"
+      },
+      "belief": {
+        "meaning_th": "ความอุดมสมบูรณ์ของป่าน่าน",
+        "beliefs_th": ["เป็นพืชท้องถิ่นที่แสดงถึงความสมบูรณ์ของป่าต้นน้ำน่าน"]
+      },
+      "wellness_activity": ["Local food tasting", "Oil pressing workshop", "Sustainable farming tour"],
+      "fragrance_family": "None",
+      "element": "ดิน (Earth)",
+      "knowledge_graph_tags": ["nan_local_plant", "edible_seed", "local_ingredient", "sustainable_farming"]
+    }
+  ],
+
+  "wellness_communities": [
+    {
+      "id": "WC001",
+      "name": "บ่อสวกโมเดล",
+      "name_en": "Bo Sok Model",
+      "location": "ตำบลบ่อสวก, จังหวัดน่าน",
+      "type": "Wellness Community (มาตรฐานกรมการแพทย์แผนไทยฯ)",
+      "description": "วิสาหกิจชุมชนชมรมแพทย์แผนไทยที่ได้รับการยกย่องเป็นต้นแบบ Wellness Community ระดับประเทศ เน้นการใช้สมุนไพรท้องถิ่นแปรรูปเป็นนวัตกรรม",
+      "services": [
+        "การสุมยา — บรรเทาหวัดและภูมิแพ้ด้วยสมุนไพรพื้นบ้าน",
+        "การแช่เท้าสมุนไพร — ใช้ตะไคร้, ไพล, เกลือ",
+        "การพอกเข่า — ลดการอักเสบและคลายเส้น",
+        "ชาใบหม่อนอินทรีย์ — บำรุงร่างกาย, ลดระดับน้ำตาล",
+        "ผลิตภัณฑ์แปรรูปใบเมี่ยง (ชา, น้ำยาบ้วนปาก)"
+      ],
+      "key_herbs": ["ใบเมี่ยง", "หม่อน", "ไพล", "ตะไคร้", "ขมิ้น"],
+      "flowers_in_use": ["ดาวเรือง (พอกเข่า)", "มะลิ (พวงมาลัย)"]
+    },
+    {
+      "id": "WC002",
+      "name": "บ้านน้ำเกี๋ยน",
+      "name_en": "Ban Nam Kian",
+      "location": "จังหวัดน่าน",
+      "type": "Biovillage Herb Model (ชีววิถีสมุนไพร)",
+      "description": "ต้นแบบชีววิถีสมุนไพรที่มีโรงงานผลิตเครื่องสำอางสมุนไพรมาตรฐานระดับประเทศ บริการครบวงจร",
+      "services": [
+        "Wellness Stay — ที่พักแนวสุขภาพ",
+        "ร้านอาหารเพื่อสุขภาพ (ครัวม่วนจุ๊บ)",
+        "ผลิตภัณฑ์เครื่องสำอางสมุนไพรที่ได้รับการรับรองจาก อย."
+      ]
+    },
+    {
+      "id": "WC003",
+      "name": "น่านแซนด์บ็อกซ์ (KAG Innovate)",
+      "name_en": "Nan Sandbox Medicinal Farm Project",
+      "location": "จังหวัดน่าน",
+      "type": "Medicinal Plant Development Project",
+      "description": "โครงการเปลี่ยนพื้นที่ปลูกข้าวโพดเป็นพืชยา ครบวงจรตั้งแต่การปลูก การวิเคราะห์ ไปจนถึงการสกัด",
+      "services": [
+        "แปลงเกษตรยา (Medicinal Farm)",
+        "ห้องปฏิบัติการวิเคราะห์ ISO/IEC 17025",
+        "โรงงานสกัดสมุนไพร GMP",
+        "สนับสนุนเกษตรกร 39 → 300 ครัวเรือน"
+      ],
+      "products_certified": "ผลิตภัณฑ์ขึ้นทะเบียน อย. แล้ว 7 รายการ"
+    },
+    {
+      "id": "WC004",
+      "name": "เส้นทางอาหารดีวิถีน่าน",
+      "name_en": "Nan Good Food Trail",
+      "location": "105 แห่งทั่วจังหวัดน่าน",
+      "type": "Wellness Food Network",
+      "description": "เครือข่ายร้านอาหารที่ใช้วัตถุดิบท้องถิ่นปลอดภัย จำนวน 105 แห่งทั่วจังหวัด เพื่อส่งเสริมการท่องเที่ยวเชิงสุขภาพ",
+      "services": [
+        "ร้านอาหารสุขภาพในชุมชน",
+        "วัตถุดิบอินทรีย์จากท้องถิ่น",
+        "เชื่อมโยงกับ Wellness Center และที่พัก"
+      ]
+    }
+  ],
+
+  "ethnic_groups": [
+    {
+      "id": "EG001",
+      "name_th": "ไทลื้อ",
+      "name_en": "Tai Lue",
+      "population_in_nan": "มากที่สุดในประเทศไทย (ตั้งถิ่นฐานในน่านมากกว่าจังหวัดอื่น)",
+      "districts": ["อำเภอปัว (ศูนย์กลาง)", "อำเภอท่าวังผา", "อำเภอทุ่งช้าง"],
+      "language": "ภาษาไทลื้อ (Tai Lü) — กลุ่มภาษาไท-กะได",
+      "religion": "พุทธเถรวาท + ความเชื่อเรื่องผี",
+      "cultural_highlights": {
+        "textile": "ผ้าทอมือไทลื้อ — ลวดลายเอกลักษณ์, ย้อมสีธรรมชาติจากดอกไม้และพืช",
+        "food": ["ข้าวแคบ (Crispy rice cracker)", "แคบหมูไทลื้อ", "ไส้อั่วไทลื้อ", "น้ำพริกหนุ่ม", "ข้าวซอยไทลื้อ (Khao Soi Tai Lue)"],
+        "music": ["จ๊อยซอ", "ปี่แม่ (Pi Mae)", "ขับลื้อ (Khap Lue)", "วงปี่จุ้ม"],
+        "dance": "ฟ้อนแง้น, ฟ้อนไทลื้อ",
+        "medicine": "ภูมิปัญญาสมุนไพร 700 ปี — พืชสมุนไพรรักษาโรคความดันโลหิตสูง (ศึกษาที่หมู่บ้านภูคำ อำเภอปัว)"
+      },
+      "flower_connection": {
+        "traditional_flowers": ["ดอกมะลิ", "ดอกดาวเรือง", "ดอกบัว", "ดอกรัก", "ดอกบานไม่รู้โรย"],
+        "special_tradition": "ประเพณีดอกไม้พันดวง — การทำดอกไม้ประดิษฐ์นับพันดอกเพื่อถวายเป็นพุทธบูชาในงานเทศน์มหาชาติ"
+      }
+    }
+  ],
+
+  "relationship_matrix": {
+    "description": "Matrix connecting festivals → flowers → beliefs → wellness activities",
+    "example_connections": [
+      {
+        "festival": "หกเป็งนมัสการพระธาตุแช่แห้ง",
+        "flower": "ดอกบัวหลวง",
+        "belief": "การตรัสรู้, ความบริสุทธิ์",
+        "wellness": "Walking meditation up the mountain, Spiritual reflection",
+        "ai_prompt": "แนะนำดอกบัวหลวงและกิจกรรมเดินจงกรมขึ้นพระธาตุแช่แห้งสำหรับผู้ที่ต้องการสมาธิและการผ่อนคลายจิตใจ"
+      },
+      {
+        "festival": "ตานก๋วยสลาก",
+        "flower": "ดอกมะลิ",
+        "belief": "ความกตัญญูต่อบรรพบุรุษ",
+        "wellness": "Grief healing, Family bonding, Generosity practice",
+        "ai_prompt": "แนะนำดอกมะลิและประเพณีตานก๋วยสลากสำหรับผู้ที่ต้องการทำบุญอุทิศส่วนกุศลให้บรรพบุรุษ"
+      },
+      {
+        "festival": "ยี่เป็ง",
+        "flower": "ดอกดาวเรือง",
+        "belief": "โชคลาภ, ความสว่างไสว",
+        "wellness": "Letting go of negativity, Light therapy, Community celebration",
+        "ai_prompt": "แนะนำดอกดาวเรืองและประเพณีลอยกระทงสำหรับผู้ที่ต้องการปล่อยวางความทุกข์และเริ่มต้นสิ่งใหม่"
+      },
+      {
+        "festival": "พิธีสืบชะตา",
+        "flower": "ดอกบานไม่รู้โรย",
+        "belief": "อายุยืน, ความมั่นคง",
+        "wellness": "Positive mindset, Anxiety reduction, Hopefulness",
+        "ai_prompt": "แนะนำดอกบานไม่รู้โรยและพิธีสืบชะตาสำหรับผู้ที่ต้องการเสริมสิริมงคลและความมั่นคงในชีวิต"
+      },
+      {
+        "festival": "ประเพณีแข่งเรือยาว",
+        "flower": "ดอกเสี้ยวดอกขาว",
+        "belief": "ความอดทน, ความสามัคคี",
+        "wellness": "Teamwork, Physical fitness, Community spirit",
+        "ai_prompt": "แนะนำดอกเสี้ยวดอกขาวดอกไม้ประจำจังหวัดและการชมแข่งเรือยาวสำหรับผู้ที่ต้องการสัมผัสวัฒนธรรมท้องถิ่น"
+      },
+      {
+        "festival": "ประเพณีเลี้ยงผีขุนน้ำ",
+        "flower": "ดอกไม้ป่าประจำถิ่น",
+        "belief": "การเคารพธรรมชาติ",
+        "wellness": "Forest bathing, Environmental connection, Grounding",
+        "ai_prompt": "แนะนำการทำ Forest Bathing ที่ป่าต้นน้ำน่านและการเรียนรู้พิธีเลี้ยงผีขุนน้ำเพื่อการเชื่อมต่อกับธรรมชาติ"
+      }
+    ]
+  },
+
+  "ml_training_notes": {
+    "recommendation_features": [
+      "user_zodiac_sign → element → recommended flowers",
+      "user_visit_month → festival_in_month → flower_in_festival",
+      "user_mood → wellness_activity → associated_flower",
+      "user_interest → flower_knowledge_graph_tag → personalized_experience"
+    ],
+    "example_training_data": [
+      {"user_element": "ดิน", "recommended_flowers": ["มะลิ", "กุหลาบ", "พุดซ้อน"], "recommended_festivals": ["สืบชะตา", "ตานก๋วยสลาก"], "wellness_tip": "ดอกมะลิจะช่วยให้คุณรู้สึกมั่นคงและผ่อนคลาย"},
+      {"user_element": "น้ำ", "recommended_flowers": ["บัวหลวง", "กระดังงา", "สารภี"], "recommended_festivals": ["ยี่เป็ง", "หกเป็ง"], "wellness_tip": "ดอกบัวจะช่วยให้คุณเชื่อมต่อกับอารมณ์และความคิด"},
+      {"user_element": "ลม", "recommended_flowers": ["เสี้ยวดอกขาว", "ลีลาวดี", "ตะไคร้"], "recommended_festivals": ["แข่งเรือ", "ดอกไม้พันดวง"], "wellness_tip": "ดอกเสี้ยวดอกขาวจะช่วยให้คุณรู้สึกสดชื่นและอิสระ"},
+      {"user_element": "ไฟ", "recommended_flowers": ["ดาวเรือง", "ทองกวาว", "บัวตอง"], "recommended_festivals": ["แห่เทียนพรรษา", "ปีใหม่ม้ง"], "wellness_tip": "ดอกดาวเรืองจะช่วยเติมพลังและความอบอุ่นให้คุณ"},
+      {"visit_month": 10, "festival": "แข่งเรือชิงถ้วยพระราชทาน", "suggested_experience": "ชมการแข่งเรือ + พัก Wellness Stay ที่บ่อสวก + ร่วมกิจกรรมสุมยาแช่เท้า"},
+      {"visit_month": 3, "festival": "หกเป็งนมัสการพระธาตุแช่แห้ง", "suggested_experience": "เดินขึ้นพระธาตุ + ทำบุญ + ชิมอาหารดีวิถีน่าน"},
+      {"visit_month": 11, "festival": "ยี่เป็ง", "suggested_experience": "ลอยกระทง + ชมประตูป่า + เที่ยวบ่อเกลือโบราณ"}
+    ]
+  }
+}
