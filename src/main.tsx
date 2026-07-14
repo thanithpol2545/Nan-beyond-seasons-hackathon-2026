@@ -10,7 +10,7 @@ import BloomingCalendar from "./EcomBoutique";
 
 const AIAssistant = React.lazy(() => import("./BloomingCalendar"));
 
-const SECTION_LINKS = ["spots", "quiz", "journal", "calendar", "chat"] as const;
+const SECTION_LINKS = ["spots", "quiz", "journal", "calendar"] as const;
 
 interface CartLine {
   id: string;
@@ -336,23 +336,6 @@ function App() {
             <BloomingCalendar />
           </div>
         </section>
-
-        <section id="chat" className="section-shell">
-          <div className="section-card p-4 sm:p-6 md:p-8">
-            <div className="section-heading mb-8">
-              <div>
-                <span className="section-kicker">{t("section.chat")}</span>
-                <h2 className="mt-3 font-serif text-3xl italic text-[#f2f4f1] md:text-4xl">
-                  {t("section.chat.title")}
-                </h2>
-              </div>
-              <p className="section-note">{sectionNotes.chat}</p>
-            </div>
-            <Suspense fallback={null}>
-              <AIAssistant />
-            </Suspense>
-          </div>
-        </section>
       </main>
 
       {isCartOpen && (
@@ -439,6 +422,7 @@ function App() {
       <footer className="border-t border-[#2a2e28]/50 py-8 text-center">
         <p className="text-[11px] font-mono uppercase tracking-[0.16em] text-[#819177]">{t("footer.text")}</p>
       </footer>
+      <Suspense fallback={null}><AIAssistant /></Suspense>
     </div>
   );
 }
