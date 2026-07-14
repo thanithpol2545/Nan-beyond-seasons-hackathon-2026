@@ -1,8 +1,17 @@
 import express from "express";
 import dotenv from "dotenv";
-import { FLOWERS_DATA, FESTIVALS_DATA, WELLNESS_COMMUNITIES } from "../src/data/nanApiData";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
 
 dotenv.config();
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const raw = JSON.parse(readFileSync(join(__dirname, "..", "nan_dataset.json"), "utf-8"));
+
+const FLOWERS_DATA = raw.flowers || [];
+const FESTIVALS_DATA = raw.festivals || [];
+const WELLNESS_COMMUNITIES = raw.wellness_communities || [];
 
 const app = express();
 app.use(express.json());
@@ -54,8 +63,8 @@ app.post("/api/generate-itinerary", async (req, res) => {
   const userInterests = interests || ["nature", "spiritual"];
   const userMood = mood || "peaceful";
 
-  const seasonalFestivals = FESTIVALS_DATA.filter((f: any) => f.month === currentMonth);
-  const matchedFlowers = FLOWERS_DATA.filter((f: any) => f.element.toLowerCase().includes(element.toLowerCase()));
+  const seasonalFestivals = (FESTIVALS_DATA as any[]).filter((f) => f.month === currentMonth);
+  const matchedFlowers = (FLOWERS_DATA as any[]).filter((f) => f.element.toLowerCase().includes(element.toLowerCase()));
 
   const prompt = `You are an expert travel coordinator for Nan Province. Create a bilingual (Thai/English) wellness itinerary for month ${currentMonth}, element ${element}, mood ${userMood}, interests ${userInterests.join(", ")}. Context - festivals: ${JSON.stringify(seasonalFestivals)}, flowers: ${JSON.stringify(matchedFlowers)}, wellness: ${JSON.stringify(WELLNESS_COMMUNITIES)}. Format with Markdown: headings, tables, bold, bullet points. Include 3-day itinerary with flower scent meditation, herbal activities, and essential oil guidance.`;
 
