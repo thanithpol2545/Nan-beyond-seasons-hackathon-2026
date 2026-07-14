@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 import fs from "fs";
 import dotenv from "dotenv";
-import { FLOWERS_DATA, FESTIVALS_DATA, WELLNESS_COMMUNITIES } from "./src/data/nanDataset";
+import { FLOWERS_DATA, FESTIVALS_DATA, WELLNESS_COMMUNITIES } from "./src/data/nanApiData";
 
 dotenv.config();
 
