@@ -2,10 +2,8 @@ import express from "express";
 import path from "path";
 import fs from "fs";
 import dotenv from "dotenv";
-import { GoogleGenAI } from "@google/genai";
 import { FLOWERS_DATA, FESTIVALS_DATA, WELLNESS_COMMUNITIES } from "./src/data/nanDataset";
 
-// Load environment variables
 dotenv.config();
 
 const app = express();
@@ -14,34 +12,44 @@ app.use(express.json());
 const PORT = 3000;
 const isProd = process.env.NODE_ENV === "production";
 
-// Safe initialization of Gemini SDK
-let ai: GoogleGenAI | null = null;
-const apiKey = process.env.GEMINI_API_KEY;
+const TYPHOON_API_KEY = process.env.TYPHOON_API_KEY;
+const TYPHOON_API_URL = "https://api.opentyphoon.ai/v1/chat/completions";
 
-if (apiKey && apiKey !== "MY_GEMINI_API_KEY") {
+const IS_MOCK = !TYPHOON_API_KEY || TYPHOON_API_KEY === "your_typhoon_api_key_here";
+
+async function callTyphoon(prompt: string): Promise<string | null> {
+  if (IS_MOCK) return null;
   try {
-    ai = new GoogleGenAI({ apiKey });
-    console.log("Gemini API initialized successfully.");
+    const res = await fetch(TYPHOON_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${TYPHOON_API_KEY}`
+      },
+      body: JSON.stringify({
+        model: "typhoon-v2-70b-instruct",
+        messages: [
+          {
+            role: "system",
+            content: "คุณคือผู้เชี่ยวชาญด้านการท่องเที่ยวเชิงสุขภาพและพฤกษาบำบัดของจังหวัดน่าน ตอบอย่างสวยงาม เป็นภาษาไทย ใช้เครื่องหมาย Markdown ให้เรียบร้อย"
+          },
+          { role: "user", content: prompt }
+        ],
+        max_tokens: 2048,
+        temperature: 0.7
+      })
+    });
+    const data = await res.json();
+    return data.choices?.[0]?.message?.content ?? null;
   } catch (err) {
-    console.error("Failed to initialize Gemini API:", err);
+    console.error("Typhoon API error:", err);
+    return null;
   }
-} else {
-  console.warn("GEMINI_API_KEY is missing or using placeholder value. AI features will fallback to template generators.");
 }
 
-// Helper to formulate a grounded response from the AI
 async function generateWellnessResponse(prompt: string, fallback: string): Promise<string> {
-  if (!ai) return fallback;
-  try {
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: prompt,
-    });
-    return response.text || fallback;
-  } catch (error) {
-    console.error("Error calling Gemini API:", error);
-    return fallback;
-  }
+  const result = await callTyphoon(prompt);
+  return result ?? fallback;
 }
 
 // --- API ROUTES ---
@@ -55,9 +63,7 @@ app.post("/api/generate-itinerary", async (req, res) => {
   const userInterests = interests || ["nature", "spiritual"];
   const userMood = mood || "peaceful";
 
-  // Filter festivals of the month
   const seasonalFestivals = FESTIVALS_DATA.filter(f => f.month === currentMonth);
-  // Match seasonal/elemental flowers
   const matchedFlowers = FLOWERS_DATA.filter(f => f.element.toLowerCase().includes(element.toLowerCase()));
 
   const prompt = `
@@ -168,22 +174,18 @@ app.post("/api/wellness-chat", async (req, res) => {
 // --- SERVING THE FRONTEND ---
 
 if (isProd) {
-  // Production
   const distPath = path.resolve(__dirname, "dist");
   app.use(express.static(distPath));
-  
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(distPath, "index.html"));
   });
 } else {
-  // Development: Vite integration as middleware
   import("vite").then(({ createServer: createViteServer }) => {
     createViteServer({
       server: { middlewareMode: true },
       appType: "spa"
     }).then((vite) => {
       app.use(vite.middlewares);
-      
       app.use("*", async (req, res, next) => {
         const url = req.originalUrl;
         try {
@@ -199,6 +201,11 @@ if (isProd) {
   });
 }
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Full-stack server running locally on http://localhost:${PORT}`);
-});
+// Only start listener in non-Vercel environments
+if (!process.env.VERCEL) {
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Full-stack server running locally on http://localhost:${PORT}`);
+  });
+}
+
+export default app;

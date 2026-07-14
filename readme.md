@@ -1,151 +1,74 @@
-# น่านไร้ฤดู Hackathon 2026 ⛰️✨
-### Nan Beyond Seasons Challenge
+# Nan Flourish — Wellness Finder & Botanical E-Commerce
 
-> เปลี่ยนทุกฤดูให้เป็นเหตุผลใหม่ในการมาเฮือนน่าน (12 เดือน 12 โอกาส ให้อยากมาน่าน)
-
-จัดโดย: หน่วยบ่มเพาะนวัตกรปัญญาประดิษฐ์ หลักสูตรวิทยาการคอมพิวเตอร์ มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา น่าน
-
-เปิดกว้างสำหรับ นักเรียน นักศึกษา นักพัฒนา นักออกแบบ ผู้ประกอบการ คนทำคอนเทนต์ คนท่องเที่ยว คนในพื้นที่ และผู้สนใจใช้ AI สร้าง Impact ให้จังหวัดน่าน — **ไม่จำเป็นต้องเขียนโค้ดเก่ง** ขอแค่พร้อมเรียนรู้ ทดลอง และทำงานเป็นทีม (1–3 คน/ทีม)
-
-**รูปแบบ:** Online Hackathon | 11–18 กรกฎาคม 2026
+> A minimalist, premium wellness finder blending **flower scent profiling**, **zodiac element matching**, **AR photography filters**, and **low-season travel itinerary generation** for Nan Province, Thailand.  
+> Built for the **Nan Beyond Seasons Hackathon 2026** — Track 2: Experience & Wellness Finder.
 
 ---
 
-## 🎯 เป้าหมายกิจกรรม
+## Concept
 
-1. **กระจายมูลค่าสู่ท้องถิ่น** — สร้างความน่าสนใจในการท่องเที่ยวน่านให้ตอบโจทย์ตลอด 12 เดือน กระจายรายได้และนักท่องเที่ยวออกจากช่วงฤดูหนาวสู่ผู้ประกอบการและชุมชนอย่างยั่งยืน
-2. **การลงมือทำด้วยเทคโนโลยี** — เรียนรู้วงจร Agile ตั้งแต่ระบุปัญหาผ่าน Design Thinking พัฒนาไอเดีย จนถึงทำ Prototype และใช้ประโยชน์จาก AI อย่างเต็มประสิทธิภาพ
-3. **สร้างความน่าสนใจตลอด 12 เดือน** — ผ่านประสบการณ์ใหม่ด้านวัฒนธรรม สุขภาพ และอาหาร เพื่อดึงดูดนักท่องเที่ยวตลอดทั้งปีอย่างสมดุล
-4. **พัฒนาด้วย Design Thinking** — สร้างผลงานต้นแบบที่ตอบโจทย์ผู้ใช้จริง ให้ได้โซลูชันที่นำไปใช้งานได้จริงในชุมชนท้องถิ่นน่าน
+ท่องเที่ยวดอกไม้ + ดูดวง — เชื่อมโยงเอกลักษณ์ของดอกไม้เข้ากับวัฒนธรรม สุขภาพ และอาหาร สู่ประสบการณ์ Wellness เชิง Mental Health
 
----
+- ดึงข้อมูล **เอกลักษณ์ประจำดอกไม้** แต่ละชนิด (ความหมายทางวัฒนธรรม, สรรพคุณทางสุขภาพ, การนำไปประกอบอาหาร)
+- ผสมผสานกับ **ศาสตร์แห่งการดูดวง** (Zodiac / ธาตุเจ้าเรือน) เพื่อแนะนำดอกไม้ที่เหมาะกับผู้ใช้
+- เชื่อมโยงไปสู่ **Wellness Experience** เช่น การแวะชมสวนดอกไม้, เวิร์กชอปทำน้ำมันหอมระเหย, กิจกรรมสุขภาพจิต (Flower Meditation, Aromatherapy)
+- ใช้ **Typhoon AI** วิเคราะห์และแนะนำ Itinerary เฉพาะบุคคลใน Low Seasons
 
-## 👥 กลุ่มเป้าหมาย
+## Features
 
-- นักเรียน นักศึกษา นักพัฒนา นักออกแบบ และนักวิเคราะห์ข้อมูล
-- ผู้ประกอบการธุรกิจท้องถิ่น คนทำงานคอนเทนต์ และบุคลากรสายท่องเที่ยว
-- ทีมขนาด 1–3 คน เปิดรับทุกระดับทักษะ
+| Section | Description |
+|---------|-------------|
+| 🗺️ **AR Spot Map** | Photography spots with scent profiles & aesthetic filters |
+| 🔮 **Zodiac Quiz** | Find your elemental flower match (ดิน น้ำ ลม ไฟ) |
+| 📓 **Scent Mood Journal** | Log your mood & get flower remedy recommendations |
+| 📅 **Blooming Calendar** | Month-by-month flowers, festivals & AI itinerary generator |
+| 🤖 **Malai AI Chat** | AI Scent Therapist — ปรึกษาสุขภาพจิตด้วยสุคนธบำบัดล้านนา |
 
----
+## Tech Stack
 
-## 🧩 Challenge Tracks
+| Layer | Stack |
+|-------|-------|
+| Frontend | React 19, Vite 6, Tailwind CSS v4, Framer Motion |
+| Backend | Express.js, dotenv |
+| AI | Typhoon AI API (`typhoon-v2-70b-instruct`) — OpenAI-compatible |
+| Dataset | `nan_dataset.json` — 227KB structured dataset (festivals, flowers, wellness communities, TAT API data) |
 
-### Track 1: AI Trip Planner & Concierge
-แนะนำเส้นทางท่องเที่ยวที่ปรับตัวตามสภาพอากาศ สไตล์ความชอบ และฤดูกาล หรือระบบ AI ช่วยดูแลและนำร้านค้าท้องถิ่น
+## Dataset
 
-### Track 2: Experience & Wellness Finder
-จับคู่ความสนใจเฉพาะ เช่น การทำสปา สมุนไพร กิจกรรมวัฒนธรรมชุมชน งานสร้างสรรค์ และบริการตอบโจทย์สาย Workation
+Comprehensive dataset of Nan Province covering:
+- **15 festivals** with flower usage & wellness connections
+- **20 flowers** with medical, aesthetic, traditional & belief dimensions
+- **4 wellness communities** (Bo Sok Model, Ban Nam Kien, etc.)
+- **6 ethnic groups** (Tai Lue, Hmong, etc.)
+- **30+ TAT API events**, **50+ places**, **3 routes**, **11 articles**
 
-### Track 3: Tools & Campaigns for Locals
-สร้างแดชบอร์ด เครื่องมือช่วยผู้ประกอบการ ออกแบบโปรโมชัน หรือแคมเปญรูปแบบดิจิทัล/Gamification สร้างแรงจูงใจในการกลับมาซ้ำ
+## Project Structure
 
----
+```
+├── api/index.ts            # Vercel serverless entry
+├── server.ts               # Express server (Typhoon AI integration)
+├── vercel.json             # Vercel deployment config
+├── src/
+│   ├── main.tsx            # App entry point
+│   ├── App.tsx             # AR Spot Map
+│   ├── ARSpotMap.tsx       # Data module (flowers, festivals, etc.)
+│   ├── ZodiacQuiz.tsx      # Elemental zodiac quiz
+│   ├── FlowerDirectory.tsx # Scent mood journal
+│   ├── EcomBoutique.tsx    # Blooming calendar & itinerary
+│   ├── BloomingCalendar.tsx# Malai AI Chat
+│   ├── AIAssistant.tsx     # TypeScript interfaces
+│   ├── styles.css          # Tailwind v4 theme
+│   ├── types.ts            # Type re-exports
+│   └── data/
+│       └── nanDataset.ts   # Dataset barrel export
+├── nan_dataset.json        # 227KB Nan province dataset
+├── nan_data_dictionary.md  # Data dictionary (Thai)
+└── .env.example            # Environment template
+```
 
-## 🧭 ทิศทางผลงานและแนวทางการตัดสิน
+## Contributors
 
-แต่ละแนวคิดมีจุดเน้นการประเมินที่แตกต่างกัน เพื่อให้ผลงานตอบโจทย์การกระจายนักท่องเที่ยวสู่น่านได้ตลอด 12 เดือนอย่างยั่งยืน
+- **Adunwit Tiampae** ([atiampa](https://github.com/atiampa)) — Full-stack development, dataset research, concept design
+- **Thanithpol Thiramongkolchai** (@thanithpol2545) — AI integration, dataset research, project coordination
 
-| แนวทาง | รายละเอียด |
-|---|---|
-| **AI Trip Planner** | วิเคราะห์พยากรณ์อากาศ ปฏิทินชุมชน และงบประมาณนักท่องเที่ยวรายปี เพื่อกระตุ้นการตัดสินใจเดินทางในช่วงกรีนซีซัน (Green Season) และกระจายนักท่องเที่ยวออกนอกช่วงไฮซีซัน |
-| **Nan Experience Finder** | ใช้ระบบ Recommendation คัดกรองและจับคู่กิจกรรมชุมชนตามกลุ่มคน เพื่อกระจายนักเดินทางสู่แหล่งท่องเที่ยวรองและวิสาหกิจชุมชนที่ยังไม่เป็นที่รู้จักในวงกว้าง |
-| **Dashboard for Local Business** | วิเคราะห์แนวโน้มข้อมูลการท่องเที่ยวเพื่อสร้างโปรโมชันเจาะกลุ่มเป้าหมาย และเพิ่มศักยภาพด้านการตลาดดิจิทัลให้กับผู้ประกอบการโฮมสเตย์และธุรกิจท้องถิ่น |
-
----
-
-## 📅 กำหนดการและไทม์ไลน์สำคัญ
-
-| วันที่ | เวลา | รายการ |
-|---|---|---|
-| เสาร์ 11 ก.ค. 2026 | 16:00 น. | ชี้แจงโจทย์การแข่งขันอย่างเป็นทางการ (ออนไลน์) |
-| เสาร์ 11 ก.ค. 2026 | 17:00 น. / 18:00 น. | ประกาศโจทย์อย่างเป็นทางการ / ปล่อยตัวแข่งขัน Hackathon + ปล่อย Resource สำหรับพัฒนา |
-| 11–15 ก.ค. 2026 | — | ระยะเวลาพัฒนา ปรับปรุง Prototype จัดทำคลิปวิดีโอ และส่งผลงาน |
-| พุธ 15 ก.ค. 2026 | 09:00 น. | **เดดไลน์ปิดรับผลงาน** (Link, Repo และวิดีโอ) — ปิดระบบ |
-| ศุกร์ 17 ก.ค. 2026 | 10:00 น. | ประกาศผลผู้เข้ารอบ 5 ทีมสุดท้าย (สไลด์ระบุ 5 ทีม, ส่วนอีกหน้าระบุ 7 ทีม — ควรตรวจสอบกับผู้จัดอีกครั้ง) |
-| เสาร์ 18 ก.ค. 2026 | 13:00 น. | นำเสนอผลงาน (Pitching) ของทีมสุดท้าย ผ่าน Zoom / ต่อคณะกรรมการทางออนไลน์ |
-
-> ⚠️ **หมายเหตุ:** ในเอกสารต้นฉบับมีความไม่ตรงกันเล็กน้อยระหว่างจำนวนทีมที่เข้ารอบ (5 ทีม vs 7 ทีม) — แนะนำให้ยืนยันกับผู้จัดผ่านกลุ่ม LINE
-
----
-
-## 📦 สิ่งที่ต้องส่งมอบ
-
-1. **Demo Link** — ลิงก์สาธารณะ เช่น Vercel URL ที่กรรมการสามารถเข้าไปทดลองและตรวจสอบฟังก์ชันการใช้งานที่เสร็จสมบูรณ์ได้ทันที
-2. **GitHub Repository** — เก็บซอร์สโค้ดพร้อม README อธิบายแนวคิดและ Tech Stack ที่เลือกใช้ (**ห้ามบันทึก API Key และข้อมูลลับลงใน Repo**)
-3. **วิดีโอ Demo** — ความยาวไม่เกิน 3 นาที สรุปปัญหา วิธีแก้ไข และสาธิตฟังก์ชันการทำงานจริงของ AI พร้อมชี้แนวทางประโยชน์ต่อชุมชนท้องถิ่น
-4. **คำอธิบายผลงาน** — บทสรุปสั้นๆ ชี้กลุ่มเป้าหมาย ปัญหา วิธีดึงประสิทธิภาพ AI มาแก้ปัญหา และขั้นตอนพัฒนาต่อยอดในอนาคต
-
----
-
-## 🏆 เกณฑ์การตัดสิน & คะแนนโบนัส
-
-รวม **100 คะแนน** แบ่งตามเกณฑ์หลัก 4 ด้าน:
-
-| เกณฑ์ | คะแนน |
-|---|---|
-| Impact เชิงท่องเที่ยว | 20 |
-| ความเข้าใจชุมชน | 15 |
-| ความคิดสร้างสรรค์ | 15 |
-| การใช้ AI | 15 |
-
-**คะแนนโบนัสพิเศษ +5 คะแนน** สำหรับทีมที่คำนึงถึงสิ่งแวดล้อม การเข้าถึงของกลุ่มเปราะบาง หรือใช้ข้อมูลจากท้องถิ่นได้อย่างสร้างสรรค์
-
-> หมายเหตุ: คะแนนย่อยรวม 4 ด้าน = 65 คะแนน (20+15+15+15) ซึ่งไม่ครบ 100 — อาจมีเกณฑ์ด้านอื่นเพิ่มเติมที่ไม่ได้ระบุในสไลด์ (เช่น การนำเสนอ/UX) ควรสอบถามผู้จัดเพื่อความชัดเจน
-
----
-
-## 📊 ตัวชี้วัดความสำเร็จของผลงาน
-
-- **ปริมาณทริปช่วง Low Season** — กระตุ้นยอดความสนใจและจัดสรรเส้นทางกระจายตัวในช่วงเดือนที่ยอดจองเฉลี่ยต่ำ เพื่อสร้างรายได้ตลอดทั้งปี
-- **กระจายเงินสู่ชุมชนรอง** — เพิ่มการนำทางนักท่องเที่ยวไปสัมผัสที่พักและวิสาหกิจชุมชนย่อยนอกพื้นที่ยอดนิยมหลัก กระจายรายได้อย่างยั่งยืน
-- **เพิ่มเวลาพำนัก & กิจกรรม** — กระตุ้นให้นักท่องเที่ยววางแผนท่องเที่ยวที่ใช้เวลาอยู่ในพื้นที่นานขึ้น และทำกิจกรรมหลากหลายตลอดทุกฤดูกาล
-- **ยกระดับขีดความสามารถดิจิทัล** — ช่วยส่งผ่านเครื่องมือจัดการข้อมูลอัจฉริยะ เพื่อให้ผู้ประกอบการและคนในชุมชนนำไปต่อยอดได้ด้วยตนเอง
-
----
-
-## ⚙️ ข้อกำหนดทางเทคนิค & จริยธรรม AI
-
-| ด้าน | รายละเอียด |
-|---|---|
-| **01 Security & Compliance** | ห้ามเปิดเผยข้อมูลลับ เช่น API Keys, Tokens หรือข้อมูลส่วนบุคคลลงใน Repository สาธารณะอย่างเด็ดขาด ให้ใช้ Environment Variables และ `.gitignore` เพื่อปกป้องข้อมูลสำคัญทุกครั้ง |
-| **02 Responsible AI Use** | ห้ามผลงานใช้ Generative AI สร้างคอนเทนต์หรือรูปภาพโดยไม่ตรวจสอบ ทีมงานต้องยืนยันความถูกต้อง ความปลอดภัย และตระหนักถึงความเหมาะสมต่อวัฒนธรรมท้องถิ่นน่าน |
-| **03 Test Account Setup** | หากระบบจำเป็นต้องใช้การล็อกอิน ให้เตรียม Test Account สำหรับคณะกรรมการไว้ในหน้าหลักอย่างชัดเจน เพื่อความสะดวกในการตรวจสอบฟังก์ชันการทำงานอย่างครบถ้วน |
-| **04 Community-Centered Design** | ออกแบบโดยคำนึงถึงชุมชนเป็นศูนย์กลาง ไม่สร้างภาระหรือผลกระทบเชิงลบต่อสิ่งแวดล้อมและวิถีชีวิตท้องถิ่น ให้ความสำคัญกับการเข้าถึงของกลุ่มเปราะบาง (Accessibility) |
-
----
-
-## 📚 ข้อมูลตั้งต้นที่แนะนำให้ทีมใช้
-
-1. [หน้า ททท. จังหวัดน่าน](https://thai.tourismthailand.org/Destinations/Provinces/%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%99/108)
-2. [365 วัน มหัศจรรย์เมืองน่าเที่ยว: 5 Must Do In Nan](https://thai.tourismthailand.org/Articles/5-must-do-in-nan)
-3. [TAT Data API](https://tatdataapi.io/)
-4. [ททท. สำนักงานน่าน - TAT Nan (Facebook)](https://www.facebook.com/tat.nan.office/)
-5. [สำนักงานการท่องเที่ยวและกีฬาจังหวัดน่าน](https://nan.mots.go.th/)
-6. [Government Data Catalog: สรุปสถานการณ์การท่องเที่ยวจังหวัดน่าน](https://gdcatalog.go.th/dataset/gdpublish-dataset-40-0111)
-7. [ปฏิทินการท่องเที่ยวประจำปีของจังหวัดน่าน](https://gdcatalog.go.th/dataset/gdpublish-40-021)
-
----
-
-## 🏅 ผลรางวัล
-
-รวมเงินรางวัลกว่า **14,000 บาท** พร้อมประกาศนียบัตร
-
-| รางวัล | มูลค่า |
-|---|---|
-| 🥇 ชนะเลิศ | 5,000 บาท |
-| 🥈 รองชนะเลิศ อันดับ 1 | 3,000 บาท |
-| 🥉 รองชนะเลิศ อันดับ 2 | 2,000 บาท |
-| 🎖️ ชมเชย (4 รางวัล) | รางวัลละ 1,000 บาท |
-
-> ผู้เข้าร่วมแข่งขันทุกคนจะได้รับประกาศนียบัตรการเข้าร่วมกิจกรรม
-
----
-
-## 📥 ช่องทางส่งผลงานและติดต่อ
-
-- **ฟอร์มส่งผลงาน:** https://forms.gle/y2x86ieEsNnsvXiv5 *(หมายเหตุ: ในเอกสารต้นฉบับมี 2 ลิงก์ฟอร์มที่ต่างกัน — `forms.gle/U5X8UGdsi43pWeb47` จากโพสต์ประกาศ และ `forms.gle/y2x86ieEsNnsvXiv5` จากสไลด์ท้ายเล่ม ควรตรวจสอบว่าใช้ลิงก์ใดเป็นทางการ)*
-- **โจทย์ฉบับเต็ม (Canva):** https://canva.link/6b61kwchwjhv5rg
-- **กลุ่ม LINE สอบถามการแข่งขัน:** https://line.me/R/ti/g/LAHXy5AhZ3
-- **ติดตามประกาศผลรางวัล:** Facebook เพจ "หลักสูตรวิทยาการคอมพิวเตอร์ มทร.ล้านนา น่าน"
-
-**Hashtags:** #RMUTLNAN #SuperAISS6 #AIVibeCoding #VibeCoding #ClaudeCode #Codex #CloudDeployment #DataScienceTH #NanTourism #Hackathon #น่านไร้ฤดู
+Built for the **Nan Beyond Seasons Hackathon 2026** — July 2026.
