@@ -788,40 +788,55 @@ export const elementMatching = (element: string) => {
     case "ดิน (Earth)":
       return {
         element_th: "ดิน (Earth)",
+        element_en: "Earth",
         personality: "สุขุม มีสติ มั่นคงดุจแผ่นดิน และรักความยุติธรรม อดทนเป็นเลิศ",
+        personality_en: "Calm, mindful, and steadfast as the earth. Deeply fair and exceptionally patient.",
         recommended: ["มะลิ (Jasmine)", "กุหลาบ (Rose)", "พุดซ้อน (Gardenia)"],
-        tip: "กลิ่นมะลิและพุดซ้อนจะช่วยเสริมจิตใจให้มั่นคง แข็งแกร่ง แต่เปี่ยมด้วยความอ่อนโยน คลายกังวลสะสม"
+        tip: "กลิ่นมะลิและพุดซ้อนจะช่วยเสริมจิตใจให้มั่นคง แข็งแกร่ง แต่เปี่ยมด้วยความอ่อนโยน คลายกังวลสะสม",
+        tip_en: "Jasmine and gardenia scents strengthen the mind with stability and gentle resilience, easing accumulated worry."
       };
     case "Water":
     case "น้ำ (Water)":
       return {
         element_th: "น้ำ (Water)",
+        element_en: "Water",
         personality: "กล้าแสดงออก ปรับตัวเก่ง มีไหวพริบดุจกระแสน้ำ อ่อนไหวและสร้างสรรค์",
+        personality_en: "Expressive, adaptable, and quick-witted like flowing water. Sensitive and deeply creative.",
         recommended: ["บัวหลวง (Lotus)", "กระดังงา (Ylang-Ylang)", "สารภี (Saraphi)"],
-        tip: "กลิ่นกระดังงาและเกสรบัวหลวงเย็นจะช่วยปลอบประโลมอารมณ์ที่ขึ้นลงให้เข้าสู่สติและปัญญาสงบนิ่ง"
+        tip: "กลิ่นกระดังงาและเกสรบัวหลวงเย็นจะช่วยปลอบประโลมอารมณ์ที่ขึ้นลงให้เข้าสู่สติและปัญญาสงบนิ่ง",
+        tip_en: "Ylang-ylang and cool lotus essence soothe emotional fluctuations, guiding you back to calm wisdom."
       };
     case "Wind":
     case "ลม (Wind)":
       return {
         element_th: "ลม (Wind)",
+        element_en: "Wind",
         personality: "คล่องแคล่ว รักอิสระ ชอบผจญภัย ช่างคิดช่างเจรจา มีไหวพริบปฏิภาณดี",
+        personality_en: "Agile, freedom-loving, and adventurous. An eloquent thinker with sharp wit.",
         recommended: ["เสี้ยวดอกขาว", "ลีลาวดี (Plumeria)", "ตะไคร้ (Lemongrass)"],
-        tip: "กลิ่นลีลาวดีที่ชวนฝันและตะไคร้สดใสจะช่วยกระตุ้นพลังความคิดสร้างสรรค์ บรรเทาอากาศคัดสมองโล่งสบาย"
+        tip: "กลิ่นลีลาวดีที่ชวนฝันและตะไคร้สดใสจะช่วยกระตุ้นพลังความคิดสร้างสรรค์ บรรเทาอากาศคัดสมองโล่งสบาย",
+        tip_en: "Dreamy plumeria and bright lemongrass spark creative energy and clear mental congestion."
       };
     case "Fire":
     case "ไฟ (Fire)":
       return {
         element_th: "ไฟ (Fire)",
+        element_en: "Fire",
         personality: "กล้าหาญ บุกเบิก เป็นผู้นำเด็ดเดี่ยว มีสเน่ห์ดึงดูดใจ และเปี่ยมด้วยแพสชันเร่าร้อน",
+        personality_en: "Brave, pioneering, and decisive. A charismatic leader burning with passion.",
         recommended: ["ดาวเรือง (Marigold)", "ทองกวาว", "ไพล (Phlai)"],
-        tip: "กลิ่นสมุนไพรไพลและเกสรดาวเรืองบำรุงสายตาจะช่วยบรรเทาความร้อนรุ่มในใจ คืนสมดุลพลังกล้ามเนื้อที่ถูกกระตุ้นบ่อย"
+        tip: "กลิ่นสมุนไพรไพลและเกสรดาวเรืองบำรุงสายตาจะช่วยบรรเทาความร้อนรุ่มในใจ คืนสมดุลพลังกล้ามเนื้อที่ถูกกระตุ้นบ่อย",
+        tip_en: "Phlai herbal and marigold scents soothe inner heat and restore balance to overactive muscles."
       };
     default:
       return {
         element_th: "ดิน (Earth)",
+        element_en: "Earth",
         personality: "สุขุม มีสติ มั่นคงดุจแผ่นดิน และรักความยุติธรรม อดทนเป็นเลิศ",
+        personality_en: "Calm, mindful, and steadfast as the earth. Deeply fair and exceptionally patient.",
         recommended: ["มะลิ (Jasmine)"],
-        tip: "กลิ่นมะลิป่าจะช่วยให้ผ่อนคลายและสร้างรากฐานจิตใจที่มั่นคง"
+        tip: "กลิ่นมะลิป่าจะช่วยให้ผ่อนคลายและสร้างรากฐานจิตใจที่มั่นคง",
+        tip_en: "Wild jasmine fragrance helps you relax and build a solid mental foundation."
       };
   }
 };

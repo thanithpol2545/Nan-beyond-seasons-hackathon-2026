@@ -10,22 +10,22 @@ interface MonthlyData {
   touristLevel: "Low" | "High";
   flowers: string[];
   festivals: string[];
-  wellnessTip: string;
+  wellnessTip: string; // translation key
 }
 
 const YEAR_TIMELINE: MonthlyData[] = [
-  { monthNum: 1, monthNameKey: "month.1", avgTemp: "15-25°C", touristLevel: "High", flowers: ["เสี้ยวดอกขาว", "บัวตอง", "เอื้องกล้วยไม้ป่า"], festivals: ["ปีใหม่ม้ง"], wellnessTip: "อากาศหนาวจัดดอยสูง เหมาะกับการแช่เท้าสมุนไพรร้อนกระตุ้นระบบประสาทล้า" },
-  { monthNum: 2, monthNameKey: "month.2", avgTemp: "16-28°C", touristLevel: "High", flowers: ["ทองกวาวแสด", "เสี้ยวดอกขาว"], festivals: ["ประเพณีดอกไม้พันดวงไทลื้อ"], wellnessTip: "ชมทัศนียภาพกิ่งก้านทองกวาวผลัดใบเบ่งบาน ดื่มชาเกสรบัวหลวงรสเย็นบำรุงชีพจร" },
-  { monthNum: 3, monthNameKey: "month.3", avgTemp: "20-33°C", touristLevel: "High", flowers: ["ทองกวาวส้ม", "เสี้ยวดอกขาว"], festivals: ["หกเป็งนมัสการพระธาตุแช่แห้ง"], wellnessTip: "ขึ้นไหว้พระธาตุแช่แห้งยามเช้าตรู่เพื่อหลบไอแดดบ่าย นั่งสมาธิกำหนดลมหายใจคลายเครียด" },
-  { monthNum: 4, monthNameKey: "month.4", avgTemp: "23-36°C", touristLevel: "Low", flowers: ["ดอกไม้ป่า", "ดอกมะลิสด"], festivals: ["สงกรานต์ล้านนา", "เลี้ยงผีขุนน้ำต้นน้ำน่าน"], wellnessTip: "แช่น้ำสรงลอยดอกมะลิบำบัดระบายพิษร้อน ชิมชาใบหม่อนรสอ่อนช่วยขับเหงื่อสารพิษ" },
-  { monthNum: 5, monthNameKey: "month.5", avgTemp: "24-34°C", touristLevel: "Low", flowers: ["บัวหลวงขาว", "พุดซ้อนหอม"], festivals: ["แปดเป็งจอมแจ้ง", "ไหว้พระธาตุเขาน้อย"], wellnessTip: "สายลมมรสุมพัดโบก สูดไออโรมาพุดซ้อนเพื่อจัดอารมณ์บวกลดความวิงเวียนสมอง" },
-  { monthNum: 6, monthNameKey: "month.6", avgTemp: "24-33°C", touristLevel: "Low", flowers: ["บัวหลวงชมพู", "กระดังงาสยาม"], festivals: ["เวิร์กชอปสุมยาสมุนไพรป่าเกี๋ยน"], wellnessTip: "หน้าฝนสีเขียวขจี เหมาะกับการทำสปาขัดผิวด้วยเกลือสินเธาว์ผสมเกสรมะลิคลายกล้ามเนื้อ" },
-  { monthNum: 7, monthNameKey: "month.7", avgTemp: "23-32°C", touristLevel: "Low", flowers: ["บัวหลวงฝักอ่อน", "ลีลาวดีขาว"], festivals: ["แห่เทียนพรรษาข่วงน่าน"], wellnessTip: "ความชื้นฝนป่าสูง แนะนำการสุมยารมไอดินเพื่อล้างปอด ขจัดเสมหะและภูมิแพ้อากาศ" },
-  { monthNum: 8, monthNameKey: "month.8", avgTemp: "23-32°C", touristLevel: "Low", flowers: ["บัวหลวงเม็ดนวล", "ไพลสมุนไพรร้อน"], festivals: ["เวิร์กชอปบ่อสวกพอกข้อเข่าดินเผา"], wellnessTip: "หน้าฝนหนาแน่น เหมาะกับกิจกรรมในร่ม แช่เท้าบำบัดความล้า ยืดหลังฟ้อนแง้นไทลื้อ" },
-  { monthNum: 9, monthNameKey: "month.9", avgTemp: "23-31°C", touristLevel: "High", flowers: ["ดาวเรืองทอง", "มะลิหอม"], festivals: ["ตานก๋วยสลากหลวง", "แข่งเรือยาวเปิดสนามน่าน"], wellnessTip: "ร่วมประเพณีทำบุญอุทิศบรรพบุรุษ บำบัดสติด้วยการสานก๋วยไผ่ สร้างอารมณ์สงบนิ่งละมุน" },
-  { monthNum: 10, monthNameKey: "month.10", avgTemp: "22-30°C", touristLevel: "High", flowers: ["เสี้ยวดอกขาว", "บานไม่รู้โรย"], festivals: ["แข่งเรือยาวชิงถ้วยพระราชทานฯ"], wellnessTip: "ฤดูกาลเปลี่ยนผ่านปลายฝนต้นหนาว ดื่มชาเบญจเกสรร้อนช่วยปรับระบบย่อยอาหารให้เสถียร" },
-  { monthNum: 11, monthNameKey: "month.11", avgTemp: "18-28°C", touristLevel: "High", flowers: ["บัวตองเหลือง", "ดาวเรืองตระการ"], festivals: ["ยี่เป็งลอยประทีปโคมน่าน"], wellnessTip: "พิธีลอยเคราะห์ชำระล้างจิตใจ สูดดมไอหอมกุหลาบและกระดังงาปรับความรักความสัมพันธ์" },
-  { monthNum: 12, monthNameKey: "month.12", avgTemp: "15-25°C", touristLevel: "High", flowers: ["บัวตอง", "เสี้ยวดอกขาวป่า", "เอื้องคำดอย"], festivals: ["งานท่องเที่ยวประจำปีของดี 15 อำเภอ"], wellnessTip: "หนาวจัดต่ำสุดของปี นั่งล้อมวงผิงไฟ Visualization Yoga กำหนดลมหายใจร้อนขับหนาว" }
+  { monthNum: 1, monthNameKey: "month.1", avgTemp: "15-25°C", touristLevel: "High", flowers: ["เสี้ยวดอกขาว", "บัวตอง", "เอื้องกล้วยไม้ป่า"], festivals: ["ปีใหม่ม้ง"], wellnessTip: "wellness.tip.1" },
+  { monthNum: 2, monthNameKey: "month.2", avgTemp: "16-28°C", touristLevel: "High", flowers: ["ทองกวาวแสด", "เสี้ยวดอกขาว"], festivals: ["ประเพณีดอกไม้พันดวงไทลื้อ"], wellnessTip: "wellness.tip.2" },
+  { monthNum: 3, monthNameKey: "month.3", avgTemp: "20-33°C", touristLevel: "High", flowers: ["ทองกวาวส้ม", "เสี้ยวดอกขาว"], festivals: ["หกเป็งนมัสการพระธาตุแช่แห้ง"], wellnessTip: "wellness.tip.3" },
+  { monthNum: 4, monthNameKey: "month.4", avgTemp: "23-36°C", touristLevel: "Low", flowers: ["ดอกไม้ป่า", "ดอกมะลิสด"], festivals: ["สงกรานต์ล้านนา", "เลี้ยงผีขุนน้ำต้นน้ำน่าน"], wellnessTip: "wellness.tip.4" },
+  { monthNum: 5, monthNameKey: "month.5", avgTemp: "24-34°C", touristLevel: "Low", flowers: ["บัวหลวงขาว", "พุดซ้อนหอม"], festivals: ["แปดเป็งจอมแจ้ง", "ไหว้พระธาตุเขาน้อย"], wellnessTip: "wellness.tip.5" },
+  { monthNum: 6, monthNameKey: "month.6", avgTemp: "24-33°C", touristLevel: "Low", flowers: ["บัวหลวงชมพู", "กระดังงาสยาม"], festivals: ["เวิร์กชอปสุมยาสมุนไพรป่าเกี๋ยน"], wellnessTip: "wellness.tip.6" },
+  { monthNum: 7, monthNameKey: "month.7", avgTemp: "23-32°C", touristLevel: "Low", flowers: ["บัวหลวงฝักอ่อน", "ลีลาวดีขาว"], festivals: ["แห่เทียนพรรษาข่วงน่าน"], wellnessTip: "wellness.tip.7" },
+  { monthNum: 8, monthNameKey: "month.8", avgTemp: "23-32°C", touristLevel: "Low", flowers: ["บัวหลวงเม็ดนวล", "ไพลสมุนไพรร้อน"], festivals: ["เวิร์กชอปบ่อสวกพอกข้อเข่าดินเผา"], wellnessTip: "wellness.tip.8" },
+  { monthNum: 9, monthNameKey: "month.9", avgTemp: "23-31°C", touristLevel: "High", flowers: ["ดาวเรืองทอง", "มะลิหอม"], festivals: ["ตานก๋วยสลากหลวง", "แข่งเรือยาวเปิดสนามน่าน"], wellnessTip: "wellness.tip.9" },
+  { monthNum: 10, monthNameKey: "month.10", avgTemp: "22-30°C", touristLevel: "High", flowers: ["เสี้ยวดอกขาว", "บานไม่รู้โรย"], festivals: ["แข่งเรือยาวชิงถ้วยพระราชทานฯ"], wellnessTip: "wellness.tip.10" },
+  { monthNum: 11, monthNameKey: "month.11", avgTemp: "18-28°C", touristLevel: "High", flowers: ["บัวตองเหลือง", "ดาวเรืองตระการ"], festivals: ["ยี่เป็งลอยประทีปโคมน่าน"], wellnessTip: "wellness.tip.11" },
+  { monthNum: 12, monthNameKey: "month.12", avgTemp: "15-25°C", touristLevel: "High", flowers: ["บัวตอง", "เสี้ยวดอกขาวป่า", "เอื้องคำดอย"], festivals: ["งานท่องเที่ยวประจำปีของดี 15 อำเภอ"], wellnessTip: "wellness.tip.12" }
 ];
 
 export default function BloomingCalendar() {
@@ -156,7 +156,7 @@ export default function BloomingCalendar() {
             <div className="pt-3 border-t border-[#2a2e28]/40">
               <span className="font-display font-semibold uppercase text-[10px] tracking-wider block text-[#f2f4f1]">{t("calendar.tip.label")}</span>
               <p className="text-[11px] leading-relaxed mt-1 italic">
-                "{selectedMonth.wellnessTip}"
+                "{t(selectedMonth.wellnessTip)}"
               </p>
             </div>
           </div>

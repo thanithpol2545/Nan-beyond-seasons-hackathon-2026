@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BookOpen, Smile, Leaf, Info, Trash2 } from "lucide-react";
-import { useLanguage } from "./i18n/LanguageContext";
+import { useLanguage, type Lang } from "./i18n/LanguageContext";
 import { JournalLog } from "./types";
 import { FLOWERS_DATA } from "./data/nanDataset";
 
@@ -33,7 +33,7 @@ export default function ScentMoodJournal() {
   const [logs, setLogs] = useState<JournalLog[]>([]);
   const [mood, setMood] = useState<"stressed" | "sad" | "tired" | "anxious" | "peaceful">("peaceful");
   const [note, setNote] = useState("");
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   useEffect(() => {
     const saved = localStorage.getItem("nan_scent_mood_logs");
@@ -201,7 +201,8 @@ export default function ScentMoodJournal() {
           <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2 scrollbar-thin">
             {logs.map((l) => {
               const matchedFlowers = FLOWERS_DATA.filter((f) => l.matchedFlowerIds.includes(f.id));
-              const dateStr = new Date(l.date).toLocaleDateString("th-TH", {
+              const dateLocale = lang === "th" ? "th-TH" : "en-US";
+              const dateStr = new Date(l.date).toLocaleDateString(dateLocale, {
                 day: "numeric",
                 month: "long",
                 year: "numeric",
@@ -249,7 +250,7 @@ export default function ScentMoodJournal() {
                           key={f.id}
                           className="text-[10px] px-2.5 py-0.5 rounded-md bg-[#c9b097]/10 text-[#c9b097] border border-[#c9b097]/25"
                         >
-                          {f.name_th} ({f.scent})
+                          {lang === "th" ? f.name_th : f.name_en} ({lang === "th" ? f.scent : (f as any).scent_en || f.scent})
                         </div>
                       ))}
                     </div>

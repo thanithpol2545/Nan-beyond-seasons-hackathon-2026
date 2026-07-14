@@ -5,40 +5,29 @@ import { elementMatching } from "./data/nanDataset";
 
 interface Question {
   id: number;
-  q: string;
-  options: { text: string; value: "Earth" | "Water" | "Wind" | "Fire" }[];
+  qKey: string;
+  optionKeys: string[];
+  optionValues: ("Earth" | "Water" | "Wind" | "Fire")[];
 }
 
 const QUESTIONS: Question[] = [
   {
     id: 1,
-    q: "เมื่อคุณเดินเข้าไปในป่าน่านอันอุดมสมบูรณ์ สิ่งแรกที่คุณมองหาคืออะไร?",
-    options: [
-      { text: "ต้นไม้ใหญ่ร่มรื่นรากลึก มั่นคงไร้การสั่นคลอน", value: "Earth" },
-      { text: "เสียงธารน้ำตกสะปันไหลรินเย็นชื่นใจ", value: "Water" },
-      { text: "สายลมหนาวพัดโบกยอดดอยภูคาอันอิสรเสรี", value: "Wind" },
-      { text: "แสงสีส้มรุ่งอรุณทอดผ่านส่องสว่างขอบฟ้า", value: "Fire" }
-    ]
+    qKey: "quiz.q1",
+    optionKeys: ["quiz.q1.a", "quiz.q1.b", "quiz.q1.c", "quiz.q1.d"],
+    optionValues: ["Earth", "Water", "Wind", "Fire"]
   },
   {
     id: 2,
-    q: "เวลาที่คุณเผชิญกับอารมณ์ตึงเครียดสะสม วิธีใดช่วยเยียวยาคุณได้ดีที่สุด?",
-    options: [
-      { text: "การเหยียบย่ำผืนดินทราย นั่งเงียบๆ สงบนิ่งดั่งขุนเขา", value: "Earth" },
-      { text: "การแช่น้ำอุ่น อาบไอสปา หรือการลอยตัวปลดปล่อยใจ", value: "Water" },
-      { text: "การเดินสูดไอหมอกอโรมา สรรหาเรื่องคุยกับสหายสนิท", value: "Wind" },
-      { text: "การออกกำลังเรียกเหงื่อ ทำกิจกรรมท้าทายใหม่ๆ เติมไฟ", value: "Fire" }
-    ]
+    qKey: "quiz.q2",
+    optionKeys: ["quiz.q2.a", "quiz.q2.b", "quiz.q2.c", "quiz.q2.d"],
+    optionValues: ["Earth", "Water", "Wind", "Fire"]
   },
   {
     id: 3,
-    q: "หากกลิ่นอโรมาสามารถบอกนิสัยลึกๆ ของคุณ โทนกลิ่นใดที่บ่งบอกความเป็นคุณ?",
-    options: [
-      { text: "กลิ่นหอมอบอุ่นลุ่มลึก อโรมาเนื้อไม้และกุหลาบดิน", value: "Earth" },
-      { text: "กลิ่นหอมสะอาดบางเบา ละอองดอกบัวและกระดังงาพราวพรรณ", value: "Water" },
-      { text: "กลิ่นหอมสดชื่น ปลุกความกระฉับกระเฉงดั่งชงโคขาวและใบเมี่ยง", value: "Wind" },
-      { text: "กลิ่นหอมฉุนสมุนไพร เครื่องเทศ ไพล ตะไคร้สดใสกระตุ้นชีพจร", value: "Fire" }
-    ]
+    qKey: "quiz.q3",
+    optionKeys: ["quiz.q3.a", "quiz.q3.b", "quiz.q3.c", "quiz.q3.d"],
+    optionValues: ["Earth", "Water", "Wind", "Fire"]
   }
 ];
 
@@ -47,11 +36,18 @@ interface Props {
   onSelectElement: (element: string) => void;
 }
 
+const ELEMENT_PRODUCTS: Record<string, { nameKey: string; price: string; id: string }> = {
+  Earth: { nameKey: "product.earth", price: "320 ฿", id: "P001" },
+  Water: { nameKey: "product.water", price: "450 ฿", id: "P002" },
+  Wind: { nameKey: "product.wind", price: "350 ฿", id: "P004" },
+  Fire: { nameKey: "product.fire", price: "390 ฿", id: "P003" }
+};
+
 export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Props) {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<("Earth" | "Water" | "Wind" | "Fire")[]>([]);
   const [resultElement, setResultElement] = useState<string | null>(null);
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   const handleStart = () => {
     setAnswers([]);
@@ -94,13 +90,6 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
 
   const currentQuestion = QUESTIONS[step - 1];
   const matchedInfo = resultElement ? elementMatching(resultElement) : null;
-
-  const ELEMENT_PRODUCTS: Record<string, { name: string; price: string; id: string }> = {
-    Earth: { name: "ชาดอกไม้สิริมงคล 'เบญจเกสรน่าน'", price: "320 ฿", id: "P001" },
-    Water: { name: "น้ำมันนวดสปาอุ่นผสมอโรมากระดังงา 'สยามผ่อนคลาย'", price: "450 ฿", id: "P002" },
-    Wind: { name: "สเปรย์น้ำลอยอโรมารสบัว 'Mindfulness Mist'", price: "350 ฿", id: "P004" },
-    Fire: { name: "สครับผิวกายดีท็อกซ์เกลือดาวเรือง", price: "390 ฿", id: "P003" }
-  };
 
   return (
     <div className="bg-[#161a15] rounded-3xl p-8 border border-[#2a2e28] max-w-2xl mx-auto shadow-2xl relative overflow-hidden">
@@ -146,17 +135,17 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
           </div>
 
           <h4 className="font-display font-medium text-lg text-[#f2f4f1] leading-relaxed">
-            {currentQuestion.q}
+            {t(currentQuestion.qKey)}
           </h4>
 
           <div className="space-y-3 pt-2">
-            {currentQuestion.options.map((opt, idx) => (
+            {currentQuestion.optionKeys.map((key, idx) => (
               <button
                 key={idx}
-                onClick={() => handleAnswer(opt.value)}
+                onClick={() => handleAnswer(currentQuestion.optionValues[idx])}
                 className="w-full text-left p-4 rounded-2xl bg-[#0d0f0c] border border-[#2a2e28] text-xs text-[#f2f4f1] hover:border-[#c9b097] hover:bg-[#161a15] transition-all flex items-center justify-between group"
               >
-                <span>{opt.text}</span>
+                <span>{t(key)}</span>
                 <ArrowRight className="h-4 w-4 text-[#819177] group-hover:text-[#c9b097] group-hover:translate-x-1 transition-all shrink-0" />
               </button>
             ))}
@@ -186,13 +175,19 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
         <div className="space-y-6 animate-fade-in">
           <div className="text-center py-4 border-b border-[#2a2e28]/60">
             <span className="text-[10px] font-mono text-[#c9b097] uppercase tracking-widest block">{t("quiz.result.badge")}</span>
-            <h4 className="font-serif italic text-3xl text-[#f2f4f1] mt-1">{t("quiz.result.title", { element: matchedInfo.element_th })}</h4>
+            <h4 className="font-serif italic text-3xl text-[#f2f4f1] mt-1">
+              {lang === "th"
+                ? t("quiz.result.title", { element: matchedInfo.element_th })
+                : `${matchedInfo.element_en} Element`}
+            </h4>
           </div>
 
           <div className="space-y-4">
             <div>
               <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-[#819177]">{t("quiz.result.personality")}</span>
-              <p className="text-xs text-[#f2f4f1] mt-1 leading-relaxed">{matchedInfo.personality}</p>
+              <p className="text-xs text-[#f2f4f1] mt-1 leading-relaxed">
+                {lang === "th" ? matchedInfo.personality : matchedInfo.personality_en}
+              </p>
             </div>
 
             <div>
@@ -212,7 +207,7 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
 
             <div className="bg-[#0d0f0c] border border-[#2a2e28] rounded-2xl p-4 text-xs text-[#819177] leading-relaxed">
               <span className="text-[#f2f4f1] font-semibold block mb-1">{t("quiz.result.tip")}</span>
-              {matchedInfo.tip}
+              {lang === "th" ? matchedInfo.tip : matchedInfo.tip_en}
             </div>
 
             {/* Personalized Product Linking */}
@@ -221,7 +216,7 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
                 <div>
                   <span className="text-[10px] font-mono text-[#c9b097] font-bold block uppercase tracking-wider">{t("quiz.result.productBadge")}</span>
                   <h5 className="font-display font-semibold text-sm text-[#f2f4f1] mt-1">
-                    {ELEMENT_PRODUCTS[resultElement]?.name}
+                    {t(ELEMENT_PRODUCTS[resultElement]?.nameKey || "product.earth")}
                   </h5>
                   <p className="text-[11px] text-[#819177] mt-1">
                     {t("quiz.result.productDesc")}

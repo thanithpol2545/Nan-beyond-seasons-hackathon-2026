@@ -38,7 +38,7 @@ function App() {
             <button
               onClick={toggleLang}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#161a15] border border-[#2a2e28] text-[#819177] hover:text-[#c9b097] hover:border-[#c9b097]/40 transition-colors font-mono text-[11px]"
-              title={lang === "th" ? "Switch to English" : "เปลี่ยนเป็นภาษาไทย"}
+              title={t("tooltip.langToggle")}
             >
               <Globe className="h-3.5 w-3.5" />
               <span className="font-medium">{lang === "th" ? "EN" : "TH"}</span>

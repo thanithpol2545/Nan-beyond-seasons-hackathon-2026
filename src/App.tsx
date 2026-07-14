@@ -5,13 +5,17 @@ import { useLanguage } from "./i18n/LanguageContext";
 interface Spot {
   id: string;
   name: string;
+  name_en: string;
   district: string;
   lat: number;
   lng: number;
   photoScore: number;
   scent: string;
+  scent_en: string;
   bestTime: string;
+  bestTime_en: string;
   description: string;
+  description_en: string;
   imageUrl: string;
 }
 
@@ -19,49 +23,65 @@ const NAN_SPOTS: Spot[] = [
   {
     id: "S001",
     name: "ซุ้มต้นลีลาวดี พิพิธภัณฑสถานแห่งชาติน่าน",
+    name_en: "Plumeria Tunnel — Nan National Museum",
     district: "เมืองน่าน",
     lat: 18.77624,
     lng: 100.77064,
     photoScore: 10,
     scent: "ลีลาวดีหวานอบอุ่น (Creamy Plumeria)",
+    scent_en: "Creamy Plumeria",
     bestTime: "ช่วงบ่ายแก่ๆ แสงลอดอุโมงค์กิ่งไม้",
+    bestTime_en: "Late afternoon — light filtering through branches",
     description: "ซุ้มต้นลีลาวดีแผ่กิ่งก้านไขว้เว้าประสานกันเป็นอุโมงค์สีเขียวขรึม มีโบราณสถานสีขาวของคุ้มหลวงเป็นฉากหลัง ถือเป็นไอคอนิคแลนด์มาร์คของการกระซิบรักที่สวยสะดุดตาที่สุดในน่าน",
+    description_en: "Plumeria branches weave into a deep green tunnel framed by white historic walls of the royal residence — Nan's most iconic romantic landmark.",
     imageUrl: "https://dmc.tatdataapi.io/assets/3a79b9d9-f84c-451b-b2f1-7f396c827cb1.jpg"
   },
   {
     id: "S002",
     name: "ดอยเสมอดาว อุทยานแห่งชาติศรีน่าน",
+    name_en: "Doi Samoe Dao — Sri Nan National Park",
     district: "นาน้อย",
     lat: 18.36816,
     lng: 100.84013,
     photoScore: 10,
     scent: "ลมหนาวหญ้าภูเขา (Fresh Cold Wind)",
+    scent_en: "Fresh Cold Wind",
     bestTime: "กลางคืน (ถ่ายทางช้างเผือก) และรุ่งเช้าพระอาทิตย์ขึ้น",
+    bestTime_en: "Night (Milky Way) & dawn sunrise",
     description: "ลานกางเต็นท์บนยอดภูเขาสูง มองเห็นทิวเขาสลับซับซ้อนและโค้งแม่น้ำน่านเบื้องล่าง ในค่ำคืนที่ท้องฟ้าเปิดประดับด้วยกลุ่มดาวนับล้านดวงดั่งเอื้อมถึง เหมาะกับการจัดจิตวิทยา Digital Detox",
+    description_en: "A high-altitude campsite with panoramic mountain views and the Nan River winding below. At night, millions of stars feel within reach — perfect for a digital detox.",
     imageUrl: "https://dmc.tatdataapi.io/assets/a7a1d407-b44b-4b4b-a83c-28478180bba7.jpg"
   },
   {
     id: "S003",
     name: "แหล่งเตาเผาและเตาดินเผา บ่อสวก",
+    name_en: "Ancient Kiln & Pottery Site — Bo Sok",
     district: "เมืองน่าน",
     lat: 18.75068,
     lng: 100.69830,
     photoScore: 8,
     scent: "ดินเผารมควันใบเมี่ยง (Earthy Clay)",
+    scent_en: "Earthy Clay",
     bestTime: "ช่วงเช้า มีสายหมอกจางและแสงนวล",
+    bestTime_en: "Morning — soft mist and gentle light",
     description: "แหล่งเรียนรู้ทางโบราณคดีเตาเผาเครื่องปั้นดินเผาอายุกว่า 700 ปี ผสานการจัดกิจกรรมพอกเข่าสมุนไพรสดด้วยสมุนไพรพื้นถิ่นสูตรพิเศษ ให้ภาพถ่ายอารมณ์ดั้งเดิมและเชื่อมต่อดิน",
+    description_en: "A 700-year-old archaeological pottery kiln site combined with fresh herbal knee compress workshops using local recipes — capturing raw, earthy photography moods.",
     imageUrl: "https://dmc.tatdataapi.io/assets/fa36e254-fa53-428d-8611-9bc65728ff25.jpg"
   },
   {
     id: "S004",
     name: "ทุ่งดอกกระดาษและเอื้อง ดอยภูคา",
+    name_en: "Paper Flower & Orchid Fields — Doi Phu Kha",
     district: "ปัว",
     lat: 19.20056,
     lng: 101.08065,
     photoScore: 9,
     scent: "เสี้ยวดอกขาวพราวชงโค (Soft Bauhinia)",
+    scent_en: "Soft Bauhinia",
     bestTime: "ฤดูหนาว (พฤศจิกายน-กุมภาพันธ์)",
+    bestTime_en: "Winter (November–February)",
     description: "จุดสูงสุดบนเทือกเขาอุทยานแห่งชาติดอยภูคา รายล้อมด้วยสายหมอกสีขาว พรรณไม้หายากดั่งประติมากรรมธรรมชาติ เช่น ต้นเสี้ยวดอกขาวป่าที่ผลิดอกสีขาวสลัดใบสวยบริสุทธิ์เต็มหุบเขา",
+    description_en: "The highest point of Doi Phu Kha National Park, surrounded by white mist and rare botanical sculptures. Wild white orchid trees shed their leaves, blossoming pure white across the valley.",
     imageUrl: "https://dmc.tatdataapi.io/assets/0761969b-e25b-4880-9c61-336836f5f3a8.jpg"
   }
 ];
@@ -78,7 +98,7 @@ export default function ARSpotMap() {
   const [selectedSpot, setSelectedSpot] = useState<Spot>(NAN_SPOTS[0]);
   const [activeFilter, setActiveFilter] = useState(FILTERS[0]);
   const [arActivated, setArActivated] = useState(false);
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
     <div className="space-y-8">
@@ -129,8 +149,8 @@ export default function ARSpotMap() {
                       <span>{spot.photoScore}.0</span>
                     </div>
                   </div>
-                  <h5 className="font-display font-semibold text-[#f2f4f1] text-xs mt-1 truncate">{spot.name}</h5>
-                  <p className="text-[11px] text-[#819177] mt-1 truncate">{spot.scent}</p>
+                  <h5 className="font-display font-semibold text-[#f2f4f1] text-xs mt-1 truncate">{lang === "th" ? spot.name : spot.name_en}</h5>
+                  <p className="text-[11px] text-[#819177] mt-1 truncate">{lang === "th" ? spot.scent : spot.scent_en}</p>
                 </div>
               </button>
             ))}
@@ -139,12 +159,12 @@ export default function ARSpotMap() {
           {/* Location Detailed Stats Card */}
           <div className="bg-[#161a15] rounded-3xl p-5 border border-[#2a2e28] space-y-3">
             <h6 className="text-xs font-display font-semibold text-[#f2f4f1]">{t("spots.stats.title")}</h6>
-            <p className="text-xs text-[#819177] leading-relaxed">{selectedSpot.description}</p>
+            <p className="text-xs text-[#819177] leading-relaxed">{lang === "th" ? selectedSpot.description : selectedSpot.description_en}</p>
             
             <div className="pt-3 border-t border-[#2a2e28] grid grid-cols-2 gap-4 text-[11px]">
               <div>
                 <span className="text-[#819177] block">{t("spots.stats.bestTime")}</span>
-                <span className="text-[#f2f4f1] font-medium mt-0.5 block">{selectedSpot.bestTime}</span>
+                <span className="text-[#f2f4f1] font-medium mt-0.5 block">{lang === "th" ? selectedSpot.bestTime : selectedSpot.bestTime_en}</span>
               </div>
               <div>
                 <span className="text-[#819177] block">{t("spots.stats.gps")}</span>
@@ -203,11 +223,11 @@ export default function ARSpotMap() {
             <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md border border-white/10 rounded-xl p-3 text-white flex items-center justify-between">
               <div>
                 <span className="text-[9px] font-mono text-[#c9b097] uppercase tracking-wider">{t("spots.camera.watermark")}</span>
-                <h6 className="text-[11px] font-display font-bold truncate max-w-[200px] sm:max-w-xs">{selectedSpot.name}</h6>
+                <h6 className="text-[11px] font-display font-bold truncate max-w-[200px] sm:max-w-xs">{lang === "th" ? selectedSpot.name : selectedSpot.name_en}</h6>
               </div>
               <div className="text-right shrink-0">
                 <span className="text-[9px] text-[#819177] block font-mono">{t("spots.camera.scentMatch")}</span>
-                <span className="text-[10px] font-medium text-[#c9b097]">{selectedSpot.scent.split(" (")[0]}</span>
+                <span className="text-[10px] font-medium text-[#c9b097]">{lang === "th" ? selectedSpot.scent.split(" (")[0] : selectedSpot.scent_en}</span>
               </div>
             </div>
 
