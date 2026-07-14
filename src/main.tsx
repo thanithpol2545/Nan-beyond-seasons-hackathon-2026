@@ -1,5 +1,5 @@
 import "./styles.css";
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { Leaf, Globe } from "lucide-react";
 import { LanguageProvider, useLanguage } from "./i18n/LanguageContext";
@@ -7,7 +7,7 @@ import ARSpotMap from "./App";
 import ZodiacQuiz from "./ZodiacQuiz";
 import ScentMoodJournal from "./FlowerDirectory";
 import BloomingCalendar from "./EcomBoutique";
-import AIAssistant from "./BloomingCalendar";
+const AIAssistant = React.lazy(() => import("./BloomingCalendar"));
 
 const SECTION_LINKS = ["spots", "quiz", "journal", "calendar", "chat"] as const;
 
@@ -91,7 +91,7 @@ function App() {
             <span className="text-[10px] font-mono text-[#c9b097] uppercase tracking-[0.2em]">{t("section.chat")}</span>
             <h2 className="font-serif italic text-3xl mt-2">{t("section.chat.title")}</h2>
           </div>
-          <AIAssistant />
+          <Suspense fallback={null}><AIAssistant /></Suspense>
         </section>
       </main>
 
