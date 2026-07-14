@@ -14,18 +14,18 @@ interface MonthlyData {
 }
 
 const YEAR_TIMELINE: MonthlyData[] = [
-  { monthNum: 1, monthNameKey: "month.1", avgTemp: "15-25°C", touristLevel: "High", flowers: ["เสี้ยวดอกขาว", "บัวตอง", "เอื้องกล้วยไม้ป่า"], festivals: ["ปีใหม่ม้ง"], wellnessTip: "wellness.tip.1" },
-  { monthNum: 2, monthNameKey: "month.2", avgTemp: "16-28°C", touristLevel: "High", flowers: ["ทองกวาวแสด", "เสี้ยวดอกขาว"], festivals: ["ประเพณีดอกไม้พันดวงไทลื้อ"], wellnessTip: "wellness.tip.2" },
-  { monthNum: 3, monthNameKey: "month.3", avgTemp: "20-33°C", touristLevel: "High", flowers: ["ทองกวาวส้ม", "เสี้ยวดอกขาว"], festivals: ["หกเป็งนมัสการพระธาตุแช่แห้ง"], wellnessTip: "wellness.tip.3" },
-  { monthNum: 4, monthNameKey: "month.4", avgTemp: "23-36°C", touristLevel: "Low", flowers: ["ดอกไม้ป่า", "ดอกมะลิสด"], festivals: ["สงกรานต์ล้านนา", "เลี้ยงผีขุนน้ำต้นน้ำน่าน"], wellnessTip: "wellness.tip.4" },
-  { monthNum: 5, monthNameKey: "month.5", avgTemp: "24-34°C", touristLevel: "Low", flowers: ["บัวหลวงขาว", "พุดซ้อนหอม"], festivals: ["แปดเป็งจอมแจ้ง", "ไหว้พระธาตุเขาน้อย"], wellnessTip: "wellness.tip.5" },
-  { monthNum: 6, monthNameKey: "month.6", avgTemp: "24-33°C", touristLevel: "Low", flowers: ["บัวหลวงชมพู", "กระดังงาสยาม"], festivals: ["เวิร์กชอปสุมยาสมุนไพรป่าเกี๋ยน"], wellnessTip: "wellness.tip.6" },
-  { monthNum: 7, monthNameKey: "month.7", avgTemp: "23-32°C", touristLevel: "Low", flowers: ["บัวหลวงฝักอ่อน", "ลีลาวดีขาว"], festivals: ["แห่เทียนพรรษาข่วงน่าน"], wellnessTip: "wellness.tip.7" },
-  { monthNum: 8, monthNameKey: "month.8", avgTemp: "23-32°C", touristLevel: "Low", flowers: ["บัวหลวงเม็ดนวล", "ไพลสมุนไพรร้อน"], festivals: ["เวิร์กชอปบ่อสวกพอกข้อเข่าดินเผา"], wellnessTip: "wellness.tip.8" },
-  { monthNum: 9, monthNameKey: "month.9", avgTemp: "23-31°C", touristLevel: "High", flowers: ["ดาวเรืองทอง", "มะลิหอม"], festivals: ["ตานก๋วยสลากหลวง", "แข่งเรือยาวเปิดสนามน่าน"], wellnessTip: "wellness.tip.9" },
-  { monthNum: 10, monthNameKey: "month.10", avgTemp: "22-30°C", touristLevel: "High", flowers: ["เสี้ยวดอกขาว", "บานไม่รู้โรย"], festivals: ["แข่งเรือยาวชิงถ้วยพระราชทานฯ"], wellnessTip: "wellness.tip.10" },
-  { monthNum: 11, monthNameKey: "month.11", avgTemp: "18-28°C", touristLevel: "High", flowers: ["บัวตองเหลือง", "ดาวเรืองตระการ"], festivals: ["ยี่เป็งลอยประทีปโคมน่าน"], wellnessTip: "wellness.tip.11" },
-  { monthNum: 12, monthNameKey: "month.12", avgTemp: "15-25°C", touristLevel: "High", flowers: ["บัวตอง", "เสี้ยวดอกขาวป่า", "เอื้องคำดอย"], festivals: ["งานท่องเที่ยวประจำปีของดี 15 อำเภอ"], wellnessTip: "wellness.tip.12" }
+  { monthNum: 1, monthNameKey: "month.1", avgTemp: "15-25°C", touristLevel: "High", flowers: ["เสี้ยวดอกขาว", "บัวตอง", "เอื้องกล้วยไม้ป่า", "พุดพิชญา", "ชวนชม"], festivals: ["ปีใหม่ม้ง"], wellnessTip: "wellness.tip.1" },
+  { monthNum: 2, monthNameKey: "month.2", avgTemp: "16-28°C", touristLevel: "High", flowers: ["ทองกวาวแสด", "เสี้ยวดอกขาว", "ชงโคป่า", "หางนกยูงไทย", "กุหลาบพันปี"], festivals: ["ประเพณีดอกไม้พันดวงไทลื้อ"], wellnessTip: "wellness.tip.2" },
+  { monthNum: 3, monthNameKey: "month.3", avgTemp: "20-33°C", touristLevel: "High", flowers: ["ทองกวาวส้ม", "เสี้ยวดอกขาว", "อินทนิล", "แก้ว", "ฟ้าประดิษฐ์"], festivals: ["หกเป็งนมัสการพระธาตุแช่แห้ง"], wellnessTip: "wellness.tip.3" },
+  { monthNum: 4, monthNameKey: "month.4", avgTemp: "23-36°C", touristLevel: "Low", flowers: ["ดอกไม้ป่า", "ดอกมะลิสด", "พุดซ้อน", "บานบุรี", "เฟื่องฟ้า"], festivals: ["สงกรานต์ล้านนา", "เลี้ยงผีขุนน้ำต้นน้ำน่าน"], wellnessTip: "wellness.tip.4" },
+  { monthNum: 5, monthNameKey: "month.5", avgTemp: "24-34°C", touristLevel: "Low", flowers: ["บัวหลวงขาว", "พุดซ้อนหอม", "กระดังงา", "ลั่นทมขาว", "มณฑา"], festivals: ["แปดเป็งจอมแจ้ง", "ไหว้พระธาตุเขาน้อย"], wellnessTip: "wellness.tip.5" },
+  { monthNum: 6, monthNameKey: "month.6", avgTemp: "24-33°C", touristLevel: "Low", flowers: ["บัวหลวงชมพู", "กระดังงาสยาม", "บัวสาย", "อุบลชาติ", "กาหลง"], festivals: ["เวิร์กชอปสุมยาสมุนไพรป่าเกี๋ยน"], wellnessTip: "wellness.tip.6" },
+  { monthNum: 7, monthNameKey: "month.7", avgTemp: "23-32°C", touristLevel: "Low", flowers: ["บัวหลวงฝักอ่อน", "ลีลาวดีขาว", "บัวผัน", "ดอกเข็ม", "ชบา"], festivals: ["แห่เทียนพรรษาข่วงน่าน"], wellnessTip: "wellness.tip.7" },
+  { monthNum: 8, monthNameKey: "month.8", avgTemp: "23-32°C", touristLevel: "Low", flowers: ["บัวหลวงเม็ดนวล", "ไพลสมุนไพรร้อน", "ขมิ้นชัน", "ว่านกั๊กจือ", "ดาหลา"], festivals: ["เวิร์กชอปบ่อสวกพอกข้อเข่าดินเผา"], wellnessTip: "wellness.tip.8" },
+  { monthNum: 9, monthNameKey: "month.9", avgTemp: "23-31°C", touristLevel: "High", flowers: ["ดาวเรืองทอง", "มะลิหอม", "พุทธรักษา", "โกสน", "บานเช้า"], festivals: ["ตานก๋วยสลากหลวง", "แข่งเรือยาวเปิดสนามน่าน"], wellnessTip: "wellness.tip.9" },
+  { monthNum: 10, monthNameKey: "month.10", avgTemp: "22-30°C", touristLevel: "High", flowers: ["เสี้ยวดอกขาว", "บานไม่รู้โรย", "ดอกรัก", "รางแดง", "กาฬพฤกษ์"], festivals: ["แข่งเรือยาวชิงถ้วยพระราชทานฯ"], wellnessTip: "wellness.tip.10" },
+  { monthNum: 11, monthNameKey: "month.11", avgTemp: "18-28°C", touristLevel: "High", flowers: ["บัวตองเหลือง", "ดาวเรืองตระการ", "ทานตะวัน", "บัวดิน", "ขจร"], festivals: ["ยี่เป็งลอยประทีปโคมน่าน"], wellnessTip: "wellness.tip.11" },
+  { monthNum: 12, monthNameKey: "month.12", avgTemp: "15-25°C", touristLevel: "High", flowers: ["บัวตอง", "เสี้ยวดอกขาวป่า", "เอื้องคำดอย", "คริสต์มาส", "ปูยอดดอย", "กุหลาบขาว"], festivals: ["งานท่องเที่ยวประจำปีของดี 15 อำเภอ"], wellnessTip: "wellness.tip.12" }
 ];
 
 export default function BloomingCalendar() {

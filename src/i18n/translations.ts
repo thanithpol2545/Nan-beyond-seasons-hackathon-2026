@@ -1,6 +1,6 @@
 export const TH: Record<string, string> = {
   "tooltip.langToggle": "เปลี่ยนเป็นภาษาอังกฤษ",
-  "header.title": "น่านฟลอริช",
+  "header.title": "Nan Flourish",
   "nav.spots": "แผนที่จุดถ่ายภาพ",
   "nav.quiz": "ดวงชะตาธาตุ",
   "nav.journal": "บันทึกอารมณ์",
@@ -21,7 +21,7 @@ export const TH: Record<string, string> = {
   "section.chat": "SECTION 05",
   "section.chat.title": "มาลัย — นักบำบัดสุคนธปัญญาประดิษฐ์",
 
-  "footer.text": "น่านฟลอริช © 2026 — ขับเคลื่อนโดย Typhoon AI และ Nan Dataset v1.0",
+  "footer.text": "Nan Flourish © 2026 — ขับเคลื่อนโดย Typhoon AI และ Nan Dataset v1.0",
 
   "wellness.tip.1": "อากาศหนาวจัดดอยสูง เหมาะกับการแช่เท้าสมุนไพรร้อนกระตุ้นระบบประสาทล้า",
   "wellness.tip.2": "ชมทัศนียภาพกิ่งก้านทองกวาวผลัดใบเบ่งบาน ดื่มชาเกสรบัวหลวงรสเย็นบำรุงชีพจร",
@@ -66,7 +66,7 @@ export const TH: Record<string, string> = {
   "spots.stats.gps": "พิกัดทางภูมิศาสตร์ (GPS)",
   "spots.camera.title": "กล้องจำลองฟิลเตอร์อโรมา (AR Scent-Filter Cam)",
   "spots.camera.badge": "REC 1080P // LN_108",
-  "spots.camera.watermark": "น่านฟลอริช Scent-Map",
+  "spots.camera.watermark": "Nan Flourish Scent-Map",
   "spots.camera.scentMatch": "SCENT MATCH",
   "spots.camera.hover": "กดปุ่มด้านล่างเพื่อสลับฟิลเตอร์อัพลง IG / TikTok",
   "spots.filter.title": "เลือกโทนสีอารมณ์บำบัด (Scent Filter Preset)",

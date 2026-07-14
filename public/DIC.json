@@ -8,7 +8,7 @@
     "header_nav": {
       "description": "ส่วนหัวเว็บ / Website Header Navigation",
       "items": {
-        "header.title": { "file": "src/main.tsx:32", "type": "brand_title", "th": "น่านฟลอริช", "en": "Nan Flourish" },
+        "header.title": { "file": "src/main.tsx:32", "type": "brand_title", "th": "Nan Flourish", "en": "Nan Flourish" },
         "nav.spots": { "file": "src/main.tsx:38", "type": "nav_link", "th": "แผนที่จุดถ่ายภาพ", "en": "AR Spot Map" },
         "nav.quiz": { "file": "src/main.tsx:38", "type": "nav_link", "th": "ดวงชะตาธาตุ", "en": "Zodiac Quiz" },
         "nav.journal": { "file": "src/main.tsx:38", "type": "nav_link", "th": "บันทึกอารมณ์", "en": "Scent Journal" },
