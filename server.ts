@@ -90,19 +90,62 @@ app.post("/api/generate-itinerary", async (req, res) => {
   `;
 
   const fallback = `
-    ### แผนการเดินทางและบำบัดทางสุขภาพจังหวัดน่าน (3 วัน 2 คืน)
-    ต้อนรับผู้มาเยือนธาตุ **${element}** ในช่วงเดือนที่ **${currentMonth}**
-    
-    **วันสำคัญและเทศกาลบำบัด:**
-    เราขอแนะนำการแวะชมชุมชนท่องเที่ยว **บ่อสวกโมเดล** เพื่อสุมยาสมุนไพรล้านนาและแช่เท้าสมุนไพรอุ่นๆ ด้วยดินเผาโบราณ และจิบชาเกสรบัวหลวงรสเย็นบำรุงหัวใจ
-    
-    **ดอกไม้ธาตุคู่บารมี:**
-    - ดอกไม้แนะนำ: ${matchedFlowers.map(f => `${f.name_th} (${f.scent})`).join(", ") || "มะลิออร์แกนิก"}
-    
-    **กิจกรรมล้างพิษจิตใจ (Mental Health Ritual):**
-    1. นั่งสมาธิกำหนดลมหายใจใต้ซุ้มลีลาวดี ณ พิพิธภัณฑสถานแห่งชาติน่าน
-    2. เวิร์กชอปทำน้ำมันหอมระเหยกระดังงาสยามผ่อนคลายสูตรเฉพาะธาตุ ณ บ้านน้ำเกี๋ยน
-    3. ถ่ายภาพความทรงจำดั่งงานศิลป์ (Minimalist Photography) ของเสี้ยวดอกขาวพราวภูคา
+## 🌿 Lanna Aromatherapy Wellness Plan — แผนอโรมาสุคนธบำบัดล้านนา
+
+### 3 Days / 2 Nights — ${element} Element Journey
+*สำหรับผู้มีธาตุเจ้าเรือน **${element}** เดือนที่ ${currentMonth}*
+
+---
+
+### 📋 Seasonal Forecast & Recommendation — พยากรณ์ฤดูกาล
+
+| Aspect | Detail |
+|--------|--------|
+| Month | เดือน ${currentMonth} |
+| Element | ${element} |
+| Mood | ${userMood} |
+| Interests | ${userInterests.join(", ")} |
+
+**Recommendation:** We recommend visiting Nan during this period to experience ${seasonalFestivals.length > 0 ? "the unique festivals and" : "the serene beauty of"} Nan's natural landscape. The weather is ideal for wellness activities and flower meditation.
+
+*คำแนะนำ:* ช่วงนี้เหมาะแก่การเยือนน่านเพื่อสัมผัสธรรมชาติและกิจกรรม wellness อย่างแท้จริง
+
+---
+
+### 🌸 Element Flower Matching — ดอกไม้คู่ธาตุ
+
+**Recommended flowers / ดอกไม้แนะนำ:**
+${matchedFlowers.length > 0 ? matchedFlowers.map(f => `- **${f.name_th}** (${f.name_en}) — *${f.scent}* — ${f.medical.benefits_th[0] || ""}`).join("\n") : "- **มะลิออร์แกนิกน่าน** (Organic Jasmine) — หอมละมุน — ช่วยคลายเครียดและบำรุงหัวใจ"}
+
+---
+
+### 📅 Day-by-Day Itinerary — แผนการเดินรายวัน
+
+**Day 1 | Mindfulness & Herbal Healing — สติและสมุนไพรบำบัด**
+- 🏛 Morning: วัดภูมินทร์ — Meditation at Wat Phumin's famous mural hall / นั่งสมาธิชมจิตรกรรมฝาผนัง
+- 🌿 Afternoon: **Bo Sok Model** — Herbal steam & hot clay compress / สุมยาสมุนไพรล้านนาและพอกเข่าดินเผา
+- 🍵 Evening: Organic herbal tea tasting / ชิมชาสมุนไพรออร์แกนิก
+
+**Day 2 | Forest Bathing & Aromatherapy — ป่าบำบัดและอโรมา**
+- 🌲 Morning: **Doi Phu Kha National Park** — Forest bathing & flower photography / เดินป่าถ่ายภาพเสี้ยวดอกขาว
+- 🎨 Afternoon: **Ban Nam Kien** — Essential oil workshop / เวิร์กชอปทำน้ำมันหอมระเหย
+- 🌅 Evening: Sunset meditation at Plumeria tunnel, Nan National Museum / นั่งสมาธิซุ้มลีลาวดี
+
+**Day 3 | Scent & Spirit — กลิ่นและจิตวิญญาณ**
+- 🧘 Morning: Yoga & scent meditation with ${matchedFlowers[0]?.name_th || "ดอกมะลิ"} / โยคะและสมาธิกลิ่นดอกไม้
+- 🛍 Afternoon: Local Tai Lue craft village visit / เยือนหมู่บ้านทอผ้าไทลื้อ
+- 🌸 Evening: Farewell flower blessing ceremony / พิธีอำลาด้วยดอกไม้
+
+---
+
+### 💆 Scent & Essential Oil Guide — คู่มือกลิ่นและน้ำมันหอมระเหย
+
+| Element | Recommended Scent | Benefits |
+|---------|------------------|----------|
+| ${element} | ${matchedFlowers.map(f => f.name_th).join(", ") || "มะลิ + กระดังงา"} | Calming, balancing, restorative / ผ่อนคลาย สมดุล ฟื้นฟู |
+
+> "Let the fragrance of Nan's flowers guide your spirit to peace."
+> "ให้กลิ่นหอมของดอกไม้น่านนำจิตวิญญาณคุณสู่ความสงบ"
   `;
 
   const result = await generateWellnessResponse(prompt, fallback);
@@ -127,16 +170,40 @@ app.post("/api/zodiac-analysis", async (req, res) => {
   `;
 
   const fallback = `
-    ### ผลวิเคราะห์ดวงชะตาบุปผาบำบัดน่าน
-    สำหรับราศี **${sign}** (เดือนเกิดที่ ${birthMonth})
-    
-    ช่วงนี้คุณอาจรู้สึกวิตกกังวลเรื่อง: *${currentAnxiety || "ความเหนื่อยล้าทางอารมณ์"}*
-    
-    **ธาตุเจ้าเรือนบำบัด:** 
-    แนะนำให้ใช้กลิ่นอโรมาของ **ดอกมะลิออร์แกนิกน่าน** และ **สารเกสรบัวหลวงเย็นบำรุงหัวใจ** เพื่อคลายความวิตกกังวล ปลอบประโลมประสาทส่วนกลางและสร้างสมาธิความสงบภายในใจ
-    
-    **Scent Journaling Tip ของวันนี้:**
-    "สูดลมหายใจเข้าลึกๆ นึกถึงละอองน้ำค้างเกาะกลีบมะลิขาว แล้วจดบันทึก 3 สิ่งที่คุณรู้สึกขอบคุณต่อผืนดินในวันนี้"
+## 🔮 Zodiac Botanical Analysis — ผลวิเคราะห์ดวงชะตาบุปผาบำบัด
+
+### ${sign} — Month ${birthMonth}
+
+**Current concern / สิ่งที่กังวล:** *${currentAnxiety || "Emotional fatigue / ความเหนื่อยล้าทางอารมณ์"}*
+
+---
+
+### Element Diagnosis — วินิจฉัยธาตุ
+
+| Element / ธาตุ | Recommendation / คำแนะนำ |
+|---------|------------------|
+| Earth ดิน | Grounding with wood & moss scents / กลิ่นเนื้อไม้และดิน |
+| Water น้ำ | Cooling with lotus & jasmine / เกสรบัวหลวงและมะลิ |
+| Wind ลม | Uplifting with plumeria & lemongrass / ลีลาวดีและตะไคร้ |
+| Fire ไฟ | Warming with marigold & phlai / ดาวเรืองและไพล |
+
+**Your recommended element / ธาตุเจ้าเรือนแนะนำ:** ดิน (Earth) — สุขุม มั่นคง อดทน
+
+---
+
+### 🌸 Flower Remedy — บุปผาบำบัด
+
+แนะนำให้ใช้กลิ่นอโรมาของ **ดอกมะลิออร์แกนิกน่าน (Organic Jasmine)** และ **สารเกสรบัวหลวงเย็นบำรุงหัวใจ (Lotus Pollen)** เพื่อคลายความวิตกกังวล ปลอบประโลมประสาทส่วนกลางและสร้างสมาธิความสงบภายในใจ
+
+*We recommend Organic Jasmine from Nan and Lotus Pollen to calm anxiety, soothe the nervous system, and restore inner peace.*
+
+---
+
+### 📝 Daily Scent Journal Prompt — คำแนะนำบันทึกกลิ่นวันนี้
+
+> "สูดลมหายใจเข้าลึกๆ นึกถึงละอองน้ำค้างเกาะกลีบมะลิขาว แล้วจดบันทึก 3 สิ่งที่คุณรู้สึกขอบคุณต่อผืนดินในวันนี้"
+>
+> "Breathe deeply, imagine dewdrops on white jasmine petals, and write down 3 things you're grateful for today."
   `;
 
   const result = await generateWellnessResponse(prompt, fallback);
@@ -164,7 +231,23 @@ app.post("/api/wellness-chat", async (req, res) => {
     - Keep it short, comforting, and deeply relaxing. No robotic system terms or headers.
   `;
 
-  const fallback = `สวัสดีเจ้า ยินดีต้อนรับสู่ข่วงปัญญาอโรมาล้านนาเจ้า... วันนี้รู้สึกเหนื่อยล้าเรื่องใดเป็นพิเศษไหมเจ้า? ชาเกสรบัวหลวงอุ่นๆ หรือกลิ่นหอมของมะลิบ่อสวกสักนิด อาจช่วยให้ค่ำคืนนี้ผ่อนคลายและหลับสบายขึ้นนะเจ้า`;
+  const fallback = `สวัสดีเจ้า ข้าเจ้าชื่อพวงมาลัย ยินดีต้อนรับสู่ข่วงปัญญาอโรมาล้านนาเจ้า 🌸
+
+*Welcome to Lanna Aromatherapy Wisdom Hall.*
+
+**คำถามของวันนี้ / Your question:**
+"${message}"
+
+ข้าเจ้าเข้าใจความรู้สึกของเจ้านะคะ... การได้สูดดมกลิ่นหอมของดอกไม้ป่าบนดอยภูคา หรือจิบชาเกสรบัวหลวงอุ่นๆ สักแก้น่าจะช่วยให้จิตใจสงบลงได้เจ้า
+
+*Malai understands your feelings... The scent of wildflowers on Doi Phu Kha or a warm cup of lotus pollen tea may help calm your mind.*
+
+📿 **คำแนะนำข้าเจ้าสำหรับวันนี้ / Malai's tip for today:**
+ลองหลับตาช้าๆ สูดลมหายใจเข้าลึก 3 ครั้ง นึกถึงสายลมเย็นที่พัดผ่านทุ่งดอกไม้ในน่าน แล้วคุณจะพบกับความสงบภายในเจ้า
+
+*Close your eyes, take 3 deep breaths, imagine the cool wind across Nan's flower fields, and you will find inner peace.*
+
+มีอะไรให้พวงมาลัยช่วยเหลือเพิ่มเติมไหมเจ้า? 🙏✨`;
 
   const result = await generateWellnessResponse(prompt, fallback);
   res.json({ response: result });

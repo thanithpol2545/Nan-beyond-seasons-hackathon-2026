@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { Calendar, Clock, Sparkles, RefreshCw, Send, ChevronRight, Leaf, ShieldAlert } from "lucide-react";
+import { marked } from "marked";
 
 interface MonthlyData {
   monthNum: number;
@@ -63,15 +64,7 @@ export default function BloomingCalendar() {
       setItinerary(data.itinerary);
     } catch (err) {
       console.error(err);
-      setItinerary(`
-        ### 🌿 แผนอโรมาสุคนธบำบัดล้านนาประจำตัวคุณ (ระบบจำลองภายนอก)
-        ต้อนรับคุณผู้มีธาตุเจ้าเรือน **${zodiacElement}** เข้าสู่น่านในเดือน **${selectedMonth.monthName}**
-        
-        **แผนการบำบัดรายวัน:**
-        - **วันแรก:** เยือนศูนย์วิสาหกิจ บ่อสวกโมเดล ทำหัตถการสุมยาเพื่อกระตุ้นจิตวิญญาณ ดื่มชาออร์แกนิก
-        - **วันที่สอง:** เดินจงกรมทำสมาธิในคุ้มหลวงน่าน ถ่ายภาพ Minimalist ซุ้มต้นลีลาวดีผลิใบระเรื่อ
-        - **วันที่สาม:** บำบัดกล้ามเนื้อที่ตึงเครียดด้วยน้ำมันสปากลั่นร้อนผสมกระดังงาปักษ์ใต้ที่หมู่บ้านน้ำเกี๋ยน
-      `);
+      setItinerary(`⚠️ *ขออภัยเจ้า / Sorry, unable to generate itinerary at this moment.* กรุณาลองใหม่อีกครั้ง`);
     } finally {
       setLoading(false);
     }
@@ -165,7 +158,7 @@ export default function BloomingCalendar() {
           </div>
         </div>
 
-        {/* Right: AI Travel Itinerary Generator with Gemini */}
+        {/* Right: AI Travel Itinerary Generator with Typhoon AI */}
         <div className="md:col-span-8 bg-[#161a15] border border-[#2a2e28] rounded-3xl p-6">
           <div className="flex items-center gap-2 mb-6">
             <Sparkles className="h-5 w-5 text-[#c9b097] animate-pulse" />
@@ -262,7 +255,7 @@ export default function BloomingCalendar() {
                   กำลังต้มกลั่นสารพฤกษาด้วยโมเดล AI...
                 </h5>
                 <p className="text-[10px] text-[#819177] max-w-xs mx-auto">
-                  ระบบเชื่อมต่อ API ของ Tourism Authority (TAT) และ Gemini AI ของคุณอยู่เจ้า กรุณารอสักครู่นะเจ้า
+                   ระบบ AI กำลังวิเคราะห์ข้อมูลพฤกษาบำบัดและวางแผนเส้นทาง wellness ให้คุณเจ้า กรุณารอสักครู่นะเจ้า
                 </p>
               </div>
             </div>
@@ -271,9 +264,10 @@ export default function BloomingCalendar() {
           {/* Render Itinerary Results */}
           {itinerary && !loading && (
             <div className="space-y-4 animate-fade-in">
-              <div className="max-h-[400px] overflow-y-auto bg-[#0d0f0c] border border-[#2a2e28] rounded-2xl p-5 text-xs text-[#819177] leading-relaxed font-sans space-y-4 scrollbar-thin whitespace-pre-line">
-                {itinerary}
-              </div>
+              <div
+                className="prose prose-invert prose-sm max-w-none overflow-y-auto bg-[#0d0f0c] border border-[#2a2e28] rounded-2xl p-5 leading-relaxed font-sans space-y-4 scrollbar-thin max-h-[500px] [&_h3]:text-[#c9b097] [&_h3]:font-serif [&_h3]:italic [&_h3]:text-lg [&_h4]:text-[#f2f4f1] [&_h4]:font-display [&_h4]:text-sm [&_strong]:text-[#f2f4f1] [&_li]:text-[#819177] [&_p]:text-[#819177] [&_blockquote]:border-l-[#c9b097] [&_blockquote]:text-[#a0a89a] [&_hr]:border-[#2a2e28] [&_table]:w-full [&_th]:text-[#c9b097] [&_th]:text-xs [&_th]:font-display [&_th]:uppercase [&_th]:tracking-wider [&_td]:text-xs [&_td]:text-[#819177] [&_td]:border [&_td]:border-[#2a2e28] [&_td]:p-2 [&_th]:border [&_th]:border-[#2a2e28] [&_th]:p-2"
+                dangerouslySetInnerHTML={{ __html: marked.parse(itinerary) }}
+              />
 
               <div className="flex gap-2">
                 <button
