@@ -70,5 +70,6 @@ Comprehensive dataset of Nan Province covering:
 
 - **Adunwit Tiampae** ([atiampa](https://github.com/atiampa)) — Full-stack development, dataset research, concept design
 - **Thanithpol Thiramongkolchai** (@thanithpol2545) — AI integration, dataset research, project coordination
+- **Supanat Kerdpoca** — Visual design, UI/UX, frontend development
 
 Built for the **Nan Beyond Seasons Hackathon 2026** — July 2026.
