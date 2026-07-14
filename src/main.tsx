@@ -1,5 +1,5 @@
 import "./styles.css";
-import React, { useState, Suspense } from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { Leaf, Globe } from "lucide-react";
 import { LanguageProvider, useLanguage } from "./i18n/LanguageContext";
@@ -7,9 +7,8 @@ import ARSpotMap from "./App";
 import ZodiacQuiz from "./ZodiacQuiz";
 import ScentMoodJournal from "./FlowerDirectory";
 import BloomingCalendar from "./EcomBoutique";
-const AIAssistant = React.lazy(() => import("./BloomingCalendar"));
 
-const SECTION_LINKS = ["spots", "quiz", "journal", "calendar", "chat"] as const;
+const SECTION_LINKS = ["spots", "quiz", "journal", "calendar"] as const;
 
 function App() {
   const [selectedElement, setSelectedElement] = useState<string>("Earth");
@@ -86,13 +85,6 @@ function App() {
           <BloomingCalendar />
         </section>
 
-        <section id="chat">
-          <div className="text-center mb-10">
-            <span className="text-[10px] font-mono text-[#c9b097] uppercase tracking-[0.2em]">{t("section.chat")}</span>
-            <h2 className="font-serif italic text-3xl mt-2">{t("section.chat.title")}</h2>
-          </div>
-          <Suspense fallback={null}><AIAssistant /></Suspense>
-        </section>
       </main>
 
       <footer className="border-t border-[#2a2e28]/50 py-8 text-center">
