@@ -254,7 +254,7 @@ export const EN: Record<string, string> = {
   "filter.f-noir": "Earthy Minimal",
 
   "chat.toggle": "Chat with Malai AI",
-  "chat.header.title": "Malai (MALAI AI)",
+  "chat.header.title": "พวงมาลัย (Malai AI)",
   "chat.header.subtitle": "Lanna Aromatherapy Guide",
   "chat.clear.tooltip": "Refresh Scent Bottle (Clear History)",
   "chat.loading": "Warming herbal infusion...",
