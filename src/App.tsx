@@ -25,7 +25,7 @@ const NAN_SPOTS: Spot[] = [
     scent: "ลีลาวดีหวานอบอุ่น (Creamy Plumeria)",
     bestTime: "ช่วงบ่ายแก่ๆ แสงลอดอุโมงค์กิ่งไม้",
     description: "ซุ้มต้นลีลาวดีแผ่กิ่งก้านไขว้เว้าประสานกันเป็นอุโมงค์สีเขียวขรึม มีโบราณสถานสีขาวของคุ้มหลวงเป็นฉากหลัง ถือเป็นไอคอนิคแลนด์มาร์คของการกระซิบรักที่สวยสะดุดตาที่สุดในน่าน",
-    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600"
+    imageUrl: "https://dmc.tatdataapi.io/assets/3a79b9d9-f84c-451b-b2f1-7f396c827cb1.jpg"
   },
   {
     id: "S002",
@@ -37,7 +37,7 @@ const NAN_SPOTS: Spot[] = [
     scent: "ลมหนาวหญ้าภูเขา (Fresh Cold Wind)",
     bestTime: "กลางคืน (ถ่ายทางช้างเผือก) และรุ่งเช้าพระอาทิตย์ขึ้น",
     description: "ลานกางเต็นท์บนยอดภูเขาสูง มองเห็นทิวเขาสลับซับซ้อนและโค้งแม่น้ำน่านเบื้องล่าง ในค่ำคืนที่ท้องฟ้าเปิดประดับด้วยกลุ่มดาวนับล้านดวงดั่งเอื้อมถึง เหมาะกับการจัดจิตวิทยา Digital Detox",
-    imageUrl: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=600"
+    imageUrl: "https://dmc.tatdataapi.io/assets/a7a1d407-b44b-4b4b-a83c-28478180bba7.jpg"
   },
   {
     id: "S003",
@@ -49,7 +49,7 @@ const NAN_SPOTS: Spot[] = [
     scent: "ดินเผารมควันใบเมี่ยง (Earthy Clay)",
     bestTime: "ช่วงเช้า มีสายหมอกจางและแสงนวล",
     description: "แหล่งเรียนรู้ทางโบราณคดีเตาเผาเครื่องปั้นดินเผาอายุกว่า 700 ปี ผสานการจัดกิจกรรมพอกเข่าสมุนไพรสดด้วยสมุนไพรพื้นถิ่นสูตรพิเศษ ให้ภาพถ่ายอารมณ์ดั้งเดิมและเชื่อมต่อดิน",
-    imageUrl: "https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?auto=format&fit=crop&q=80&w=600"
+    imageUrl: "https://dmc.tatdataapi.io/assets/fa36e254-fa53-428d-8611-9bc65728ff25.jpg"
   },
   {
     id: "S004",
@@ -61,7 +61,7 @@ const NAN_SPOTS: Spot[] = [
     scent: "เสี้ยวดอกขาวพราวชงโค (Soft Bauhinia)",
     bestTime: "ฤดูหนาว (พฤศจิกายน-กุมภาพันธ์)",
     description: "จุดสูงสุดบนเทือกเขาอุทยานแห่งชาติดอยภูคา รายล้อมด้วยสายหมอกสีขาว พรรณไม้หายากดั่งประติมากรรมธรรมชาติ เช่น ต้นเสี้ยวดอกขาวป่าที่ผลิดอกสีขาวสลัดใบสวยบริสุทธิ์เต็มหุบเขา",
-    imageUrl: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=600"
+    imageUrl: "https://dmc.tatdataapi.io/assets/0761969b-e25b-4880-9c61-336836f5f3a8.jpg"
   }
 ];
 
