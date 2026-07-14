@@ -1,7 +1,7 @@
 import "./styles.css";
-import React, { Suspense, useMemo, useState } from "react";
+import React, { Suspense, useEffect, useMemo, useState } from "react";
 import ReactDOM from "react-dom/client";
-import { ArrowDownRight, Globe, Leaf, MessageCircleHeart, Sparkles, Stars } from "lucide-react";
+import { ArrowDownRight, Globe, Leaf, MessageCircleHeart, Minus, Plus, ShoppingBag, Sparkles, Stars, X } from "lucide-react";
 import { LanguageProvider, useLanguage } from "./i18n/LanguageContext";
 import ARSpotMap from "./App";
 import ZodiacQuiz from "./ZodiacQuiz";
@@ -12,10 +12,63 @@ const AIAssistant = React.lazy(() => import("./BloomingCalendar"));
 
 const SECTION_LINKS = ["spots", "quiz", "journal", "calendar", "chat"] as const;
 
+interface CartLine {
+  id: string;
+  nameKey: string;
+  price: string;
+  quantity: number;
+}
+
+const PRODUCT_CATALOG: Record<string, Omit<CartLine, "quantity">> = {
+  P001: { id: "P001", nameKey: "product.earth", price: "320 ฿" },
+  P002: { id: "P002", nameKey: "product.water", price: "450 ฿" },
+  P003: { id: "P003", nameKey: "product.fire", price: "390 ฿" },
+  P004: { id: "P004", nameKey: "product.wind", price: "350 ฿" },
+};
+
 function App() {
   const [selectedElement, setSelectedElement] = useState<string>("Earth");
-  const [cartCount, setCartCount] = useState(0);
+  const [cartItems, setCartItems] = useState<CartLine[]>([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const { lang, toggleLang, t } = useLanguage();
+
+  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+  const addProductToCart = (productId: string) => {
+    const product = PRODUCT_CATALOG[productId];
+    if (!product) return;
+
+    setCartItems((current) => {
+      const existing = current.find((item) => item.id === productId);
+      if (existing) {
+        return current.map((item) =>
+          item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+        );
+      }
+      return [...current, { ...product, quantity: 1 }];
+    });
+  };
+
+  const updateCartQuantity = (productId: string, delta: number) => {
+    setCartItems((current) =>
+      current
+        .map((item) =>
+          item.id === productId ? { ...item, quantity: item.quantity + delta } : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  };
+
+  useEffect(() => {
+    if (!isCartOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsCartOpen(false);
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isCartOpen]);
 
   const heroStats = useMemo(
     () =>
@@ -98,12 +151,12 @@ function App() {
       <div className="floating-orb floating-orb-b" />
 
       <header className="sticky top-0 z-50 border-b border-[#2a2e28]/50 bg-[#0f110e]/70 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4">
-          <div className="flex items-center gap-3">
+        <div className="site-header-inner mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-4">
+          <div className="site-brand flex min-w-0 items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#c9b097]/30 bg-[#c9b097]/10">
               <Leaf className="h-5 w-5 text-[#c9b097]" />
             </div>
-            <div>
+            <div className="min-w-0">
               <span className="block font-serif text-lg tracking-tight">{t("header.title")}</span>
               <span className="text-[10px] uppercase tracking-[0.24em] text-[#819177]">
                 {lang === "th" ? "botanical wellness atlas" : "botanical wellness atlas"}
@@ -111,51 +164,59 @@ function App() {
             </div>
           </div>
 
-          <nav className="flex flex-wrap items-center gap-2 text-[11px] font-medium uppercase tracking-[0.18em] text-[#819177]">
+          <nav className="site-nav flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.18em] text-[#819177]" aria-label="Primary navigation">
             {SECTION_LINKS.map((id) => (
               <a
                 key={id}
                 href={`#${id}`}
-                className="rounded-full border border-transparent px-3 py-1.5 transition-colors hover:border-[#2a2e28] hover:text-[#c9b097]"
+                className="shrink-0 whitespace-nowrap rounded-full border border-transparent px-3 py-2 transition-colors hover:border-[#2a2e28] hover:text-[#c9b097]"
               >
                 {t(`nav.${id}`)}
               </a>
             ))}
           </nav>
 
-          <div className="flex items-center gap-3 text-xs">
+          <div className="site-header-controls flex shrink-0 items-center gap-3 text-xs">
             <button
               onClick={toggleLang}
-              className="soft-button soft-button-secondary px-3 py-2 font-mono text-[11px] tracking-[0.16em]"
+              className="language-toggle soft-button soft-button-secondary px-3 py-2 font-mono text-[11px] tracking-[0.16em]"
               title={t("tooltip.langToggle")}
+              aria-label={t("tooltip.langToggle")}
             >
               <Globe className="h-3.5 w-3.5" />
               <span>{lang === "th" ? "EN" : "TH"}</span>
             </button>
-            <div className="hidden items-center gap-3 rounded-full border border-[#2a2e28] bg-[#11130f] px-4 py-2 sm:flex">
-              <span className="text-[#819177]">
+            <button
+              type="button"
+              onClick={() => setIsCartOpen(true)}
+              className="cart-summary flex items-center gap-2 rounded-full border border-[#2a2e28] bg-[#11130f] px-3 py-2 text-left transition-colors hover:border-[#c9b097]/60 hover:bg-[#161a15] sm:gap-3 sm:px-4"
+              aria-expanded={isCartOpen}
+              aria-controls="cart-drawer"
+            >
+              <ShoppingBag className="h-4 w-4 shrink-0 text-[#c9b097]" />
+              <span className="cart-element text-[#819177]">
                 {t("header.element")}: <span className="font-medium text-[#c9b097]">{selectedElement}</span>
               </span>
-              <span className="h-4 w-px bg-[#2a2e28]" />
+              <span className="cart-divider h-4 w-px bg-[#2a2e28]" />
               <span className="text-[#819177]">
                 {t("header.cart")}: <span className="font-medium text-[#c9b097]">{cartCount}</span>
               </span>
-            </div>
+            </button>
           </div>
         </div>
       </header>
 
-      <main id="main" className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-8 md:py-12">
-        <section className="glass-panel overflow-hidden rounded-[2rem] px-6 py-8 md:px-8 md:py-10">
+      <main id="main" className="mx-auto flex max-w-7xl flex-col gap-10 px-4 py-8 sm:px-6 md:py-12">
+        <section className="glass-panel hero-shell overflow-hidden rounded-[2rem] px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10">
           <div className="hero-grid">
-            <div className="space-y-6">
+            <div className="min-w-0 space-y-6">
               <span className="eyebrow">
                 <Sparkles className="h-3.5 w-3.5" />
                 {heroCopy.eyebrow}
               </span>
 
               <div className="max-w-3xl space-y-4">
-                <h1 className="max-w-4xl font-serif text-4xl leading-[1.02] text-[#f6f3ee] sm:text-5xl md:text-6xl">
+                <h1 className="hero-title max-w-4xl font-serif text-4xl leading-[1.08] text-[#f6f3ee] sm:text-5xl md:text-6xl">
                   {heroCopy.title}
                 </h1>
                 <p className="max-w-2xl text-sm leading-7 text-[#b4beb0] md:text-base">
@@ -186,7 +247,7 @@ function App() {
               </div>
             </div>
 
-            <aside className="section-card flex h-full flex-col justify-between p-6">
+            <aside className="section-card flex min-w-0 h-full flex-col justify-between p-5 sm:p-6">
               <div className="space-y-4">
                 <div className="flex items-center justify-between text-[#c9b097]">
                   <span className="eyebrow border-[#2a2e28] bg-[#161a15] text-[0.62rem]">Curated Frame</span>
@@ -214,7 +275,7 @@ function App() {
         </section>
 
         <section id="spots" className="section-shell">
-          <div className="section-card p-6 md:p-8">
+          <div className="section-card p-4 sm:p-6 md:p-8">
             <div className="section-heading mb-8">
               <div>
                 <span className="section-kicker">{t("section.spots")}</span>
@@ -229,7 +290,7 @@ function App() {
         </section>
 
         <section id="quiz" className="section-shell">
-          <div className="section-card p-6 md:p-8">
+          <div className="section-card p-4 sm:p-6 md:p-8">
             <div className="section-heading mb-8">
               <div>
                 <span className="section-kicker">{t("section.quiz")}</span>
@@ -240,14 +301,14 @@ function App() {
               <p className="section-note">{sectionNotes.quiz}</p>
             </div>
             <ZodiacQuiz
-              onAddProductToCart={() => setCartCount((c) => c + 1)}
+              onAddProductToCart={addProductToCart}
               onSelectElement={(el: string) => setSelectedElement(el)}
             />
           </div>
         </section>
 
         <section id="journal" className="section-shell">
-          <div className="section-card p-6 md:p-8">
+          <div className="section-card p-4 sm:p-6 md:p-8">
             <div className="section-heading mb-8">
               <div>
                 <span className="section-kicker">{t("section.journal")}</span>
@@ -262,7 +323,7 @@ function App() {
         </section>
 
         <section id="calendar" className="section-shell">
-          <div className="section-card p-6 md:p-8">
+          <div className="section-card p-4 sm:p-6 md:p-8">
             <div className="section-heading mb-8">
               <div>
                 <span className="section-kicker">{t("section.calendar")}</span>
@@ -277,7 +338,7 @@ function App() {
         </section>
 
         <section id="chat" className="section-shell">
-          <div className="section-card p-6 md:p-8">
+          <div className="section-card p-4 sm:p-6 md:p-8">
             <div className="section-heading mb-8">
               <div>
                 <span className="section-kicker">{t("section.chat")}</span>
@@ -293,6 +354,87 @@ function App() {
           </div>
         </section>
       </main>
+
+      {isCartOpen && (
+        <div className="cart-layer fixed inset-0 z-[70]" role="presentation">
+          <button
+            type="button"
+            aria-label={t("cart.close")}
+            className="absolute inset-0 h-full w-full bg-black/60 backdrop-blur-sm"
+            onClick={() => setIsCartOpen(false)}
+          />
+          <aside
+            id="cart-drawer"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="cart-title"
+            className="cart-drawer absolute right-0 top-0 flex h-full w-full max-w-md flex-col border-l border-[#2a2e28] bg-[#11130f] p-5 shadow-2xl sm:p-6"
+          >
+            <div className="flex items-start justify-between gap-4 border-b border-[#2a2e28] pb-5">
+              <div>
+                <span className="section-kicker">{t("header.cart")}</span>
+                <h2 id="cart-title" className="mt-2 font-serif text-3xl italic text-[#f2f4f1]">
+                  {t("cart.title")}
+                </h2>
+                <p className="mt-1 text-sm text-[#819177]">
+                  {t("cart.items", { count: cartCount })}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsCartOpen(false)}
+                className="rounded-full border border-[#2a2e28] p-2 text-[#819177] transition-colors hover:border-[#c9b097] hover:text-[#f2f4f1]"
+                aria-label={t("cart.close")}
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            {cartItems.length === 0 ? (
+              <div className="flex flex-1 flex-col items-center justify-center text-center">
+                <ShoppingBag className="h-10 w-10 text-[#c9b097]" />
+                <p className="mt-4 font-serif text-2xl italic text-[#f2f4f1]">{t("cart.empty")}</p>
+                <p className="mt-2 max-w-xs text-sm leading-relaxed text-[#819177]">{t("cart.emptyDesc")}</p>
+              </div>
+            ) : (
+              <div className="flex flex-1 flex-col overflow-y-auto py-5">
+                <div className="space-y-3">
+                  {cartItems.map((item) => (
+                    <div key={item.id} className="rounded-2xl border border-[#2a2e28] bg-[#0d0f0c] p-4">
+                      <div className="flex items-start justify-between gap-3">
+                        <p className="font-display text-base leading-relaxed text-[#f2f4f1]">{t(item.nameKey)}</p>
+                        <span className="shrink-0 font-mono text-sm text-[#c9b097]">{item.price}</span>
+                      </div>
+                      <div className="mt-4 flex items-center justify-between">
+                        <span className="text-sm text-[#819177]">{t("cart.quantity")}</span>
+                        <div className="flex items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={() => updateCartQuantity(item.id, -1)}
+                            className="rounded-full border border-[#2a2e28] p-1.5 text-[#c9b097] transition-colors hover:border-[#c9b097]"
+                            aria-label={t("cart.decrease")}
+                          >
+                            <Minus className="h-4 w-4" />
+                          </button>
+                          <span className="min-w-6 text-center font-mono text-sm text-[#f2f4f1]">{item.quantity}</span>
+                          <button
+                            type="button"
+                            onClick={() => updateCartQuantity(item.id, 1)}
+                            className="rounded-full border border-[#2a2e28] p-1.5 text-[#c9b097] transition-colors hover:border-[#c9b097]"
+                            aria-label={t("cart.increase")}
+                          >
+                            <Plus className="h-4 w-4" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </aside>
+        </div>
+      )}
 
       <footer className="border-t border-[#2a2e28]/50 py-8 text-center">
         <p className="text-[11px] font-mono uppercase tracking-[0.16em] text-[#819177]">{t("footer.text")}</p>
