@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { MessageSquare, Send, Sparkles, X, RefreshCw } from "lucide-react";
 import { useLanguage } from "./i18n/LanguageContext";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface Message {
   sender: "user" | "bot";
@@ -142,22 +144,28 @@ export default function AIAssistant() {
             {/* Messages Body */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gradient-to-b from-[#0d0f0c] to-[#111410] scrollbar-thin">
               {messages.map((m, idx) => (
-                <div
-                  key={idx}
-                  className={`flex ${
-                    m.sender === "user" ? "justify-end" : "justify-start"
-                  }`}
-                >
                   <div
-                    className={`max-w-[85%] rounded-2xl p-3.5 text-xs leading-relaxed ${
-                      m.sender === "user"
-                        ? "bg-[#c9b097] text-[#0d0f0c] rounded-tr-xs font-medium"
-                        : "bg-[#161a15] text-[#f2f4f1] border border-[#2a2e28] rounded-tl-xs"
+                    key={idx}
+                    className={`flex ${
+                      m.sender === "user" ? "justify-end" : "justify-start"
                     }`}
                   >
-                    {m.text}
+                    <div
+                      className={`max-w-[85%] rounded-2xl p-3.5 text-xs leading-relaxed ${
+                        m.sender === "user"
+                          ? "bg-[#c9b097] text-[#0d0f0c] rounded-tr-xs font-medium"
+                          : "bg-[#161a15] text-[#f2f4f1] border border-[#2a2e28] rounded-tl-xs prose prose-invert prose-xs max-w-none"
+                      }`}
+                    >
+                      {m.sender === "bot" ? (
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                          {m.text}
+                        </ReactMarkdown>
+                      ) : (
+                        m.text
+                      )}
+                    </div>
                   </div>
-                </div>
               ))}
               {loading && (
                 <div className="flex justify-start">

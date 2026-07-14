@@ -78,159 +78,158 @@ function generateChatFallback(msg: string, lang: "th" | "en"): string {
   const lower = msg.toLowerCase();
   const isTh = lang === "th";
 
-  const spots = Object.entries(NAN_PLACES).map(([k, v]) => `- **${k}** — ${isTh ? v.th : v.en}`).join("\n");
-  const sampleFlowers = isTh
-    ? ["เสี้ยวดอกขาว (White Bauhinia)", "บัวตอง (Sunflower)", "ทองกวาว (Red Silk Cotton)", "พุดซ้อนหอม (Fragrant Gardenia)", "กระดังงา (Ylang-Ylang)"].join(", ")
-    : ["White Bauhinia (เสี้ยวดอกขาว)", "Sunflower (บัวตอง)", "Red Silk Cotton (ทองกวาว)", "Fragrant Gardenia (พุดซ้อนหอม)", "Ylang-Ylang (กระดังงา)"].join(", ");
+  const spotItems = Object.entries(NAN_PLACES).map(([k, v]) => `- **${k}** — ${isTh ? v.th : v.en}`);
+  const spotsList = spotItems.join("\n");
 
-  const intro = isTh
-    ? `สวัสดีเจ้า \`พวงมาลัย\` ยินดีต้อนรับสู่ข่วงปัญญาอโรมาล้านนาเจ้า 🌸`
-    : `🌸 Welcome to Lanna Aromatherapy Wisdom Hall, I'm \`Malai (พวงมาลัย)\`.`;
+  const flowerListEN = ["White Bauhinia", "Sunflower", "Red Silk Cotton", "Fragrant Gardenia", "Ylang-Ylang"];
+  const flowerListTH = ["เสี้ยวดอกขาว", "บัวตอง", "ทองกวาว", "พุดซ้อนหอม", "กระดังงา"];
+
   const outro = isTh
-    ? `มีอะไรให้พวงมาลัยช่วยเหลือเพิ่มเติมไหมเจ้า? 🙏✨`
-    : `Anything else I can help with? 🙏✨`;
+    ? "มีอะไรให้พวงมาลัยช่วยเหลือเพิ่มเติมไหมเจ้า? 🙏✨"
+    : "Anything else I can help with? 🙏✨";
+
+  // --- Wellness / Relaxation ---
+  if (/wellness|สุขภาพ|health|relax|ผ่อนคลาย|spa|massage|นวด|body|ร่างกาย|คลาย|stress|เครียด|เหนื่อย|lazy/.test(lower)) {
+    return isTh
+      ? `สวัสดีเจ้า \`พวงมาลัย\` ยินดีต้อนรับสู่ข่วงปัญญาอโรมาล้านนาเจ้า 🌸
+
+อยากผ่อนคลายเนาะเจ้า น่านมีโปรแกรมสุขภาพครบวงจรตั้งแต่สมุนไพรล้านนาไปจนถึงสปาธรรมชาติเลยเจ้า
+
+🧘 **กิจกรรมแนะนำ:**
+- ♨️ **สุมยาสมุนไพรบ่อสวก** — อบสมุนไพรล้านนาล้างพิษ
+- 🧖 **สปาขัดผิวเกลือสินเธาว์ดอกมะลิ** — ผ่อนคลายกล้ามเนื้อ
+- 🌲 **Forest Bathing ดอยภูคา** — เดินป่าบำบัดจิต
+- 🧘 **นั่งสมาธิซุ้มลีลาวดีวัดภูมินทร์** — สมาธิท่ามกลางธรรมชาติ
+- 🍵 **ชิมชาสมุนไพรเบญจเกสร** — ปรับสมดุลธาตุทั้ง 5
+
+💡 ช่วง Low Season (เม.ย.-ส.ค.) มีส่วนลด Flourish Pass สูงถึง 40% ด้วยเจ้า
+
+${outro}`
+      : `🌸 *Malai here.* Looking to unwind? Nan has complete wellness programs from Lanna herbs to natural spas.
+
+🧘 **Recommended:**
+- ♨️ **Bo Sok Herbal Steam** — Lanna herbal detox
+- 🧖 **Salt & Jasmine Body Scrub Spa** — muscle relaxation
+- 🌲 **Doi Phu Kha Forest Bathing** — mindful nature walk
+- 🧘 **Plumeria Tunnel Meditation** — meditate in nature
+- 🍵 **Five-Herb Tea Tasting** — balance all 5 elements
+
+💡 Low Season (Apr-Aug) offers Flourish Pass discounts up to 40%.
+
+${outro}`;
+  }
 
   // --- Trip planning ---
-  if (/trip|เที่ยว|travel|tour|itinerary|plan|place|ที่เที่ยว|สถานที่|spot/.test(lower)) {
-    return `${intro}
+  if (/trip|เที่ยว|travel|tour|itinerary|plan|place|ที่เที่ยว|สถานที่|spot|จุด/.test(lower)) {
+    return isTh
+      ? `สวัสดีเจ้า \`พวงมาลัย\` ยินดีต้อนรับสู่ข่วงปัญญาอโรมาล้านนาเจ้า 🌸
 
-**${isTh ? "คำตอบ" : "Answer"}:** "${msg}"
+น่านมีจุดท่องเที่ยวเชิงสุขภาพหลากหลายให้เลือกตามธาตุเจ้าเรือนเจ้า
 
-${isTh ? "น่านมีจุดท่องเที่ยวเชิงสุขภาพหลากหลายให้เลือกตามธาตุเจ้าเรือนเจ้า" : "Nan offers diverse wellness spots for every element."}
+📍 **จุดแนะนำในน่าน:**
+${spotsList}
 
-### ${isTh ? "📍 จุดแนะนำในน่าน" : "📍 Recommended Nan Spots"}
-${spots}
+🌺 **ดอกไม้เด่น:** ${flowerListTH.join(", ")}
 
-${isTh ? `🌺 **ดอกไม้เด่น:** ${sampleFlowers}` : `🌺 **Signature flowers:** ${sampleFlowers}`}
+💡 แนะนำให้เริ่มที่บ่อสวกเพื่อสุมยาสมุนไพรก่อน แล้วค่อยขึ้นดอยภูคาชมทุ่งดอกไม้บาน แล้วปิดท้ายที่วัดภูมินทร์ช่วงเย็นเจ้า
 
-${isTh
-  ? "💡 **คำแนะนำ:** แนะนำให้เริ่มที่บ่อสวกเพื่อสุมยาสมุนไพรก่อน แล้วค่อยขึ้นดอยภูคาชมทุ่งดอกไม้บาน แล้วปิดท้ายที่วัดภูมินทร์ช่วงเย็นเจ้า"
-  : "💡 **Tip:** Start at Bo Sok for herbal steam, then Doi Phu Kha for flower fields, finish at Wat Phumin at sunset."}
+${outro}`
+      : `🌸 *Malai here.* Nan offers diverse wellness spots for every element.
+
+📍 **Recommended spots:**
+${spotsList}
+
+🌺 **Signature flowers:** ${flowerListEN.join(", ")}
+
+💡 Start at Bo Sok for herbal steam, then Doi Phu Kha for flower fields, finish at Wat Phumin at sunset.
 
 ${outro}`;
   }
 
   // --- Flowers / Scents / Aromatherapy ---
   if (/flower|ดอกไม้|scent|กลิ่น|aroma|อโรมา|essential oil|น้ำมันหอม|herb|สมุนไพร/.test(lower)) {
-    return `${intro}
+    return isTh
+      ? `สวัสดีเจ้า \`พวงมาลัย\` ยินดีต้อนรับสู่ข่วงปัญญาอโรมาล้านนาเจ้า 🌸
 
-**${isTh ? "คำตอบ" : "Answer"}:** "${msg}"
+น่านมีพรรณไม้หอมกว่า 200 ชนิดที่เหมาะกับการทำอโรมาบำบัดเจ้า
 
-${isTh
-  ? "น่านมีพรรณไม้หอมกว่า 200 ชนิดที่เหมาะกับการทำอโรมาบำบัดเจ้า"
-  : "Nan has over 200 aromatic plant species perfect for aromatherapy."}
+🌼 **ดอกไม้หอมแนะนำ:**
+- **เสี้ยวดอกขาว** — กลิ่นหอมหวานอ่อนๆ ช่วยผ่อนคลาย คลายเครียด
+- **พุดซ้อนหอม** — กลิ่นหอมเข้มข้น ช่วยปรับอารมณ์ ลดวิตกกังวล
+- **กระดังงา** — กลิ่นหอมหวานอบอุ่น เหมาะกับการทำสมาธิ
+- **มะลิออร์แกนิกน่าน** — กลิ่นหอมละมุน ปลอบประโลมจิตใจ
+- **บัวหลวง** — กลิ่นหอมบริสุทธิ์ ใช้ในพิธีกรรมทางจิตวิญญาณ
 
-${isTh ? "🌼 **ดอกไม้หอมแนะนำ:**" : "🌼 **Recommended fragrant flowers:**"}
-${[isTh
-  ? "- **เสี้ยวดอกขาว** — กลิ่นหอมหวานอ่อนๆ ช่วยผ่อนคลาย คลายเครียด"
-  : "- **White Bauhinia** — sweet subtle scent, stress relief",
-  isTh
-  ? "- **พุดซ้อนหอม** — กลิ่นหอมเข้มข้น ช่วยปรับอารมณ์ ลดวิตกกังวล"
-  : "- **Fragrant Gardenia** — rich fragrance, mood balancing",
-  isTh
-  ? "- **กระดังงา** — กลิ่นหอมหวานอบอุ่น เหมาะกับการทำสมาธิ"
-  : "- **Ylang-Ylang** — warm sweet scent, meditation aid",
-  isTh
-  ? "- **มะลิออร์แกนิกน่าน** — กลิ่นหอมละมุน ปลอบประโลมจิตใจ"
-  : "- **Nan Organic Jasmine** — gentle fragrance, soul-calming",
-  isTh
-  ? "- **บัวหลวง** — กลิ่นหอมบริสุทธิ์ ใช้ในพิธีกรรมทางจิตวิญญาณ"
-  : "- **Lotus** — pure sacred scent, spiritual ceremonies"].join("\n")}
+💡 ลองซื้อน้ำมันหอมระเหยจากชุมชนบ้านน้ำเกี๋ยน หรือแวะร้าน Organic Herb ที่บ่อสวกเจ้า
 
-${isTh
-  ? "💡 **คำแนะนำ:** ลองซื้อน้ำมันหอมระเหยจากชุมชนบ้านน้ำเกี๋ยน หรือแวะร้าน Organic Herb ที่บ่อสวกเจ้า"
-  : "💡 **Tip:** Buy essential oils from Ban Nam Kien community or visit Organic Herb shop at Bo Sok."}
+${outro}`
+      : `🌸 *Malai here.* Nan has over 200 aromatic plant species perfect for aromatherapy.
 
-${outro}`;
-  }
+🌼 **Recommended fragrant flowers:**
+- **White Bauhinia** — sweet subtle scent, stress relief
+- **Fragrant Gardenia** — rich fragrance, mood balancing
+- **Ylang-Ylang** — warm sweet scent, meditation aid
+- **Nan Organic Jasmine** — gentle fragrance, soul-calming
+- **Lotus** — pure sacred scent, spiritual ceremonies
 
-  // --- Wellness / Health / Relaxation ---
-  if (/wellness|สุขภาพ|health|relax|ผ่อนคลาย|spa|massage|นวด|body|ร่างกาย/.test(lower)) {
-    return `${intro}
-
-**${isTh ? "คำตอบ" : "Answer"}:** "${msg}"
-
-${isTh
-  ? "น่านมีโปรแกรมสุขภาพครบวงจร ตั้งแต่สมุนไพรล้านนาไปจนถึงสปาธรรมชาติเจ้า"
-  : "Nan offers complete wellness programs from Lanna herbs to natural spas."}
-
-${isTh ? "🧘 **กิจกรรมแนะนำ:**" : "🧘 **Recommended activities:**"}
-${isTh
-  ? `- ♨️ **สุมยาสมุนไพรบ่อสวก** — อบสมุนไพรล้านนาล้างพิษ
-- 🧖 **สปาขัดผิวเกลือสินเธาว์ดอกมะลิ** — ผ่อนคลายกล้ามเนื้อ
-- 🌲 **Forest Bathing ดอยภูคา** — เดินป่าบำบัดจิต
-- 🧘 **นั่งสมาธิซุ้มลีลาวดีวัดภูมินทร์** — สมาธิท่ามกลางธรรมชาติ
-- 🍵 **ชิมชาสมุนไพรเบญจเกสร** — ปรับสมดุลธาตุทั้ง 5`
-  : `- ♨️ **Bo Sok Herbal Steam** — Lanna herbal detox
-- 🧖 **Salt & Jasmine Body Scrub Spa** — muscle relaxation
-- 🌲 **Doi Phu Kha Forest Bathing** — mindful nature walk
-- 🧘 **Plumeria Tunnel Meditation** — meditate in nature
-- 🍵 **Five-Herb Tea Tasting** — balance all 5 elements`}
-
-${isTh
-  ? "💡 **คำแนะนำ:** ช่วง Low Season (เม.ย.-ส.ค.) มีส่วนลด Flourish Pass สูงถึง 40% เจ้า"
-  : "💡 **Tip:** Low Season (Apr-Aug) offers Flourish Pass discounts up to 40%."}
+💡 Buy essential oils from Ban Nam Kien community or visit Organic Herb shop at Bo Sok.
 
 ${outro}`;
   }
 
   // --- Elements / Zodiac ---
   if (/ธาตุ|element|zodiac|ดวง|horoscope|ราศี|sign/.test(lower)) {
-    return `${intro}
+    return isTh
+      ? `สวัสดีเจ้า \`พวงมาลัย\` ยินดีต้อนรับสู่ข่วงปัญญาอโรมาล้านนาเจ้า 🌸
 
-**${isTh ? "คำตอบ" : "Answer"}:** "${msg}"
+ธาตุเจ้าเรือนทั้ง 4 (ดิน น้ำ ลม ไฟ) เชื่อมโยงกับดอกไม้และจุดท่องเที่ยวในน่านเจ้า
 
-${isTh
-  ? "ธาตุเจ้าเรือนทั้ง 4 (ดิน น้ำ ลม ไฟ) เชื่อมโยงกับดอกไม้และจุดท่องเที่ยวในน่านเจ้า"
-  : "The 4 elements (Earth, Water, Wind, Fire) connect to Nan's flowers and spots."}
-
-${isTh
-  ? `### 🔥🔥🔥🔥 ธาตุทั้ง 4 กับการบำบัด
+🔥🔥🔥🔥 **ธาตุทั้ง 4 กับการบำบัด**
 | **ธาตุ** | **ดอกไม้คู่ธาตุ** | **จุดแนะนำ** |
 |----------|-----------------|-------------|
-| 🌍 **ดิน** (Earth) | มะลิ, ดาวเรือง | บ่อสวก — พอกดินเผา |
-| 🌊 **น้ำ** (Water) | บัวหลวง, พุดซ้อน | วัดภูมินทร์, สะปัน |
-| 🌬️ **ลม** (Wind) | เสี้ยวดอกขาว, กระดังงา | ดอยภูคา — ลมเย็นยอดดอย |
-| 🔥 **ไฟ** (Fire) | ทองกวาว, บานบุรี | พระธาตุแช่แห้ง — จุดธูปเทียน`
-  : `### 🔥🔥🔥🔥 Elements & Remedies
+| 🌍 **ดิน (Earth)** | มะลิ, ดาวเรือง | บ่อสวก — พอกดินเผา |
+| 🌊 **น้ำ (Water)** | บัวหลวง, พุดซ้อน | วัดภูมินทร์, สะปัน |
+| 🌬️ **ลม (Wind)** | เสี้ยวดอกขาว, กระดังงา | ดอยภูคา — ลมเย็นยอดดอย |
+| 🔥 **ไฟ (Fire)** | ทองกวาว, บานบุรี | พระธาตุแช่แห้ง — จุดธูปเทียน |
+
+💡 ลองทำ Quiz Zodiac ในเว็บเพื่อค้นหาธาตุเจ้าเรือนของคุณเจ้า
+
+${outro}`
+      : `🌸 *Malai here.* The 4 elements (Earth, Water, Wind, Fire) connect to Nan's flowers and spots.
+
+🔥🔥🔥🔥 **Elements & Remedies**
 | **Element** | **Flower** | **Recommended Spot** |
 |-------------|-----------|---------------------|
 | 🌍 **Earth** | Jasmine, Marigold | Bo Sok — clay compress |
 | 🌊 **Water** | Lotus, Gardenia | Wat Phumin, Saparn |
 | 🌬️ **Wind** | White Bauhinia, Ylang-Ylang | Doi Phu Kha — mountain breeze |
-| 🔥 **Fire** | Red Silk Cotton, Bougainvillea | Wat Chae Haeng — candle lighting`}
+| 🔥 **Fire** | Red Silk Cotton, Bougainvillea | Wat Chae Haeng — candle lighting |
 
-${isTh
-  ? "💡 **คำแนะนำ:** ลองทำ Quiz Zodiac ในเว็บเพื่อค้นหาธาตุเจ้าเรือนของคุณเจ้า"
-  : "💡 **Tip:** Take the Zodiac Quiz on this site to discover your element."}
+💡 Take the Zodiac Quiz on this site to discover your element.
 
 ${outro}`;
   }
 
   // --- General ---
-  return `${intro}
-
-**${isTh ? "คำตอบ" : "Answer"}:** "${msg}"
-
-${isTh
-  ? `ข้าเจ้าขอเสนอข้อมูลเกี่ยวกับน่านดังนี้เจ้า 🌸
+  return isTh
+    ? `สวัสดีเจ้า \`พวงมาลัย\` ยินดีต้อนรับสู่ข่วงปัญญาอโรมาล้านนาเจ้า 🌸
 
 📍 **แหล่งท่องเที่ยวเด่น:**
-${spots}
+${spotsList}
 
-🌺 **ดอกไม้ประจำถิ่น:**
-${sampleFlowers}
+🌺 **ดอกไม้ประจำถิ่น:** ${flowerListTH.join(", ")}
 
-💡 **คำแนะนำ:** พวงมาลัยสามารถช่วยแนะนำทริป ให้ข้อมูลดอกไม้ แนะนำกิจกรรมสุขภาพ หรือวิเคราะห์ธาตุเจ้าเรือนได้เจ้า`
-  : `Let me share some Nan highlights for you 🌸
+💡 พวงมาลัยสามารถช่วยแนะนำทริป ให้ข้อมูลดอกไม้ แนะนำกิจกรรมสุขภาพ หรือวิเคราะห์ธาตุเจ้าเรือนได้เจ้า
+
+${outro}`
+    : `🌸 *Malai here.*
 
 📍 **Top spots:**
-${spots}
+${spotsList}
 
-🌺 **Local flowers:**
-${sampleFlowers}
+🌺 **Local flowers:** ${flowerListEN.join(", ")}
 
-💡 **Tip:** I can help plan a trip, recommend flowers, suggest wellness activities, or analyze your element.`}
+💡 I can help plan a trip, recommend flowers, suggest wellness activities, or analyze your element.
 
 ${outro}`;
 }
@@ -333,7 +332,7 @@ app.post("/api/wellness-chat", async (req, res) => {
   const lang = detectLang(message || "");
   const conversationHistory = history ? history.map((h: any) => `${h.sender === "user" ? "User" : "Therapist"}: ${h.text}`).join("\n") : "";
 
-  const prompt = `You are 'พวงมาลัย' (Malai), AI Scent Therapist of Nan. User asks: "${message}". History: ${conversationHistory}. Respond gently in ${lang === "th" ? "Thai with 'เจ้า' polite form" : "English"}. Relate to Nan flowers, elements, wellness spots. Keep short, comforting.${lang === "th" ? " Use some English too." : " Use some Thai too."}`;
+  const prompt = `You are 'พวงมาลัย' (Malai), AI Scent Therapist of Nan. User asks: "${message}". History: ${conversationHistory}. Respond gently in ${lang === "th" ? "Thai with 'เจ้า' polite form" : "English"}. Relate to Nan flowers, elements, wellness spots. Keep short, comforting. DO NOT repeat the user's question. Start directly with your answer. Use Markdown formatting for readability.${lang === "th" ? " Use some English too." : " Use some Thai too."}`;
 
   const fallback = generateChatFallback(message, lang);
 
