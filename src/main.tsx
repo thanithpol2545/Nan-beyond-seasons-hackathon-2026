@@ -1,5 +1,5 @@
 import "./styles.css";
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { Leaf, Globe } from "lucide-react";
 import { LanguageProvider, useLanguage } from "./i18n/LanguageContext";
@@ -7,6 +7,7 @@ import ARSpotMap from "./App";
 import ZodiacQuiz from "./ZodiacQuiz";
 import ScentMoodJournal from "./FlowerDirectory";
 import BloomingCalendar from "./EcomBoutique";
+const AIAssistant = React.lazy(() => import("./BloomingCalendar"));
 
 const SECTION_LINKS = ["spots", "quiz", "journal", "calendar"] as const;
 
@@ -92,6 +93,7 @@ function App() {
           {t("footer.text")}
         </p>
       </footer>
+      <Suspense fallback={null}><AIAssistant /></Suspense>
     </div>
   );
 }
