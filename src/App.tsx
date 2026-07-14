@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MapPin, Camera, Star, Sliders, Info, ShieldCheck } from "lucide-react";
+import { useLanguage } from "./i18n/LanguageContext";
 
 interface Spot {
   id: string;
@@ -66,17 +67,18 @@ const NAN_SPOTS: Spot[] = [
 ];
 
 const FILTERS = [
-  { id: "f-normal", name: "Original Scent", css: "" },
-  { id: "f-vintage", name: "Lanna Nostalgia (ส้มอบอุ่น)", css: "sepia(40%) contrast(110%) saturate(120%) hue-rotate(10deg)" },
-  { id: "f-cool", name: "Forest Mist (ฟ้าน้ำหมอก)", css: "contrast(95%) brightness(105%) saturate(80%) hue-rotate(190deg) sepia(10%)" },
-  { id: "f-gold", name: "Golden Sunset (ทองอร่าม)", css: "brightness(110%) saturate(140%) sepia(30%) hue-rotate(-15deg)" },
-  { id: "f-noir", name: "Earthy Minimal (ดรามาติกขาวดำ)", css: "grayscale(100%) contrast(130%)" }
+  { id: "f-normal", nameKey: "filter.f-normal", css: "" },
+  { id: "f-vintage", nameKey: "filter.f-vintage", css: "sepia(40%) contrast(110%) saturate(120%) hue-rotate(10deg)" },
+  { id: "f-cool", nameKey: "filter.f-cool", css: "contrast(95%) brightness(105%) saturate(80%) hue-rotate(190deg) sepia(10%)" },
+  { id: "f-gold", nameKey: "filter.f-gold", css: "brightness(110%) saturate(140%) sepia(30%) hue-rotate(-15deg)" },
+  { id: "f-noir", nameKey: "filter.f-noir", css: "grayscale(100%) contrast(130%)" }
 ];
 
 export default function ARSpotMap() {
   const [selectedSpot, setSelectedSpot] = useState<Spot>(NAN_SPOTS[0]);
   const [activeFilter, setActiveFilter] = useState(FILTERS[0]);
   const [arActivated, setArActivated] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <div className="space-y-8">
@@ -84,14 +86,14 @@ export default function ARSpotMap() {
       <div className="border border-[#2a2e28] rounded-3xl bg-[#161a15] p-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <h3 className="font-serif italic text-2xl text-[#f2f4f1]">Photography & Scent Spots of Nan</h3>
+            <h3 className="font-serif italic text-2xl text-[#f2f4f1]">{t("spots.editorial.title")}</h3>
             <p className="text-xs text-[#819177] mt-1 leading-relaxed">
-              แผนที่จุดถ่ายภาพสร้างสรรค์ผสานกลิ่นสุคนธบำบัด ออกแบบสำหรับนักเดินทางที่ชื่นชอบองค์ประกอบศิลป์ แสงพรีเมียม และประเทืองสุขจิตวิญญาณ
+              {t("spots.editorial.desc")}
             </p>
           </div>
           <div className="flex items-center gap-2 bg-[#0d0f0c] px-4 py-2 rounded-full border border-[#2a2e28] text-xs">
             <ShieldCheck className="h-4 w-4 text-[#c9b097]" />
-            <span className="text-[#819177]">TAT API Gps Certified 108</span>
+            <span className="text-[#819177]">{t("spots.editorial.badge")}</span>
           </div>
         </div>
       </div>
@@ -101,7 +103,7 @@ export default function ARSpotMap() {
         <div className="lg:col-span-5 space-y-4">
           <h4 className="font-display font-semibold text-xs tracking-wider uppercase text-[#819177] flex items-center gap-1.5">
             <Sliders className="h-4 w-4 text-[#c9b097]" />
-            <span>เลือกจุดแลนด์มาร์คเพื่อวิเคราะห์กลิ่น</span>
+            <span>{t("spots.panel.title")}</span>
           </h4>
 
           <div className="space-y-2">
@@ -136,16 +138,16 @@ export default function ARSpotMap() {
 
           {/* Location Detailed Stats Card */}
           <div className="bg-[#161a15] rounded-3xl p-5 border border-[#2a2e28] space-y-3">
-            <h6 className="text-xs font-display font-semibold text-[#f2f4f1]">มิติด้านแสงและพฤกษภูมิสถาปัตย์</h6>
+            <h6 className="text-xs font-display font-semibold text-[#f2f4f1]">{t("spots.stats.title")}</h6>
             <p className="text-xs text-[#819177] leading-relaxed">{selectedSpot.description}</p>
             
             <div className="pt-3 border-t border-[#2a2e28] grid grid-cols-2 gap-4 text-[11px]">
               <div>
-                <span className="text-[#819177] block">ช่วงเวลาแสงสีทอง (Best Light)</span>
+                <span className="text-[#819177] block">{t("spots.stats.bestTime")}</span>
                 <span className="text-[#f2f4f1] font-medium mt-0.5 block">{selectedSpot.bestTime}</span>
               </div>
               <div>
-                <span className="text-[#819177] block">พิกัดทางภูมิศาสตร์ (GPS)</span>
+                <span className="text-[#819177] block">{t("spots.stats.gps")}</span>
                 <span className="text-[#f2f4f1] font-mono mt-0.5 block">{selectedSpot.lat.toFixed(4)}, {selectedSpot.lng.toFixed(4)}</span>
               </div>
             </div>
@@ -157,10 +159,10 @@ export default function ARSpotMap() {
           <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-display font-semibold text-[#f2f4f1] flex items-center gap-2">
               <Camera className="h-4 w-4 text-[#c9b097]" />
-              กล้องจำลองฟิลเตอร์อโรมา (AR Scent-Filter Cam)
+              {t("spots.camera.title")}
             </span>
             <div className="text-[10px] bg-[#0d0f0c] text-[#819177] px-3 py-1 rounded-full border border-[#2a2e28] font-mono">
-              REC 1080P // LN_108
+              {t("spots.camera.badge")}
             </div>
           </div>
 
@@ -200,11 +202,11 @@ export default function ARSpotMap() {
             {/* Scent Info Watermark (looks premium on Instagram) */}
             <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md border border-white/10 rounded-xl p-3 text-white flex items-center justify-between">
               <div>
-                <span className="text-[9px] font-mono text-[#c9b097] uppercase tracking-wider">Nan Flourish Scent-Map</span>
+                <span className="text-[9px] font-mono text-[#c9b097] uppercase tracking-wider">{t("spots.camera.watermark")}</span>
                 <h6 className="text-[11px] font-display font-bold truncate max-w-[200px] sm:max-w-xs">{selectedSpot.name}</h6>
               </div>
               <div className="text-right shrink-0">
-                <span className="text-[9px] text-[#819177] block font-mono">SCENT MATCH</span>
+                <span className="text-[9px] text-[#819177] block font-mono">{t("spots.camera.scentMatch")}</span>
                 <span className="text-[10px] font-medium text-[#c9b097]">{selectedSpot.scent.split(" (")[0]}</span>
               </div>
             </div>
@@ -212,14 +214,14 @@ export default function ARSpotMap() {
             {/* Hover overlay hint */}
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none text-white text-xs gap-2">
               <Camera className="h-4 w-4 animate-bounce" />
-              <span>กดปุ่มด้านล่างเพื่อสลับฟิลเตอร์อัพลง IG / TikTok</span>
+              <span>{t("spots.camera.hover")}</span>
             </div>
           </div>
 
           {/* Filter selector row */}
           <div className="mt-5 space-y-4">
             <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-[#819177] block">
-              เลือกโทนสีอารมณ์บำบัด (Scent Filter Preset)
+              {t("spots.filter.title")}
             </span>
             <div className="grid grid-cols-5 gap-2">
               {FILTERS.map((f) => (
@@ -235,7 +237,7 @@ export default function ARSpotMap() {
                       : "bg-[#0d0f0c] border-[#2a2e28] text-[#819177] hover:border-[#819177]/30"
                   }`}
                 >
-                  {f.name.split(" (")[0]}
+                  {t(f.nameKey)}
                 </button>
               ))}
             </div>
@@ -243,7 +245,7 @@ export default function ARSpotMap() {
             {arActivated && (
               <div className="bg-[#0d0f0c] rounded-xl p-3 border border-emerald-900/30 text-[10px] text-emerald-400 flex items-center gap-2">
                 <Info className="h-4 w-4 text-emerald-400 shrink-0" />
-                <span>เปิดใช้งานฟิลเตอร์เสมือนจริงเรียบร้อยแล้วเจ้า! ถ่ายหน้าจอเพื่อเก็บภาพองค์ประกอบแบบ Minimalist ได้เลยเจ้า 📸</span>
+                <span>{t("spots.filter.success")}</span>
               </div>
             )}
           </div>

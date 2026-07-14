@@ -1,32 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { BookOpen, Smile, Leaf, Info, Trash2 } from "lucide-react";
+import { useLanguage } from "./i18n/LanguageContext";
 import { JournalLog } from "./types";
 import { FLOWERS_DATA } from "./data/nanDataset";
 
-// Helper to recommend floral remedies based on logged mood
 const getMoodFlowerMatches = (mood: string): string[] => {
   switch (mood) {
     case "stressed":
-      return ["FL002", "FL012"]; // Jasmine, Ylang-Ylang
+      return ["FL002", "FL012"];
     case "sad":
-      return ["FL013", "FL014"]; // Rose, Flame of the Forest
+      return ["FL013", "FL014"];
     case "tired":
-      return ["FL018", "FL001"]; // Phlai, Orchid Tree
+      return ["FL018", "FL001"];
     case "anxious":
-      return ["FL003", "FL002"]; // Lotus, Jasmine
+      return ["FL003", "FL002"];
     case "peaceful":
-      return ["FL003", "FL010"]; // Lotus, Plumeria
+      return ["FL003", "FL010"];
     default:
       return ["FL002"];
   }
+};
+
+const MOOD_ICONS: Record<string, string> = {
+  stressed: "🤯",
+  sad: "😢",
+  tired: "🥱",
+  anxious: "😰",
+  peaceful: "🧘"
 };
 
 export default function ScentMoodJournal() {
   const [logs, setLogs] = useState<JournalLog[]>([]);
   const [mood, setMood] = useState<"stressed" | "sad" | "tired" | "anxious" | "peaceful">("peaceful");
   const [note, setNote] = useState("");
+  const { t } = useLanguage();
 
-  // Load logs on mount
   useEffect(() => {
     const saved = localStorage.getItem("nan_scent_mood_logs");
     if (saved) {
@@ -36,7 +44,6 @@ export default function ScentMoodJournal() {
         console.error(e);
       }
     } else {
-      // Seed initial logs to look premium and rich out-of-the-box
       const seedLogs: JournalLog[] = [
         {
           id: "seed-1",
@@ -87,6 +94,22 @@ export default function ScentMoodJournal() {
     saveLogs(filtered);
   };
 
+  const moodLabels: Record<string, string> = {
+    stressed: t("journal.mood.stressed"),
+    sad: t("journal.mood.sad"),
+    tired: t("journal.mood.tired"),
+    anxious: t("journal.mood.anxious"),
+    peaceful: t("journal.mood.peaceful")
+  };
+
+  const moodOptions = [
+    { value: "stressed", labelKey: "journal.mood.stressed", icon: "🤯" },
+    { value: "sad", labelKey: "journal.mood.sad", icon: "😢" },
+    { value: "tired", labelKey: "journal.mood.tired", icon: "🥱" },
+    { value: "anxious", labelKey: "journal.mood.anxious", icon: "😰" },
+    { value: "peaceful", labelKey: "journal.mood.peaceful", icon: "🧘" }
+  ];
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
       {/* Left Column: Form */}
@@ -94,7 +117,7 @@ export default function ScentMoodJournal() {
         <div className="flex items-center gap-2 mb-6">
           <BookOpen className="h-5 w-5 text-[#c9b097]" />
           <h3 className="font-display font-semibold text-[#f2f4f1] tracking-wide text-base">
-            บันทึกสุคนธอารมณ์ยามเช้า (Scent Mood Journal)
+            {t("journal.title")}
           </h3>
         </div>
 
@@ -102,16 +125,10 @@ export default function ScentMoodJournal() {
           {/* Mood Selector Grid */}
           <div>
             <label className="block text-[11px] font-display font-semibold uppercase tracking-wider text-[#819177] mb-3">
-              อารมณ์ของคุณวันนี้ (Daily Mood)
+              {t("journal.moodLabel")}
             </label>
             <div className="grid grid-cols-5 gap-2">
-              {[
-                { value: "stressed", label: "ตึงเครียด", icon: "🤯" },
-                { value: "sad", label: "เศร้าหมอง", icon: "😢" },
-                { value: "tired", label: "เหนื่อยล้า", icon: "🥱" },
-                { value: "anxious", label: "วิตกกังวล", icon: "😰" },
-                { value: "peaceful", label: "สงบใจ", icon: "🧘" }
-              ].map((m) => (
+              {moodOptions.map((m) => (
                 <button
                   key={m.value}
                   type="button"
@@ -123,7 +140,7 @@ export default function ScentMoodJournal() {
                   }`}
                 >
                   <span className="text-xl mb-1">{m.icon}</span>
-                  <span className="text-[10px] font-medium leading-none">{m.label}</span>
+                  <span className="text-[10px] font-medium leading-none">{t(m.labelKey)}</span>
                 </button>
               ))}
             </div>
@@ -132,18 +149,18 @@ export default function ScentMoodJournal() {
           {/* Notes Input */}
           <div>
             <label className="block text-[11px] font-display font-semibold uppercase tracking-wider text-[#819177] mb-2">
-              บอกเล่าความในใจสั้นๆ (Daily Reflections)
+              {t("journal.noteLabel")}
             </label>
             <textarea
               value={note}
               onChange={(e) => setNote(e.target.value)}
-              placeholder="เช้านี้อากาศเป็นอย่างไร อารมณ์และความคิดของคุณมีเรื่องใดรบกวนหรือไม่..."
+              placeholder={t("journal.notePlaceholder")}
               rows={4}
               maxLength={250}
               className="w-full bg-[#0d0f0c] border border-[#2a2e28] rounded-2xl p-4 text-xs text-[#f2f4f1] placeholder-[#819177]/60 focus:outline-hidden focus:border-[#c9b097] resize-none"
             />
             <div className="text-right text-[10px] text-[#819177] mt-1">
-              {note.length}/250 ตัวอักษร
+              {t("journal.charCount", { count: note.length })}
             </div>
           </div>
 
@@ -151,10 +168,9 @@ export default function ScentMoodJournal() {
           <div className="bg-[#0d0f0c]/60 rounded-2xl p-4 border border-[#2a2e28] text-[11px] text-[#819177] flex gap-3">
             <Info className="h-4 w-4 text-[#c9b097] shrink-0 mt-0.5" />
             <div>
-              <span className="text-[#f2f4f1] font-medium">คำแนะนำสุคนธบำบัดล้านนา:</span>
+              <span className="text-[#f2f4f1] font-medium">{t("journal.info.title")}</span>
               <p className="mt-1 leading-relaxed">
-                การจดบันทึกอารมณ์ร่วมกับการจับคู่กลิ่นบำบัด ช่วยส่งเสริมการทำสมาธิและการตื่นรู้
-                ระบบจะวิเคราะห์เพื่อคัดสรรดอกไม้น่านและกิจกรรมแช่ตัวพอกสมุนไพรที่เหมาะสมกับใจคุณ
+                {t("journal.info.desc")}
               </p>
             </div>
           </div>
@@ -164,7 +180,7 @@ export default function ScentMoodJournal() {
             disabled={!note.trim()}
             className="w-full py-3 rounded-full bg-[#c9b097] text-[#0d0f0c] font-display font-semibold text-xs tracking-wider uppercase hover:bg-[#b09a82] active:scale-98 transition-all disabled:opacity-40"
           >
-            บันทึกสุคนธอารมณ์
+            {t("journal.submit")}
           </button>
         </form>
       </div>
@@ -173,13 +189,13 @@ export default function ScentMoodJournal() {
       <div className="lg:col-span-7 space-y-4">
         <h4 className="font-display font-semibold text-sm text-[#f2f4f1] tracking-wider uppercase flex items-center gap-2 mb-2">
           <Smile className="h-4 w-4 text-[#819177]" />
-          <span>บันทึกความตื่นรู้ย้อนหลัง ({logs.length})</span>
+          <span>{t("journal.logsTitle", { count: logs.length })}</span>
         </h4>
 
         {logs.length === 0 ? (
           <div className="bg-[#161a15] rounded-3xl p-12 border border-[#2a2e28] text-center text-[#819177]">
             <Leaf className="h-10 w-10 text-[#2a2e28] mx-auto mb-3" />
-            <p className="text-xs">ยังไม่มีบันทึกอารมณ์ในขณะนี้ เริ่มบันทึกเพื่อดูแผนภูมิบำบัดของคุณ</p>
+            <p className="text-xs">{t("journal.empty")}</p>
           </div>
         ) : (
           <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2 scrollbar-thin">
@@ -208,17 +224,13 @@ export default function ScentMoodJournal() {
                     <div className="flex items-center gap-2 shrink-0">
                       <span className="text-xs px-2.5 py-1 rounded-full bg-[#0d0f0c] text-[#f2f4f1] border border-[#2a2e28] font-medium flex items-center gap-1.5 capitalize">
                         <span>
-                          {l.mood === "stressed" && "🤯 เครียด"}
-                          {l.mood === "sad" && "😢 เศร้า"}
-                          {l.mood === "tired" && "🥱 เหนื่อย"}
-                          {l.mood === "anxious" && "😰 กังวล"}
-                          {l.mood === "peaceful" && "🧘 สงบ"}
+                          {MOOD_ICONS[l.mood]} {moodLabels[l.mood] || l.mood}
                         </span>
                       </span>
                       <button
                         onClick={() => deleteLog(l.id)}
                         className="p-1.5 rounded-md hover:bg-[#0d0f0c] text-[#819177] hover:text-red-400 transition-colors"
-                        title="ลบข้อมูล"
+                        title={t("journal.delete")}
                       >
                         <Trash2 className="h-3.5 w-3.5" />
                       </button>
@@ -229,7 +241,7 @@ export default function ScentMoodJournal() {
                   <div className="pt-3 border-t border-[#2a2e28]/60 flex flex-wrap items-center gap-3">
                     <span className="text-[10px] font-display font-medium text-[#819177] uppercase tracking-wider flex items-center gap-1">
                       <Leaf className="h-3 w-3 text-[#c9b097]" />
-                      พรรณพฤกษาบำบัดแนะนำ:
+                      {t("journal.recommend")}
                     </span>
                     <div className="flex flex-wrap gap-1.5">
                       {matchedFlowers.map((f) => (

@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "title": "Nan Flourish — Thai/EN Translation Dictionary (DIC)",
+    "description": "Maps code functions/buttons/UI elements to their Thai and English text",
+    "updated": "2026-07-14"
+  },
+  "sections": {
+    "header_nav": {
+      "description": "ส่วนหัวเว็บ / Website Header Navigation",
+      "items": {
+        "header.title": { "file": "src/main.tsx:32", "type": "brand_title", "th": "น่านฟลอริช", "en": "Nan Flourish" },
+        "nav.spots": { "file": "src/main.tsx:38", "type": "nav_link", "th": "แผนที่จุดถ่ายภาพ", "en": "AR Spot Map" },
+        "nav.quiz": { "file": "src/main.tsx:38", "type": "nav_link", "th": "ดวงชะตาธาตุ", "en": "Zodiac Quiz" },
+        "nav.journal": { "file": "src/main.tsx:38", "type": "nav_link", "th": "บันทึกอารมณ์", "en": "Scent Journal" },
+        "nav.calendar": { "file": "src/main.tsx:38", "type": "nav_link", "th": "ปฏิทินพฤกษา", "en": "Blooming Calendar" },
+        "nav.chat": { "file": "src/main.tsx:38", "type": "nav_link", "th": "มาลัย AI", "en": "Malai AI" },
+        "header.lang": { "file": "src/main.tsx:45-55", "type": "toggle_button", "th": "EN", "en": "TH" },
+        "header.element": { "file": "src/main.tsx:58", "type": "status_label", "th": "ธาตุ", "en": "Element" },
+        "header.cart": { "file": "src/main.tsx:60", "type": "status_label", "th": "ตะกร้า", "en": "Cart" }
+      }
+    },
+    "section_headers": {
+      "description": "หัวข้อแต่ละ Section / Section Headings",
+      "items": {
+        "section.spots": { "file": "src/main.tsx:65-68", "type": "section_badge", "th": "SECTION 01", "en": "SECTION 01" },
+        "section.spots.title": { "file": "src/main.tsx:65-68", "type": "section_heading", "th": "จุดถ่ายภาพและสุคนธบำบัดน่าน", "en": "Photography & Scent Spots" },
+        "section.quiz": { "file": "src/main.tsx:71-74", "type": "section_badge", "th": "SECTION 02", "en": "SECTION 02" },
+        "section.quiz.title": { "file": "src/main.tsx:71-74", "type": "section_heading", "th": "ดวงชะตาธาตุพฤกษา", "en": "Elemental Zodiac Quiz" },
+        "section.journal": { "file": "src/main.tsx:77-80", "type": "section_badge", "th": "SECTION 03", "en": "SECTION 03" },
+        "section.journal.title": { "file": "src/main.tsx:77-80", "type": "section_heading", "th": "บันทึกสุคนธอารมณ์", "en": "Scent Mood Journal" },
+        "section.calendar": { "file": "src/main.tsx:83-86", "type": "section_badge", "th": "SECTION 04", "en": "SECTION 04" },
+        "section.calendar.title": { "file": "src/main.tsx:83-86", "type": "section_heading", "th": "ปฏิทินพฤกษาบานและแผนเดินทาง", "en": "Blooming Calendar & Itinerary" },
+        "section.chat": { "file": "src/main.tsx:89-92", "type": "section_badge", "th": "SECTION 05", "en": "SECTION 05" },
+        "section.chat.title": { "file": "src/main.tsx:89-92", "type": "section_heading", "th": "มาลัย — นักบำบัดสุคนธปัญญาประดิษฐ์", "en": "Malai — AI Scent Therapist" }
+      }
+    },
+    "footer": {
+      "description": "ส่วนท้ายเว็บ / Footer",
+      "items": {
+        "footer.text": { "file": "src/main.tsx:97", "type": "footer_text", "th": "น่านฟลอริช © 2026 — ขับเคลื่อนโดย Typhoon AI และ Nan Dataset v1.0", "en": "Nan Flourish © 2026 — Powered by Typhoon AI & Nan Dataset v1.0" }
+      }
+    },
+    "ar_spot_map": {
+      "description": "แผนที่จุดถ่ายภาพ / AR Spot Map (App.tsx)",
+      "items": {
+        "spots.editorial.title": { "file": "src/App.tsx:87", "type": "heading", "th": "จุดถ่ายภาพและสุคนธบำบัดน่าน", "en": "Photography & Scent Spots of Nan" },
+        "spots.editorial.desc": { "file": "src/App.tsx:88-89", "type": "description", "th": "แผนที่จุดถ่ายภาพสร้างสรรค์ผสานกลิ่นสุคนธบำบัด...", "en": "A curated map blending creative photography spots with aromatherapy wellness..." },
+        "spots.editorial.badge": { "file": "src/App.tsx:94", "type": "badge", "th": "TAT API Gps Certified 108", "en": "TAT API Gps Certified 108" },
+        "spots.panel.title": { "file": "src/App.tsx:103-104", "type": "panel_heading", "th": "เลือกจุดแลนด์มาร์คเพื่อวิเคราะห์กลิ่น", "en": "Select Landmark for Scent Analysis" },
+        "spots.stats.title": { "file": "src/App.tsx:139", "type": "subheading", "th": "มิติด้านแสงและพฤกษภูมิสถาปัตย์", "en": "Light & Botanical Architecture" },
+        "spots.stats.bestTime": { "file": "src/App.tsx:144", "type": "label", "th": "ช่วงเวลาแสงสีทอง (Best Light)", "en": "Best Light Time Slot" },
+        "spots.stats.gps": { "file": "src/App.tsx:148", "type": "label", "th": "พิกัดทางภูมิศาสตร์ (GPS)", "en": "GPS Coordinates" },
+        "spots.camera.title": { "file": "src/App.tsx:159-160", "type": "panel_heading", "th": "กล้องจำลองฟิลเตอร์อโรมา (AR Scent-Filter Cam)", "en": "AR Scent-Filter Camera" },
+        "spots.camera.badge": { "file": "src/App.tsx:162-163", "type": "status_badge", "th": "REC 1080P // LN_108", "en": "REC 1080P // LN_108" },
+        "spots.camera.watermark": { "file": "src/App.tsx:203", "type": "watermark", "th": "น่านฟลอริช Scent-Map", "en": "Nan Flourish Scent-Map" },
+        "spots.camera.scentMatch": { "file": "src/App.tsx:207", "type": "label", "th": "SCENT MATCH", "en": "SCENT MATCH" },
+        "spots.camera.hover": { "file": "src/App.tsx:215", "type": "hover_hint", "th": "กดปุ่มด้านล่างเพื่อสลับฟิลเตอร์อัพลง IG / TikTok", "en": "Press button below to switch filters & post to IG / TikTok" },
+        "spots.filter.title": { "file": "src/App.tsx:222", "type": "section_label", "th": "เลือกโทนสีอารมณ์บำบัด (Scent Filter Preset)", "en": "Scent Filter Preset" },
+        "spots.filter.success": { "file": "src/App.tsx:246", "type": "success_message", "th": "เปิดใช้งานฟิลเตอร์เสมือนจริงเรียบร้อยแล้วเจ้า! ถ่ายหน้าจอเพื่อเก็บภาพองค์ประกอบแบบ Minimalist ได้เลยเจ้า 📸", "en": "AR filter activated! Screenshot to capture your minimalist composition 📸" }
+      }
+    },
+    "filters": {
+      "description": "ปุ่มฟิลเตอร์ภาพ / AR Camera Filter Buttons",
+      "items": {
+        "filter.f-normal": { "file": "src/App.tsx:69", "type": "filter_button", "th": "Original Scent", "en": "Original Scent" },
+        "filter.f-vintage": { "file": "src/App.tsx:70", "type": "filter_button", "th": "Lanna Nostalgia", "en": "Lanna Nostalgia" },
+        "filter.f-cool": { "file": "src/App.tsx:71", "type": "filter_button", "th": "Forest Mist", "en": "Forest Mist" },
+        "filter.f-gold": { "file": "src/App.tsx:72", "type": "filter_button", "th": "Golden Sunset", "en": "Golden Sunset" },
+        "filter.f-noir": { "file": "src/App.tsx:73", "type": "filter_button", "th": "Earthy Minimal", "en": "Earthy Minimal" }
+      }
+    },
+    "malai_chat": {
+      "description": "แชทบอทพวงมาลัย / Malai AI Chat (BloomingCalendar.tsx)",
+      "items": {
+        "chat.toggle": { "file": "src/BloomingCalendar.tsx:83", "type": "floating_button", "th": "คุยกับพวงมาลัย AI", "en": "Chat with Malai AI" },
+        "chat.header.title": { "file": "src/BloomingCalendar.tsx:98", "type": "drawer_header", "th": "พวงมาลัย (MALAI AI)", "en": "Malai (MALAI AI)" },
+        "chat.header.subtitle": { "file": "src/BloomingCalendar.tsx:102", "type": "drawer_subtitle", "th": "ที่ปรึกษาสุคนธบำบัดล้านนา", "en": "Lanna Aromatherapy Guide" },
+        "chat.clear.tooltip": { "file": "src/BloomingCalendar.tsx:109", "type": "tooltip", "th": "อบร่ำเครื่องหอมใหม่ (ล้างประวัติ)", "en": "Refresh Scent Bottle (Clear History)" },
+        "chat.loading": { "file": "src/BloomingCalendar.tsx:151", "type": "loading_text", "th": "กำลังต้มน้ำอุ่นปรุงยาหอมเจ้า...", "en": "Warming herbal infusion..." },
+        "chat.placeholder": { "file": "src/BloomingCalendar.tsx:164", "type": "input_placeholder", "th": "พิมพ์ถามพวงมาลัยเรื่องอโรมาและน่านบำบัด...", "en": "Ask Malai about aromatherapy & Nan healing..." },
+        "chat.error": { "file": "src/BloomingCalendar.tsx:57", "type": "error_message", "th": "ขออภัยเจ้า... ดูเหมือนพลังคลื่นอโรมาจะขาดหายไปชั่วคราว ลองใหม่อีกครั้งนะเจ้า", "en": "Apologies... the aroma wave seems temporarily disrupted. Please try again." },
+        "chat.reset": { "file": "src/BloomingCalendar.tsx:66-71", "type": "bot_reset_message", "th": "ข้าเจ้าได้อบร่ำชำระขวดเครื่องหอมเรียบร้อยแล้วเจ้า... มีกลิ่นสมุนไพรหรือดอกไม้น่านตัวใดที่อยากปรึกษาพวงมาลัยอีกไหมเจ้า?", "en": "The scent bottles have been cleansed... Is there any Nan flower or herb you'd like to consult Malai about?" },
+        "chat.welcome": { "file": "src/BloomingCalendar.tsx:13-14", "type": "bot_welcome", "th": "ยินดีต้อนรับเจ้า... ข้าเจ้าชื่อ 'พวงมาลัย' เป็นผู้นำทางสุคนธบำบัดแห่งล้านนา...", "en": "Welcome... I am 'Malai', your Lanna Aromatherapy guide..." }
+      }
+    },
+    "blooming_calendar": {
+      "description": "ปฏิทินพฤกษาและสร้างแผนเดินทาง / Blooming Calendar & AI Itinerary (EcomBoutique.tsx)",
+      "items": {
+        "calendar.timeline.title": { "file": "src/EcomBoutique.tsx:78", "type": "timeline_heading", "th": "ปฏิทินพฤกษาบานรายเดือนจังหวัดน่าน (Select Month to Explore)", "en": "Nan Monthly Blooming Calendar (Select Month to Explore)" },
+        "calendar.lowSeason.badge": { "file": "src/EcomBoutique.tsx:95", "type": "season_badge", "th": "LOW SEASON", "en": "LOW SEASON" },
+        "calendar.lowSeason.title": { "file": "src/EcomBoutique.tsx:119", "type": "info_card_heading", "th": "แคมเปญกรีนน่าน (Low-Season Campaign)", "en": "Green Nan Campaign (Low-Season Campaign)" },
+        "calendar.lowSeason.desc": { "file": "src/EcomBoutique.tsx:122", "type": "info_card_desc", "th": "นักท่องเที่ยวหนาแน่นต่ำ...", "en": "Low tourist density..." },
+        "calendar.peakSeason.title": { "file": "src/EcomBoutique.tsx:127", "type": "info_card_heading", "th": "ไฮซีซั่นน่านสะพรั่ง (Peak Season)", "en": "Nan Peak Season" },
+        "calendar.peakSeason.desc": { "file": "src/EcomBoutique.tsx:128-129", "type": "info_card_desc", "th": "อากาศหนาวเย็นสบาย...", "en": "Cool, pleasant weather..." },
+        "calendar.flowers.label": { "file": "src/EcomBoutique.tsx:135", "type": "field_label", "th": "บุปผาบานหลัก (Flowers in Bloom):", "en": "Flowers in Bloom:" },
+        "calendar.festivals.label": { "file": "src/EcomBoutique.tsx:146", "type": "field_label", "th": "ประเพณีสำคัญ (Festivals & Events):", "en": "Festivals & Events:" },
+        "calendar.tip.label": { "file": "src/EcomBoutique.tsx:153", "type": "field_label", "th": "ข้อเสนอสุคนธบำบัด (Therapist Tip):", "en": "Therapist Tip:" },
+        "calendar.ai.title": { "file": "src/EcomBoutique.tsx:165", "type": "form_heading", "th": "ผู้ออกแบบแผนเดินทางอโรมา AI", "en": "AI Aromatherapy Itinerary Designer" },
+        "calendar.ai.desc": { "file": "src/EcomBoutique.tsx:171", "type": "form_description", "th": "โมเดลปัญญาประดิษฐ์...เดือน **{month}**...", "en": "The AI model...**{month}** weather..." },
+        "calendar.ai.elementLabel": { "file": "src/EcomBoutique.tsx:178", "type": "form_label", "th": "ธาตุราศีเจ้าเรือน (Zodiac Element)", "en": "Zodiac Element" },
+        "calendar.ai.moodLabel": { "file": "src/EcomBoutique.tsx:195", "type": "form_label", "th": "ระดับความล้าทางอารมณ์ของคุณ (Mental State)", "en": "Your Mental State" },
+        "calendar.ai.interestsLabel": { "file": "src/EcomBoutique.tsx:214", "type": "form_label", "th": "ความสนใจหลักในการท่องเที่ยวบำบัด (Select Interests)", "en": "Select Interests" },
+        "calendar.ai.submit": { "file": "src/EcomBoutique.tsx:243", "type": "submit_button", "th": "วิเคราะห์ด้วย AI & เจนเนอเรตทริป", "en": "Analyze with AI & Generate Trip" },
+        "calendar.ai.loading.title": { "file": "src/EcomBoutique.tsx:255", "type": "loading_heading", "th": "กำลังต้มกลั่นสารพฤกษาด้วยโมเดล AI...", "en": "Distilling botanical essence with AI model..." },
+        "calendar.ai.loading.desc": { "file": "src/EcomBoutique.tsx:258", "type": "loading_desc", "th": "ระบบ AI กำลังวิเคราะห์ข้อมูลพฤกษาบำบัด...", "en": "The AI system is analyzing aromatherapy data..." },
+        "calendar.ai.reset": { "file": "src/EcomBoutique.tsx:277", "type": "reset_button", "th": "แก้ไขพารามิเตอร์ใหม่", "en": "Edit Parameters" },
+        "calendar.ai.error": { "file": "src/EcomBoutique.tsx:67", "type": "error_message", "th": "⚠️ *ขออภัยเจ้า / Sorry...* กรุณาลองใหม่อีกครั้ง", "en": "⚠️ *Sorry...* Please try again later." }
+      }
+    },
+    "zodiac_elements": {
+      "description": "ตัวเลือกธาตุในฟอร์ม / Element Dropdown Options",
+      "items": {
+        "element.Earth": { "file": "src/EcomBoutique.tsx:185", "type": "select_option", "th": "ธาตุดิน (พิจิก มังกร พฤษภ)", "en": "Earth (Capricorn, Taurus, Virgo)" },
+        "element.Water": { "file": "src/EcomBoutique.tsx:186", "type": "select_option", "th": "ธาตุน้ำ (กรกฎ มีน พิจิก)", "en": "Water (Cancer, Pisces, Scorpio)" },
+        "element.Wind": { "file": "src/EcomBoutique.tsx:187", "type": "select_option", "th": "ธาตุลม (กุมภ์ มิถุน ตุลย์)", "en": "Wind (Aquarius, Gemini, Libra)" },
+        "element.Fire": { "file": "src/EcomBoutique.tsx:188", "type": "select_option", "th": "ธาตุไฟ (เมษ สิงห์ ธนู)", "en": "Fire (Aries, Leo, Sagittarius)" }
+      }
+    },
+    "moods": {
+      "description": "ตัวเลือกอารมณ์ / Mood Dropdown Options",
+      "items": {
+        "mood.stressed": { "file": "src/EcomBoutique.tsx:202", "type": "select_option", "th": "มีความเครียดสะสมหนักหน่วง", "en": "Heavy accumulated stress" },
+        "mood.tired": { "file": "src/EcomBoutique.tsx:203", "type": "select_option", "th": "เมื่อยล้าทางกาย ออฟฟิศซินโดรม", "en": "Physical fatigue, office syndrome" },
+        "mood.anxious": { "file": "src/EcomBoutique.tsx:204", "type": "select_option", "th": "กระวนกระวาย วิตกกังวลใจ", "en": "Restless, anxious" },
+        "mood.sad": { "file": "src/EcomBoutique.tsx:205", "type": "select_option", "th": "หดหู่ เศร้าใจ ต้องการเสียงธรรมชาติบำบัด", "en": "Sad, seeking nature therapy" },
+        "mood.peaceful": { "file": "src/EcomBoutique.tsx:206", "type": "select_option", "th": "ผ่อนคลายดี แต่อยากเติมแรงบันดาลใจสร้างสรรค์", "en": "Relaxed but seeking creative inspiration" }
+      }
+    },
+    "interests": {
+      "description": "ปุ่มเลือกความสนใจ / Interest Checklist Buttons",
+      "items": {
+        "interest.nature": { "file": "src/EcomBoutique.tsx:218", "type": "toggle_button", "th": "🌿 กิจกรรมเดินป่า Forest Bathing", "en": "🌿 Forest Bathing Activities" },
+        "interest.spiritual": { "file": "src/EcomBoutique.tsx:219", "type": "toggle_button", "th": "🧘 สมาธิจิตและกราบพระพุทธบูชา", "en": "🧘 Meditation & Spiritual Practice" },
+        "interest.handicraft": { "file": "src/EcomBoutique.tsx:220", "type": "toggle_button", "th": "🎨 เวิร์กชอปทำผ้าทอย้อมสีธรรมชาติ", "en": "🎨 Natural Dye & Weaving Workshop" },
+        "interest.gastronomy": { "file": "src/EcomBoutique.tsx:221", "type": "toggle_button", "th": "🍵 ชิมชาวิถีน่านแซนด์บ็อกซ์", "en": "🍵 Nan Tea Sandbox Tasting" }
+      }
+    },
+    "scent_journal": {
+      "description": "บันทึกสุคนธอารมณ์ / Scent Mood Journal (FlowerDirectory.tsx)",
+      "items": {
+        "journal.title": { "file": "src/FlowerDirectory.tsx:97", "type": "form_heading", "th": "บันทึกสุคนธอารมณ์ยามเช้า (Scent Mood Journal)", "en": "Scent Mood Journal" },
+        "journal.moodLabel": { "file": "src/FlowerDirectory.tsx:105", "type": "field_label", "th": "อารมณ์ของคุณวันนี้ (Daily Mood)", "en": "Daily Mood" },
+        "journal.mood.stressed": { "file": "src/FlowerDirectory.tsx:109", "type": "mood_button", "th": "ตึงเครียด", "en": "Stressed" },
+        "journal.mood.sad": { "file": "src/FlowerDirectory.tsx:110", "type": "mood_button", "th": "เศร้าหมอง", "en": "Sad" },
+        "journal.mood.tired": { "file": "src/FlowerDirectory.tsx:111", "type": "mood_button", "th": "เหนื่อยล้า", "en": "Tired" },
+        "journal.mood.anxious": { "file": "src/FlowerDirectory.tsx:112", "type": "mood_button", "th": "วิตกกังวล", "en": "Anxious" },
+        "journal.mood.peaceful": { "file": "src/FlowerDirectory.tsx:113", "type": "mood_button", "th": "สงบใจ", "en": "Peaceful" },
+        "journal.noteLabel": { "file": "src/FlowerDirectory.tsx:135", "type": "field_label", "th": "บอกเล่าความในใจสั้นๆ (Daily Reflections)", "en": "Daily Reflections" },
+        "journal.notePlaceholder": { "file": "src/FlowerDirectory.tsx:140", "type": "textarea_placeholder", "th": "เช้านี้อากาศเป็นอย่างไร...", "en": "How is the morning air?..." },
+        "journal.info.title": { "file": "src/FlowerDirectory.tsx:154", "type": "info_heading", "th": "คำแนะนำสุคนธบำบัดล้านนา:", "en": "Lanna Scent Therapy Guidance:" },
+        "journal.info.desc": { "file": "src/FlowerDirectory.tsx:155-158", "type": "info_desc", "th": "การจดบันทึกอารมณ์ร่วมกับการจับคู่กลิ่นบำบัด...", "en": "Journaling your emotions alongside matching therapeutic scents..." },
+        "journal.submit": { "file": "src/FlowerDirectory.tsx:167", "type": "submit_button", "th": "บันทึกสุคนธอารมณ์", "en": "Save Scent Journal" },
+        "journal.logsTitle": { "file": "src/FlowerDirectory.tsx:176", "type": "section_heading", "th": "บันทึกความตื่นรู้ย้อนหลัง ({count})", "en": "Mindfulness Logs ({count})" },
+        "journal.empty": { "file": "src/FlowerDirectory.tsx:182", "type": "empty_state", "th": "ยังไม่มีบันทึกอารมณ์ในขณะนี้...", "en": "No mood entries yet..." },
+        "journal.delete": { "file": "src/FlowerDirectory.tsx:221", "type": "tooltip", "th": "ลบข้อมูล", "en": "Delete entry" },
+        "journal.recommend": { "file": "src/FlowerDirectory.tsx:232", "type": "section_label", "th": "พรรณพฤกษาบำบัดแนะนำ:", "en": "Recommended Florals:" }
+      }
+    },
+    "zodiac_quiz": {
+      "description": "แบบทดสอบธาตุ / Zodiac Element Quiz (ZodiacQuiz.tsx)",
+      "items": {
+        "quiz.intro.title": { "file": "src/ZodiacQuiz.tsx:109", "type": "intro_heading", "th": "ค้นหาธาตุเจ้าเรือนบุปผาน่าน", "en": "Discover Your Elemental Flower Sign" },
+        "quiz.intro.desc": { "file": "src/ZodiacQuiz.tsx:110-112", "type": "intro_description", "th": "ตอบคำถามทดสอบบุคลิกภาพเชิงชีววิทยาและสุคนธบำบัดล้านนา...", "en": "Answer personality questions grounded in Lanna bio-aromatherapy..." },
+        "quiz.intro.start": { "file": "src/ZodiacQuiz.tsx:119", "type": "start_button", "th": "เริ่มทดสอบธาตุบำบัด", "en": "Start Element Quiz" },
+        "quiz.back": { "file": "src/ZodiacQuiz.tsx:170", "type": "back_button", "th": "BACK", "en": "Back" },
+        "quiz.result.badge": { "file": "src/ZodiacQuiz.tsx:180", "type": "result_badge", "th": "YOUR PERSONALITY ELEMENT", "en": "YOUR PERSONALITY ELEMENT" },
+        "quiz.result.title": { "file": "src/ZodiacQuiz.tsx:181", "type": "result_heading", "th": "ธาตุ{element}", "en": "{element} Element" },
+        "quiz.result.personality": { "file": "src/ZodiacQuiz.tsx:186", "type": "section_label", "th": "บุคลิกลักษณะประจำตัว (Personality)", "en": "Personality Profile" },
+        "quiz.result.floral": { "file": "src/ZodiacQuiz.tsx:191", "type": "section_label", "th": "พฤกษาบำบัดประจำธาตุ (Floral Matches)", "en": "Floral Matches" },
+        "quiz.result.tip": { "file": "src/ZodiacQuiz.tsx:206", "type": "tip_label", "th": "💡 คำแนะนำเพื่อความสุขใจ (Wellness Tip):", "en": "💡 Wellness Tip:" },
+        "quiz.result.productBadge": { "file": "src/ZodiacQuiz.tsx:214", "type": "product_badge", "th": "RECOMMENDED BOTANICAL REMEDY", "en": "RECOMMENDED BOTANICAL REMEDY" },
+        "quiz.result.productDesc": { "file": "src/ZodiacQuiz.tsx:221-222", "type": "product_desc", "th": "ปรุงกลั่นเพื่อช่วยชำระล้าง เสริมพลังธาตุ และเยียวยาจุดบกพร่องตามภูมิปัญญาล้านนา", "en": "Distilled to cleanse, strengthen your element, and heal deficiencies according to Lanna wisdom." },
+        "quiz.result.addCart": { "file": "src/ZodiacQuiz.tsx:250", "type": "add_cart_button", "th": "เพิ่มผลิตภัณฑ์ลงรถเข็น", "en": "Add to Cart" },
+        "quiz.result.retest": { "file": "src/ZodiacQuiz.tsx:257", "type": "retest_button", "th": "RETEST", "en": "Retest" }
+      }
+    },
+    "months": {
+      "description": "ชื่อเดือน / Month Names",
+      "items": {
+        "month.1": { "file": "translations.ts", "type": "month_name", "th": "มกราคม", "en": "January" },
+        "month.2": { "file": "translations.ts", "type": "month_name", "th": "กุมภาพันธ์", "en": "February" },
+        "month.3": { "file": "translations.ts", "type": "month_name", "th": "มีนาคม", "en": "March" },
+        "month.4": { "file": "translations.ts", "type": "month_name", "th": "เมษายน", "en": "April" },
+        "month.5": { "file": "translations.ts", "type": "month_name", "th": "พฤษภาคม", "en": "May" },
+        "month.6": { "file": "translations.ts", "type": "month_name", "th": "มิถุนายน", "en": "June" },
+        "month.7": { "file": "translations.ts", "type": "month_name", "th": "กรกฎาคม", "en": "July" },
+        "month.8": { "file": "translations.ts", "type": "month_name", "th": "สิงหาคม", "en": "August" },
+        "month.9": { "file": "translations.ts", "type": "month_name", "th": "กันยายน", "en": "September" },
+        "month.10": { "file": "translations.ts", "type": "month_name", "th": "ตุลาคม", "en": "October" },
+        "month.11": { "file": "translations.ts", "type": "month_name", "th": "พฤศจิกายน", "en": "November" },
+        "month.12": { "file": "translations.ts", "type": "month_name", "th": "ธันวาคม", "en": "December" }
+      }
+    }
+  },
+  "api_endpoints": {
+    "description": "API endpoints และการตอบกลับภาษา / API endpoints and language-aware responses",
+    "items": {
+      "/api/wellness-chat": {
+        "file": "api/index.ts:158-185",
+        "method": "POST",
+        "description": "แชทกับ AI นักบำบัด / Chat with Malai AI Therapist",
+        "language_detection": "ตรวจจับภาษาไทยโดยอัตโนมัติจากข้อความผู้ใช้ / Auto-detect Thai from user message using regex [\\u0E00-\\u0E7F]",
+        "body": { "message": "string", "history": "Message[]" },
+        "response": { "response": "string (Markdown)" }
+      },
+      "/api/generate-itinerary": {
+        "file": "api/index.ts:68-128",
+        "method": "POST",
+        "description": "สร้างแผนเดินทางสุคนธบำบัด / Generate wellness itinerary",
+        "language_detection": "ระบุภาษาใน body: { lang: 'th' | 'en' } / Specify lang in request body",
+        "body": { "month": "number", "zodiacElement": "string", "interests": "string[]", "mood": "string", "lang?": "'th'|'en'" },
+        "response": { "itinerary": "string (Markdown)" }
+      },
+      "/api/zodiac-analysis": {
+        "file": "api/index.ts:131-155",
+        "method": "POST",
+        "description": "วิเคราะห์ดวงชะตาธาตุ / Zodiac element analysis",
+        "language_detection": "ระบุภาษาใน body: { lang: 'th' | 'en' } / Specify lang in request body",
+        "body": { "sign": "string", "birthMonth": "number", "currentAnxiety?": "string", "lang?": "'th'|'en'" },
+        "response": { "analysis": "string (Markdown)" }
+      }
+    }
+  },
+  "how_it_works": {
+    "description": "วิธีทำงานของระบบภาษา / How the i18n system works",
+    "translation_system": {
+      "file": "src/i18n/translations.ts",
+      "type": "key_value_dictionary",
+      "thai_dict": "TH: Record<string, string>",
+      "english_dict": "EN: Record<string, string>"
+    },
+    "language_context": {
+      "file": "src/i18n/LanguageContext.tsx",
+      "provider": "LanguageProvider — wraps entire app in main.tsx",
+      "hook": "useLanguage() — returns { lang, toggleLang, t }",
+      "t_function": "t(key, vars?) — looks up key in current language dict, falls back to TH, then key itself"
+    },
+    "language_toggle": {
+      "file": "src/main.tsx:45-55",
+      "type": "globe_button",
+      "behavior": "toggles between 'th' and 'en', saves to localStorage('nan_lang')",
+      "thai_label": "EN (กดเพื่อเปลี่ยนเป็นอังกฤษ)",
+      "english_label": "TH (click to switch to Thai)"
+    },
+    "api_language": {
+      "detection_chat": "/api/wellness-chat — auto-detects from 'message' field",
+      "detection_form": "/api/generate-itinerary, /api/zodiac-analysis — reads 'lang' from request body",
+      "fallback": "fallback responses are bilingual (both Thai and English)"
+    }
+  }
+}

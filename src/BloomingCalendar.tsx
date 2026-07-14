@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { MessageSquare, Send, Sparkles, X, RefreshCw } from "lucide-react";
+import { useLanguage } from "./i18n/LanguageContext";
 
 interface Message {
   sender: "user" | "bot";
@@ -11,12 +12,30 @@ export default function AIAssistant() {
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: "bot",
-      text: "ยินดีต้อนรับเจ้า... ข้าเจ้าชื่อ 'พวงมาลัย' เป็นผู้นำทางสุคนธบำบัดแห่งล้านนา มีเรื่องไม่สบายใจ เหนื่อยล้า หรืออยากค้นหากลิ่นดอกไม้น่านประจำตัว สอบถามข้าเจ้าได้เลยนะเจ้า 🌸"
+      text: ""
     }
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const { t, lang } = useLanguage();
+  const initialRender = useRef(true);
+
+  useEffect(() => {
+    if (initialRender.current) {
+      initialRender.current = false;
+      setMessages([{ sender: "bot", text: t("chat.welcome") }]);
+    }
+  }, [lang]); // Re-run when language changes
+
+  useEffect(() => {
+    setMessages((prev) => {
+      if (prev.length === 1 && prev[0].sender === "bot") {
+        return [{ sender: "bot", text: t("chat.welcome") }];
+      }
+      return prev;
+    });
+  }, [lang, t]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -43,7 +62,7 @@ export default function AIAssistant() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           message: input,
-          history: messages.slice(-5) // Send last 5 messages for context
+          history: messages.slice(-5)
         })
       });
       const data = await response.json();
@@ -54,7 +73,7 @@ export default function AIAssistant() {
         ...prev,
         {
           sender: "bot",
-          text: "ขออภัยเจ้า... ดูเหมือนพลังคลื่นอโรมาจะขาดหายไปชั่วคราว ลองใหม่อีกครั้งนะเจ้า"
+          text: t("chat.error")
         }
       ]);
     } finally {
@@ -66,7 +85,7 @@ export default function AIAssistant() {
     setMessages([
       {
         sender: "bot",
-        text: "ข้าเจ้าได้อบร่ำชำระขวดเครื่องหอมเรียบร้อยแล้วเจ้า... มีกลิ่นสมุนไพรหรือดอกไม้น่านตัวใดที่อยากปรึกษาพวงมาลัยอีกไหมเจ้า?"
+        text: t("chat.reset")
       }
     ]);
   };
@@ -80,7 +99,7 @@ export default function AIAssistant() {
         id="ai-bot-toggle"
       >
         <MessageSquare className="h-4 w-4 animate-pulse" />
-        <span>คุยกับพวงมาลัย AI</span>
+        <span>{t("chat.toggle")}</span>
       </button>
 
       {/* Floating Drawer */}
@@ -95,18 +114,18 @@ export default function AIAssistant() {
                 </div>
                 <div>
                   <h4 className="font-display font-semibold text-[#f2f4f1] text-sm tracking-wide">
-                    พวงมาลัย (MALAI AI)
+                    {t("chat.header.title")}
                   </h4>
                   <span className="text-[11px] text-[#819177] flex items-center gap-1">
                     <Sparkles className="h-3 w-3 text-[#c9b097]" />
-                    ที่ปรึกษาสุคนธบำบัดล้านนา
+                    {t("chat.header.subtitle")}
                   </span>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <button
                   onClick={clearChat}
-                  title="อบร่ำเครื่องหอมใหม่ (ล้างประวัติ)"
+                  title={t("chat.clear.tooltip")}
                   className="p-1.5 rounded-md hover:bg-[#2a2e28] text-[#819177] hover:text-[#f2f4f1] transition-colors"
                 >
                   <RefreshCw className="h-4 w-4" />
@@ -148,7 +167,7 @@ export default function AIAssistant() {
                       <span className="w-1.5 h-1.5 bg-[#c9b097] rounded-full animate-bounce" style={{ animationDelay: "150ms" }}></span>
                       <span className="w-1.5 h-1.5 bg-[#c9b097] rounded-full animate-bounce" style={{ animationDelay: "300ms" }}></span>
                     </div>
-                    <span>กำลังต้มน้ำอุ่นปรุงยาหอมเจ้า...</span>
+                    <span>{t("chat.loading")}</span>
                   </div>
                 </div>
               )}
@@ -161,7 +180,7 @@ export default function AIAssistant() {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="พิมพ์ถามพวงมาลัยเรื่องอโรมาและน่านบำบัด..."
+                placeholder={t("chat.placeholder")}
                 className="flex-1 bg-[#161a15] border border-[#2a2e28] rounded-full px-4 py-2.5 text-xs text-[#f2f4f1] focus:outline-hidden focus:border-[#c9b097] placeholder-[#819177]"
               />
               <button

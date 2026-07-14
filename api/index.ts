@@ -20,7 +20,19 @@ const TYPHOON_API_KEY = process.env.TYPHOON_API_KEY;
 const TYPHOON_API_URL = "https://api.opentyphoon.ai/v1/chat/completions";
 const IS_MOCK = !TYPHOON_API_KEY || TYPHOON_API_KEY === "your_typhoon_api_key_here";
 
-async function callTyphoon(prompt: string): Promise<string | null> {
+function detectLang(text: string): "th" | "en" {
+  const thaiRegex = /[\u0E00-\u0E7F]/;
+  return thaiRegex.test(text) ? "th" : "en";
+}
+
+function getSystemPrompt(lang: "th" | "en"): string {
+  if (lang === "th") {
+    return "คุณคือผู้เชี่ยวชาญด้านการท่องเที่ยวเชิงสุขภาพและพฤกษาบำบัดของจังหวัดน่าน ตอบอย่างสวยงาม เป็นภาษาไทย ใช้เครื่องหมาย Markdown ให้เรียบร้อย";
+  }
+  return "You are an expert in wellness tourism and botanical therapy of Nan Province, Thailand. Respond beautifully in English using Markdown formatting.";
+}
+
+async function callTyphoon(prompt: string, lang: "th" | "en" = "th"): Promise<string | null> {
   if (IS_MOCK) return null;
   try {
     const res = await fetch(TYPHOON_API_URL, {
@@ -32,10 +44,7 @@ async function callTyphoon(prompt: string): Promise<string | null> {
       body: JSON.stringify({
         model: "typhoon-v2-70b-instruct",
         messages: [
-          {
-            role: "system",
-            content: "คุณคือผู้เชี่ยวชาญด้านการท่องเที่ยวเชิงสุขภาพและพฤกษาบำบัดของจังหวัดน่าน ตอบอย่างสวยงาม เป็นภาษาไทย ใช้เครื่องหมาย Markdown ให้เรียบร้อย"
-          },
+          { role: "system", content: getSystemPrompt(lang) },
           { role: "user", content: prompt }
         ],
         max_tokens: 2048,
@@ -50,14 +59,15 @@ async function callTyphoon(prompt: string): Promise<string | null> {
   }
 }
 
-async function generateWellnessResponse(prompt: string, fallback: string): Promise<string> {
-  const result = await callTyphoon(prompt);
+async function generateWellnessResponse(prompt: string, fallback: string, lang: "th" | "en" = "th"): Promise<string> {
+  const result = await callTyphoon(prompt, lang);
   return result ?? fallback;
 }
 
 // 1. POST /api/generate-itinerary
 app.post("/api/generate-itinerary", async (req, res) => {
-  const { month, zodiacElement, interests, mood } = req.body;
+  const { month, zodiacElement, interests, mood, lang: reqLang } = req.body;
+  const lang: "th" | "en" = reqLang === "en" ? "en" : "th";
   const currentMonth = Number(month) || 12;
   const element = zodiacElement || "Water";
   const userInterests = interests || ["nature", "spiritual"];
@@ -115,12 +125,13 @@ ${matchedFlowers.length > 0 ? matchedFlowers.map((f: any) => `- **${f.name_th}**
 > "ให้กลิ่นหอมของดอกไม้น่านนำจิตวิญญาณคุณสู่ความสงบ"
   `;
 
-  res.json({ itinerary: await generateWellnessResponse(prompt, fallback) });
+  res.json({ itinerary: await generateWellnessResponse(prompt, fallback, lang) });
 });
 
 // 2. POST /api/zodiac-analysis
 app.post("/api/zodiac-analysis", async (req, res) => {
-  const { sign, birthMonth, currentAnxiety } = req.body;
+  const { sign, birthMonth, currentAnxiety, lang: reqLang } = req.body;
+  const lang: "th" | "en" = reqLang === "en" ? "en" : "th";
 
   const prompt = `Analyze horoscope for ${sign}, month ${birthMonth}, anxiety: "${currentAnxiety}". Use Nan botanical knowledge. Provide bilingual Thai/English response with Markdown formatting. Include element analysis, flower recommendations, and daily scent journal prompt.`;
 
@@ -142,15 +153,16 @@ app.post("/api/zodiac-analysis", async (req, res) => {
 > "Breathe deeply, imagine dewdrops on jasmine petals, write 3 things you're grateful for."
   `;
 
-  res.json({ analysis: await generateWellnessResponse(prompt, fallback) });
+  res.json({ analysis: await generateWellnessResponse(prompt, fallback, lang) });
 });
 
 // 3. POST /api/wellness-chat
 app.post("/api/wellness-chat", async (req, res) => {
   const { message, history } = req.body;
+  const lang = detectLang(message || "");
   const conversationHistory = history ? history.map((h: any) => `${h.sender === "user" ? "User" : "Therapist"}: ${h.text}`).join("\n") : "";
 
-  const prompt = `You are 'พวงมาลัย' (Malai), AI Scent Therapist of Nan. User asks: "${message}". History: ${conversationHistory}. Respond gently in Thai with "เจ้า" polite form. Relate to Nan flowers, elements, wellness spots. Keep short, comforting. Use some English too.`;
+  const prompt = `You are 'พวงมาลัย' (Malai), AI Scent Therapist of Nan. User asks: "${message}". History: ${conversationHistory}. Respond gently in ${lang === "th" ? "Thai with 'เจ้า' polite form" : "English"}. Relate to Nan flowers, elements, wellness spots. Keep short, comforting.${lang === "th" ? " Use some English too." : " Use some Thai too."}`;
 
   const fallback = `สวัสดีเจ้า ข้าเจ้าชื่อพวงมาลัย ยินดีต้อนรับสู่ข่วงปัญญาอโรมาล้านนาเจ้า 🌸
 
@@ -169,7 +181,7 @@ app.post("/api/wellness-chat", async (req, res) => {
 
 มีอะไรให้พวงมาลัยช่วยเหลือเพิ่มเติมไหมเจ้า? 🙏✨`;
 
-  res.json({ response: await generateWellnessResponse(prompt, fallback) });
+  res.json({ response: await generateWellnessResponse(prompt, fallback, lang) });
 });
 
 export default app;

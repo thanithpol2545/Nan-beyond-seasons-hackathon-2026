@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Sparkles, ArrowRight, ArrowLeft, RefreshCw, Leaf, Check } from "lucide-react";
+import { useLanguage } from "./i18n/LanguageContext";
 import { elementMatching } from "./data/nanDataset";
 
 interface Question {
@@ -47,9 +48,10 @@ interface Props {
 }
 
 export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Props) {
-  const [step, setStep] = useState(0); // 0: intro, 1-3: questions, 4: result
+  const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<("Earth" | "Water" | "Wind" | "Fire")[]>([]);
   const [resultElement, setResultElement] = useState<string | null>(null);
+  const { t } = useLanguage();
 
   const handleStart = () => {
     setAnswers([]);
@@ -63,7 +65,6 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
     if (step < QUESTIONS.length) {
       setStep(step + 1);
     } else {
-      // Calculate majority
       const counts = updatedAnswers.reduce((acc, curr) => {
         acc[curr] = (acc[curr] || 0) + 1;
         return acc;
@@ -81,7 +82,7 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
 
       setResultElement(maxVal);
       onSelectElement(maxVal);
-      setStep(step + 1); // Go to results
+      setStep(step + 1);
     }
   };
 
@@ -93,6 +94,13 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
 
   const currentQuestion = QUESTIONS[step - 1];
   const matchedInfo = resultElement ? elementMatching(resultElement) : null;
+
+  const ELEMENT_PRODUCTS: Record<string, { name: string; price: string; id: string }> = {
+    Earth: { name: "ชาดอกไม้สิริมงคล 'เบญจเกสรน่าน'", price: "320 ฿", id: "P001" },
+    Water: { name: "น้ำมันนวดสปาอุ่นผสมอโรมากระดังงา 'สยามผ่อนคลาย'", price: "450 ฿", id: "P002" },
+    Wind: { name: "สเปรย์น้ำลอยอโรมารสบัว 'Mindfulness Mist'", price: "350 ฿", id: "P004" },
+    Fire: { name: "สครับผิวกายดีท็อกซ์เกลือดาวเรือง", price: "390 ฿", id: "P003" }
+  };
 
   return (
     <div className="bg-[#161a15] rounded-3xl p-8 border border-[#2a2e28] max-w-2xl mx-auto shadow-2xl relative overflow-hidden">
@@ -106,9 +114,9 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
             <Sparkles className="h-8 w-8 text-[#c9b097] animate-pulse" />
           </div>
           <div className="space-y-2">
-            <h3 className="font-serif italic text-3xl text-[#f2f4f1]">ค้นหาธาตุเจ้าเรือนบุปผาน่าน</h3>
+            <h3 className="font-serif italic text-3xl text-[#f2f4f1]">{t("quiz.intro.title")}</h3>
             <p className="text-xs text-[#819177] max-w-md mx-auto leading-relaxed">
-              ตอบคำถามทดสอบบุคลิกภาพเชิงชีววิทยาและสุคนธบำบัดล้านนา เพื่อวิเคราะห์ธาตุเจ้าเรือน (ดิน น้ำ ลม ไฟ) จับคู่พรรณไม้สมุนไพรและอโรมาบำบัดที่สอดรับกับจิตวิญญาณของคุณอย่างแท้จริง
+              {t("quiz.intro.desc")}
             </p>
           </div>
 
@@ -116,7 +124,7 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
             onClick={handleStart}
             className="px-8 py-3 rounded-full bg-[#c9b097] text-[#0d0f0c] font-display font-semibold text-xs uppercase tracking-wider hover:bg-[#b09a82] hover:scale-105 active:scale-95 transition-all duration-300"
           >
-            เริ่มทดสอบธาตุบำบัด
+            {t("quiz.intro.start")}
           </button>
         </div>
       )}
@@ -125,8 +133,8 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
       {step > 0 && step <= QUESTIONS.length && currentQuestion && (
         <div className="space-y-6 animate-fade-in">
           <div className="flex justify-between items-center text-[10px] font-mono text-[#819177]">
-            <span>QUESTION {step} OF {QUESTIONS.length}</span>
-            <span>{Math.round((step / QUESTIONS.length) * 100)}% COMPLETE</span>
+            <span>{t("quiz.progress.question", { step, total: QUESTIONS.length })}</span>
+            <span>{t("quiz.progress.percent", { percent: Math.round((step / QUESTIONS.length) * 100) })}</span>
           </div>
 
           {/* Progress Bar */}
@@ -167,28 +175,28 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
               className="text-xs text-[#819177] hover:text-[#f2f4f1] flex items-center gap-1.5 font-mono pt-4 transition-colors"
             >
               <ArrowLeft className="h-3 w-3" />
-              <span>BACK</span>
+              <span>{t("quiz.back")}</span>
             </button>
           </div>
         </div>
       )}
 
       {/* Results Screen */}
-      {step > QUESTIONS.length && matchedInfo && (
+      {step > QUESTIONS.length && matchedInfo && resultElement && (
         <div className="space-y-6 animate-fade-in">
           <div className="text-center py-4 border-b border-[#2a2e28]/60">
-            <span className="text-[10px] font-mono text-[#c9b097] uppercase tracking-widest block">YOUR PERSONALITY ELEMENT</span>
-            <h4 className="font-serif italic text-3xl text-[#f2f4f1] mt-1">ธาตุ{matchedInfo.element_th}</h4>
+            <span className="text-[10px] font-mono text-[#c9b097] uppercase tracking-widest block">{t("quiz.result.badge")}</span>
+            <h4 className="font-serif italic text-3xl text-[#f2f4f1] mt-1">{t("quiz.result.title", { element: matchedInfo.element_th })}</h4>
           </div>
 
           <div className="space-y-4">
             <div>
-              <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-[#819177]">บุคลิกลักษณะประจำตัว (Personality)</span>
+              <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-[#819177]">{t("quiz.result.personality")}</span>
               <p className="text-xs text-[#f2f4f1] mt-1 leading-relaxed">{matchedInfo.personality}</p>
             </div>
 
             <div>
-              <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-[#819177]">พฤกษาบำบัดประจำธาตุ (Floral Matches)</span>
+              <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-[#819177]">{t("quiz.result.floral")}</span>
               <div className="flex flex-wrap gap-2 mt-2">
                 {matchedInfo.recommended.map((item, idx) => (
                   <span
@@ -203,7 +211,7 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
             </div>
 
             <div className="bg-[#0d0f0c] border border-[#2a2e28] rounded-2xl p-4 text-xs text-[#819177] leading-relaxed">
-              <span className="text-[#f2f4f1] font-semibold block mb-1">💡 คำแนะนำเพื่อความสุขใจ (Wellness Tip):</span>
+              <span className="text-[#f2f4f1] font-semibold block mb-1">{t("quiz.result.tip")}</span>
               {matchedInfo.tip}
             </div>
 
@@ -211,50 +219,34 @@ export default function ZodiacQuiz({ onAddProductToCart, onSelectElement }: Prop
             <div className="bg-[#c9b097]/10 border border-[#c9b097]/25 rounded-2xl p-5 mt-4 space-y-4">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <span className="text-[10px] font-mono text-[#c9b097] font-bold block uppercase tracking-wider">RECOMMENDED BOTANICAL REMEDY</span>
+                  <span className="text-[10px] font-mono text-[#c9b097] font-bold block uppercase tracking-wider">{t("quiz.result.productBadge")}</span>
                   <h5 className="font-display font-semibold text-sm text-[#f2f4f1] mt-1">
-                    {resultElement === "Earth" && "ชาดอกไม้สิริมงคล 'เบญจเกสรน่าน'"}
-                    {resultElement === "Water" && "น้ำมันนวดสปาอุ่นผสมอโรมากระดังงา 'สยามผ่อนคลาย'"}
-                    {resultElement === "Wind" && "สเปรย์น้ำลอยอโรมารสบัว 'Mindfulness Mist'"}
-                    {resultElement === "Fire" && "สครับผิวกายดีท็อกซ์เกลือดาวเรือง"}
+                    {ELEMENT_PRODUCTS[resultElement]?.name}
                   </h5>
                   <p className="text-[11px] text-[#819177] mt-1">
-                    ปรุงกลั่นเพื่อช่วยชำระล้าง เสริมพลังธาตุ และเยียวยาจุดบกพร่องตามภูมิปัญญาล้านนา
+                    {t("quiz.result.productDesc")}
                   </p>
                 </div>
                 <div className="text-right shrink-0">
                   <span className="text-xs font-mono font-bold text-[#c9b097] block">
-                    {resultElement === "Earth" && "320 ฿"}
-                    {resultElement === "Water" && "450 ฿"}
-                    {resultElement === "Wind" && "350 ฿"}
-                    {resultElement === "Fire" && "390 ฿"}
+                    {ELEMENT_PRODUCTS[resultElement]?.price}
                   </span>
                 </div>
               </div>
 
               <div className="flex gap-2 pt-2">
                 <button
-                  onClick={() => {
-                    const id =
-                      resultElement === "Earth"
-                        ? "P001"
-                        : resultElement === "Water"
-                        ? "P002"
-                        : resultElement === "Wind"
-                        ? "P004"
-                        : "P003";
-                    onAddProductToCart(id);
-                  }}
+                  onClick={() => onAddProductToCart(ELEMENT_PRODUCTS[resultElement]?.id || "P001")}
                   className="flex-1 py-2.5 rounded-xl bg-[#c9b097] text-[#0d0f0c] text-center font-display font-bold text-[11px] tracking-wider uppercase hover:bg-[#b09a82] transition-colors"
                 >
-                  เพิ่มผลิตภัณฑ์ลงรถเข็น
+                  {t("quiz.result.addCart")}
                 </button>
                 <button
                   onClick={resetQuiz}
                   className="px-4 py-2.5 rounded-xl border border-[#2a2e28] text-[#819177] hover:text-[#f2f4f1] text-[11px] font-display uppercase tracking-wider flex items-center gap-1.5 transition-colors"
                 >
                   <RefreshCw className="h-3.5 w-3.5" />
-                  <span>RETEST</span>
+                  <span>{t("quiz.result.retest")}</span>
                 </button>
               </div>
             </div>
